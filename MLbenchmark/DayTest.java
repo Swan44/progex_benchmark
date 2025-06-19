@@ -1,6 +1,8 @@
-import static org.junit.Assert.assertEquals;
+package MLbenchmark;
 
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class DayTest {
 

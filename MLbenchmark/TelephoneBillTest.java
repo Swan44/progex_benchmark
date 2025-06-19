@@ -1,4 +1,4 @@
-package com.chapter.one;
+package MLbenchmark;
 
 import junit.framework.*;
 public class TelephoneBillTest extends TestCase{

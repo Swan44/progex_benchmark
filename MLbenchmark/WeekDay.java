@@ -1,4 +1,4 @@
-package com.chapter.one;
+package MLbenchmark;
 
 public class WeekDay {
 	public static String get_day(int date, int month, int year){

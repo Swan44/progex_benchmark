@@ -1,4 +1,4 @@
-package com.chapter.one;
+package MLbenchmark;
 public class TelephoneBill {
 	public static double cal_bill(int custnum, int numcalls){
 		int valid = 0;

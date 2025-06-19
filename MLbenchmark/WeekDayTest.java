@@ -1,4 +1,4 @@
-package com.chapter.one;
+package MLbenchmark;
 //import classes.WeekDay;
 import junit.framework.*;
 

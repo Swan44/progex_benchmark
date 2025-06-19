@@ -1,4 +1,4 @@
-// This is a mutant program.
+package MLbenchmark;// This is a mutant program.
 // Author : ysma
 
 public class Day
