@@ -1,0 +1,347 @@
+[
+    {
+        "difference": "@@ -158 +158 @@\n-            for (; i < length; i++ ) {\n+            for (; i <= length; i++ ) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -176 +176 @@\n-                result.append(name.substring(0, i));\n+                result.append(name.substring(-1, i));",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -181 +181 @@\n-                if (c == dollarReplacementFirstChar && name.startsWith(dollarReplacement, i)) {\n+                if (false && name.startsWith(dollarReplacement, i)) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -186 +186 @@\n-                    i += escapeCharReplacement.length() - 1;\n+                    i += escapeCharReplacement.length() % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -172 +172 @@\n-            final StringBuffer result = new StringBuffer(length + 8);\n+            final StringBuffer result = new StringBuffer(length - 8);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-                if (c == dollarReplacementFirstChar || c == escapeReplacementFirstChar) {\n+                if (c == dollarReplacementFirstChar) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -179 +179 @@\n-            for (; i < length; i++ ) {\n+            for (; false; i++ ) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -152 +152 @@\n-            final char escapeReplacementFirstChar = escapeCharReplacement.charAt(0);\n+            final char escapeReplacementFirstChar = escapeCharReplacement.charAt(1);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -172 +172 @@\n-            final StringBuffer result = new StringBuffer(length + 8);\n+            final StringBuffer result = new StringBuffer(length + -8);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -179 +179 @@\n-            for (; i < length; i++ ) {\n+            for (; i <= length; i++ ) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -167 +167 @@\n-            if (i == length) {\n+            if (false) {",
+        "equivalence": true,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -151 +151 @@\n-            final char dollarReplacementFirstChar = dollarReplacement.charAt(0);\n+            final char dollarReplacementFirstChar = dollarReplacement.charAt(-1);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -172 +172 @@\n-            final StringBuffer result = new StringBuffer(length + 8);\n+            final StringBuffer result = new StringBuffer(length * 8);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-                if (c == dollarReplacementFirstChar || c == escapeReplacementFirstChar) {\n+                if (c == dollarReplacementFirstChar || c <= escapeReplacementFirstChar) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -181 +181 @@\n-                if (c == dollarReplacementFirstChar && name.startsWith(dollarReplacement, i)) {\n+                if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-                if (c == dollarReplacementFirstChar || c == escapeReplacementFirstChar) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-                if (c == dollarReplacementFirstChar || c == escapeReplacementFirstChar) {\n+                if (c == escapeReplacementFirstChar) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -187 +187 @@\n-                    result.append('_');\n+                    ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -184 +184 @@\n-                } else if (c == escapeReplacementFirstChar\n+                } else if (c >= escapeReplacementFirstChar",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-            int i = 0;\n+            int i = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -148 +148 @@\n-        String s = (String)(ref == null ? null : ref.get());\n+        String s = (String)(false ? null : ref.get());",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -182 +182 @@\n-                    i += dollarReplacement.length() - 1;\n+                    i += dollarReplacement.length() / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -175 +175 @@\n-            if (i > 0) {\n+            if (i > -1) {",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -175 +175 @@\n-            if (i > 0) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -172 +172 @@\n-            final StringBuffer result = new StringBuffer(length + 8);\n+            final StringBuffer result = new StringBuffer(length / 8);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -183 +183 @@\n-                    result.append('$');\n+                    ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -175 +175 @@\n-            if (i > 0) {\n+            if (i >= 0) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-                if (c == dollarReplacementFirstChar || c == escapeReplacementFirstChar) {\n+                if (c <= dollarReplacementFirstChar || c == escapeReplacementFirstChar) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -179 +179 @@\n-            for (; i < length; i++ ) {\n+            for (; i != length; i++ ) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -151 +151 @@\n-            final char dollarReplacementFirstChar = dollarReplacement.charAt(0);\n+            final char dollarReplacementFirstChar = dollarReplacement.charAt(1);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -182 +182 @@\n-                    i += dollarReplacement.length() - 1;\n+                    ;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-                if (c == dollarReplacementFirstChar || c == escapeReplacementFirstChar) {\n+                if (c >= dollarReplacementFirstChar || c == escapeReplacementFirstChar) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -181 +181 @@\n-                if (c == dollarReplacementFirstChar && name.startsWith(dollarReplacement, i)) {\n+                if (c == dollarReplacementFirstChar) {",
+        "equivalence": true,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-            int i = 0;\n+            int i = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -176 +176 @@\n-                result.append(name.substring(0, i));\n+                result.append(name.substring(1, i));",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -152 +152 @@\n-            final char escapeReplacementFirstChar = escapeCharReplacement.charAt(0);\n+            final char escapeReplacementFirstChar = escapeCharReplacement.charAt(-1);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -172 +172 @@\n-            final StringBuffer result = new StringBuffer(length + 8);\n+            final StringBuffer result = new StringBuffer(length % 8);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -150 +150 @@\n-        if (s == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -182 +182 @@\n-                    i += dollarReplacement.length() - 1;\n+                    i += dollarReplacement.length() - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -184 +184 @@\n-                } else if (c == escapeReplacementFirstChar\n+                } else if (c <= escapeReplacementFirstChar",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -181 +181 @@\n-                if (c == dollarReplacementFirstChar && name.startsWith(dollarReplacement, i)) {\n+                if (name.startsWith(dollarReplacement, i)) {",
+        "equivalence": true,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -172 +172 @@\n-            final StringBuffer result = new StringBuffer(length + 8);\n+            final StringBuffer result = new StringBuffer(length + 0);",
+        "equivalence": true,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -181 +181 @@\n-                if (c == dollarReplacementFirstChar && name.startsWith(dollarReplacement, i)) {\n+                if (c <= dollarReplacementFirstChar && name.startsWith(dollarReplacement, i)) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -167 +167 @@\n-            if (i == length) {\n+            if (i <= length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-            unescapeCache.put(name, new WeakReference(s));\n+            ;",
+        "equivalence": true,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -182 +182 @@\n-                    i += dollarReplacement.length() - 1;\n+                    i += dollarReplacement.length() * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -158 +158 @@\n-            for (; i < length; i++ ) {\n+            for (; i != length; i++ ) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -175 +175 @@\n-            if (i > 0) {\n+            if (i != 0) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -175 +175 @@\n-            if (i > 0) {\n+            if (i > 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -186 +186 @@\n-                    i += escapeCharReplacement.length() - 1;\n+                    i += escapeCharReplacement.length() + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-                if (c == dollarReplacementFirstChar || c == escapeReplacementFirstChar) {\n+                if (c == dollarReplacementFirstChar || c >= escapeReplacementFirstChar) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -176 +176 @@\n-                result.append(name.substring(0, i));\n+                ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -189 +189 @@\n-                    result.append(c);\n+                    ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-                if (c == dollarReplacementFirstChar || c == escapeReplacementFirstChar) {\n+                if (false || c == escapeReplacementFirstChar) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -186 +186 @@\n-                    i += escapeCharReplacement.length() - 1;\n+                    i += escapeCharReplacement.length() - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -186 +186 @@\n-                    i += escapeCharReplacement.length() - 1;\n+                    i += escapeCharReplacement.length() / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -158 +158 @@\n-            for (; i < length; i++ ) {\n+            for (; false; i++ ) {",
+        "equivalence": true,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -167 +167 @@\n-            if (i == length) {\n+            if (i >= length) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-                if (c == dollarReplacementFirstChar || c == escapeReplacementFirstChar) {\n+                if (c == dollarReplacementFirstChar || false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -181 +181 @@\n-                if (c == dollarReplacementFirstChar && name.startsWith(dollarReplacement, i)) {\n+                if (c == dollarReplacementFirstChar == name.startsWith(dollarReplacement, i)) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-                if (c == dollarReplacementFirstChar || c == escapeReplacementFirstChar) {\n+                if (c == dollarReplacementFirstChar != (c == escapeReplacementFirstChar)) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -186 +186 @@\n-                    i += escapeCharReplacement.length() - 1;\n+                    i += escapeCharReplacement.length() * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -182 +182 @@\n-                    i += dollarReplacement.length() - 1;\n+                    i += dollarReplacement.length() - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -182 +182 @@\n-                    i += dollarReplacement.length() - 1;\n+                    i += dollarReplacement.length() % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -186 +186 @@\n-                    i += escapeCharReplacement.length() - 1;\n+                    i += escapeCharReplacement.length() - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -182 +182 @@\n-                    i += dollarReplacement.length() - 1;\n+                    i += dollarReplacement.length() + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -184 +184 @@\n-                } else if (c == escapeReplacementFirstChar\n+                } else if (false",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -181 +181 @@\n-                if (c == dollarReplacementFirstChar && name.startsWith(dollarReplacement, i)) {\n+                if (c >= dollarReplacementFirstChar && name.startsWith(dollarReplacement, i)) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -186 +186 @@\n-                    i += escapeCharReplacement.length() - 1;\n+                    ;",
+        "equivalence": false,
+        "operator": "ADL"
+    }
+]

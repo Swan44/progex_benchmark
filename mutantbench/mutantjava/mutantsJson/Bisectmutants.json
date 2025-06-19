@@ -1,0 +1,967 @@
+[
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * x + N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (diff > -1) {",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x + x - N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = -x * x - N;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        this.mEpsilon = epsilon;\n+        this.mEpsilon = --epsilon;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M + x) - 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-                    M = x;\n+                    M = x--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -42 +41,0 @@\n-        mResult = r;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (--M + x) / 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-                m = x;\n+                m = --x;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m + --x) / 2;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-                    M = x;\n+                    M = -x;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (++diff < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * x - N++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs( --diff ) > mEpsilon) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M + x) * 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M + ++x) / 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29,12 +28,0 @@\n-        while (Math.abs(diff) > mEpsilon) {\n-            if (diff < 0) {\n-                m = x;\n-                x = (M + x) / 2;\n-            } else {\n-                if (diff > 0) {\n-                    M = x;\n-                    x = (m + x) / 2;\n-                }\n-            }\n-            diff = x * x - N;\n-        }",
+        "equivalence": false,
+        "operator": "WLDL"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x % x - N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs( diff-- ) > mEpsilon) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) >= mEpsilon) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (diff > 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * x * N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (diff > 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (diff < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = --x * x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m + x++) / 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (diff++ > 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -24 +24 @@\n-        double x = N;\n+        double x = N++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = ++x * x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-        double m = 1;\n+        double m = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        mResult = r;\n+        mResult = ++r;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -43 +43 @@\n-        return r;\n+        return r--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x-- * x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m / x) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-                m = x;\n+                m = x--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        mResult = r;\n+        mResult = -r;",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M - x) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m + x) + 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -43 +43 @@\n-        return r;\n+        return r++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (diff-- < 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (diff != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs( ++diff ) > mEpsilon) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (--diff < 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) > --mEpsilon) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M * x) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (diff++ < 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x-- * x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) != mEpsilon) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (--diff > 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-                    M = x;\n+                    M = x++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = -x * x - N;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m++ + x) / 2;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M++ + x) / 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (diff <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m + x--) / 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -35 +34,0 @@\n-                    M = x;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -43 +43 @@\n-        return r;\n+        return -r;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs( diff++ ) > mEpsilon) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (-m + x) / 2;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = --x * x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M + x) + 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * x++ - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        r = x;\n+        r = -x;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (diff < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x - N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) > mEpsilon--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (diff != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (--m + x) / 2;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * ++x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m + x) / 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x / x - N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) > mEpsilon++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        this.mEpsilon = epsilon;\n+        this.mEpsilon = epsilon--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        mResult = r;\n+        mResult = r--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        this.mEpsilon = epsilon;\n+        this.mEpsilon = ++epsilon;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x++ * x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * x;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * x;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -31 +30,0 @@\n-                m = x;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -24 +24 @@\n-        double x = N;\n+        double x = N--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) > ++mEpsilon) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * x * N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) != mEpsilon) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (!(diff < 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x - x - N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (diff-- > 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -30,9 +29,0 @@\n-            if (diff < 0) {\n-                m = x;\n-                x = (M + x) / 2;\n-            } else {\n-                if (diff > 0) {\n-                    M = x;\n-                    x = (m + x) / 2;\n-                }\n-            }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-                    M = x;\n+                    M = --x;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m + x) / -2;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        r = x;\n+        r = x++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * --x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (++M + x) / 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +35,0 @@\n-                    x = (m + x) / 2;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (++m + x) / 2;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = m + x - 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * --x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        mResult = r;\n+        mResult = --r;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x - N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M-- + x) / 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * x-- - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (!(diff > 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * x - N--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x++ * x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m + ++x) / 2;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) != mEpsilon) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M + x--) / 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-                m = x;\n+                m = ++x;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m % x) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x / x - N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * x + N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * x++ - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (-M + x) / 2;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (x) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M + x++) / 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m - x) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        double M = N;\n+        double M = -N;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = M + x;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (diff >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m-- + x) / 2;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        this.mEpsilon = epsilon;\n+        this.mEpsilon = epsilon++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-                m = x;\n+                m = x++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-                m = x;\n+                m = -x;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        double M = N;\n+        double M = N--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (diff < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        mResult = r;\n+        mResult = r++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * ++x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -27 +27 @@\n-        double r = x;\n+        double r = x--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m * x) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -27 +27 @@\n-        double r = x;\n+        double r = -x;",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M + x) % 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-        double m = 1;\n+        double m = 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-                    M = x;\n+                    M = ++x;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) < mEpsilon) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) >= mEpsilon) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        this.mEpsilon = epsilon;\n+        this.mEpsilon = -epsilon;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M + --x) / 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = M + x + 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x + x - N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +31,0 @@\n-                x = (M + x) / 2;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (diff == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M / x) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M + x) / 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = m + x + 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x % x - N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * x / N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -27 +27 @@\n-        double r = x;\n+        double r = x++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (diff <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * x / N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -39 +38,0 @@\n-            diff = x * x - N;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (!(Math.abs( diff ) > mEpsilon)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -43 +43 @@\n-        return r;\n+        return 0;",
+        "equivalence": false,
+        "operator": "NULL"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = m + x;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        r = x;\n+        r = x--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            if (diff < 0) {\n+            if (diff == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +40,0 @@\n-        r = x;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -24 +24 @@\n-        double x = N;\n+        double x = -N;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        double M = N;\n+        double M = N++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (++diff > 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * x - N--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M % x) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        r = x;\n+        r = ++x;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (x) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        r = x;\n+        r = --x;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -34,4 +33,0 @@\n-                if (diff > 0) {\n-                    M = x;\n-                    x = (m + x) / 2;\n-                }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * x - N++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) == mEpsilon) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = (M + x) / -2;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m + x) % 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = ++x * x - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) >= mEpsilon) {",
+        "equivalence": false,
+        "operator": "NULL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-                x = (M + x) / 2;\n+                x = M + x - 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        double diff = x * x - N;\n+        double diff = x * x % N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * x % N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -19 +18,0 @@\n-        this.mEpsilon = epsilon;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x - x - N;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        while (Math.abs(diff) > mEpsilon) {\n+        while (Math.abs(diff) <= mEpsilon) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -34 +34 @@\n-                if (diff > 0) {\n+                if (diff >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m + x) * 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -36 +36 @@\n-                    x = (m + x) / 2;\n+                    x = (m + x) - 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            diff = x * x - N;\n+            diff = x * x-- - N;",
+        "equivalence": false,
+        "operator": "AOIS"
+    }
+]

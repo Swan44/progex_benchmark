@@ -1,0 +1,2437 @@
+[
+    {
+        "difference": "@@ -1601 +1601 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -530 +530 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -491 +491 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -253 +253 @@\n-                map.put(entry[0], entry[1]);\n+                map.put(entry[-1], entry[1]);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -764 +764 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -490 +490 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2242 +2242 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -2142 +2142 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1602 +1602 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1709 +1709 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -647 +647 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1282 +1282 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1987 +1987 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -2247 +2247 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2239 +2239 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -725 +725 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -253 +253 @@\n-                map.put(entry[0], entry[1]);\n+                ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -1984 +1984 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1706 +1706 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -526 +526 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -641 +641 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1708 +1708 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1496 +1496 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -640 +640 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -646 +646 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1282 +1282 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2023 +2023 @@\n-            if (array[i] >= min && array[i] <= max) {\n+            if (array[i] <= max) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1498 +1498 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -730 +730 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -679 +679 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1288 +1288 @@\n-            for (int i = startIndex; i >= 0; i--) {\n+            for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -680 +680 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2023 +2023 @@\n-            if (array[i] >= min && array[i] <= max) {\n+            if (array[i] >= min) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1711 +1711 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1706 +1706 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -457 +457 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -718 +718 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -568 +568 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2137 +2137 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -601 +601 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2248 +2248 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -2022 +2022 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1986 +1986 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -241 +241 @@\n-        for (int i = 0; i < array.length; i++) {\n+        for (int i = 0; false; i++) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1604 +1604 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -574 +574 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1282 +1282 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+        "equivalence": true,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -652 +652 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -1285 +1285 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1815 +1815 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1816 +1816 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1398 +1398 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2137 +2137 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1393 +1393 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -679 +679 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2020 +2020 @@\n-        double min = valueToFind - tolerance;\n+        double min = valueToFind * tolerance;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -643 +643 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1815 +1815 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -685 +685 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2023 +2023 @@\n-            if (array[i] >= min && array[i] <= max) {\n+            if (array[i] >= min && true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1502 +1502 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1498 +1498 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2012 +2012 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -442 +442 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -2139 +2139 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2023 +2023 @@\n-            if (array[i] >= min && array[i] <= max) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -457 +457 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -529 +529 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -640 +640 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -685 +685 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2137 +2137 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -484 +484 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1395 +1395 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2137 +2137 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -485 +485 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -484 +484 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2015 +2015 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1279 +1279 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -2248 +2248 @@\n-            if (valueToFind == array[i]) {\n+            if (array[i]) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -724 +724 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1499 +1499 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -607 +607 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -613 +613 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -2020 +2020 @@\n-        double min = valueToFind - tolerance;\n+        double min = valueToFind / tolerance;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1813 +1813 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1981 +1981 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -763 +763 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -535 +535 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -686 +686 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -760 +760 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -613 +613 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1986 +1986 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -569 +569 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -529 +529 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -453 +453 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -562 +562 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -241 +241 @@\n-        for (int i = 0; i < array.length; i++) {\n+        for (int i = 1; i < array.length; i++) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2023 +2023 @@\n-            if (array[i] >= min && array[i] <= max) {\n+            if (array[i] == min && array[i] <= max) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -679 +679 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1501 +1501 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -647 +647 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -764 +764 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1285 +1285 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -530 +530 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1499 +1499 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -607 +607 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1493 +1493 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -562 +562 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1601 +1601 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -757 +757 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1816 +1816 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind <= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1709 +1709 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2020 +2020 @@\n-        double min = valueToFind - tolerance;\n+        double min = valueToFind % tolerance;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2142 +2142 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -563 +563 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -569 +569 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1812 +1812 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1287 +1287 @@\n-        if (objectToFind == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -446 +446 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -453 +453 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1604 +1604 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -607 +607 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2017 +2017 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -574 +574 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -1813 +1813 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -601 +601 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1986 +1986 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -487 +487 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1709 +1709 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2022 +2022 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -526 +526 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -2245 +2245 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1295 +1295 @@\n-                if (objectToFind.equals(array[i])) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -1813 +1813 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -601 +601 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2245 +2245 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1285 +1285 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1294 +1294 @@\n-            for (int i = startIndex; i >= 0; i--) {\n+            for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1395 +1395 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2139 +2139 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -652 +652 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -453 +453 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -601 +601 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -608 +608 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -248 +248 @@\n-                if (entry.length < 2) {\n+                if (entry.length < 0) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1813 +1813 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2018 +2018 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1294 +1294 @@\n-            for (int i = startIndex; i >= 0; i--) {\n+            for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1986 +1986 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1502 +1502 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind <= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1984 +1984 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1604 +1604 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -769 +769 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -691 +691 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -1816 +1816 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind >= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -721 +721 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1393 +1393 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -484 +484 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -523 +523 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -241 +241 @@\n-        for (int i = 0; i < array.length; i++) {\n+        for (int i = 0; i != array.length; i++) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -646 +646 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -679 +679 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1396 +1396 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -529 +529 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -607 +607 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1285 +1285 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -754 +754 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -682 +682 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1984 +1984 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -491 +491 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -569 +569 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2242 +2242 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2244 +2244 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -760 +760 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -568 +568 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1294 +1294 @@\n-            for (int i = startIndex; i >= 0; i--) {\n+            for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2247 +2247 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -715 +715 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -2244 +2244 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1288 +1288 @@\n-            for (int i = startIndex; i >= 0; i--) {\n+            for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -676 +676 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1987 +1987 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind <= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -691 +691 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1294 +1294 @@\n-            for (int i = startIndex; i >= 0; i--) {\n+            for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -2012 +2012 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -1599 +1599 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1501 +1501 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2245 +2245 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -241 +241 @@\n-        for (int i = 0; i < array.length; i++) {\n+        for (int i = 0; i <= array.length; i++) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2023 +2023 @@\n-            if (array[i] >= min && array[i] <= max) {\n+            if (array[i] >= min && array[i] < max) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1706 +1706 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1398 +1398 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -484 +484 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1815 +1815 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1810 +1810 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -602 +602 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1393 +1393 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1604 +1604 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2247 +2247 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2018 +2018 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2140 +2140 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -448 +448 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2139 +2139 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -484 +484 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -240 +240 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length + 1.5));",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -682 +682 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1983 +1983 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -523 +523 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1496 +1496 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1703 +1703 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1496 +1496 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1984 +1984 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -719 +719 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -725 +725 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2137 +2137 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1596 +1596 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -2142 +2142 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1396 +1396 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1599 +1599 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -240 +240 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length * 0.0));",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -2018 +2018 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1399 +1399 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -679 +679 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2140 +2140 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -535 +535 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -601 +601 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -530 +530 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -453 +453 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -530 +530 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1496 +1496 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1981 +1981 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -2242 +2242 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -535 +535 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -718 +718 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1398 +1398 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -763 +763 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -451 +451 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1285 +1285 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2017 +2017 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2022 +2022 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -524 +524 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -253 +253 @@\n-                map.put(entry[0], entry[1]);\n+                map.put(entry[1], entry[1]);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1706 +1706 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -237 +237 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1984 +1984 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2020 +2020 @@\n-        double min = valueToFind - tolerance;\n+        double min = valueToFind + tolerance;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2018 +2018 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -719 +719 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -451 +451 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -496 +496 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -725 +725 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -523 +523 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1712 +1712 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -598 +598 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1984 +1984 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1602 +1602 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -490 +490 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1711 +1711 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -652 +652 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2244 +2244 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2021 +2021 @@\n-        double max = valueToFind + tolerance;\n+        double max = valueToFind % tolerance;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2247 +2247 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -2134 +2134 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -769 +769 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -453 +453 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1501 +1501 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -641 +641 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -568 +568 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1399 +1399 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind >= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1288 +1288 @@\n-            for (int i = startIndex; i >= 0; i--) {\n+            for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -240 +240 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length % 1.5));",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2021 +2021 @@\n-        double max = valueToFind + tolerance;\n+        double max = valueToFind * tolerance;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -608 +608 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -718 +718 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1499 +1499 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1602 +1602 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -454 +454 @@\n-            return (Object[]) Array.newInstance(type, 0);\n+            return (Object[]) Array.newInstance(type, -1);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -763 +763 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2143 +2143 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1395 +1395 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -565 +565 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2022 +2022 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -565 +565 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -682 +682 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -724 +724 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1396 +1396 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2140 +2140 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2023 +2023 @@\n-            if (array[i] >= min && array[i] <= max) {\n+            if (array[i] > min && array[i] <= max) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1987 +1987 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind >= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -523 +523 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1978 +1978 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -1396 +1396 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1399 +1399 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind <= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -721 +721 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -248 +248 @@\n-                if (entry.length < 2) {\n+                if (entry.length <= 2) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1810 +1810 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1706 +1706 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -718 +718 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -240 +240 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length - 1.5));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1496 +1496 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -451 +451 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2021 +2021 @@\n-        double max = valueToFind + tolerance;\n+        double max = valueToFind - tolerance;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1978 +1978 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -451 +451 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -757 +757 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1602 +1602 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -526 +526 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1393 +1393 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -448 +448 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2023 +2023 @@\n-            if (array[i] >= min && array[i] <= max) {\n+            if (true && array[i] <= max) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -2015 +2015 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1605 +1605 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind >= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -454 +454 @@\n-            return (Object[]) Array.newInstance(type, 0);\n+            return (Object[]) Array.newInstance(type, 1);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -764 +764 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2018 +2018 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1986 +1986 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -248 +248 @@\n-                if (entry.length < 2) {\n+                if (entry.length < -2) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -724 +724 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1294 +1294 @@\n-            for (int i = startIndex; i >= 0; i--) {\n+            for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -721 +721 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -730 +730 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1499 +1499 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -647 +647 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -643 +643 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1396 +1396 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1807 +1807 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -490 +490 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2021 +2021 @@\n-        double max = valueToFind + tolerance;\n+        double max = valueToFind / tolerance;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -568 +568 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1709 +1709 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2140 +2140 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -763 +763 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1812 +1812 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -643 +643 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -520 +520 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -569 +569 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -491 +491 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2142 +2142 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1289 +1289 @@\n-                if (array[i] == null) {\n+                if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1602 +1602 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -730 +730 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -725 +725 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -724 +724 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2140 +2140 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -490 +490 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2239 +2239 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -1810 +1810 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -764 +764 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -680 +680 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -487 +487 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2015 +2015 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -608 +608 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1605 +1605 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1284 +1284 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2245 +2245 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -686 +686 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1810 +1810 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -529 +529 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2017 +2017 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+        "equivalence": true,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -764 +764 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1393 +1393 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2023 +2023 @@\n-            if (array[i] >= min && array[i] <= max) {\n+            if (array[i] >= min && array[i] == max) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1602 +1602 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1398 +1398 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1502 +1502 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind >= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -559 +559 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -613 +613 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -448 +448 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1709 +1709 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -485 +485 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1711 +1711 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2018 +2018 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -602 +602 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -686 +686 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -446 +446 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1288 +1288 @@\n-            for (int i = startIndex; i >= 0; i--) {\n+            for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -245 +245 @@\n-                map.put(entry.getKey(), entry.getValue());\n+                ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -2142 +2142 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -496 +496 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -640 +640 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -530 +530 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1599 +1599 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -604 +604 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -604 +604 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -491 +491 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -758 +758 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1396 +1396 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -523 +523 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2245 +2245 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -685 +685 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1708 +1708 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -640 +640 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -241 +241 @@\n-        for (int i = 0; i < array.length; i++) {\n+        for (int i = -1; i < array.length; i++) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -248 +248 @@\n-                if (entry.length < 2) {\n+                if (entry.length != 2) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1284 +1284 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -757 +757 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -240 +240 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length / 1.5));",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -725 +725 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1498 +1498 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1711 +1711 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1709 +1709 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1295 +1295 @@\n-                if (objectToFind.equals(array[i])) {\n+                if (false) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -686 +686 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1813 +1813 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1983 +1983 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -481 +481 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -2143 +2143 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind <= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -646 +646 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -1813 +1813 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2248 +2248 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -608 +608 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -457 +457 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1601 +1601 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -604 +604 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -565 +565 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1815 +1815 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -562 +562 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1981 +1981 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1708 +1708 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -240 +240 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length * -1.5));",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1501 +1501 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -248 +248 @@\n-                if (entry.length < 2) {\n+                if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -491 +491 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1288 +1288 @@\n-            for (int i = startIndex; i >= 0; i--) {\n+            for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -562 +562 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -757 +757 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1981 +1981 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -640 +640 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2015 +2015 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -686 +686 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2247 +2247 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -574 +574 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -647 +647 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -647 +647 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -2242 +2242 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1282 +1282 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1712 +1712 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind >= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -757 +757 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -569 +569 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2242 +2242 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1604 +1604 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -2143 +2143 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind >= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -524 +524 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -2022 +2022 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1599 +1599 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1599 +1599 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -2245 +2245 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -769 +769 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -1398 +1398 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2140 +2140 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -563 +563 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -637 +637 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1282 +1282 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -2134 +2134 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -1284 +1284 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -562 +562 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -253 +253 @@\n-                map.put(entry[0], entry[1]);\n+                map.put(entry[0], entry[-1]);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1810 +1810 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -691 +691 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -760 +760 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -718 +718 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1711 +1711 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -253 +253 @@\n-                map.put(entry[0], entry[1]);\n+                map.put(entry[0], entry[0]);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1499 +1499 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1712 +1712 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind <= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -646 +646 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -487 +487 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1499 +1499 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -1605 +1605 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind <= array[i]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1981 +1981 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -1812 +1812 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -496 +496 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1983 +1983 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -2023 +2023 @@\n-            if (array[i] >= min && array[i] <= max) {\n+            if (array[i] >= min == array[i] <= max) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -1390 +1390 @@\n-        if (array == null) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -1815 +1815 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -1501 +1501 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -1285 +1285 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -2015 +2015 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -685 +685 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -758 +758 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -608 +608 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    }
+]

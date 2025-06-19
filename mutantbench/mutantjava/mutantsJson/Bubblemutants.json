@@ -1,0 +1,47 @@
+[
+    {
+        "difference": "@@ -12 +12 @@\n-\t\tfor(j=i+1;j<5;j++)\n+\t\tfor(j=i/1;j<5;j++)",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -16 +16 @@\n-\t\t\t\txyz=a[i];\n+\t\t\t\txyz=a[i]--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-\t\t\t\ta[j]=xyz;\n+\t\t\t\ta[j]=xyz--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -17 +17 @@\n-\t\t\t\ta[i]=a[j];\n+\t\t\t\ta[i]=a[j]++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-\t\t\t\ta[j]=xyz;\n+\t\t\t\ta[j]=xyz++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -16 +16 @@\n-\t\t\t\txyz=a[i];\n+\t\t\t\txyz=a[i]++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-\t\t\tif(a[i]<a[j])\n+\t\t\tif(a[i]<=a[j])",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -12 +12 @@\n-\t\tfor(j=i+1;j<5;j++)\n+\t\tfor(j=i*1;j<5;j++)",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -17 +17 @@\n-\t\t\t\ta[i]=a[j];\n+\t\t\t\ta[i]=a[j]--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    }
+]

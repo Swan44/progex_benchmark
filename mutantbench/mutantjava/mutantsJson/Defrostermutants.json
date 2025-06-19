@@ -1,0 +1,717 @@
+[
+    {
+        "difference": "@@ -210 +210 @@\n-\tif ( We1_BA_DEF_ev_ctr2 + We1_BA_DEF_ev_ctr3 + We1_BA_DEF_ev_ctr5 == 1024)\n+\tif ( We1_BA_DEF_ev_ctr2 + We1_BA_DEF_ev_ctr3 - We1_BA_DEF_ev_ctr5 == 1024)",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = -abs(We1_BA_DEF_ev_ctr2) * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "ABSI"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && ++confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e++ > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e >= 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 / ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * --We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev ))\n+\t\tif ( ! ( We1_BA_DEF++ == We1_BA_DEF_ev ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e != 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -190 +190 @@\n-\t\t\t\t\t\tif (( request == 0) && ( error_e == 0))\n+\t\t\t\t\t\tif (( request == 0) && ( error_e++ == 0))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -190 +190 @@\n-\t\t\t\t\t\tif (( request == 0) && ( error_e == 0))\n+\t\t\t\t\t\tif (( request++ == 0) && ( error_e == 0))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -151 +151 @@\n-\t\t\t\t\t\tif ( ControlElement_DEF == 0)\n+\t\t\t\t\t\tif ( ControlElement_DEF++ == 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e-- > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev ))\n+\t\tif ( ! ( We1_BA_DEF <= We1_BA_DEF_ev ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF > 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && ++error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e++ > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -58 +58 @@\n-\t\tif (0 != Clip_15 )\n+\t\tif (0 != Clip_15-- )",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF >= 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev ))\n+\t\tif ( ! ( We1_BA_DEF == --We1_BA_DEF_ev ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -210 +210 @@\n-\tif ( We1_BA_DEF_ev_ctr2 + We1_BA_DEF_ev_ctr3 + We1_BA_DEF_ev_ctr5 == 1024)\n+\tif ( We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr3 + We1_BA_DEF_ev_ctr5 == 1024)",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-\t\t\t\t\t\t\tif ( ControlElement_DEF > 0)\n+\t\t\t\t\t\t\tif ( ControlElement_DEF-- > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 > ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -210 +210 @@\n-\tif ( We1_BA_DEF_ev_ctr2 + We1_BA_DEF_ev_ctr3 + We1_BA_DEF_ev_ctr5 == 1024)\n+\tif ( We1_BA_DEF_ev_ctr2 + We1_BA_DEF_ev_ctr3 + We1_BA_DEF_ev_ctr5 >= 1024)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && --confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 > ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF != 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF < 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e <= 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev ))\n+\t\tif ( ! ( We1_BA_DEF-- == We1_BA_DEF_ev ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e >= 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e < 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( ++We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -137 +137 @@\n-\t\t\t\t\t\t\t\tif ( ControlElement_DEF > 0)\n+\t\t\t\t\t\t\t\tif ( ControlElement_DEF-- > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0++ >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -180 +180 @@\n-\t\t\t\t\t\tif ( request > 0 && ( error_e == 0))\n+\t\t\t\t\t\tif ( request-- > 0 && ( error_e == 0))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e != 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+    \tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 % ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -190 +190 @@\n-\t\t\t\t\t\tif (( request == 0) && ( error_e == 0))\n+\t\t\t\t\t\tif (( request == 0) && ( error_e <= 0))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-\t\t\t\t\t\t\tif ( ControlElement_DEF > 0)\n+\t\t\t\t\t\t\tif ( ControlElement_DEF != 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e <= 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -216 +216 @@\n-\t\tif (( We1_BA_DEF_ev_ctr2 ) - ( We1_BA_DEF_ev_ctr3 ) - ( We1_BA_DEF_ev_ctr5 ) == 1024)\n+\t\tif (( We1_BA_DEF_ev_ctr2 ) * ( We1_BA_DEF_ev_ctr3 ) - ( We1_BA_DEF_ev_ctr5 ) == 1024)",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e-- == 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = --We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2++ - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && --error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( --We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -180 +180 @@\n-\t\t\t\t\t\tif ( request > 0 && ( error_e == 0))\n+\t\t\t\t\t\tif ( request > 0 && ( error_e <= 0))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e++ > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 == ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 % ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 * ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( ++We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2++ * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e < 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && ++confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e++ == 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF++ == 0 ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -216 +216 @@\n-\t\tif (( We1_BA_DEF_ev_ctr2 ) - ( We1_BA_DEF_ev_ctr3 ) - ( We1_BA_DEF_ev_ctr5 ) == 1024)\n+\t\tif (( We1_BA_DEF_ev_ctr2 ) - ( We1_BA_DEF_ev_ctr3 ) * ( We1_BA_DEF_ev_ctr5 ) == 1024)",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0-- >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e <= 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 + We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e == 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0-- >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -180 +180 @@\n-\t\t\t\t\t\tif ( request > 0 && ( error_e == 0))\n+\t\t\t\t\t\tif ( request++ > 0 && ( error_e == 0))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2-- - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -180 +180 @@\n-\t\t\t\t\t\tif ( request > 0 && ( error_e == 0))\n+\t\t\t\t\t\tif ( request > 0 && ( error_e-- == 0))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -210 +210 @@\n-\tif ( We1_BA_DEF_ev_ctr2 + We1_BA_DEF_ev_ctr3 + We1_BA_DEF_ev_ctr5 == 1024)\n+\tif ( We1_BA_DEF_ev_ctr2 - We1_BA_DEF_ev_ctr3 + We1_BA_DEF_ev_ctr5 == 1024)",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-\t\t\t\t\t\t\tif ( ControlElement_DEF > 0)\n+\t\t\t\t\t\t\tif ( ControlElement_DEF++ > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e-- > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -216 +216 @@\n-\t\tif (( We1_BA_DEF_ev_ctr2 ) - ( We1_BA_DEF_ev_ctr3 ) - ( We1_BA_DEF_ev_ctr5 ) == 1024)\n+\t\tif (( We1_BA_DEF_ev_ctr2 ) - ( We1_BA_DEF_ev_ctr3 ) + ( We1_BA_DEF_ev_ctr5 ) == 1024)",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( --We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e >= 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( ++confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev ))\n+\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev++ ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -216 +216 @@\n-\t\tif (( We1_BA_DEF_ev_ctr2 ) - ( We1_BA_DEF_ev_ctr3 ) - ( We1_BA_DEF_ev_ctr5 ) == 1024)\n+\t\tif (( We1_BA_DEF_ev_ctr2 ) - ( We1_BA_DEF_ev_ctr3 ) - ( We1_BA_DEF_ev_ctr5 ) >= 1024)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * ++We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e < 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e++ > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -180 +180 @@\n-\t\t\t\t\t\tif ( request > 0 && ( error_e == 0))\n+\t\t\t\t\t\tif ( request != 0 && ( error_e == 0))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e > 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0++ >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && ++error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( --ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( --confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -190 +190 @@\n-\t\t\t\t\t\tif (( request == 0) && ( error_e == 0))\n+\t\t\t\t\t\tif (( request == 0) && ( error_e-- == 0))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF-- == 0 ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( -abs(We1_BA_DEF_ev_ctr3) - 1000);",
+        "equivalence": true,
+        "operator": "ABSI"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ++ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e == 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = abs(We1_BA_DEF_ev_ctr2) * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "ABSI"
+    },
+    {
+        "difference": "@@ -77 +77 @@\n-\t\t\tif ( Clip_15 == 0)\n+\t\t\tif ( Clip_15 <= 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 == ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e >= 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -58 +58 @@\n-\t\tif (0 != Clip_15 )\n+\t\tif (0 != Clip_15++ )",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-\t\t\t\t\t\t\tif ( ControlElement_DEF == 0)\n+\t\t\t\t\t\t\tif ( ControlElement_DEF-- == 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * (-abs(We1_BA_DEF_ev_ctr2)) - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "ABSI"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * abs(We1_BA_DEF_ev_ctr2) - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "ABSI"
+    },
+    {
+        "difference": "@@ -151 +151 @@\n-\t\t\t\t\t\tif ( ControlElement_DEF == 0)\n+\t\t\t\t\t\tif ( ControlElement_DEF <= 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e >= 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -190 +190 @@\n-\t\t\t\t\t\tif (( request == 0) && ( error_e == 0))\n+\t\t\t\t\t\tif (( request-- == 0) && ( error_e == 0))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 - We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( ++We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e != 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev ))\n+\t\tif ( ! ( --We1_BA_DEF == We1_BA_DEF_ev ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3-- - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -210 +210 @@\n-\tif ( We1_BA_DEF_ev_ctr2 + We1_BA_DEF_ev_ctr3 + We1_BA_DEF_ev_ctr5 == 1024)\n+\tif ( We1_BA_DEF_ev_ctr2 + We1_BA_DEF_ev_ctr3 + We1_BA_DEF_ev_ctr5 > 1024)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e < 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3++ - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-\t\t\t\t\t\t\tif ( ControlElement_DEF == 0)\n+\t\t\t\t\t\t\tif ( ControlElement_DEF <= 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev ))\n+\t\tif ( ! ( We1_BA_DEF == ++We1_BA_DEF_ev ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -190 +190 @@\n-\t\t\t\t\t\tif (( request == 0) && ( error_e == 0))\n+\t\t\t\t\t\tif (( request <= 0) && ( error_e == 0))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -216 +216 @@\n-\t\tif (( We1_BA_DEF_ev_ctr2 ) - ( We1_BA_DEF_ev_ctr3 ) - ( We1_BA_DEF_ev_ctr5 ) == 1024)\n+\t\tif (( We1_BA_DEF_ev_ctr2 ) + ( We1_BA_DEF_ev_ctr3 ) - ( We1_BA_DEF_ev_ctr5 ) == 1024)",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e != 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( abs(We1_BA_DEF_ev_ctr3) - 1000);",
+        "equivalence": true,
+        "operator": "ABSI"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e-- > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 == ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = ++We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -180 +180 @@\n-\t\t\t\t\t\tif ( request > 0 && ( error_e == 0))\n+\t\t\t\t\t\tif ( request > 0 && ( error_e++ == 0))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e != 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e == 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 > ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && --error_e > 0 && confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( --We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 + ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && --confirmation_e > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -151 +151 @@\n-\t\t\t\t\t\tif ( ControlElement_DEF == 0)\n+\t\t\t\t\t\tif ( ControlElement_DEF-- == 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -77 +77 @@\n-\t\t\tif ( Clip_15 == 0)\n+\t\t\tif (Clip_15++ == 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -216 +216 @@\n-\t\tif (( We1_BA_DEF_ev_ctr2 ) - ( We1_BA_DEF_ev_ctr3 ) - ( We1_BA_DEF_ev_ctr5 ) == 1024)\n+\t\tif (( We1_BA_DEF_ev_ctr2 ) - ( We1_BA_DEF_ev_ctr3 ) - ( We1_BA_DEF_ev_ctr5 ) > 1024)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-\t\t\t\t\t\t\tif ( ControlElement_DEF == 0)\n+\t\t\t\t\t\t\tif ( ControlElement_DEF++ == 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -137 +137 @@\n-\t\t\t\t\t\t\t\tif ( ControlElement_DEF > 0)\n+\t\t\t\t\t\t\t\tif ( ControlElement_DEF != 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev ))\n+\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev-- ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF <= 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -117 +117 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e == 0 ) && ( ControlElement_DEF == 0 ))\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr1 >= ((  int ) 1000 )) && ( confirmation_e <= 0 ) && ( ControlElement_DEF == 0 ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -70 +70 @@\n-\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2 * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);\n+\t\tWe1_BA_DEF = We1_BA_DEF_ev_ctr2-- * We1_BA_DEF_ev_ctr2 - ( We1_BA_DEF_ev_ctr3 - 1000);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev ))\n+\t\tif ( ! ( ++We1_BA_DEF == We1_BA_DEF_ev ))",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e <= 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-\t\tif ( ! ( We1_BA_DEF == We1_BA_DEF_ev ))\n+\t\tif ( ! ( We1_BA_DEF < We1_BA_DEF_ev ))",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -77 +77 @@\n-\t\t\tif ( Clip_15 == 0)\n+\t\t\tif (Clip_15-- == 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e == 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -137 +137 @@\n-\t\t\t\t\t\t\t\tif ( ControlElement_DEF > 0)\n+\t\t\t\t\t\t\t\tif ( ControlElement_DEF++ > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -174 +174 @@\n-\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e-- > 0)",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e > 0)\n+\t\t\t\t\t\t\tif (( We1_BA_DEF_ev_ctr0 >= ((  int ) 3250 )) && error_e > 0 && confirmation_e < 0)",
+        "equivalence": true,
+        "operator": "ROR"
+    }
+]

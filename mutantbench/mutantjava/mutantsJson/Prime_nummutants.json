@@ -1,0 +1,37 @@
+[
+    {
+        "difference": "@@ -19 +19 @@\n-\t\t\tSystem.out.printf(\"%-4d\",m);\n+\t\t\tSystem.out.printf(\"%-4d\",Math.abs(m));",
+        "equivalence": true,
+        "operator": "ABSI"
+    },
+    {
+        "difference": "@@ -8 +8 @@\n-\t\tk=(int)Math.sqrt(m+1);\n+\t\tk=(int)Math.sqrt(Math.abs(m)+1);",
+        "equivalence": true,
+        "operator": "ABSI"
+    },
+    {
+        "difference": "@@ -8 +8 @@\n-\t\tk=(int)Math.sqrt(m+1);\n+\t\tk=(int)Math.sqrt(m*1);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -8 +8 @@\n-\t\tk=(int)Math.sqrt(m+1);\n+\t\tk=(int)Math.sqrt(m/1);",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-\tSystem.out.printf(\"\\\\nThe total is %d\",h);\n+\tSystem.out.printf(\"\\\\nThe total is %d\",Math.abs(h));",
+        "equivalence": true,
+        "operator": "ABSI"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-\tSystem.out.printf(\"\\\\nThe total is %d\",h);\n+\tSystem.out.printf(\"\\\\nThe total is %d\",h--);",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-\tSystem.out.printf(\"\\\\nThe total is %d\",h);\n+\tSystem.out.printf(\"\\\\nThe total is %d\",h++);",
+        "equivalence": true,
+        "operator": "AOIS"
+    }
+]

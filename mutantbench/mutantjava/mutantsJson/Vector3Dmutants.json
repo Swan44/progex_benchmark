@@ -1,0 +1,602 @@
+[
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(-1, inverse * z, -inverse * y);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= -threshold) == (y <= threshold)) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y / (z * z));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 - Math.sqrt(x * x + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse + y, -inverse * x, 0);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse + x, 0);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse * x, -1);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= threshold) && (x <= threshold)) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x + z / z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y <= threshold)) {",
+        "equivalence": true,
+        "operator": "AODU"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse / x, 0);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x == -threshold) && (x <= threshold)) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = -1 / Math.sqrt(y * y + z * z);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse * x, 1);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(+inverse * z, 0, inverse * x);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x - y * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x > -threshold) && (x <= threshold)) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse / z, 0, inverse * x);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse % y, -inverse * x, 0);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((true) && (y <= threshold)) {",
+        "equivalence": false,
+        "operator": "AODU"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y == -threshold) && (y <= threshold)) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y > -threshold) && (y <= threshold)) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse - y, -inverse * x, 0);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, -1, inverse * x);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 - Math.sqrt(x * x + y * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse + z, 0, inverse * x);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 0 / Math.sqrt(y * y + z * z);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 - Math.sqrt(y * y + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse * z, -inverse - y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x - x + y * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, 0, inverse / x);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((true) && (x <= threshold)) {",
+        "equivalence": false,
+        "operator": "AODU"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse - z, 0, inverse * x);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x - x + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 + Math.sqrt(x * x + y * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= +threshold) && (y <= threshold)) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x + y + y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x / x + y * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x % (z * z));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= -threshold) && (true)) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse - z, -inverse * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y * (z * z));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse / z, -inverse * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 % Math.sqrt(y * y + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y + z + z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x % x + y * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= -threshold) && (y == threshold)) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 % Math.sqrt(x * x + y * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x + z - z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x % x + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 * Math.sqrt(x * x + y * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 0 / Math.sqrt(x * x + z * z);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x + y - y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y + z / z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse / y, -inverse * x, 0);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x <= threshold)) {",
+        "equivalence": true,
+        "operator": "AODU"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x * (y * y));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse * z, -inverse / y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= -threshold) && (y < threshold)) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= -threshold)) {",
+        "equivalence": true,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = -1 / Math.sqrt(x * x + y * y);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -265 +265 @@\n-    if (threshold == 0) {\n+    if (threshold == 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, 0, inverse + x);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if (false) {",
+        "equivalence": false,
+        "operator": "AODU"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= -threshold) && (true)) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= -threshold) && (x < threshold)) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(1, inverse * z, -inverse * y);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse % z, -inverse * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x + z + z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = 0.0 * getNorm();",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 0 / Math.sqrt(x * x + y * y);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse * z, -inverse + y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x + y / y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 * Math.sqrt(y * y + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse - x, 0);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y % (z * z));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse + z, -inverse * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y / y + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x + y % y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x % (y * y));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, +inverse * x, 0);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -265 +265 @@\n-    if (threshold == 0) {\n+    if (threshold >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y + z - z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, 1, inverse * x);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y + z % z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 + Math.sqrt(y * y + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x * (z * z));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse * z, +inverse * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y + y + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse * z, -inverse % y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, 0, inverse - x);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if (false) {",
+        "equivalence": false,
+        "operator": "AODU"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x / x + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = 0.6 - getNorm();",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 * Math.sqrt(x * x + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = 0.6 + getNorm();",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -265 +265 @@\n-    if (threshold == 0) {\n+    if (threshold <= 0) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x / (y * y));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = 0.6 / getNorm();",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -265 +265 @@\n-    if (threshold == 0) {\n+    if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse % x, 0);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = -0.6 * getNorm();",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = 0.6 % getNorm();",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, 0, inverse % x);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x / (z * z));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y - z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y % y + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 + Math.sqrt(x * x + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = -1 / Math.sqrt(x * x + z * z);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y - y + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= -threshold) == (x <= threshold)) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x + x + y * y);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= -threshold) && (x == threshold)) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x + z % z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 % Math.sqrt(x * x + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x + x + z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -265 +265 @@\n-    if (threshold == 0) {\n+    if (threshold == -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= -threshold)) {",
+        "equivalence": true,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x - z * z);",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse % z, 0, inverse * x);",
+        "equivalence": false,
+        "operator": "AORB"
+    }
+]

@@ -1,0 +1,517 @@
+[
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[~j] < data[j - 1]) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j + 1] = temp;",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -12 +12 @@\n-                    int temp = data[j];\n+                    int temp = data[~j];",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j / 1];",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length; i++) {",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[~j - 1];",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j + 1];",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; true; --j) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j / 1] = temp;",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; --j > i; --j) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = -temp;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > i--; --j) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i != data.length - 1; i++) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j < i; --j) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = --temp;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i++ < data.length - 1; i++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = temp--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[--j] < data[j - 1]) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[~j] = data[j - 1];",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j <= i; --j) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -13 +12,0 @@\n-                    data[j] = data[j - 1];",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = temp++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > i;  ) {",
+        "equivalence": false,
+        "operator": "AODS"
+    },
+    {
+        "difference": "@@ -11,5 +10,0 @@\n-                if (data[j] < data[j - 1]) {\n-                    int temp = data[j];\n-                    data[j] = data[j - 1];\n-                    data[j - 1] = temp;\n-                }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; !(j > i); --j) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > --i; --j) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length / 1; i++) {",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] != data[j - 1]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j] = temp;",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j != i; --j) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -10,7 +9,0 @@\n-            for (int j = data.length - 1; j > i; --j) {\n-                if (data[j] < data[j - 1]) {\n-                    int temp = data[j];\n-                    data[j] = data[j - 1];\n-                    data[j - 1] = temp;\n-                }\n-            }",
+        "equivalence": false,
+        "operator": "FLDL"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j++ > i; --j) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j >= i; --j) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j--] < data[j - 1]) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j++ - 1]) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < 1; i++) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j * 1];",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > ++i; --j) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j % 1]) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[--j - 1];",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > i; j++) {",
+        "equivalence": false,
+        "operator": "AORS"
+    },
+    {
+        "difference": "@@ -12 +12 @@\n-                    int temp = data[j];\n+                    int temp = data[j--];",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1;; --j) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[1]) {",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = ~temp;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; ~j > i; --j) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j == i; --j) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[1] = temp;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[-j - 1];",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; --i < data.length - 1; i++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] > data[j - 1]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[++j - 1];",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j++ - 1];",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j++] < data[j - 1]) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] == data[j - 1]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i >= data.length - 1; i++) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] >= data[j - 1]) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[++j] < data[j - 1]) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -9,9 +8,0 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n-            for (int j = data.length - 1; j > i; --j) {\n-                if (data[j] < data[j - 1]) {\n-                    int temp = data[j];\n-                    data[j] = data[j - 1];\n-                    data[j - 1] = temp;\n-                }\n-            }\n-        }",
+        "equivalence": false,
+        "operator": "FLDL"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j % 1] = temp;",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i > data.length - 1; i++) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[--j - 1]) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < ~data.length - 1; i++) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -12 +12 @@\n-                    int temp = data[j];\n+                    int temp = data[-j];",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j + 1]) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -14 +13,0 @@\n-                    data[j - 1] = temp;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j-- > i; --j) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; ++j > i; --j) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j % 1];",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0;; i++) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length + 1; i++) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[~j - 1]) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length * 1; i++) {",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j-- - 1]) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j * 1] = temp;",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; !(i < data.length - 1); i++) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i-- < data.length - 1; i++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length - 1; i--) {",
+        "equivalence": false,
+        "operator": "AORS"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[~j - 1] = temp;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i <= data.length - 1; i++) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length - 1;) {",
+        "equivalence": false,
+        "operator": "AODS"
+    },
+    {
+        "difference": "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = ++temp;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; true; i++) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > ~i; --j) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j];",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j * 1]) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > i;) {",
+        "equivalence": false,
+        "operator": "AODS"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[++j - 1]) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length % 1; i++) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j-- - 1];",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j / 1]) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i == data.length - 1; i++) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j]) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length - 1;  ) {",
+        "equivalence": false,
+        "operator": "AODS"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; ++i < data.length - 1; i++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[1];",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -12 +12 @@\n-                    int temp = data[j];\n+                    int temp = data[j++];",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; ~i < data.length - 1; i++) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > i++; --j) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] <= data[j - 1]) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (!(data[j] < data[j - 1])) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    }
+]

@@ -1,0 +1,3777 @@
+[
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && ~c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint ^ delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -200 +200 @@\n-            count++;\n+             ;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; ~i < count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition-- : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i > delimiterCodePoints.length; i++) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint-- && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition > maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition < maxPosition++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -57 +57 @@\n-                c = delimiters.codePointAt( j );\n+                c = delimiters.codePointAt( j-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (false && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; !(i < delimiterCodePoints.length); i++) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -193 +193 @@\n-        int currpos = currentPosition;\n+        int currpos = currentPosition++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -55 +55 @@\n-            delimiterCodePoints = new int[count];\n+            delimiterCodePoints = new int[++count];",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count--; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m < c++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] == --codePoint) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (++c <= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( ~c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -120 +120 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( -position );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m > c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint ^ delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( -c );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position += Character.charCount( --c );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -49 +48,0 @@\n-                m = c;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i <= delimiterCodePoints.length; i++) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m < --c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] >= codePoint) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (!(c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos == position--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -71 +70,0 @@\n-        retDelims = returnDelims;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (startPos == position) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position %= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position = Character.charCount( c );",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -94,3 +93,0 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n-                    break;\n-                }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position != maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -129 +129 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( ~position );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m < ~c) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos != position) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( ++c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = false && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint-- && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( ~c ) >= 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -197 +196,0 @@\n-                break;",
+        "equivalence": false,
+        "operator": "OSDL"
+    },
+    {
+        "difference": "@@ -57 +57 @@\n-                c = delimiters.codePointAt( j );\n+                c = delimiters.codePointAt( ~j );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos == position++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= ++maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c < maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && !(startPos == position)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -114 +114 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( position++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition == maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -193 +193 @@\n-        int currpos = currentPosition;\n+        int currpos = ~currentPosition;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c > maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i == delimiters.length(); i += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && c <= ~Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition >= ++maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i--, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AORS"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos-- == position) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length();) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (++c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (~m < c) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (true || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i != delimiters.length(); i += Character.charCount( c )) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -43 +43 @@\n-            c = delimiters.charAt( i );\n+            c = delimiters.charAt( ~i );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( --c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition >= maxPosition;",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] <= codePoint) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (~c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i += Character.charCount( -c )) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -128,11 +127,0 @@\n-            if (!hasSurrogates) {\n-                char c = str.charAt( position );\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n-                    position++;\n-                }\n-            } else {\n-                int c = str.codePointAt( position );\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n-                    position += Character.charCount( c );\n-                }\n-            }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -55 +55 @@\n-            delimiterCodePoints = new int[count];\n+            delimiterCodePoints = new int[count++];",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -66 +65,0 @@\n-        newPosition = -1;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -57 +57 @@\n-                c = delimiters.codePointAt( j );\n+                c = delimiters.codePointAt( j++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -99 +99 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( ~position );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -182 +182 @@\n-        return hasMoreTokens();\n+        return true;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position < ~maxPosition) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c-- <= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -115,3 +114,0 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n-                    break;\n-                }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -53 +53 @@\n-        maxDelimCodePoint = m;\n+        maxDelimCodePoint = m++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position *= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition < ~maxPosition;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && --startPos == position) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -167 +167 @@\n-        int start = currentPosition;\n+        int start = currentPosition--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( c++ );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i--] == codePoint) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56,4 +55,0 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n-                c = delimiters.codePointAt( j );\n-                delimiterCodePoints[i] = c;\n-            }",
+        "equivalence": false,
+        "operator": "FLDL"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (!(c >= Character.MIN_HIGH_SURROGATE) && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -111 +111 @@\n-        int position = startPos;\n+        int position = startPos--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position < maxPosition--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( --c );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -155 +155 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( ++currentPosition );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= --maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -49 +49 @@\n-                m = c;\n+                m = ~c;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (!(c <= maxDelimCodePoint && isDelimiter( c ))) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -55 +55 @@\n-            delimiterCodePoints = new int[count];\n+            delimiterCodePoints = new int[~count];",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j -= Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c++ )) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -55 +54,0 @@\n-            delimiterCodePoints = new int[count];",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( currpos++ );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (~c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && --position < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-                c = delimiters.codePointAt( i );\n+                c = delimiters.codePointAt( i-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (!(m < c)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition++ < maxPosition;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( ~currpos );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -90 +90 @@\n-        int position = startPos;\n+        int position = -startPos;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position *= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (--c <= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (++c > maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -169 +169 @@\n-        return str.substring( start, currentPosition );\n+        return \"\";",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( c-- );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition++ >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (true && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (--currpos < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos >= maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c++ <= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position += Character.charCount( ++c );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -58 +58 @@\n-                delimiterCodePoints[i] = c;\n+                delimiterCodePoints[i] = ~c;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c++ <= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( currpos-- );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition != maxPosition;",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c != maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -134 +134 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( ~position );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (--position < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( ++c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( -c );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition > 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c ) <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -124 +123,0 @@\n-                position += Character.charCount( c );",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos < ++maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( c-- );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position < --maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition >= --maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -155 +155 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( --currentPosition );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition-- < maxPosition;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -53 +53 @@\n-        maxDelimCodePoint = m;\n+        maxDelimCodePoint = -m;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c == maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint-- || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( --c ) < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -147 +147 @@\n-                return true;\n+                return false;",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 && !delimsChanged ? ~newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -169 +169 @@\n-        return str.substring( start, currentPosition );\n+        return str.substring( start, currentPosition-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] == ~codePoint) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (--c <= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= ~maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -106 +106 @@\n-        return position;\n+        return ~position;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -131 +130,0 @@\n-                    position++;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -136 +135,0 @@\n-                    position += Character.charCount( c );",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = true && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -169 +169 @@\n-        return str.substring( start, currentPosition );\n+        return str.substring( start, -currentPosition );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( ++c );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition < --maxPosition;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -111 +111 @@\n-        int position = startPos;\n+        int position = ~startPos;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return ~newPosition < maxPosition;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( --c );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (~c > maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition == maxPosition;",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -58 +58 @@\n-                delimiterCodePoints[i] = c;\n+                delimiterCodePoints[i] = -c;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m < ++c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims ^ startPos == position) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position >= maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -43 +43 @@\n-            c = delimiters.charAt( i );\n+            c = delimiters.charAt( i-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= ~maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition == 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] == codePoint++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint || delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; !(i < delimiters.length()); i += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos < maxPosition++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -114 +114 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( ~position );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -161 +160,0 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (!(c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j /= Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -53 +53 @@\n-        maxDelimCodePoint = m;\n+        maxDelimCodePoint = ~m;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return ++newPosition < maxPosition;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -168 +168 @@\n-        currentPosition = scanToken( currentPosition );\n+        currentPosition = scanToken( --currentPosition );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -195 +194,0 @@\n-            currpos = skipDelimiters( currpos );",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c != maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint && !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c-- >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = ++newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -53 +53 @@\n-        maxDelimCodePoint = m;\n+        maxDelimCodePoint = --m;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -175 +174,0 @@\n-        delimsChanged = true;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -113 +113 @@\n-            if (!hasSurrogates) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position == maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -200 +200 @@\n-            count++;\n+            count--;",
+        "equivalence": false,
+        "operator": "AORS"
+    },
+    {
+        "difference": "@@ -193 +193 @@\n-        int currpos = currentPosition;\n+        int currpos = -currentPosition;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c-- <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c < maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -169 +169 @@\n-        return str.substring( start, currentPosition );\n+        return str.substring( ~start, currentPosition );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position = Character.charCount( c );",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -113,13 +112,0 @@\n-            if (!hasSurrogates) {\n-                char c = str.charAt( position );\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n-                    break;\n-                }\n-                position++;\n-            } else {\n-                int c = str.codePointAt( position );\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n-                    break;\n-                }\n-                position += Character.charCount( c );\n-            }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition > maxPosition;",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] > codePoint) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -169 +169 @@\n-        return str.substring( start, currentPosition );\n+        return str.substring( start++, currentPosition );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j *= Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint-- && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c >= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c++ ) >= 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; !(i < count); i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-        if (delimiters == null) {\n+        if (!(delimiters == null)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c < Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( ~currentPosition );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (~position < maxPosition) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -114 +114 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( -position );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i != count; i++, j += Character.charCount( c )) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -45 +44,0 @@\n-                c = delimiters.codePointAt( i );",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (true && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (false && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return false;",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && --c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -167 +167 @@\n-        int start = currentPosition;\n+        int start = -currentPosition;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (!(currentPosition >= maxPosition)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (true && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return --newPosition < maxPosition;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -120 +120 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( position-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (~currpos < maxPosition) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (~currentPosition >= maxPosition) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -169 +169 @@\n-        return str.substring( start, currentPosition );\n+        return str.substring( start, ~currentPosition );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (++c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c < maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -91,15 +90,0 @@\n-        while (!retDelims && position < maxPosition) {\n-            if (!hasSurrogates) {\n-                char c = str.charAt( position );\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n-                    break;\n-                }\n-                position++;\n-            } else {\n-                int c = str.codePointAt( position );\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n-                    break;\n-                }\n-                position += Character.charCount( c );\n-            }\n-        }",
+        "equivalence": false,
+        "operator": "WLDL"
+    },
+    {
+        "difference": "@@ -97 +97 @@\n-                position++;\n+                position--;",
+        "equivalence": false,
+        "operator": "AORS"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position < maxPosition++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint && isDelimiter( c++ )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -53 +53 @@\n-        maxDelimCodePoint = m;\n+        maxDelimCodePoint = ++m;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (++currpos < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition++ >= maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (!(c <= maxDelimCodePoint) && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i < delimiterCodePoints.length;  ) {",
+        "equivalence": false,
+        "operator": "AODS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (true && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -116 +115,0 @@\n-                    break;",
+        "equivalence": false,
+        "operator": "OSDL"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims ^ position < maxPosition) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -92 +92 @@\n-            if (!hasSurrogates) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition-- >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -35,4 +34,0 @@\n-        if (delimiters == null) {\n-            maxDelimCodePoint = 0;\n-            return;\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -202 +202 @@\n-        return count;\n+        return ~count;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || !(delimiters.indexOf( c ) < 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c-- > maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims || position < maxPosition) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 ^ !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= ~maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -168 +167,0 @@\n-        currentPosition = scanToken( currentPosition );",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( currpos-- );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint && isDelimiter( ~c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return true;",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i++ < delimiters.length(); i += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (!(position < maxPosition)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -168 +168 @@\n-        currentPosition = scanToken( currentPosition );\n+        currentPosition = scanToken( currentPosition++ );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position >= maxPosition) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > ++maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint || !isDelimiter( ~c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c != Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -43 +43 @@\n-            c = delimiters.charAt( i );\n+            c = delimiters.charAt( ++i );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-                c = delimiters.codePointAt( i );\n+                c = delimiters.codePointAt( -i );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( ~c ) >= 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i %= Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i != delimiterCodePoints.length; i++) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c >= maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -58 +58 @@\n-                delimiterCodePoints[i] = c;\n+                delimiterCodePoints[i] = --c;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -49 +49 @@\n-                m = c;\n+                m = c++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition >= maxPosition++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[~i] == codePoint) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c++ > maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (!(c > maxDelimCodePoint || delimiters.indexOf( c ) < 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -114 +114 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( position-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position < ~maxPosition) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -54 +54 @@\n-        if (hasSurrogates) {\n+        if (!hasSurrogates) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position -= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (!(c <= maxDelimCodePoint) && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c > maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint++ || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] != codePoint) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (++c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -128 +128 @@\n-            if (!hasSurrogates) {\n+            if (hasSurrogates) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint ^ isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i += Character.charCount( ++c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( ++c );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (--c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && !(delimiters.indexOf( c ) >= 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i -= Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -167 +167 @@\n-        int start = currentPosition;\n+        int start = ~currentPosition;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -155 +155 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( -currentPosition );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c++ >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0;; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; ~i < delimiters.length(); i += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (~c <= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -57 +57 @@\n-                c = delimiters.codePointAt( j );\n+                c = delimiters.codePointAt( -j );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > ~maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition <= maxPosition;",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -99 +99 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( position++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -99 +99 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( -position );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-                c = delimiters.codePointAt( i );\n+                c = delimiters.codePointAt( i++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -54 +54 @@\n-        if (hasSurrogates) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (!(currpos < maxPosition)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (false || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( --c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-                c = delimiters.codePointAt( i );\n+                c = delimiters.codePointAt( --i );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c > maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i += Character.charCount( c-- )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 || !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos++ == position) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition >= ~maxPosition) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -127,13 +126,0 @@\n-        if (retDelims && startPos == position) {\n-            if (!hasSurrogates) {\n-                char c = str.charAt( position );\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n-                    position++;\n-                }\n-            } else {\n-                int c = str.codePointAt( position );\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n-                    position += Character.charCount( c );\n-                }\n-            }\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c-- <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -134 +134 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( position++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos == ~position) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -164,3 +163,0 @@\n-        if (currentPosition >= maxPosition) {\n-            throw new java.util.NoSuchElementException();\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && ~startPos == position) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( ++c ) < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos > maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i < ~delimiterCodePoints.length; i++) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -118 +118 @@\n-                position++;\n+                position--;",
+        "equivalence": false,
+        "operator": "AORS"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (true && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i == count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -48,3 +47,0 @@\n-            if (m < c) {\n-                m = c;\n-            }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c-- ) >= 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44,4 +43,0 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n-                c = delimiters.codePointAt( i );\n-                hasSurrogates = true;\n-            }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -65 +64,0 @@\n-        currentPosition = 0;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position < maxPosition--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos <= maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -140 +140 @@\n-        return position;\n+        return ~position;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c != maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint++ || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (!(c > maxDelimCodePoint) || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -93 +93 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( -position );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = ~newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -106 +106 @@\n-        return position;\n+        return -position;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos >= --maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( ~currpos );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (true || !isDelimiter( c )) {",
+        "equivalence": true,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c == maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i > count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -202 +202 @@\n-        return count;\n+        return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos == --position) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && !(position < maxPosition)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -97 +96,0 @@\n-                position++;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; --i < count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position <= maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (!isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m-- < c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c == maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -194,8 +193,0 @@\n-        while (currpos < maxPosition) {\n-            currpos = skipDelimiters( currpos );\n-            if (currpos >= maxPosition) {\n-                break;\n-            }\n-            currpos = scanToken( currpos );\n-            count++;\n-        }",
+        "equivalence": false,
+        "operator": "WLDL"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position %= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -100,3 +99,0 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n-                    break;\n-                }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -101 +100,0 @@\n-                    break;",
+        "equivalence": false,
+        "operator": "OSDL"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && c == Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition <= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; true; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( ~c );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -129 +129 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( position-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (position < maxPosition) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position++ < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -129 +129 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( -position );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (--currentPosition >= maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( -currentPosition );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -145,5 +144,0 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n-            if (delimiterCodePoints[i] == codePoint) {\n-                return true;\n-            }\n-        }",
+        "equivalence": false,
+        "operator": "FLDL"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c++ ) >= 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position += Character.charCount( -c );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c < maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c != maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) > 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position-- < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (!(delimiterCodePoints[i] == codePoint)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-                c = delimiters.codePointAt( i );\n+                c = delimiters.codePointAt( ++i );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i == delimiterCodePoints.length; i++) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (--c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -128 +128 @@\n-            if (!hasSurrogates) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition++ );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (!(c <= maxDelimCodePoint) && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -176 +175,0 @@\n-        setMaxDelimCodePoint();",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && c < Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m != c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (!(c <= maxDelimCodePoint && isDelimiter( c ))) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m++ < c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition++ : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position -= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint && isDelimiter( c-- )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[++i] == codePoint) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j %= Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i += Character.charCount( c++ )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && c > Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( ++currpos );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i >= count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && c >= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c++ <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (--c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c > maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos != maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c++ ) < 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos-- < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = !(newPosition >= 0) && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c-- > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( ++currpos );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c-- ) >= 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position += Character.charCount( ~c );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] < codePoint) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -87 +87 @@\n-        if (delimiters == null) {\n+        if (delimiters != null) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -43 +43 @@\n-            c = delimiters.charAt( i );\n+            c = delimiters.charAt( --i );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position > maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint && delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -200 +199,0 @@\n-            count++;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (false && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c-- <= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] == ++codePoint) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position < --maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (++c <= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && c-- <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j = Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m >= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 && !delimsChanged ? -newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (++currpos >= maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > ~maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -58 +58 @@\n-                delimiterCodePoints[i] = c;\n+                delimiterCodePoints[i] = c++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position < maxPosition++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= --maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -155 +155 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( ~currentPosition );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -168 +168 @@\n-        currentPosition = scanToken( currentPosition );\n+        currentPosition = scanToken( ~currentPosition );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > ++maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position /= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint ^ delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i <= delimiters.length(); i += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -121,3 +120,0 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n-                    break;\n-                }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -55 +55 @@\n-            delimiterCodePoints = new int[count];\n+            delimiterCodePoints = new int[count--];",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -51 +50,0 @@\n-            count++;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (++currentPosition >= maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos < ~maxPosition) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && ++startPos == position) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -70 +69,0 @@\n-        delimiters = delim;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -69 +68,0 @@\n-        maxPosition = str.length();",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; ++i < delimiters.length(); i += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition < ++maxPosition;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-        if (delimiters == null) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint ^ !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -71 +71 @@\n-        retDelims = returnDelims;\n+        retDelims = !returnDelims;",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && ++position < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos++ < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (++position < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && ++c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( -c )) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -106 +106 @@\n-        return position;\n+        return position++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( -currpos );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c >= maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -155 +155 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( currentPosition-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position /= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i += Character.charCount( --c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -66 +66 @@\n-        newPosition = -1;\n+        newPosition = 1;",
+        "equivalence": false,
+        "operator": "AODU"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c++ > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition-- >= maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -118 +117,0 @@\n-                position++;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -51 +51 @@\n-            count++;\n+            count--;",
+        "equivalence": false,
+        "operator": "AORS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < --count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -111 +111 @@\n-        int position = startPos;\n+        int position = -startPos;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -155 +155 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( currentPosition++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; ~i < delimiterCodePoints.length; i++) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos > maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i = Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos >= maxPosition++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -57 +57 @@\n-                c = delimiters.codePointAt( j );\n+                c = delimiters.codePointAt( ++j );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -93 +93 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( position-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos <= position) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (false && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i <= count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -146,3 +145,0 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n-                return true;\n-            }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -57 +57 @@\n-                c = delimiters.codePointAt( j );\n+                c = delimiters.codePointAt( --j );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c == Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -46 +45,0 @@\n-                hasSurrogates = true;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i++ < delimiterCodePoints.length; i++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i >= delimiterCodePoints.length; i++) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -51 +51 @@\n-            count++;\n+             ;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (false && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c < maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c == maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (++c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (false || !isDelimiter( c )) {",
+        "equivalence": true,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position < ++maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition <= maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-                c = delimiters.codePointAt( i );\n+                c = delimiters.codePointAt( ~i );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return !(newPosition < maxPosition);",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i++] == codePoint) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -120 +120 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( ~position );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c >= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint && isDelimiter( c-- )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -118 +118 @@\n-                position++;\n+                 ;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint ^ isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos > position) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -120 +120 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( position++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m == c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -58 +58 @@\n-                delimiterCodePoints[i] = c;\n+                delimiterCodePoints[i] = ++c;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) > 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos == maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -168 +168 @@\n-        currentPosition = scanToken( currentPosition );\n+        currentPosition = scanToken( ++currentPosition );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (--c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -122 +121,0 @@\n-                    break;",
+        "equivalence": false,
+        "operator": "OSDL"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (~c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && c++ <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > --maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition < 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (!retDelims && startPos == position) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition != maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -140 +140 @@\n-        return position;\n+        return position++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims || startPos == position) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos < position) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i < delimiterCodePoints.length;) {",
+        "equivalence": false,
+        "operator": "AODS"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c >= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c == maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position *= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -72 +71,0 @@\n-        setMaxDelimCodePoint();",
+        "equivalence": false,
+        "operator": "FCDL"
+    },
+    {
+        "difference": "@@ -140 +140 @@\n-        return position;\n+        return position--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -87 +87 @@\n-        if (delimiters == null) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -87,3 +86,0 @@\n-        if (delimiters == null) {\n-            throw new java.lang.NullPointerException();\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-        if (delimiters == null) {\n+        if (delimiters != null) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint || isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position++ < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -134 +134 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( position-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -199 +198,0 @@\n-            currpos = scanToken( currpos );",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint || delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( c++ );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i < delimiterCodePoints.length; i--) {",
+        "equivalence": false,
+        "operator": "AORS"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m < c--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -42,11 +41,0 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n-            c = delimiters.charAt( i );\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n-                c = delimiters.codePointAt( i );\n-                hasSurrogates = true;\n-            }\n-            if (m < c) {\n-                m = c;\n-            }\n-            count++;\n-        }",
+        "equivalence": false,
+        "operator": "FLDL"
+    },
+    {
+        "difference": "@@ -88 +87,0 @@\n-            throw new java.lang.NullPointerException();",
+        "equivalence": false,
+        "operator": "OSDL"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= ++maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint-- && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count++; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint++ && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -162 +161,0 @@\n-        delimsChanged = false;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = --newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= ++maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (--currpos >= maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos != maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -131 +131 @@\n-                    position++;\n+                    position--;",
+        "equivalence": false,
+        "operator": "AORS"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position %= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -113 +113 @@\n-            if (!hasSurrogates) {\n+            if (hasSurrogates) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position == maxPosition) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos >= maxPosition--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition >= maxPosition--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -150 +150 @@\n-        return false;\n+        return true;",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint-- || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -43 +43 @@\n-            c = delimiters.charAt( i );\n+            c = delimiters.charAt( -i );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -90 +90 @@\n-        int position = startPos;\n+        int position = startPos++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; --i < delimiterCodePoints.length; i++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && !(delimiters.indexOf( c ) >= 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (~c <= maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!(!retDelims && position < maxPosition)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -168 +168 @@\n-        currentPosition = scanToken( currentPosition );\n+        currentPosition = scanToken( -currentPosition );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position = Character.charCount( c );",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -202 +202 @@\n-        return count;\n+        return count--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint++ && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c <= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -140 +140 @@\n-        return position;\n+        return -position;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -202 +202 @@\n-        return count;\n+        return -count;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos >= ~maxPosition) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint || isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -129 +129 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( position++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -177 +177 @@\n-        return nextToken();\n+        return \"\";",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (!(currpos >= maxPosition)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position /= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -58 +58 @@\n-                delimiterCodePoints[i] = c;\n+                delimiterCodePoints[i] = c--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( ~c ) < 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos-- >= maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -106 +106 @@\n-        return position;\n+        return position--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( currpos++ );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < ++count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (--m < c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= --maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -130,3 +129,0 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n-                    position++;\n-                }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (retDelims && position < maxPosition) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -55 +55 @@\n-            delimiterCodePoints = new int[count];\n+            delimiterCodePoints = new int[-count];",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos >= position) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (m <= c) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c++ <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -165 +164,0 @@\n-            throw new java.util.NoSuchElementException();",
+        "equivalence": false,
+        "operator": "OSDL"
+    },
+    {
+        "difference": "@@ -156 +156 @@\n-        return newPosition < maxPosition;\n+        return newPosition < maxPosition--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && ~position < maxPosition) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position <= maxPosition) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -103 +103 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( ~c );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( --currpos );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position += Character.charCount( c-- );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -169 +169 @@\n-        return str.substring( start, currentPosition );\n+        return str.substring( start--, currentPosition );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint && isDelimiter( c++ )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -163 +162,0 @@\n-        newPosition = -1;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -67 +66,0 @@\n-        delimsChanged = false;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && c != Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -49 +49 @@\n-                m = c;\n+                m = --c;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -49 +49 @@\n-                m = c;\n+                m = -c;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > --maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -49 +49 @@\n-                m = c;\n+                m = c--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -49 +49 @@\n-                m = c;\n+                m = ++c;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (~c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; --i < delimiters.length(); i += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = !(newPosition >= 0 && !delimsChanged) ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE ^ c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (--c > maxDelimCodePoint || !isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -93 +93 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( position++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= ++maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c == maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -53 +52,0 @@\n-        maxDelimCodePoint = m;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -182 +182 @@\n-        return hasMoreTokens();\n+        return false;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c != maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( -currpos );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -87 +87 @@\n-        if (delimiters == null) {\n+        if (!(delimiters == null)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos <= maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[--i] == codePoint) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition-- );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -93 +93 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( ~position );",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position != maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; ++i < delimiterCodePoints.length; i++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -146 +146 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] == codePoint--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -100 +100 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (!(c > maxDelimCodePoint || !isDelimiter( c ))) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position-- < maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i-- < count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( --currpos );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -92 +92 @@\n-            if (!hasSurrogates) {\n+            if (hasSurrogates) {",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -131 +131 @@\n-                    position++;\n+                     ;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i += Character.charCount( ~c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -155 +154,0 @@\n-        newPosition = skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos == maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -54,7 +53,0 @@\n-        if (hasSurrogates) {\n-            delimiterCodePoints = new int[count];\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n-                c = delimiters.codePointAt( j );\n-                delimiterCodePoints[i] = c;\n-            }\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -112,15 +111,0 @@\n-        while (position < maxPosition) {\n-            if (!hasSurrogates) {\n-                char c = str.charAt( position );\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n-                    break;\n-                }\n-                position++;\n-            } else {\n-                int c = str.codePointAt( position );\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n-                    break;\n-                }\n-                position += Character.charCount( c );\n-            }\n-        }",
+        "equivalence": false,
+        "operator": "WLDL"
+    },
+    {
+        "difference": "@@ -55 +55 @@\n-            delimiterCodePoints = new int[count];\n+            delimiterCodePoints = new int[--count];",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196,3 +195,0 @@\n-            if (currpos >= maxPosition) {\n-                break;\n-            }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c < maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -91 +91 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position < ++maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint || isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -97 +97 @@\n-                position++;\n+                 ;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -124 +124 @@\n-                position += Character.charCount( c );\n+                position -= Character.charCount( c );",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint && isDelimiter( ~c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition >= 0 && delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "SEOD"
+    },
+    {
+        "difference": "@@ -140 +140 @@\n-        return position;\n+        return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= ~Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -135,3 +134,0 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n-                    position += Character.charCount( c );\n-                }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -106 +106 @@\n-        return position;\n+        return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -161 +161 @@\n-        currentPosition = newPosition >= 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );\n+        currentPosition = newPosition != 0 && !delimsChanged ? newPosition : skipDelimiters( currentPosition );",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -58 +57,0 @@\n-                delimiterCodePoints[i] = c;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -174 +173,0 @@\n-        delimiters = delim;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -53 +53 @@\n-        maxDelimCodePoint = m;\n+        maxDelimCodePoint = m--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -167 +167 @@\n-        int start = currentPosition;\n+        int start = currentPosition++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -136 +136 @@\n-                    position += Character.charCount( c );\n+                    position += Character.charCount( c++ );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c-- )) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= --maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE && !(c <= Character.MAX_LOW_SURROGATE)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i *= Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -202 +202 @@\n-        return count;\n+        return count++;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (!(c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i++ < count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( --c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -43 +43 @@\n-            c = delimiters.charAt( i );\n+            c = delimiters.charAt( i++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (++m < c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -193 +193 @@\n-        int currpos = currentPosition;\n+        int currpos = currentPosition--;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -90 +90 @@\n-        int position = startPos;\n+        int position = startPos--;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -134 +134 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( -position );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c ) == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -103 +102,0 @@\n-                position += Character.charCount( c );",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c >= Character.MIN_HIGH_SURROGATE || c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (!(c <= maxDelimCodePoint) && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (~currpos >= maxPosition) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -169 +169 @@\n-        return str.substring( start, currentPosition );\n+        return str.substring( start, currentPosition++ );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -58 +58 @@\n-                delimiterCodePoints[i] = c;\n+                delimiterCodePoints[~i] = c;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c-- ) < 0) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -99 +99 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( position-- );",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( ++c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -135 +135 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= ~maxDelimCodePoint && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos >= ++maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -164 +164 @@\n-        if (currentPosition >= maxPosition) {\n+        if (currentPosition < maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -169 +169 @@\n-        return str.substring( start, currentPosition );\n+        return str.substring( -start, currentPosition );",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-            if (m < c) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -145 +145 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i-- < delimiterCodePoints.length; i++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < ~count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c != maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -121 +121 @@\n-                if (c <= maxDelimCodePoint && isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint++ && isDelimiter( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i < delimiters.length(); i /= Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "SAR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c <= maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i >= delimiters.length(); i += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; i < count;) {",
+        "equivalence": false,
+        "operator": "AODS"
+    },
+    {
+        "difference": "@@ -36 +35,0 @@\n-            maxDelimCodePoint = 0;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -168 +168 @@\n-        currentPosition = scanToken( currentPosition );\n+        currentPosition = scanToken( currentPosition-- );",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (!(c > maxDelimCodePoint) || delimiters.indexOf( c ) < 0) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -56 +56 @@\n-            for (int i = 0, j = 0; i < count; i++, j += Character.charCount( c )) {\n+            for (int i = 0, j = 0; ++i < count; i++, j += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c >= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i-- < delimiters.length(); i += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {\n+            if (c > Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c ) != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (retDelims && startPos == ++position) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -92,13 +91,0 @@\n-            if (!hasSurrogates) {\n-                char c = str.charAt( position );\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n-                    break;\n-                }\n-                position++;\n-            } else {\n-                int c = str.codePointAt( position );\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n-                    break;\n-                }\n-                position += Character.charCount( c );\n-            }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos < --maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -68 +67,0 @@\n-        this.str = str;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -90 +90 @@\n-        int position = startPos;\n+        int position = ~startPos;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -111 +111 @@\n-        int position = startPos;\n+        int position = startPos++;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -95 +94,0 @@\n-                    break;",
+        "equivalence": false,
+        "operator": "OSDL"
+    },
+    {
+        "difference": "@@ -127 +127 @@\n-        if (retDelims && startPos == position) {\n+        if (!(retDelims && startPos == position)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -115 +115 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (c <= maxDelimCodePoint++ && delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -112 +112 @@\n-        while (position < maxPosition) {\n+        while (position > maxPosition) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos < maxPosition) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos++ >= maxPosition) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        for (int i = 0; i < delimiters.length(); i += Character.charCount( c )) {\n+        for (int i = 0; i > delimiters.length(); i += Character.charCount( c )) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -130 +130 @@\n-                if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0) {\n+                if (delimiters.indexOf( c ) >= 0) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -163 +163 @@\n-        newPosition = -1;\n+        newPosition = 1;",
+        "equivalence": false,
+        "operator": "AODU"
+    },
+    {
+        "difference": "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos < maxPosition--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -94 +94 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c ) > 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    }
+]

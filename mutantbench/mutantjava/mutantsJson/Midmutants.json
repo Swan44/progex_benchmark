@@ -1,0 +1,27 @@
+[
+    {
+        "difference": "@@ -5 +5 @@\n-\t\t\tif (c < b) {\n+\t\t\tif (c <= b) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -6 +6 @@\n-\t\t\t\tif (a < c) {\n+\t\t\t\tif (a <= c) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -16 +16 @@\n-\t\t\t\tif (a > c) {\n+\t\t\t\tif (a >= c) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -4 +4 @@\n-\t\tif (a < b) {\n+\t\tif (a <= b) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -15 +15 @@\n-\t\t\tif (c > b) {\n+\t\t\tif (c >= b) {",
+        "equivalence": true,
+        "operator": "ROR"
+    }
+]

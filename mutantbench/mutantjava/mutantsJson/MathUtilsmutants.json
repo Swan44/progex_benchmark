@@ -1,0 +1,637 @@
+[
+    {
+        "difference": "@@ -424 +424 @@\n-        if (k == 31) {\n+        if (k == -31) {",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": NaN,
+        "equivalence": false,
+        "operator": "LOR"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u * 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -402 +402 @@\n-        if (u * v == 0) {\n+        if (u * v >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((v & 1) == 0 && k < 31) { // while u and v are",
+        "equivalence": true,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-            t = (v - u) / 2;\n+            t = (v / u) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -439 +439 @@\n-            if (t > 0) {\n+            if (t > -1) {",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = (false) ? v : -(u / 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -414 +414 @@\n-            v = -v;\n+            v = ~v;",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -410 +410 @@\n-        if (u > 0) {\n+        if (u > 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v ^ 1) == 0 && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "LOR"
+    },
+    {
+        "difference": "@@ -440 +440 @@\n-                u = -t;\n+                u = ~t;",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -402 +402 @@\n-        if (u * v == 0) {\n+        if (u + v == 0) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (false && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -449 +449 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return +u * (1 << k); // gcd is u*2^k",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) <= 1) ? v : -(u / 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u | 1) == 1) ? v : -(u / 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "LOR"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : +(u / 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -420 +420 @@\n-            u /= 2;\n+            ;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-            t = (v - u) / 2;\n+            t = (v % u) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u ^ 1) == 1) ? v : -(u / 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "LOR"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u / 0)/* B3 */;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u / -2)/* B3 */;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -421 +421 @@\n-            v /= 2;\n+            v /= 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -449 +449 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u * (1 >>> k); // gcd is u*2^k",
+        "equivalence": false,
+        "operator": "SOR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && false) { // while u and v are",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0) { // while u and v are",
+        "equivalence": true,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 == ((v & 1) == 0) && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -417 +417 @@\n-        int k = 0;\n+        int k = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -411 +411 @@\n-            u = -u;\n+            u = ~u;",
+        "equivalence": false,
+        "operator": "AODU"
+    },
+    {
+        "difference": "@@ -417 +417 @@\n-        int k = 0;\n+        int k = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": NaN,
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v | 1) == 0 && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "LOR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 1 && (v & 1) == 1 && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -420 +420 @@\n-            u /= 2;\n+            u /= -2;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": NaN,
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) >= 1) ? v : -(u / 2)/* B3 */;",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -413 +413 @@\n-        if (v > 0) {\n+        if (v != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -449 +449 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u * (-1 << k); // gcd is u*2^k",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -439 +439 @@\n-            if (t > 0) {\n+            if (t >= 0) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -411 +411 @@\n-            u = -u;\n+            u = +u;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && false && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) >= 0 && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": NaN,
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && k < -31) { // while u and v are",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -403 +403 @@\n-            return (Math.abs(u) + Math.abs(v));\n+            return (Math.abs(u) - Math.abs(v));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": NaN,
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) <= 0 && k < 31) { // while u and v are",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -448 +448 @@\n-        } while (t != 0);\n+        } while (true);",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -448 +448 @@\n-        } while (t != 0);\n+        } while (t > 0);",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -449 +449 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u * (0 << k); // gcd is u*2^k",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -410 +410 @@\n-        if (u > 0) {\n+        if (u > -1) {",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-            t = (v - u) / 2;\n+            t = (v + u) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == -1 && (v & 1) == -1 && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -421 +421 @@\n-            v /= 2;\n+            v /= -2;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-            t = (v - u) / 2;\n+            t = (v - u) + 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : ~(u / 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -449 +449 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u * (1 >> k); // gcd is u*2^k",
+        "equivalence": false,
+        "operator": "SOR"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 0) == 0) ? v : -(u / 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -424 +424 @@\n-        if (k == 31) {\n+        if (k == 0) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u + 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && k < 31) { // while u and v are",
+        "equivalence": true,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -403 +403 @@\n-            return (Math.abs(u) + Math.abs(v));\n+            return (Math.abs(u) / Math.abs(v));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && k <= 31) { // while u and v are",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) <= 0 && (v & 1) == 0 && k < 31) { // while u and v are",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -449 +449 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u - (1 << k); // gcd is u*2^k",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && k < 0) { // while u and v are",
+        "equivalence": true,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-            t = (v - u) / 2;\n+            t = (v - u) / -2;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (false && (v & 1) == 0 && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u - 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -436 +436 @@\n-                t /= 2; // cast out twos\n+                t /= 0; // cast out twos",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -413 +413 @@\n-        if (v > 0) {\n+        if (v > -1) {",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -449 +449 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return ~u * (1 << k); // gcd is u*2^k",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": NaN,
+        "equivalence": false,
+        "operator": "LOR"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & -1) == -1) ? v : -(u / 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -410 +410 @@\n-        if (u > 0) {\n+        if (u >= 0) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -420 +420 @@\n-            u /= 2;\n+            u /= 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": NaN,
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (((u & 1) == 0 && (v & 1) == 0) == k < 31) { // while u and v are",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & -1) == 0 && (v & -1) == 0 && k < 3-1) { // while u and v are",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -413 +413 @@\n-        if (v > 0) {\n+        if (v >= 0) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -449 +449 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u / (1 << k); // gcd is u*2^k",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u ^ 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "LOR"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-            t = (v - u) / 2;\n+            t = (v - u) - 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -402 +402 @@\n-        if (u * v == 0) {\n+        if (u % v == 0) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-            t = (v - u) / 2;\n+            t = (v - u) % 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -403 +403 @@\n-            return (Math.abs(u) + Math.abs(v));\n+            return (Math.abs(u) * Math.abs(v));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -413 +413 @@\n-        if (v > 0) {\n+        if (v > 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -410 +410 @@\n-        if (u > 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -439 +439 @@\n-            if (t > 0) {\n+            if (t != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -414 +414 @@\n-            v = -v;\n+            v = +v;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -402 +402 @@\n-        if (u * v == 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -421 +421 @@\n-            v /= 2;\n+            ;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -436 +436 @@\n-                t /= 2; // cast out twos\n+                ; // cast out twos",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && k != 31) { // while u and v are",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u | 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "LOR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) >= 0 && (v & 1) == 0 && k < 31) { // while u and v are",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (false) { // while u and v are",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-            t = (v - u) / 2;\n+            t = (v - u) * 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -424 +424 @@\n-        if (k == 31) {\n+        if (k <= 31) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -449 +449 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u + (1 << k); // gcd is u*2^k",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -424 +424 @@\n-        if (k == 31) {\n+        if (k >= 31) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-            t = (v - u) / 2;\n+            t = (v - u) / 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (k < 31) { // while u and v are",
+        "equivalence": true,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -410 +410 @@\n-        if (u > 0) {\n+        if (u != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -439 +439 @@\n-            if (t > 0) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -439 +439 @@\n-            if (t > 0) {\n+            if (t > 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -445 +445 @@\n-            t = (v - u) / 2;\n+            t = (v * u) / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": NaN,
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -448 +448 @@\n-        } while (t != 0);\n+        } while (t != 1);",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -436 +436 @@\n-                t /= 2; // cast out twos\n+                t /= -2; // cast out twos",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -448 +448 @@\n-        } while (t != 0);\n+        } while (t < 0);",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -402 +402 @@\n-        if (u * v == 0) {\n+        if (u - v == 0) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -440 +440 @@\n-                u = -t;\n+                u = +t;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -449 +449 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u % (1 << k); // gcd is u*2^k",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -448 +448 @@\n-        } while (t != 0);\n+        } while (t != -1);",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -402 +402 @@\n-        if (u * v == 0) {\n+        if (u * v == 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -402 +402 @@\n-        if (u * v == 0) {\n+        if (u * v == -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -403 +403 @@\n-            return (Math.abs(u) + Math.abs(v));\n+            return (Math.abs(u) % Math.abs(v));",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -413 +413 @@\n-        if (v > 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 0) == 0 && (v & 0) == 0 && k < 30) { // while u and v are",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -402 +402 @@\n-        if (u * v == 0) {\n+        if (u * v <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": NaN,
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u % 2)/* B3 */;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -424 +424 @@\n-        if (k == 31) {\n+        if (false) {",
+        "equivalence": true,
+        "operator": "CDL"
+    },
+    {
+        "difference": NaN,
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -402 +402 @@\n-        if (u * v == 0) {\n+        if (u / v == 0) {",
+        "equivalence": false,
+        "operator": "AORB"
+    }
+]

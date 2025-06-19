@@ -1,0 +1,3517 @@
+[
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b-- || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -27 +27 @@\n-            trian = trian + 2;\n+            trian = trian % 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (a + c > b) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b == ++c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c <= a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b++ + c < a) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = ~trian + 3;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-                return INVALID;\n+                return -INVALID;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian <= 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32,5 +31,0 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n-                return INVALID;\n-            } else {\n-                return SCALENE;\n-            }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (true && a + c > b) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (true && b + c > a) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (--trian > 3) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || !(c <= 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a == c++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (!(a + b < c || a + c < b || b + c < a)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if ((a + b < c || a + c < b) != b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -38 +39 @@\n-        if (trian > 3) {\n+        if (trian > -3) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (~b == c) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-                return INVALID;\n+                return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (!(trian == 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -22 +23 @@\n-        if (a == b) {\n+        if (a >= b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian-- == 3 && b + c > a) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = ++trian + 3;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c != b || b + c < a) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            trian = trian + 3;\n+            trian = trian + 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (~a + b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c && a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a == ++b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c != b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = 1;",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a != b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = -trian + 2;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian > 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if ((a <= 0 || b <= 0) && c <= 0) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || true) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a / c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + ++c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (~trian == 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c <= b || b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a < c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && ++b + c > a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b / c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 ^ b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || --b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a % c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 && b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + --c > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian <= 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c == b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian++ + 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a % b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a - c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || !(b <= 0) || c <= 0) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian++ > 3) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2) {",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian-- == 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -27 +27 @@\n-            trian = trian + 2;\n+            trian = trian - 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a / b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (!(a <= 0 || b <= 0 || c <= 0)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b / c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (--trian == 3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = --trian + 1;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c >= a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian++ == 3 && b + c > a) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (false || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a * c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + ~c > a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || !(a + c < b) || b + c < a) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian < 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b / c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian < 3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c != b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a-- + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && !(b + c > a)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b > c++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a - c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 0 && b + c > a) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a % b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 0 && a + c > b) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c < b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (a + c > b) {",
+        "equivalence": true,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c-- < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -25,3 +24,0 @@\n-        if (a == c) {\n-            trian = trian + 2;\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b != c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -21 +22 @@\n-        trian = 0;\n+        trian = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 == a + b > c) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + --c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (true || b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (trian++ == 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c > a--) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 == a + c > b) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = trian * 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (--a == b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b-- > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c < ~a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a == ++c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (true) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                    return ISOSCELES;\n+                    return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c <= a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b-- == c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a++ + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian - 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || true || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -25 +26 @@\n-        if (a == c) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (b + c > a) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -27 +27 @@\n-            trian = trian + 2;\n+            trian = trian / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -52 +52 @@\n-        return INVALID;\n+        return ~INVALID;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b < 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (--a <= 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c == a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -22 +23 @@\n-        if (a == b) {\n+        if (a <= b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && ++a + c > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a - b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || ++b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a == 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a == b--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-                return ISOSCELES;\n+                return ~ISOSCELES;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || true || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian <= 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == -2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 1 || b <= 1 || c <= 1) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian >= 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = trian % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c-- > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b <= c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a != 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (++trian == 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c != a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + ~c > b) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian >= 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-                return SCALENE;\n+                return -SCALENE;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c++ > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -26 +27 @@\n-            trian = trian + 2;\n+            trian = trian + 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (++a <= 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-        if (trian == 0) {\n+        if (trian >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -38 +39 @@\n-        if (trian > 3) {\n+        if (trian > 0) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (trian != 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b < 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c > a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian >= 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a != c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a == ~c) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a > 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-            return INVALID;\n+            return -INVALID;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && ++a + b > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b <= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian <= 1 && a + b > c) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-            return ISOSCELES;\n+            return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (--a + b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if ((a + b < c || a + c < b) && b + c < a) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c > a++) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (!(trian > 3)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || false || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && ~a + c > b) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a-- <= 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || true || c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c <= b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (!(trian == 2) && a + c > b) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a - b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a / c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian != 3) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (false && a + b > c) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b != c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 ^ a + b > c) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b == c++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 || a + b > c) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -23 +24 @@\n-            trian = trian + 1;\n+            trian = trian % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b >= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == -1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-        if (trian == 0) {\n+        if (trian <= 0) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (++a == b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || ~b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || ++a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian++ == 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (a + b > c) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a-- + b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if ((a <= 0 || b <= 0) != c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c ^ a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a % c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a % b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = trian - 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian-- == 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        trian = 0;\n+        trian = 1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && true) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a - b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (!(trian == 1) && a + b > c) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -25 +26 @@\n-        if (a == c) {\n+        if (a <= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            return EQUILATERAL;\n+            return ~EQUILATERAL;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b++ + c > a) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a-- == b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c >= b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian <= 3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-        if (a == b) {\n+        if (a <= b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (--a == c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b != c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a % b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c != a) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + ~c < a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -24 +24 @@\n-            trian = trian + 1;\n+            trian = trian / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = trian * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (~a <= 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b >= c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c != a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a / b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            trian = trian + 3;\n+            trian = trian + -3;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -27 +27 @@\n-            trian = trian + 2;\n+            trian = trian + -2;",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-        if (trian > 3) {\n+        if (trian > -3) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian++ == 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a == 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c >= b) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-        if (trian == 0) {\n+        if (trian == -1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 ^ b + c > a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c != a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b <= c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-        if (a == c) {\n+        if (a >= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a / c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a - c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (!(trian == 3) && b + c > a) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a == b++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || --a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b % c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -38 +39 @@\n-        if (trian > 3) {\n+        if (trian != 3) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (++trian == 3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian != 3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c >= a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -38 +39 @@\n-        if (trian > 3) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (trian <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a == 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -29 +30 @@\n-            trian = trian + 3;\n+            trian = trian % 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c < a--) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c != a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -29 +30 @@\n-            trian = trian + 3;\n+            trian = trian - 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + ++c > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c++ < a) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b >= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = ~trian + 2;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c >= b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b++ <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || false || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -31 +32 @@\n-        if (trian == 0) {\n+        if (trian == 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true || c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 != b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -22 +23 @@\n-        if (a == b) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            return EQUILATERAL;\n+            return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian <= 3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-        if (trian > 3) {\n+        if (trian >= 3) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a % c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a / b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a++ <= 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = trian / 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || true || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b++ || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (!(b == c)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = trian-- + 1;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b != c) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = trian - 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (trian >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -23 +24 @@\n-            trian = trian + 1;\n+            trian = trian / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if ((a + b < c || a + c < b) != b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b++ == c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + ++b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c < a++) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (true && a + b > c) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a * b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && ~a + b > c) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -27 +27 @@\n-            trian = trian + 2;\n+            trian = trian * 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (!(a == b)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b > c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-        if (trian > 3) {\n+        if (trian != 3) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == -1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 || a + c > b) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (!(trian == 2 && a + c > b)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a * c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = ++trian + 1;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b == --c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= -1 || b <= -1 || c <= -1) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c-- || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b * c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + --b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (++trian > 3) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + ++c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c == b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-                return INVALID;\n+                return ~INVALID;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && true) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-        if (a == c) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a / b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (false && a + b > c) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (false && a + c > b) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a * c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (--trian == 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || true) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a - b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b < c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b - c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 0 && a + b > c) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        if (b == c) {\n+        if (b >= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (!(a <= 0) || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 0 && b + c > a) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian == 3) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b <= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b != c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        if (b == c) {\n+        if (b <= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + ++c > a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c <= b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian >= 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a < 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -29 +30 @@\n-            trian = trian + 3;\n+            trian = trian / 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + --b > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c-- <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a > b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -29 +28,0 @@\n-            trian = trian + 3;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -27 +27 @@\n-            trian = trian + 2;\n+            trian = trian + 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 1 || b <= 1 || c <= 1) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b <= c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c++ > a) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b > 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b >= c) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b == 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -28 +29 @@\n-        if (b == c) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a * b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a - b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian % 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if ((a <= 0 || b <= 0) != c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a == c--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c >= a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c != a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-        if (a == c) {\n+        if (a <= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b > c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b == c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -26 +27 @@\n-            trian = trian + 2;\n+            trian = trian - 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (false || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (trian > 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a * c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            trian = trian + 3;\n+            trian = trian / 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || ~c <= 0) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-            return INVALID;\n+            return ~INVALID;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b - c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a % c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (--trian == 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a / b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b - c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && --b + c > a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -29 +30 @@\n-            trian = trian + 3;\n+            trian = trian + -3;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a < b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b * c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a <= b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (b + c > a) {",
+        "equivalence": true,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-            return ISOSCELES;\n+            return -ISOSCELES;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 == a + b > c) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b-- < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && ~b + c > a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-            return EQUILATERAL;\n+            return -EQUILATERAL;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a == --c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -52 +52 @@\n-        return INVALID;\n+        return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (!(trian == 1 && a + b > c)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || false || b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian <= 3) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (false && a + c > b) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a - c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c >= b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (a + b > c) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a == ~b) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b++ < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (~trian == 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c == a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (false && b + c > a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b - c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (!(a == c)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-        if (a == b) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (false || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b % c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c > b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian <= 1 && a + b > c) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b / c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                    return ISOSCELES;\n+                    return ~ISOSCELES;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c++ || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3) {",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (!(a <= 0 || b <= 0) || c <= 0) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian >= 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a-- + c > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -52 +52 @@\n-        return INVALID;\n+        return -INVALID;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (false && a + b > c) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b < c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian != 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -23 +24 @@\n-            trian = trian + 1;\n+            trian = trian + -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a++ + b > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b / c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && !(a + b > c)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c <= a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-                return ISOSCELES;\n+                return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -41,11 +40,0 @@\n-        if (trian == 1 && a + b > c) {\n-            return ISOSCELES;\n-        } else {\n-            if (trian == 2 && a + c > b) {\n-                return ISOSCELES;\n-            } else {\n-                if (trian == 3 && b + c > a) {\n-                    return ISOSCELES;\n-                }\n-            }\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -23 +24 @@\n-            trian = trian + 1;\n+            trian = trian - 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian * 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a-- + b > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b * c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -23 +22,0 @@\n-            trian = trian + 1;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c > b--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a++ == b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c != a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a++ + b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = -trian + 3;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + ~b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c++ <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-        if (a == b) {\n+        if (a >= b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b % c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian > 3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (true || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a * b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c-- > a) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -31,7 +30,0 @@\n-        if (trian == 0) {\n-            if (a + b < c || a + c < b || b + c < a) {\n-                return INVALID;\n-            } else {\n-                return SCALENE;\n-            }\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b == c--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c > ~b) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = trian-- + 3;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b - c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -24 +24 @@\n-            trian = trian + 1;\n+            trian = trian % 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a % c > b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < ~b || b + c < a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a % b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c > b++) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c <= b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c != b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-            return ISOSCELES;\n+            return ~ISOSCELES;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < ~c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + ~b > c) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c != a) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (trian < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian < 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 || b + c > a) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c >= a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b * c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (--b == c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c != b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -21 +22 @@\n-        trian = 0;\n+        trian = -1;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b % c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a / c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b == 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -26 +27 @@\n-            trian = trian + 2;\n+            trian = trian + -2;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 == a + c > b) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a - b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-                return SCALENE;\n+                return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == -3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian <= 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18,3 +17,0 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n-            return INVALID;\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b * c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +30 @@\n-            trian = trian + 3;\n+            trian = trian + 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian >= 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (true || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -23 +24 @@\n-            trian = trian + 1;\n+            trian = trian + 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = trian++ + 3;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c == 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && --a + b > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = trian;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian < 3) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c-- < a) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b >= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (b + c > a) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -47,3 +46,0 @@\n-                if (trian == 3 && b + c > a) {\n-                    return ISOSCELES;\n-                }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b / c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a > c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (~a == c) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a / c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (false && b + c > a) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = -trian + 1;",
+        "equivalence": true,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b == 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a <= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || --b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -24 +24 @@\n-            trian = trian + 1;\n+            trian = trian * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (~trian == 3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (a + b > c) {",
+        "equivalence": true,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "ROD"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian-- > 3) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b == ~c) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 0 && a + b > c) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= -1 || b <= -1 || c <= -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -28 +29 @@\n-        if (b == c) {\n+        if (b <= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c <= a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b * c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 == b + c > a) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || ~a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = trian;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-                return ISOSCELES;\n+                return -ISOSCELES;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (~trian > 3) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a-- == c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = ++trian + 2;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a % b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (!(a + b < c) || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c < 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b != c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -38,3 +37,0 @@\n-        if (trian > 3) {\n-            return EQUILATERAL;\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = trian / 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -26 +25,0 @@\n-            trian = trian + 2;",
+        "equivalence": false,
+        "operator": "ADL"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            trian = trian + 3;\n+            trian = trian % 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b != c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -31 +32 @@\n-        if (trian == 0) {\n+        if (trian == -1) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 == b + c > a) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -24 +24 @@\n-            trian = trian + 1;\n+            trian = trian - 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b > ~c) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a++ == c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if ((a <= 0 || b <= 0) ^ c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a - c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || false || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-        if (b == c) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (trian-- == 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (false && b + c > a) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if ((a + b < c || a + c < b) ^ b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (a + c > b) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -29 +30 @@\n-            trian = trian + 3;\n+            trian = trian * 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a < 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44,7 +43,0 @@\n-            if (trian == 2 && a + c > b) {\n-                return ISOSCELES;\n-            } else {\n-                if (trian == 3 && b + c > a) {\n-                    return ISOSCELES;\n-                }\n-            }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = trian % 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (~a == b) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = --trian + 2;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -44 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == -2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian != 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -26 +27 @@\n-            trian = trian + 2;\n+            trian = trian % 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -42 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a * b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b == c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b < 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            trian = trian + 3;\n+            trian = trian - 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 0 && a + c > b) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || ~b + c < a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a < 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b >= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (b + c < a) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = --trian + 3;",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -24 +24 @@\n-            trian = trian + 1;\n+            trian = trian + 0;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -25 +26 @@\n-        if (a == c) {\n+        if (a >= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -28,3 +27,0 @@\n-        if (b == c) {\n-            trian = trian + 3;\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -35 +35 @@\n-                return SCALENE;\n+                return ~SCALENE;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a >= b) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && !(a + c > b)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == -3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian >= 3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (true) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c != b) {",
+        "equivalence": false,
+        "operator": "SEOR"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b > c--) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a * c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && --a + c > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian > 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || ++b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || !(b + c < a)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || ++c <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian >= 3 && b + c > a) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian >= 3) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + --c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && false) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c > 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -28 +29 @@\n-        if (b == c) {\n+        if (b >= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a >= c) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 ^ a + c > b) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2) {",
+        "equivalence": true,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b % c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a / b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -26 +27 @@\n-            trian = trian + 2;\n+            trian = trian / 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-        if (trian > 3) {\n+        if (trian > 0) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        trian = 0;\n+        trian = -1;",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -33 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a - c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-        if (trian == 0) {\n+        if (trian == 1) {",
+        "equivalence": false,
+        "operator": "CR"
+    },
+    {
+        "difference": "@@ -48 +48 @@\n-                    return ISOSCELES;\n+                    return -ISOSCELES;",
+        "equivalence": false,
+        "operator": "AOIU"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a >= 0 || b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c++ < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a / c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + ~c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -31 +32 @@\n-        if (trian == 0) {\n+        if (trian >= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b-- + c < a) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-            return INVALID;\n+            return 0;",
+        "equivalence": false,
+        "operator": "VDL"
+    },
+    {
+        "difference": "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 != b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b % c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && true) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -30 +30 @@\n-            trian = trian + 3;\n+            trian = trian * 3;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a * b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c > ~a) {",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a == --b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +33 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a * c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (++trian == 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b - c > a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (--trian == 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a % c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian >= 3 && b + c > a) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (++trian == 2 && a + c > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (!(a + b < c || a + c < b) || b + c < a) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -41 +42 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1) {",
+        "equivalence": true,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && b > c) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b-- <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + ++b > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + --c > a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (false || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b-- + c > a) {",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian <= 3 && b + c > a) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -18 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -25 +25 @@\n-        if (a == c) {\n+        if (++a == c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -31 +32 @@\n-        if (trian == 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b != 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = ~trian + 1;",
+        "equivalence": false,
+        "operator": "LOI"
+    },
+    {
+        "difference": "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (false && a + c > b) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (++a + b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b++ > c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -22,3 +21,0 @@\n-        if (a == b) {\n-            trian = trian + 1;\n-        }",
+        "equivalence": false,
+        "operator": "ISDL"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || --c <= 0) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -39 +39 @@\n-        if (trian > 3) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -28 +28 @@\n-        if (b == c) {\n+        if (++b == c) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = trian++ + 1;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -24 +24 @@\n-            trian = trian + 1;\n+            trian = trian + -1;",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -23 +24 @@\n-            trian = trian + 1;\n+            trian = trian * 1;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a++ + c > b) {",
+        "equivalence": false,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (!(trian == 3 && b + c > a)) {",
+        "equivalence": false,
+        "operator": "SEOI"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-        if (trian == 0) {\n+        if (false) {",
+        "equivalence": false,
+        "operator": "null"
+    },
+    {
+        "difference": "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (b <= 0 || c <= 0) {",
+        "equivalence": false,
+        "operator": "CDL"
+    },
+    {
+        "difference": "@@ -26 +27 @@\n-            trian = trian + 2;\n+            trian = trian * 2;",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -31 +32 @@\n-        if (trian == 0) {\n+        if (trian <= 0) {",
+        "equivalence": true,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a * b < c || a + c < b || b + c < a) {",
+        "equivalence": false,
+        "operator": "AORB"
+    },
+    {
+        "difference": "@@ -38 +39 @@\n-        if (trian > 3) {\n+        if (trian >= 3) {",
+        "equivalence": false,
+        "operator": "ROR"
+    },
+    {
+        "difference": "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian-- + 2;",
+        "equivalence": true,
+        "operator": "AOIS"
+    },
+    {
+        "difference": "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (~trian == 1 && a + b > c) {",
+        "equivalence": false,
+        "operator": "LOI"
+    }
+]
