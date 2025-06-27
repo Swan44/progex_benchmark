@@ -1,0 +1,26 @@
+[ {
+  "mutant_id" : "MUT_0000",
+  "difference" : "@@ -5 +5 @@\n-\t\t\tif (c < b) {\n+\t\t\tif (c <= b) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_0001",
+  "difference" : "@@ -6 +6 @@\n-\t\t\t\tif (a < c) {\n+\t\t\t\tif (a <= c) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_0002",
+  "difference" : "@@ -16 +16 @@\n-\t\t\t\tif (a > c) {\n+\t\t\t\tif (a >= c) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_0003",
+  "difference" : "@@ -4 +4 @@\n-\t\tif (a < b) {\n+\t\tif (a <= b) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_0004",
+  "difference" : "@@ -15 +15 @@\n-\t\t\tif (c > b) {\n+\t\t\tif (c >= b) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+} ]

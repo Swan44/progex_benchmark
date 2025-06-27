@@ -1,0 +1,1007 @@
+{
+  "directed": true,
+  "label": "AST of Bisect.java",
+  "type": "Abstract Syntax Tree (AST)",
+  "file": "Bisect.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 0,
+      "type": "ROOT",
+      "label": "Bisect.java",
+      "normalized": "Bisect.java"
+    },
+    {
+      "id": 1,
+      "line": 1,
+      "type": "PACKAGE",
+      "label": "programs.Bisect.mutants.mutant_001",
+      "normalized": "programs.Bisect.mutants.mutant_001"
+    },
+    {
+      "id": 2,
+      "line": 4,
+      "type": "CLASS",
+      "label": "CLASS",
+      "normalized": "CLASS"
+    },
+    {
+      "id": 3,
+      "line": 4,
+      "type": "MODIFIER",
+      "label": "public",
+      "normalized": "public"
+    },
+    {
+      "id": 4,
+      "line": 4,
+      "type": "NAME",
+      "label": "Bisect",
+      "normalized": "Bisect"
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "type": "FIELD",
+      "label": "FIELD",
+      "normalized": "FIELD"
+    },
+    {
+      "id": 6,
+      "line": 7,
+      "type": "MODIFIER",
+      "label": "MODIFIER",
+      "normalized": "MODIFIER"
+    },
+    {
+      "id": 7,
+      "line": 7,
+      "type": "TYPE",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 8,
+      "line": 7,
+      "type": "NAME",
+      "label": "mEpsilon",
+      "normalized": "$VARF_1"
+    },
+    {
+      "id": 9,
+      "line": 9,
+      "type": "FIELD",
+      "label": "FIELD",
+      "normalized": "FIELD"
+    },
+    {
+      "id": 10,
+      "line": 9,
+      "type": "MODIFIER",
+      "label": "MODIFIER",
+      "normalized": "MODIFIER"
+    },
+    {
+      "id": 11,
+      "line": 9,
+      "type": "TYPE",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 12,
+      "line": 9,
+      "type": "NAME",
+      "label": "mNumber",
+      "normalized": "$VARF_2"
+    },
+    {
+      "id": 13,
+      "line": 11,
+      "type": "FIELD",
+      "label": "FIELD",
+      "normalized": "FIELD"
+    },
+    {
+      "id": 14,
+      "line": 11,
+      "type": "MODIFIER",
+      "label": "MODIFIER",
+      "normalized": "MODIFIER"
+    },
+    {
+      "id": 15,
+      "line": 11,
+      "type": "TYPE",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 16,
+      "line": 11,
+      "type": "NAME",
+      "label": "mResult",
+      "normalized": "$VARF_3"
+    },
+    {
+      "id": 17,
+      "line": 13,
+      "type": "CONSTRUCTOR",
+      "label": "CONSTRUCTOR",
+      "normalized": "CONSTRUCTOR"
+    },
+    {
+      "id": 18,
+      "line": 13,
+      "type": "MODIFIER",
+      "label": "public",
+      "normalized": "public"
+    },
+    {
+      "id": 19,
+      "line": 14,
+      "type": "BLOCK",
+      "label": "BLOCK",
+      "normalized": "BLOCK"
+    },
+    {
+      "id": 20,
+      "line": 17,
+      "type": "METHOD",
+      "label": "METHOD",
+      "normalized": "METHOD"
+    },
+    {
+      "id": 21,
+      "line": 17,
+      "type": "MODIFIER",
+      "label": "public",
+      "normalized": "public"
+    },
+    {
+      "id": 22,
+      "line": 17,
+      "type": "RETURN",
+      "label": "void",
+      "normalized": "void"
+    },
+    {
+      "id": 23,
+      "line": 17,
+      "type": "NAME",
+      "label": "setEpsilon",
+      "normalized": "$METHOD_1"
+    },
+    {
+      "id": 24,
+      "line": 17,
+      "type": "PARAMS",
+      "label": "PARAMS",
+      "normalized": "PARAMS"
+    },
+    {
+      "id": 25,
+      "line": 17,
+      "type": "VAR",
+      "label": "VAR",
+      "normalized": "VAR"
+    },
+    {
+      "id": 26,
+      "line": 17,
+      "type": "TYPE",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 27,
+      "line": 17,
+      "type": "NAME",
+      "label": "epsilon",
+      "normalized": "$VARL_1"
+    },
+    {
+      "id": 28,
+      "line": 18,
+      "type": "BLOCK",
+      "label": "BLOCK",
+      "normalized": "BLOCK"
+    },
+    {
+      "id": 29,
+      "line": 19,
+      "type": "",
+      "label": "this.mEpsilon = epsilon",
+      "normalized": "this.$VARF_1 ?= $VARL_1"
+    },
+    {
+      "id": 30,
+      "line": 22,
+      "type": "METHOD",
+      "label": "METHOD",
+      "normalized": "METHOD"
+    },
+    {
+      "id": 31,
+      "line": 22,
+      "type": "MODIFIER",
+      "label": "public",
+      "normalized": "public"
+    },
+    {
+      "id": 32,
+      "line": 22,
+      "type": "RETURN",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 33,
+      "line": 22,
+      "type": "NAME",
+      "label": "sqrt",
+      "normalized": "$METHOD_2"
+    },
+    {
+      "id": 34,
+      "line": 22,
+      "type": "PARAMS",
+      "label": "PARAMS",
+      "normalized": "PARAMS"
+    },
+    {
+      "id": 35,
+      "line": 22,
+      "type": "VAR",
+      "label": "VAR",
+      "normalized": "VAR"
+    },
+    {
+      "id": 36,
+      "line": 22,
+      "type": "TYPE",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 37,
+      "line": 22,
+      "type": "NAME",
+      "label": "N",
+      "normalized": "$VARL_1"
+    },
+    {
+      "id": 38,
+      "line": 23,
+      "type": "BLOCK",
+      "label": "BLOCK",
+      "normalized": "BLOCK"
+    },
+    {
+      "id": 39,
+      "line": 24,
+      "type": "VAR",
+      "label": "VAR",
+      "normalized": "VAR"
+    },
+    {
+      "id": 40,
+      "line": 24,
+      "type": "TYPE",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 41,
+      "line": 24,
+      "type": "NAME",
+      "label": "x",
+      "normalized": "$VARL_2"
+    },
+    {
+      "id": 42,
+      "line": 24,
+      "type": "INIT",
+      "label": "= N",
+      "normalized": "= $VARL_1"
+    },
+    {
+      "id": 43,
+      "line": 25,
+      "type": "VAR",
+      "label": "VAR",
+      "normalized": "VAR"
+    },
+    {
+      "id": 44,
+      "line": 25,
+      "type": "TYPE",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 45,
+      "line": 25,
+      "type": "NAME",
+      "label": "M",
+      "normalized": "$VARL_3"
+    },
+    {
+      "id": 46,
+      "line": 25,
+      "type": "INIT",
+      "label": "= N",
+      "normalized": "= $VARL_1"
+    },
+    {
+      "id": 47,
+      "line": 26,
+      "type": "VAR",
+      "label": "VAR",
+      "normalized": "VAR"
+    },
+    {
+      "id": 48,
+      "line": 26,
+      "type": "TYPE",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 49,
+      "line": 26,
+      "type": "NAME",
+      "label": "m",
+      "normalized": "$VARL_4"
+    },
+    {
+      "id": 50,
+      "line": 26,
+      "type": "INIT",
+      "label": "= 1",
+      "normalized": "= 1"
+    },
+    {
+      "id": 51,
+      "line": 27,
+      "type": "VAR",
+      "label": "VAR",
+      "normalized": "VAR"
+    },
+    {
+      "id": 52,
+      "line": 27,
+      "type": "TYPE",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 53,
+      "line": 27,
+      "type": "NAME",
+      "label": "r",
+      "normalized": "$VARL_5"
+    },
+    {
+      "id": 54,
+      "line": 27,
+      "type": "INIT",
+      "label": "= x",
+      "normalized": "= $VARL_2"
+    },
+    {
+      "id": 55,
+      "line": 28,
+      "type": "VAR",
+      "label": "VAR",
+      "normalized": "VAR"
+    },
+    {
+      "id": 56,
+      "line": 28,
+      "type": "TYPE",
+      "label": "double",
+      "normalized": "double"
+    },
+    {
+      "id": 57,
+      "line": 28,
+      "type": "NAME",
+      "label": "diff",
+      "normalized": "$VARL_6"
+    },
+    {
+      "id": 58,
+      "line": 28,
+      "type": "INIT",
+      "label": "= x * x - N",
+      "normalized": "= $VARL_2 * $VARL_2 - $VARL_1"
+    },
+    {
+      "id": 59,
+      "line": 29,
+      "type": "WHILE",
+      "label": "WHILE",
+      "normalized": "WHILE"
+    },
+    {
+      "id": 60,
+      "line": 29,
+      "type": "COND",
+      "label": "Math.abs(diff) > mEpsilon",
+      "normalized": "Math.abs($VARL_6) > $VARF_1"
+    },
+    {
+      "id": 61,
+      "line": 29,
+      "type": "BLOCK",
+      "label": "BLOCK",
+      "normalized": "BLOCK"
+    },
+    {
+      "id": 62,
+      "line": 30,
+      "type": "IF",
+      "label": "IF",
+      "normalized": "IF"
+    },
+    {
+      "id": 63,
+      "line": 30,
+      "type": "COND",
+      "label": "diff < 0",
+      "normalized": "$VARL_6 < 0"
+    },
+    {
+      "id": 64,
+      "line": 30,
+      "type": "THEN",
+      "label": "THEN",
+      "normalized": "THEN"
+    },
+    {
+      "id": 65,
+      "line": 31,
+      "type": "",
+      "label": "m = x",
+      "normalized": "$VARL_4 ?= $VARL_2"
+    },
+    {
+      "id": 66,
+      "line": 32,
+      "type": "",
+      "label": "x = (M + x) / 2",
+      "normalized": "$VARL_2 ?= ($VARL_3 + $VARL_2) / 2"
+    },
+    {
+      "id": 67,
+      "line": 33,
+      "type": "ELSE",
+      "label": "ELSE",
+      "normalized": "ELSE"
+    },
+    {
+      "id": 68,
+      "line": 34,
+      "type": "IF",
+      "label": "IF",
+      "normalized": "IF"
+    },
+    {
+      "id": 69,
+      "line": 34,
+      "type": "COND",
+      "label": "diff > 0",
+      "normalized": "$VARL_6 > 0"
+    },
+    {
+      "id": 70,
+      "line": 34,
+      "type": "THEN",
+      "label": "THEN",
+      "normalized": "THEN"
+    },
+    {
+      "id": 71,
+      "line": 35,
+      "type": "",
+      "label": "M = x",
+      "normalized": "$VARL_3 ?= $VARL_2"
+    },
+    {
+      "id": 72,
+      "line": 36,
+      "type": "",
+      "label": "x = (m + x) / 2",
+      "normalized": "$VARL_2 ?= ($VARL_4 + $VARL_2) / 2"
+    },
+    {
+      "id": 73,
+      "line": 39,
+      "type": "",
+      "label": "diff = x * x - N",
+      "normalized": "$VARL_6 ?= $VARL_2 * $VARL_2 - $VARL_1"
+    },
+    {
+      "id": 74,
+      "line": 41,
+      "type": "",
+      "label": "r = x++",
+      "normalized": "$VARL_5 ?= $VARL_2++"
+    },
+    {
+      "id": 75,
+      "line": 42,
+      "type": "",
+      "label": "mResult = r",
+      "normalized": "$VARF_3 ?= $VARL_5"
+    },
+    {
+      "id": 76,
+      "line": 43,
+      "type": "",
+      "label": "return r;",
+      "normalized": "return $VARL_5"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 2,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 2,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 5,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 5,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 2,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 9,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 9,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 2,
+      "target": 13,
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 13,
+      "target": 15,
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 13,
+      "target": 16,
+      "label": ""
+    },
+    {
+      "id": 16,
+      "source": 2,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 17,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 17,
+      "target": 19,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 2,
+      "target": 20,
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 20,
+      "target": 21,
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 20,
+      "target": 22,
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 20,
+      "target": 23,
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 20,
+      "target": 24,
+      "label": ""
+    },
+    {
+      "id": 24,
+      "source": 24,
+      "target": 25,
+      "label": ""
+    },
+    {
+      "id": 25,
+      "source": 25,
+      "target": 26,
+      "label": ""
+    },
+    {
+      "id": 26,
+      "source": 25,
+      "target": 27,
+      "label": ""
+    },
+    {
+      "id": 27,
+      "source": 20,
+      "target": 28,
+      "label": ""
+    },
+    {
+      "id": 28,
+      "source": 28,
+      "target": 29,
+      "label": ""
+    },
+    {
+      "id": 29,
+      "source": 2,
+      "target": 30,
+      "label": ""
+    },
+    {
+      "id": 30,
+      "source": 30,
+      "target": 31,
+      "label": ""
+    },
+    {
+      "id": 31,
+      "source": 30,
+      "target": 32,
+      "label": ""
+    },
+    {
+      "id": 32,
+      "source": 30,
+      "target": 33,
+      "label": ""
+    },
+    {
+      "id": 33,
+      "source": 30,
+      "target": 34,
+      "label": ""
+    },
+    {
+      "id": 34,
+      "source": 34,
+      "target": 35,
+      "label": ""
+    },
+    {
+      "id": 35,
+      "source": 35,
+      "target": 36,
+      "label": ""
+    },
+    {
+      "id": 36,
+      "source": 35,
+      "target": 37,
+      "label": ""
+    },
+    {
+      "id": 37,
+      "source": 30,
+      "target": 38,
+      "label": ""
+    },
+    {
+      "id": 38,
+      "source": 38,
+      "target": 39,
+      "label": ""
+    },
+    {
+      "id": 39,
+      "source": 39,
+      "target": 40,
+      "label": ""
+    },
+    {
+      "id": 40,
+      "source": 39,
+      "target": 41,
+      "label": ""
+    },
+    {
+      "id": 41,
+      "source": 39,
+      "target": 42,
+      "label": ""
+    },
+    {
+      "id": 42,
+      "source": 38,
+      "target": 43,
+      "label": ""
+    },
+    {
+      "id": 43,
+      "source": 43,
+      "target": 44,
+      "label": ""
+    },
+    {
+      "id": 44,
+      "source": 43,
+      "target": 45,
+      "label": ""
+    },
+    {
+      "id": 45,
+      "source": 43,
+      "target": 46,
+      "label": ""
+    },
+    {
+      "id": 46,
+      "source": 38,
+      "target": 47,
+      "label": ""
+    },
+    {
+      "id": 47,
+      "source": 47,
+      "target": 48,
+      "label": ""
+    },
+    {
+      "id": 48,
+      "source": 47,
+      "target": 49,
+      "label": ""
+    },
+    {
+      "id": 49,
+      "source": 47,
+      "target": 50,
+      "label": ""
+    },
+    {
+      "id": 50,
+      "source": 38,
+      "target": 51,
+      "label": ""
+    },
+    {
+      "id": 51,
+      "source": 51,
+      "target": 52,
+      "label": ""
+    },
+    {
+      "id": 52,
+      "source": 51,
+      "target": 53,
+      "label": ""
+    },
+    {
+      "id": 53,
+      "source": 51,
+      "target": 54,
+      "label": ""
+    },
+    {
+      "id": 54,
+      "source": 38,
+      "target": 55,
+      "label": ""
+    },
+    {
+      "id": 55,
+      "source": 55,
+      "target": 56,
+      "label": ""
+    },
+    {
+      "id": 56,
+      "source": 55,
+      "target": 57,
+      "label": ""
+    },
+    {
+      "id": 57,
+      "source": 55,
+      "target": 58,
+      "label": ""
+    },
+    {
+      "id": 58,
+      "source": 38,
+      "target": 59,
+      "label": ""
+    },
+    {
+      "id": 59,
+      "source": 59,
+      "target": 60,
+      "label": ""
+    },
+    {
+      "id": 60,
+      "source": 59,
+      "target": 61,
+      "label": ""
+    },
+    {
+      "id": 61,
+      "source": 61,
+      "target": 62,
+      "label": ""
+    },
+    {
+      "id": 62,
+      "source": 62,
+      "target": 63,
+      "label": ""
+    },
+    {
+      "id": 63,
+      "source": 62,
+      "target": 64,
+      "label": ""
+    },
+    {
+      "id": 64,
+      "source": 64,
+      "target": 65,
+      "label": ""
+    },
+    {
+      "id": 65,
+      "source": 64,
+      "target": 66,
+      "label": ""
+    },
+    {
+      "id": 66,
+      "source": 62,
+      "target": 67,
+      "label": ""
+    },
+    {
+      "id": 67,
+      "source": 67,
+      "target": 68,
+      "label": ""
+    },
+    {
+      "id": 68,
+      "source": 68,
+      "target": 69,
+      "label": ""
+    },
+    {
+      "id": 69,
+      "source": 68,
+      "target": 70,
+      "label": ""
+    },
+    {
+      "id": 70,
+      "source": 70,
+      "target": 71,
+      "label": ""
+    },
+    {
+      "id": 71,
+      "source": 70,
+      "target": 72,
+      "label": ""
+    },
+    {
+      "id": 72,
+      "source": 61,
+      "target": 73,
+      "label": ""
+    },
+    {
+      "id": 73,
+      "source": 38,
+      "target": 74,
+      "label": ""
+    },
+    {
+      "id": 74,
+      "source": 38,
+      "target": 75,
+      "label": ""
+    },
+    {
+      "id": 75,
+      "source": 38,
+      "target": 76,
+      "label": ""
+    }
+  ]
+}

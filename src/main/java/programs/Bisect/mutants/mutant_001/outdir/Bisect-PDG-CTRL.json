@@ -1,0 +1,291 @@
+{
+  "directed": true,
+  "label": "CDG of Bisect.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "Bisect.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 13,
+      "label": "Bisect ()"
+    },
+    {
+      "id": 1,
+      "line": 0,
+      "label": "exit"
+    },
+    {
+      "id": 2,
+      "line": 17,
+      "label": "void setEpsilon( double epsilon )"
+    },
+    {
+      "id": 3,
+      "line": 19,
+      "label": "this.mEpsilon = epsilon"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "exit"
+    },
+    {
+      "id": 5,
+      "line": 22,
+      "label": "double sqrt( double N )"
+    },
+    {
+      "id": 6,
+      "line": 24,
+      "label": "double x = N"
+    },
+    {
+      "id": 7,
+      "line": 25,
+      "label": "double M = N"
+    },
+    {
+      "id": 8,
+      "line": 26,
+      "label": "double m = 1"
+    },
+    {
+      "id": 9,
+      "line": 27,
+      "label": "double r = x"
+    },
+    {
+      "id": 10,
+      "line": 28,
+      "label": "double diff = x * x - N"
+    },
+    {
+      "id": 11,
+      "line": 29,
+      "label": "while (Math.abs(diff) > mEpsilon)"
+    },
+    {
+      "id": 12,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 13,
+      "line": 30,
+      "label": "if (diff < 0)"
+    },
+    {
+      "id": 14,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 15,
+      "line": 31,
+      "label": "m = x"
+    },
+    {
+      "id": 16,
+      "line": 32,
+      "label": "x = (M + x) / 2"
+    },
+    {
+      "id": 17,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 18,
+      "line": 34,
+      "label": "if (diff > 0)"
+    },
+    {
+      "id": 19,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 20,
+      "line": 35,
+      "label": "M = x"
+    },
+    {
+      "id": 21,
+      "line": 36,
+      "label": "x = (m + x) / 2"
+    },
+    {
+      "id": 22,
+      "line": 39,
+      "label": "diff = x * x - N"
+    },
+    {
+      "id": 23,
+      "line": 41,
+      "label": "r = x++"
+    },
+    {
+      "id": 24,
+      "line": 42,
+      "label": "mResult = r"
+    },
+    {
+      "id": 25,
+      "line": 43,
+      "label": "return r;"
+    },
+    {
+      "id": 26,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 5,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 5,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 5,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 5,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 11,
+      "target": 12,
+      "label": "True"
+    },
+    {
+      "id": 10,
+      "source": 12,
+      "target": 13,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 13,
+      "target": 14,
+      "label": "True"
+    },
+    {
+      "id": 12,
+      "source": 14,
+      "target": 15,
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 14,
+      "target": 16,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 13,
+      "target": 17,
+      "label": "False"
+    },
+    {
+      "id": 15,
+      "source": 17,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 16,
+      "source": 18,
+      "target": 19,
+      "label": "True"
+    },
+    {
+      "id": 17,
+      "source": 19,
+      "target": 20,
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 19,
+      "target": 21,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 12,
+      "target": 22,
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 5,
+      "target": 23,
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 5,
+      "target": 24,
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 5,
+      "target": 25,
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 5,
+      "target": 26,
+      "label": ""
+    }
+  ]
+}
