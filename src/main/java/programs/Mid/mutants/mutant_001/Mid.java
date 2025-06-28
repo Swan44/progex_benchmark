@@ -13,7 +13,7 @@ public class Mid {
 			}
 		} else {
 			if (c > b) {
-				if (a > c) {
+				if (a >= c) {
 					mid = c;
 				} else {
 					mid = a;
