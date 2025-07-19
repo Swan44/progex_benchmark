@@ -1,3 +1,5 @@
+package programs.Prime_num.original;
+
 public class Prime_num {
 	public static void main(String args[])
 {

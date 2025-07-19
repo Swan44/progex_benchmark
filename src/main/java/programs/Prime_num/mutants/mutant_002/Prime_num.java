@@ -5,7 +5,7 @@ public class Prime_num {
 	System.out.print("\n");
 	for(m=1;m<=5;m++)
 	{
-		k=(int)Math.sqrt(m+1);
+		k=(int)Math.sqrt(Math.abs(m)+1);
 		for(i=2;i<=k;i++)
 		{
 			if(m%i==0)

@@ -31,7 +31,7 @@ public class MutantIdGenerator {
             Map<String, Object> newMutant = new LinkedHashMap<>();
 
             // 添加ID作为第一个字段
-            String mutantId = idPrefix + String.format(idFormat, i);
+            String mutantId = idPrefix + String.format(idFormat, i + 1);
             newMutant.put("mutant_id", mutantId);
 
             // 保留原始字段
@@ -52,12 +52,11 @@ public class MutantIdGenerator {
     }
     public static void main(String[] args) {
         try {
-            // 示例用法
             addMutantIds(
-                    "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsJson\\Midmutants.json",
-                    "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsIDJson\\Midmutants.json",
+                    "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsJson\\Trianglemutants.json",
+                    "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsIDJson\\Trianglemutants.json",
                     "MUT_",  // 自定义前缀
-                    "%04d"   // 4位数字ID
+                    "%03d"   // 4位数字ID
             );
 
             // 或使用默认配置
