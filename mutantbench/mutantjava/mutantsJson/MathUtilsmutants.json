@@ -5,11 +5,6 @@
         "operator": "AOIU"
     },
     {
-        "difference": NaN,
-        "equivalence": false,
-        "operator": "LOR"
-    },
-    {
         "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u * 2)/* B3 */;",
         "equivalence": false,
         "operator": "AORB"
@@ -155,11 +150,6 @@
         "operator": "AOIU"
     },
     {
-        "difference": NaN,
-        "equivalence": true,
-        "operator": "ROR"
-    },
-    {
         "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v | 1) == 0 && k < 31) { // while u and v are",
         "equivalence": false,
         "operator": "LOR"
@@ -173,11 +163,6 @@
         "difference": "@@ -420 +420 @@\n-            u /= 2;\n+            u /= -2;",
         "equivalence": false,
         "operator": "AOIU"
-    },
-    {
-        "difference": NaN,
-        "equivalence": false,
-        "operator": "ADL"
     },
     {
         "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) >= 1) ? v : -(u / 2)/* B3 */;",
@@ -215,11 +200,6 @@
         "operator": "ROR"
     },
     {
-        "difference": NaN,
-        "equivalence": false,
-        "operator": "CR"
-    },
-    {
         "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && k < -31) { // while u and v are",
         "equivalence": false,
         "operator": "AOIU"
@@ -228,11 +208,6 @@
         "difference": "@@ -403 +403 @@\n-            return (Math.abs(u) + Math.abs(v));\n+            return (Math.abs(u) - Math.abs(v));",
         "equivalence": false,
         "operator": "AORB"
-    },
-    {
-        "difference": NaN,
-        "equivalence": false,
-        "operator": "AOIU"
     },
     {
         "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) <= 0 && k < 31) { // while u and v are",
@@ -365,11 +340,6 @@
         "operator": "null"
     },
     {
-        "difference": NaN,
-        "equivalence": false,
-        "operator": "LOR"
-    },
-    {
         "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & -1) == -1) ? v : -(u / 2)/* B3 */;",
         "equivalence": false,
         "operator": "AOIU"
@@ -383,11 +353,6 @@
         "difference": "@@ -420 +420 @@\n-            u /= 2;\n+            u /= 0;",
         "equivalence": false,
         "operator": "CR"
-    },
-    {
-        "difference": NaN,
-        "equivalence": false,
-        "operator": "AOIU"
     },
     {
         "difference": "@@ -418 +418 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (((u & 1) == 0 && (v & 1) == 0) == k < 31) { // while u and v are",
@@ -540,11 +505,6 @@
         "operator": "AORB"
     },
     {
-        "difference": NaN,
-        "equivalence": false,
-        "operator": "CDL"
-    },
-    {
         "difference": "@@ -448 +448 @@\n-        } while (t != 0);\n+        } while (t != 1);",
         "equivalence": false,
         "operator": "CR"
@@ -610,11 +570,6 @@
         "operator": "ROR"
     },
     {
-        "difference": NaN,
-        "equivalence": false,
-        "operator": "CR"
-    },
-    {
         "difference": "@@ -429 +429 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u % 2)/* B3 */;",
         "equivalence": false,
         "operator": "AORB"
@@ -623,11 +578,6 @@
         "difference": "@@ -424 +424 @@\n-        if (k == 31) {\n+        if (false) {",
         "equivalence": true,
         "operator": "CDL"
-    },
-    {
-        "difference": NaN,
-        "equivalence": false,
-        "operator": "ROR"
     },
     {
         "difference": "@@ -402 +402 @@\n-        if (u * v == 0) {\n+        if (u / v == 0) {",
