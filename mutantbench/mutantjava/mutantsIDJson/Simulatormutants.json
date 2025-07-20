@@ -1,0 +1,341 @@
+[ {
+  "mutant_id" : "MUT_001",
+  "difference" : "@@ -1471 +1471 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; false; i++) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_002",
+  "difference" : "@@ -1416 +1416 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = -1; i < nodesList.size(); i++) {",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_003",
+  "difference" : "@@ -1429 +1429 @@\n-\t\t\tfloat nAifsd = sifs + 2 * slot;\n+\t\t\tfloat nAifsd = sifs * (2 * slot);",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_004",
+  "difference" : "@@ -1429 +1429 @@\n-\t\t\tfloat nAifsd = sifs + 2 * slot;\n+\t\t\tfloat nAifsd = sifs + 2 / slot;",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_005",
+  "difference" : "@@ -1448 +1448 @@\n-\t\t\t\tnAifsd = sifs + aifs3 * slot;\n+\t\t\t\tnAifsd = sifs / (aifs3 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_006",
+  "difference" : "@@ -1455 +1455 @@\n-\t\t\t\tnAifsd = sifs + aifs0 * slot;\n+\t\t\t\tnAifsd = sifs + aifs0 + slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_007",
+  "difference" : "@@ -1416 +1416 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; false; i++) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_008",
+  "difference" : "@@ -1448 +1448 @@\n-\t\t\t\tnAifsd = sifs + aifs3 * slot;\n+\t\t\t\tnAifsd = sifs + aifs3 - slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_009",
+  "difference" : "@@ -1470 +1470 @@\n-\t\tint position = -1;\n+\t\tint position = 0;",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_010",
+  "difference" : "@@ -1441 +1441 @@\n-\t\t\t\tnAifsd = sifs + aifs2 * slot;\n+\t\t\t\tnAifsd = sifs % (aifs2 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_011",
+  "difference" : "@@ -1464 +1464 @@\n-\t\t\tnmbrOfNodes++;\n+\t\t\t;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_012",
+  "difference" : "@@ -1448 +1448 @@\n-\t\t\t\tnAifsd = sifs + aifs3 * slot;\n+\t\t\t\tnAifsd = sifs + aifs3 % slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_013",
+  "difference" : "@@ -1441 +1441 @@\n-\t\t\t\tnAifsd = sifs + aifs2 * slot;\n+\t\t\t\tnAifsd = sifs + aifs2 - slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_014",
+  "difference" : "@@ -1441 +1441 @@\n-\t\t\t\tnAifsd = sifs + aifs2 * slot;\n+\t\t\t\tnAifsd = sifs - aifs2 * slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_015",
+  "difference" : "@@ -1455 +1455 @@\n-\t\t\t\tnAifsd = sifs + aifs0 * slot;\n+\t\t\t\tnAifsd = sifs + aifs0 - slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_016",
+  "difference" : "@@ -1416 +1416 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; i <= nodesList.size(); i++) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_017",
+  "difference" : "@@ -1477 +1477 @@\n-\t\tif (position != -1) {\n+\t\tif (position > -1) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_018",
+  "difference" : "@@ -1441 +1441 @@\n-\t\t\t\tnAifsd = sifs + aifs2 * slot;\n+\t\t\t\tnAifsd = sifs + aifs2 % slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_019",
+  "difference" : "@@ -1455 +1455 @@\n-\t\t\t\tnAifsd = sifs + aifs0 * slot;\n+\t\t\t\tnAifsd = sifs / (aifs0 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_020",
+  "difference" : "@@ -1415 +1415 @@\n-\t\tboolean nodeExists = false;\n+\t\tboolean nodeExists = true;",
+  "equivalence" : false,
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_021",
+  "difference" : "@@ -1416 +1416 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; i != nodesList.size(); i++) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_022",
+  "difference" : "@@ -1429 +1429 @@\n-\t\t\tfloat nAifsd = sifs + 2 * slot;\n+\t\t\tfloat nAifsd = sifs + 2 - slot;",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_023",
+  "difference" : "@@ -1471 +1471 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; i <= nodesList.size(); i++) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_024",
+  "difference" : "@@ -1478 +1478 @@\n-\t\t\tnodesList.removeElementAt(position);\n+\t\t\t;",
+  "equivalence" : false,
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_025",
+  "difference" : "@@ -1455 +1455 @@\n-\t\t\t\tnAifsd = sifs + aifs0 * slot;\n+\t\t\t\tnAifsd = sifs * (aifs0 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_026",
+  "difference" : "@@ -1418 +1418 @@\n-\t\t\t\tnodeExists = true;\n+\t\t\t\tnodeExists = false;",
+  "equivalence" : false,
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_027",
+  "difference" : "@@ -1448 +1448 @@\n-\t\t\t\tnAifsd = sifs + aifs3 * slot;\n+\t\t\t\tnAifsd = sifs - aifs3 * slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_028",
+  "difference" : "@@ -1441 +1441 @@\n-\t\t\t\tnAifsd = sifs + aifs2 * slot;\n+\t\t\t\tnAifsd = sifs / (aifs2 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_029",
+  "difference" : "@@ -1441 +1441 @@\n-\t\t\t\tnAifsd = sifs + aifs2 * slot;\n+\t\t\t\tnAifsd = sifs * (aifs2 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_030",
+  "difference" : "@@ -1422 +1422 @@\n-\t\tif (nodeExists) {\n+\t\tif (false) {",
+  "equivalence" : false,
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_031",
+  "difference" : "@@ -1429 +1429 @@\n-\t\t\tfloat nAifsd = sifs + 2 * slot;\n+\t\t\tfloat nAifsd = sifs + 2 % slot;",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_032",
+  "difference" : "@@ -1429 +1429 @@\n-\t\t\tfloat nAifsd = sifs + 2 * slot;\n+\t\t\tfloat nAifsd = sifs - 2 * slot;",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_033",
+  "difference" : "@@ -1471 +1471 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; i != nodesList.size(); i++) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_034",
+  "difference" : "@@ -1477 +1477 @@\n-\t\tif (position != -1) {\n+\t\tif (true) {",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_035",
+  "difference" : "@@ -1455 +1455 @@\n-\t\t\t\tnAifsd = sifs + aifs0 * slot;\n+\t\t\t\tnAifsd = sifs % (aifs0 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_036",
+  "difference" : "@@ -1455 +1455 @@\n-\t\t\t\tnAifsd = sifs + aifs0 * slot;\n+\t\t\t\tnAifsd = sifs + aifs0 / slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_037",
+  "difference" : "@@ -1455 +1455 @@\n-\t\t\t\tnAifsd = sifs + aifs0 * slot;\n+\t\t\t\tnAifsd = sifs + aifs0 % slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_038",
+  "difference" : "@@ -1429 +1429 @@\n-\t\t\tfloat nAifsd = sifs + 2 * slot;\n+\t\t\tfloat nAifsd = sifs % (2 * slot);",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_039",
+  "difference" : "@@ -1455 +1455 @@\n-\t\t\t\tnAifsd = sifs + aifs0 * slot;\n+\t\t\t\tnAifsd = sifs - aifs0 * slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_040",
+  "difference" : "@@ -1471 +1471 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = -1; i < nodesList.size(); i++) {",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_041",
+  "difference" : "@@ -1434 +1434 @@\n-\t\t\t\tnAifsd = sifs + aifs1 * slot;\n+\t\t\t\tnAifsd = sifs % (aifs1 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_042",
+  "difference" : "@@ -1434 +1434 @@\n-\t\t\t\tnAifsd = sifs + aifs1 * slot;\n+\t\t\t\tnAifsd = sifs + aifs1 - slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_043",
+  "difference" : "@@ -1477 +1477 @@\n-\t\tif (position != -1) {\n+\t\tif (position != 0) {",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_044",
+  "difference" : "@@ -1434 +1434 @@\n-\t\t\t\tnAifsd = sifs + aifs1 * slot;\n+\t\t\t\tnAifsd = sifs + aifs1 % slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_045",
+  "difference" : "@@ -1477 +1477 @@\n-\t\tif (position != -1) {\n+\t\tif (position != 1) {",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_046",
+  "difference" : "@@ -1429 +1429 @@\n-\t\t\tfloat nAifsd = sifs + 2 * slot;\n+\t\t\tfloat nAifsd = sifs + 2 + slot;",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_047",
+  "difference" : "@@ -1448 +1448 @@\n-\t\t\t\tnAifsd = sifs + aifs3 * slot;\n+\t\t\t\tnAifsd = sifs % (aifs3 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_048",
+  "difference" : "@@ -1434 +1434 @@\n-\t\t\t\tnAifsd = sifs + aifs1 * slot;\n+\t\t\t\tnAifsd = sifs / (aifs1 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_049",
+  "difference" : "@@ -1480 +1480 @@\n-\t\t\treturn true;\n+\t\t\treturn false;",
+  "equivalence" : false,
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_050",
+  "difference" : "@@ -1448 +1448 @@\n-\t\t\t\tnAifsd = sifs + aifs3 * slot;\n+\t\t\t\tnAifsd = sifs * (aifs3 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_051",
+  "difference" : "@@ -1429 +1429 @@\n-\t\t\tfloat nAifsd = sifs + 2 * slot;\n+\t\t\tfloat nAifsd = sifs + -2 * slot;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_052",
+  "difference" : "@@ -1470 +1470 @@\n-\t\tint position = -1;\n+\t\tint position = 1;",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_053",
+  "difference" : "@@ -1471 +1471 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 1; i < nodesList.size(); i++) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_054",
+  "difference" : "@@ -1479 +1479 @@\n-\t\t\tnmbrOfNodes--;\n+\t\t\t;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_055",
+  "difference" : "@@ -1434 +1434 @@\n-\t\t\t\tnAifsd = sifs + aifs1 * slot;\n+\t\t\t\tnAifsd = sifs + aifs1 + slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_056",
+  "difference" : "@@ -1441 +1441 @@\n-\t\t\t\tnAifsd = sifs + aifs2 * slot;\n+\t\t\t\tnAifsd = sifs + aifs2 / slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_057",
+  "difference" : "@@ -1434 +1434 @@\n-\t\t\t\tnAifsd = sifs + aifs1 * slot;\n+\t\t\t\tnAifsd = sifs - aifs1 * slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_058",
+  "difference" : "@@ -1434 +1434 @@\n-\t\t\t\tnAifsd = sifs + aifs1 * slot;\n+\t\t\t\tnAifsd = sifs * (aifs1 * slot);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_059",
+  "difference" : "@@ -1422 +1422 @@\n-\t\tif (nodeExists) {\n+\t\tif (true) {",
+  "equivalence" : false,
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_060",
+  "difference" : "@@ -1434 +1434 @@\n-\t\t\t\tnAifsd = sifs + aifs1 * slot;\n+\t\t\t\tnAifsd = sifs + aifs1 / slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_061",
+  "difference" : "@@ -1463 +1463 @@\n-\t\t\tnodesList.addElement(nd);\n+\t\t\t;",
+  "equivalence" : false,
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_062",
+  "difference" : "@@ -1429 +1429 @@\n-\t\t\tfloat nAifsd = sifs + 2 * slot;\n+\t\t\tfloat nAifsd = sifs / (2 * slot);",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_063",
+  "difference" : "@@ -1416 +1416 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 1; i < nodesList.size(); i++) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_064",
+  "difference" : "@@ -1448 +1448 @@\n-\t\t\t\tnAifsd = sifs + aifs3 * slot;\n+\t\t\t\tnAifsd = sifs + aifs3 / slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_065",
+  "difference" : "@@ -1441 +1441 @@\n-\t\t\t\tnAifsd = sifs + aifs2 * slot;\n+\t\t\t\tnAifsd = sifs + aifs2 + slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_066",
+  "difference" : "@@ -1429 +1429 @@\n-\t\t\tfloat nAifsd = sifs + 2 * slot;\n+\t\t\tfloat nAifsd = sifs + 0 * slot;",
+  "equivalence" : true,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_067",
+  "difference" : "@@ -1448 +1448 @@\n-\t\t\t\tnAifsd = sifs + aifs3 * slot;\n+\t\t\t\tnAifsd = sifs + aifs3 + slot;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_068",
+  "difference" : "@@ -1477 +1477 @@\n-\t\tif (position != -1) {\n+\t\tif (position < -1) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+} ]

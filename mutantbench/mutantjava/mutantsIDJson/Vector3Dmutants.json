@@ -1,0 +1,601 @@
+[ {
+  "mutant_id" : "MUT_001",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(-1, inverse * z, -inverse * y);",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_002",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= -threshold) == (y <= threshold)) {",
+  "equivalence" : true,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_003",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y / (z * z));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_004",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 - Math.sqrt(x * x + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_005",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse + y, -inverse * x, 0);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_006",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse + x, 0);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_007",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse * x, -1);",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_008",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= threshold) && (x <= threshold)) {",
+  "equivalence" : false,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_009",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x + z / z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_010",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y <= threshold)) {",
+  "equivalence" : true,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_011",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse / x, 0);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_012",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x == -threshold) && (x <= threshold)) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_013",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = -1 / Math.sqrt(y * y + z * z);",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_014",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse * x, 1);",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_015",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(+inverse * z, 0, inverse * x);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_016",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x - y * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_017",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x > -threshold) && (x <= threshold)) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_018",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse / z, 0, inverse * x);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_019",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse % y, -inverse * x, 0);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_020",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((true) && (y <= threshold)) {",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_021",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y == -threshold) && (y <= threshold)) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_022",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y > -threshold) && (y <= threshold)) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_023",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse - y, -inverse * x, 0);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_024",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, -1, inverse * x);",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_025",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 - Math.sqrt(x * x + y * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_026",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse + z, 0, inverse * x);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_027",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 0 / Math.sqrt(y * y + z * z);",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_028",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 - Math.sqrt(y * y + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_029",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse * z, -inverse - y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_030",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x - x + y * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_031",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, 0, inverse / x);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_032",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((true) && (x <= threshold)) {",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_033",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse - z, 0, inverse * x);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_034",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x - x + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_035",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 + Math.sqrt(x * x + y * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_036",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= +threshold) && (y <= threshold)) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_037",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x + y + y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_038",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x / x + y * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_039",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x % (z * z));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_040",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= -threshold) && (true)) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_041",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse - z, -inverse * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_042",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y * (z * z));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_043",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse / z, -inverse * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_044",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 % Math.sqrt(y * y + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_045",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y + z + z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_046",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x % x + y * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_047",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= -threshold) && (y == threshold)) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_048",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 % Math.sqrt(x * x + y * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_049",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x + z - z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_050",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x % x + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_051",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 * Math.sqrt(x * x + y * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_052",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 0 / Math.sqrt(x * x + z * z);",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_053",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x + y - y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_054",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y + z / z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_055",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse / y, -inverse * x, 0);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_056",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x <= threshold)) {",
+  "equivalence" : true,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_057",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x * (y * y));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_058",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse * z, -inverse / y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_059",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= -threshold) && (y < threshold)) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_060",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if ((y >= -threshold)) {",
+  "equivalence" : true,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_061",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = -1 / Math.sqrt(x * x + y * y);",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_062",
+  "difference" : "@@ -265 +265 @@\n-    if (threshold == 0) {\n+    if (threshold == 1) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_063",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, 0, inverse + x);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_064",
+  "difference" : "@@ -272 +272 @@\n-    } else if ((y >= -threshold) && (y <= threshold)) {\n+    } else if (false) {",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_065",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= -threshold) && (true)) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_066",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= -threshold) && (x < threshold)) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_067",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(1, inverse * z, -inverse * y);",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_068",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse % z, -inverse * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_069",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x + z + z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_070",
+  "difference" : "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = 0.0 * getNorm();",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_071",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 0 / Math.sqrt(x * x + y * y);",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_072",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse * z, -inverse + y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_073",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x + y / y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_074",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 * Math.sqrt(y * y + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_075",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse - x, 0);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_076",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y % (z * z));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_077",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse + z, -inverse * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_078",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y / y + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_079",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x + y % y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_080",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x % (y * y));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_081",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, +inverse * x, 0);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_082",
+  "difference" : "@@ -265 +265 @@\n-    if (threshold == 0) {\n+    if (threshold >= 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_083",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y + z - z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_084",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, 1, inverse * x);",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_085",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y + z % z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_086",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 + Math.sqrt(y * y + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_087",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x * (z * z));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_088",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse * z, +inverse * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_089",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y + y + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_090",
+  "difference" : "@@ -271 +271 @@\n-      return new Vector3D(0, inverse * z, -inverse * y);\n+      return new Vector3D(0, inverse * z, -inverse % y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_091",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, 0, inverse - x);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_092",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if (false) {",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_093",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x / x + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_094",
+  "difference" : "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = 0.6 - getNorm();",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_095",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 * Math.sqrt(x * x + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_096",
+  "difference" : "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = 0.6 + getNorm();",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_097",
+  "difference" : "@@ -265 +265 @@\n-    if (threshold == 0) {\n+    if (threshold <= 0) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_098",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x * x / (y * y));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_099",
+  "difference" : "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = 0.6 / getNorm();",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_100",
+  "difference" : "@@ -265 +265 @@\n-    if (threshold == 0) {\n+    if (false) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_101",
+  "difference" : "@@ -277 +277 @@\n-    return new Vector3D(inverse * y, -inverse * x, 0);\n+    return new Vector3D(inverse * y, -inverse % x, 0);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_102",
+  "difference" : "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = -0.6 * getNorm();",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_103",
+  "difference" : "@@ -264 +264 @@\n-    double threshold = 0.6 * getNorm();\n+    double threshold = 0.6 % getNorm();",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_104",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse * z, 0, inverse % x);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_105",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x / (z * z));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_106",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y * y - z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_107",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y % y + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_108",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 + Math.sqrt(x * x + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_109",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = -1 / Math.sqrt(x * x + z * z);",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_110",
+  "difference" : "@@ -270 +270 @@\n-      double inverse  = 1 / Math.sqrt(y * y + z * z);\n+      double inverse  = 1 / Math.sqrt(y - y + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_111",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= -threshold) == (x <= threshold)) {",
+  "equivalence" : true,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_112",
+  "difference" : "@@ -276 +276 @@\n-    double inverse  = 1 / Math.sqrt(x * x + y * y);\n+    double inverse  = 1 / Math.sqrt(x + x + y * y);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_113",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= -threshold) && (x == threshold)) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_114",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x + z % z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_115",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 % Math.sqrt(x * x + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_116",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x + x + z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_117",
+  "difference" : "@@ -265 +265 @@\n-    if (threshold == 0) {\n+    if (threshold == -1) {",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_118",
+  "difference" : "@@ -269 +269 @@\n-    if ((x >= -threshold) && (x <= threshold)) {\n+    if ((x >= -threshold)) {",
+  "equivalence" : true,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_119",
+  "difference" : "@@ -273 +273 @@\n-      double inverse  = 1 / Math.sqrt(x * x + z * z);\n+      double inverse  = 1 / Math.sqrt(x * x - z * z);",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_120",
+  "difference" : "@@ -274 +274 @@\n-      return new Vector3D(-inverse * z, 0, inverse * x);\n+      return new Vector3D(-inverse % z, 0, inverse * x);",
+  "equivalence" : false,
+  "operator" : "AORB"
+} ]

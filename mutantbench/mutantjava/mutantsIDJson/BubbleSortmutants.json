@@ -1,0 +1,516 @@
+[ {
+  "mutant_id" : "MUT_001",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[~j] < data[j - 1]) {",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_002",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j + 1] = temp;",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_003",
+  "difference" : "@@ -12 +12 @@\n-                    int temp = data[j];\n+                    int temp = data[~j];",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_004",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j / 1];",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_005",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length; i++) {",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_006",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[~j - 1];",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_007",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j + 1];",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_008",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; true; --j) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_009",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j / 1] = temp;",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_010",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; --j > i; --j) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_011",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = -temp;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_012",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > i--; --j) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_013",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i != data.length - 1; i++) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_014",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j < i; --j) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_015",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = --temp;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_016",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i++ < data.length - 1; i++) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_017",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = temp--;",
+  "equivalence" : true,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_018",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[--j] < data[j - 1]) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_019",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[~j] = data[j - 1];",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_020",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j <= i; --j) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_021",
+  "difference" : "@@ -13 +12,0 @@\n-                    data[j] = data[j - 1];",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_022",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = temp++;",
+  "equivalence" : true,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_023",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > i;  ) {",
+  "equivalence" : false,
+  "operator" : "AODS"
+}, {
+  "mutant_id" : "MUT_024",
+  "difference" : "@@ -11,5 +10,0 @@\n-                if (data[j] < data[j - 1]) {\n-                    int temp = data[j];\n-                    data[j] = data[j - 1];\n-                    data[j - 1] = temp;\n-                }",
+  "equivalence" : false,
+  "operator" : "ISDL"
+}, {
+  "mutant_id" : "MUT_025",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; !(j > i); --j) {",
+  "equivalence" : false,
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_026",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > --i; --j) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_027",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length / 1; i++) {",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_028",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (true) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_029",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] != data[j - 1]) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_030",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j] = temp;",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_031",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j != i; --j) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_032",
+  "difference" : "@@ -10,7 +9,0 @@\n-            for (int j = data.length - 1; j > i; --j) {\n-                if (data[j] < data[j - 1]) {\n-                    int temp = data[j];\n-                    data[j] = data[j - 1];\n-                    data[j - 1] = temp;\n-                }\n-            }",
+  "equivalence" : false,
+  "operator" : "FLDL"
+}, {
+  "mutant_id" : "MUT_033",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j++ > i; --j) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_034",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j >= i; --j) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_035",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j--] < data[j - 1]) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_036",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j++ - 1]) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_037",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < 1; i++) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_038",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j * 1];",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_039",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > ++i; --j) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_040",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j % 1]) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_041",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[--j - 1];",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_042",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > i; j++) {",
+  "equivalence" : false,
+  "operator" : "AORS"
+}, {
+  "mutant_id" : "MUT_043",
+  "difference" : "@@ -12 +12 @@\n-                    int temp = data[j];\n+                    int temp = data[j--];",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_044",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1;; --j) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_045",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[1]) {",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_046",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = ~temp;",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_047",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; ~j > i; --j) {",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_048",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j == i; --j) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_049",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[1] = temp;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_050",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[-j - 1];",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_051",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; --i < data.length - 1; i++) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_052",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] > data[j - 1]) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_053",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[++j - 1];",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_054",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j++ - 1];",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_055",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j++] < data[j - 1]) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_056",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] == data[j - 1]) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_057",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i >= data.length - 1; i++) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_058",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] >= data[j - 1]) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_059",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[++j] < data[j - 1]) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_060",
+  "difference" : "@@ -9,9 +8,0 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n-            for (int j = data.length - 1; j > i; --j) {\n-                if (data[j] < data[j - 1]) {\n-                    int temp = data[j];\n-                    data[j] = data[j - 1];\n-                    data[j - 1] = temp;\n-                }\n-            }\n-        }",
+  "equivalence" : false,
+  "operator" : "FLDL"
+}, {
+  "mutant_id" : "MUT_061",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j % 1] = temp;",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_062",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i > data.length - 1; i++) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_063",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[--j - 1]) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_064",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < ~data.length - 1; i++) {",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_065",
+  "difference" : "@@ -12 +12 @@\n-                    int temp = data[j];\n+                    int temp = data[-j];",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_066",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j + 1]) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_067",
+  "difference" : "@@ -14 +13,0 @@\n-                    data[j - 1] = temp;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_068",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j-- > i; --j) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_069",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; ++j > i; --j) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_070",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j % 1];",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_071",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0;; i++) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_072",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length + 1; i++) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_073",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[~j - 1]) {",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_074",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length * 1; i++) {",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_075",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j-- - 1]) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_076",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j * 1] = temp;",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_077",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; !(i < data.length - 1); i++) {",
+  "equivalence" : false,
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_078",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i-- < data.length - 1; i++) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_079",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length - 1; i--) {",
+  "equivalence" : false,
+  "operator" : "AORS"
+}, {
+  "mutant_id" : "MUT_080",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[~j - 1] = temp;",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_081",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i <= data.length - 1; i++) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_082",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length - 1;) {",
+  "equivalence" : false,
+  "operator" : "AODS"
+}, {
+  "mutant_id" : "MUT_083",
+  "difference" : "@@ -14 +14 @@\n-                    data[j - 1] = temp;\n+                    data[j - 1] = ++temp;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_084",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; true; i++) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_085",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (false) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_086",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > ~i; --j) {",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_087",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j];",
+  "equivalence" : true,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_088",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j * 1]) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_089",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > i;) {",
+  "equivalence" : false,
+  "operator" : "AODS"
+}, {
+  "mutant_id" : "MUT_090",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[++j - 1]) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_091",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length % 1; i++) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_092",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[j-- - 1];",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_093",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j / 1]) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_094",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i == data.length - 1; i++) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_095",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] < data[j]) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_096",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; i < data.length - 1;  ) {",
+  "equivalence" : false,
+  "operator" : "AODS"
+}, {
+  "mutant_id" : "MUT_097",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; ++i < data.length - 1; i++) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_098",
+  "difference" : "@@ -13 +13 @@\n-                    data[j] = data[j - 1];\n+                    data[j] = data[1];",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_099",
+  "difference" : "@@ -12 +12 @@\n-                    int temp = data[j];\n+                    int temp = data[j++];",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_100",
+  "difference" : "@@ -9 +9 @@\n-        for (int i = 0; i < data.length - 1; i++) {\n+        for (int i = 0; ~i < data.length - 1; i++) {",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_101",
+  "difference" : "@@ -10 +10 @@\n-            for (int j = data.length - 1; j > i; --j) {\n+            for (int j = data.length - 1; j > i++; --j) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_102",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (data[j] <= data[j - 1]) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_103",
+  "difference" : "@@ -11 +11 @@\n-                if (data[j] < data[j - 1]) {\n+                if (!(data[j] < data[j - 1])) {",
+  "equivalence" : false,
+  "operator" : "SEOI"
+} ]
