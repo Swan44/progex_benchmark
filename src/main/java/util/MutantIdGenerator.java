@@ -53,8 +53,8 @@ public class MutantIdGenerator {
     public static void main(String[] args) {
         try {
             addMutantIds(
-                    "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsJson\\XmlFriendlyNameCodermutants.json",
-                    "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsIDJson\\XmlFriendlyNameCodermutants.json",
+                    "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsJson\\Midmutants.json",
+                    "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsIDJson\\Midmutants.json",
                     "MUT_",  // 自定义前缀
                     "%03d"   // 4位数字ID
             );
