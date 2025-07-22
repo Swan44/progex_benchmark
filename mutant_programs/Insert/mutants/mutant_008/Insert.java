@@ -12,7 +12,7 @@ public class Insert {
         System.out.printf("\n");
         System.out.printf("insert a new number:");
         end = a[2];
-        if (number >= end) {
+        if (number >= end--) {
             a[3] = number;
         } else {
             for (i = 0; i < 3; i++) {

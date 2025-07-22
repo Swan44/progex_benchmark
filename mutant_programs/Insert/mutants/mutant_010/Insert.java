@@ -11,7 +11,7 @@ public class Insert {
         }
         System.out.printf("\n");
         System.out.printf("insert a new number:");
-        end = a[2];
+        end = Math.abs(a[2]);
         if (number >= end) {
             a[3] = number;
         } else {

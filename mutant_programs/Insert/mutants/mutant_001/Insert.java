@@ -29,7 +29,7 @@ public class Insert {
             }
         }
         for (i = 0; i < 4; i++) {
-            System.out.printf("%6d", a[i]);
+            System.out.printf("%6d", a[i]++);
         }
         System.out.printf("\n");
     }

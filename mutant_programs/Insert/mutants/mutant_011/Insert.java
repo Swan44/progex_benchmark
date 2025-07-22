@@ -18,7 +18,7 @@ public class Insert {
             for (i = 0; i < 3; i++) {
                 if (a[i] > number) {
                     mytemp1 = a[i];
-                    a[i] = number;
+                    a[i] = number--;
                     for (j = i + 1; j < 4; j++) {
                         mytemp2 = a[j];
                         a[j] = mytemp1;

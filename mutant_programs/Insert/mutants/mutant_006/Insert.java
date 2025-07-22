@@ -21,7 +21,7 @@ public class Insert {
                     a[i] = number;
                     for (j = i + 1; j < 4; j++) {
                         mytemp2 = a[j];
-                        a[j] = mytemp1;
+                        a[j] = mytemp1--;
                         mytemp1 = mytemp2;
                     }
                     break;
