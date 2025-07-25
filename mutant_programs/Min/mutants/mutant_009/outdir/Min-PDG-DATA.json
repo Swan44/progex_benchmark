@@ -1,0 +1,151 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of Min.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "Min.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int min(int I, int J)",
+      "defs": ["I", "J"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int Min",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "Min = I",
+      "defs": ["Min"],
+      "uses": ["I"]
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "if (J<I)",
+      "defs": [],
+      "uses": ["I", "J"]
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "Min=J--",
+      "defs": ["Min", "J"],
+      "uses": ["J"]
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 6,
+      "line": 8,
+      "label": "return Min;",
+      "defs": [],
+      "uses": ["Min"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 3,
+      "target": 5,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 6,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 0,
+      "target": 2,
+      "type": "Flows",
+      "label": "I"
+    },
+    {
+      "id": 8,
+      "source": 0,
+      "target": 3,
+      "type": "Flows",
+      "label": "I"
+    },
+    {
+      "id": 9,
+      "source": 0,
+      "target": 3,
+      "type": "Flows",
+      "label": "J"
+    },
+    {
+      "id": 10,
+      "source": 0,
+      "target": 4,
+      "type": "Flows",
+      "label": "J"
+    },
+    {
+      "id": 11,
+      "source": 2,
+      "target": 6,
+      "type": "Flows",
+      "label": "Min"
+    },
+    {
+      "id": 12,
+      "source": 4,
+      "target": 6,
+      "type": "Flows",
+      "label": "Min"
+    }
+  ]
+}

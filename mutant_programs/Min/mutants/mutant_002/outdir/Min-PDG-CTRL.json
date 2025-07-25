@@ -1,0 +1,94 @@
+{
+  "directed": true,
+  "label": "CDG of Min.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "Min.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int min(int I, int J)"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int Min"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "Min = I"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "if (J<I)"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "Min=J"
+    },
+    {
+      "id": 6,
+      "line": 8,
+      "label": "return Min++;"
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": "True"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 0,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 0,
+      "target": 7,
+      "label": ""
+    }
+  ]
+}

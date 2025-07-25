@@ -1,0 +1,91 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of Min.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "Min.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int min(int I, int J)"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int Min"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "Min = I"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "if (J<I)"
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "Min=J++"
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 6,
+      "line": 8,
+      "label": "return Min;"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": "True"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 3,
+      "target": 5,
+      "label": "False"
+    },
+    {
+      "id": 6,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    }
+  ]
+}

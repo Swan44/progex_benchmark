@@ -1,0 +1,457 @@
+{
+  "directed": true,
+  "label": "CDG of Insert.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "Insert.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 5,
+      "label": "void main(int number)"
+    },
+    {
+      "id": 1,
+      "line": 6,
+      "label": "int[] a = new int[] { -14, 6, 28, 0 }"
+    },
+    {
+      "id": 2,
+      "line": 7,
+      "label": "int mytemp1, mytemp2, end, i, j"
+    },
+    {
+      "id": 3,
+      "line": 8,
+      "label": "System.out.println('original array is:\\n')"
+    },
+    {
+      "id": 4,
+      "line": 9,
+      "label": "i = 0"
+    },
+    {
+      "id": 5,
+      "line": 9,
+      "label": "for (i < 3)"
+    },
+    {
+      "id": 6,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 7,
+      "line": 10,
+      "label": "System.out.printf('%5d', a[i])"
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "i++"
+    },
+    {
+      "id": 9,
+      "line": 12,
+      "label": "System.out.printf('\\n')"
+    },
+    {
+      "id": 10,
+      "line": 13,
+      "label": "System.out.printf('insert a new number:')"
+    },
+    {
+      "id": 11,
+      "line": 14,
+      "label": "end = a[2]"
+    },
+    {
+      "id": 12,
+      "line": 15,
+      "label": "if (number >= end)"
+    },
+    {
+      "id": 13,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 14,
+      "line": 16,
+      "label": "a[3] = number--"
+    },
+    {
+      "id": 15,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 16,
+      "line": 18,
+      "label": "i = 0"
+    },
+    {
+      "id": 17,
+      "line": 18,
+      "label": "for (i < 3)"
+    },
+    {
+      "id": 18,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 19,
+      "line": 19,
+      "label": "if (a[i] > number)"
+    },
+    {
+      "id": 20,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 21,
+      "line": 20,
+      "label": "mytemp1 = a[i]"
+    },
+    {
+      "id": 22,
+      "line": 21,
+      "label": "a[i] = number"
+    },
+    {
+      "id": 23,
+      "line": 22,
+      "label": "j = i + 1"
+    },
+    {
+      "id": 24,
+      "line": 22,
+      "label": "for (j < 4)"
+    },
+    {
+      "id": 25,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 26,
+      "line": 23,
+      "label": "mytemp2 = a[j]"
+    },
+    {
+      "id": 27,
+      "line": 24,
+      "label": "a[j] = mytemp1"
+    },
+    {
+      "id": 28,
+      "line": 25,
+      "label": "mytemp1 = mytemp2"
+    },
+    {
+      "id": 29,
+      "line": 22,
+      "label": "j++"
+    },
+    {
+      "id": 30,
+      "line": 27,
+      "label": "break;"
+    },
+    {
+      "id": 31,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 32,
+      "line": 18,
+      "label": "i++"
+    },
+    {
+      "id": 33,
+      "line": 0,
+      "label": "FOLLOW-1"
+    },
+    {
+      "id": 34,
+      "line": 31,
+      "label": "i = 0"
+    },
+    {
+      "id": 35,
+      "line": 31,
+      "label": "for (i < 4)"
+    },
+    {
+      "id": 36,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 37,
+      "line": 32,
+      "label": "System.out.printf('%6d', a[i])"
+    },
+    {
+      "id": 38,
+      "line": 31,
+      "label": "i++"
+    },
+    {
+      "id": 39,
+      "line": 34,
+      "label": "System.out.printf('\\n')"
+    },
+    {
+      "id": 40,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 0,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 0,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": "True"
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 6,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 0,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 0,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 0,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 0,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 12,
+      "target": 13,
+      "label": "True"
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 12,
+      "target": 15,
+      "label": "False"
+    },
+    {
+      "id": 15,
+      "source": 15,
+      "target": 16,
+      "label": ""
+    },
+    {
+      "id": 16,
+      "source": 15,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 17,
+      "target": 18,
+      "label": "True"
+    },
+    {
+      "id": 18,
+      "source": 18,
+      "target": 19,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 19,
+      "target": 20,
+      "label": "True"
+    },
+    {
+      "id": 20,
+      "source": 20,
+      "target": 21,
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 20,
+      "target": 22,
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 20,
+      "target": 23,
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 20,
+      "target": 24,
+      "label": ""
+    },
+    {
+      "id": 24,
+      "source": 24,
+      "target": 25,
+      "label": "True"
+    },
+    {
+      "id": 25,
+      "source": 25,
+      "target": 26,
+      "label": ""
+    },
+    {
+      "id": 26,
+      "source": 25,
+      "target": 27,
+      "label": ""
+    },
+    {
+      "id": 27,
+      "source": 25,
+      "target": 28,
+      "label": ""
+    },
+    {
+      "id": 28,
+      "source": 25,
+      "target": 29,
+      "label": ""
+    },
+    {
+      "id": 29,
+      "source": 20,
+      "target": 30,
+      "label": ""
+    },
+    {
+      "id": 30,
+      "source": 19,
+      "target": 31,
+      "label": "False"
+    },
+    {
+      "id": 31,
+      "source": 18,
+      "target": 32,
+      "label": ""
+    },
+    {
+      "id": 32,
+      "source": 31,
+      "target": 33,
+      "label": ""
+    },
+    {
+      "id": 33,
+      "source": 33,
+      "target": 34,
+      "label": ""
+    },
+    {
+      "id": 34,
+      "source": 33,
+      "target": 35,
+      "label": ""
+    },
+    {
+      "id": 35,
+      "source": 35,
+      "target": 36,
+      "label": "True"
+    },
+    {
+      "id": 36,
+      "source": 36,
+      "target": 37,
+      "label": ""
+    },
+    {
+      "id": 37,
+      "source": 36,
+      "target": 38,
+      "label": ""
+    },
+    {
+      "id": 38,
+      "source": 33,
+      "target": 39,
+      "label": ""
+    },
+    {
+      "id": 39,
+      "source": 0,
+      "target": 40,
+      "label": ""
+    }
+  ]
+}
