@@ -1,22 +1,22 @@
 [ {
   "mutant_id" : "MUT_001",
-  "difference" : "@@ -36 +36 @@\n-\tif(year%400==0||(year%4==0&&year%100!=0))\n+\tif(year%400==0||(year%4==0&&year%100!=0))\n@@ -40 +40 @@\n-\tif(leap==1&&month>2)\n+\tif(leap==1&&month++>2)",
+  "difference" : "@@ -40 +40 @@\n-\tif(leap==1&&month>2)\n+\tif(leap==1&&month++>2)",
   "operator" : "AOIS"
 }, {
   "mutant_id" : "MUT_002",
-  "difference" : "@@ -35,2 +35,2 @@\n-\tsum=sum+day;\n-\tif(year%400==0||(year%4==0&&year%100!=0))\n+\tsum=sum+day++;\n+\tif(year%400==0||(year%4==0&&year%100!=0))",
+  "difference" : "@@ -35 +35 @@\n-\tsum=sum+day;\n+\tsum=sum+day++;",
   "operator" : "AOIS"
 }, {
   "mutant_id" : "MUT_003",
-  "difference" : "@@ -35,2 +35,2 @@\n-\tsum=sum+day;\n-\tif(year%400==0||(year%4==0&&year%100!=0))\n+\tsum=sum+day--;\n+\tif(year%400==0||(year%4==0&&year%100!=0))",
+  "difference" : "@@ -35 +35 @@\n-\tsum=sum+day;\n+\tsum=sum+day--;",
   "operator" : "AOIS"
 }, {
   "mutant_id" : "MUT_004",
-  "difference" : "@@ -35,2 +35,2 @@\n-\tsum=sum+day;\n-\tif(year%400==0||(year%4==0&&year%100!=0))\n+\tsum=sum+abs(day);\n+\tif(year%400==0||(year%4==0&&year%100!=0))",
+  "difference" : "@@ -35 +35 @@\n-\tsum=sum+day;\n+\tsum=sum+abs(day);",
   "operator" : "ABSI"
 }, {
   "mutant_id" : "MUT_005",
-  "difference" : "@@ -35,2 +35,2 @@\n-\tsum=sum+day;\n-\tif(year%400==0||(year%4==0&&year%100!=0))\n+\tsum=abs(sum)+day;\n+\tif(year%400==0||(year%4==0&&year%100!=0))",
+  "difference" : "@@ -35 +35 @@\n-\tsum=sum+day;\n+\tsum=abs(sum)+day;",
   "operator" : "ABSI"
 }, {
   "mutant_id" : "MUT_006",
@@ -24,7 +24,7 @@
   "operator" : "ROR"
 }, {
   "mutant_id" : "MUT_007",
-  "difference" : "@@ -36 +36 @@\n-\tif(year%400==0||(year%4==0&&year%100!=0))\n+\tif(year%400==0||(year%4==0&&year%100!=0))\n@@ -40 +40 @@\n-\tif(leap==1&&month>2)\n+\tif(leap++==1&&month>2)",
+  "difference" : "@@ -40 +40 @@\n-\tif(leap==1&&month>2)\n+\tif(leap++==1&&month>2)",
   "operator" : "AOIS"
 }, {
   "mutant_id" : "MUT_008",
@@ -32,11 +32,11 @@
   "operator" : "AOIS"
 }, {
   "mutant_id" : "MUT_009",
-  "difference" : "@@ -36 +36 @@\n-\tif(year%400==0||(year%4==0&&year%100!=0))\n+\tif(year%400==0||(year%4==0&&year%100!=0))\n@@ -40 +40 @@\n-\tif(leap==1&&month>2)\n+\tif(leap--==1&&month>2)",
+  "difference" : "@@ -40 +40 @@\n-\tif(leap==1&&month>2)\n+\tif(leap--==1&&month>2)",
   "operator" : "AOIS"
 }, {
   "mutant_id" : "MUT_010",
-  "difference" : "@@ -36 +36 @@\n-\tif(year%400==0||(year%4==0&&year%100!=0))\n+\tif(year%400==0||(year%4==0&&year%100!=0))\n@@ -40 +40 @@\n-\tif(leap==1&&month>2)\n+\tif(leap==1&&month-->2)",
+  "difference" : "@@ -40 +40 @@\n-\tif(leap==1&&month>2)\n+\tif(leap==1&&month-->2)",
   "operator" : "AOIS"
 }, {
   "mutant_id" : "MUT_011",
@@ -52,6 +52,6 @@
   "operator" : "ROR"
 }, {
   "mutant_id" : "MUT_014",
-  "difference" : "@@ -36 +36 @@\n-\tif(year%400==0||(year%4==0&&year%100!=0))\n+\tif(year%400==0||(year%4==0&&year%100!=0))\n@@ -40 +40 @@\n-\tif(leap==1&&month>2)\n+\tif(leap>=1&&month>2)",
+  "difference" : "@@ -40 +40 @@\n-\tif(leap==1&&month>2)\n+\tif(leap>=1&&month>2)",
   "operator" : "ROR"
 } ]

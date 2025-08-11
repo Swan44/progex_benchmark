@@ -37,7 +37,7 @@ public static void main(int day, int month, int year)
 		leap=1;
 	else
 		leap=0;
-	if(leap==1&&month>2)
+	if(leap==1&&month++>2)
 		sum++;
 	System.out.printf("It is the %d th day.",sum);
 }

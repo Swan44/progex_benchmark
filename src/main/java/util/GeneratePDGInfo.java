@@ -12,7 +12,7 @@ public class GeneratePDGInfo {
     private static final File PROGEX_WORKING_DIR = new File("D:\\progex-v3.4.5\\progex-v3.4.5");
     public static void main(String[] args) {
         // mutants 文件夹路径
-        String mutantsBaseDir = "D:\\bishe_code\\progex_benchmark\\mutant_programs\\Insert\\mutants";
+        String mutantsBaseDir = "D:\\bishe_code\\progex_benchmark\\mutant_programs\\Day\\mutants";
 
         // 遍历 mutants 文件夹
         File mutantsDir = new File(mutantsBaseDir);
@@ -39,8 +39,6 @@ public class GeneratePDGInfo {
                 System.err.println("处理 " + mutantDir.getName() + " 时出错: " + e.getMessage());
             }
         });
-
-        //System.out.println("所有变异体的 CFG 和 PDG 生成完成！");
     }
 
     /**
@@ -64,23 +62,6 @@ public class GeneratePDGInfo {
             return;
         }
         String javaFilePath = javaFiles[0].getAbsolutePath();
-
-        // 生成 CFG
-        //String cfgOutDir = outDir.resolve("cfg").toString();
-        //Files.createDirectories(Paths.get(cfgOutDir));
-        //String cfgCommand = String.format(
-                //"java -jar \"%s\" -cfg -lang java -format json -outdir \"%s\" \"%s\"",
-                //PROGEX_JAR_PATH, outDir.toString(), javaFilePath
-        //);
-        //executeCommand(cfgCommand);
-
-        // 生成 PDG
-        //String pdgOutDir = outDir.resolve("pdg").toString();
-        //Files.createDirectories(Paths.get(pdgOutDir));
-        /*String pdgCommand = String.format(
-                "java -jar \"%s\" -pdg -lang java -format json -outdir \"%s\" \"%s\"",
-                PROGEX_JAR_PATH, outDir.toString(), javaFilePath
-        );*/
         String[] pdgCommand = new String[]{
                 "java", "-jar", PROGEX_JAR_PATH,
                 "-pdg", "-lang", "java", "-format", "json",
@@ -88,8 +69,6 @@ public class GeneratePDGInfo {
                 javaFilePath
         };
         executeCommand(pdgCommand, PROGEX_WORKING_DIR);
-
-        //System.out.println(mutantName + " 处理完成");
     }
 
     /**
@@ -99,15 +78,6 @@ public class GeneratePDGInfo {
      * @throws InterruptedException
      */
     private static void executeCommand(String[] command, File workingDir) throws IOException, InterruptedException {
-        /*Process process = new ProcessBuilder()
-                .command("cmd.exe", "/c", command)
-                .inheritIO()
-                .start();
-
-        int exitCode = process.waitFor();
-        if (exitCode != 0) {
-            throw new IOException("命令执行失败: " + command);
-        }*/
         ProcessBuilder builder = new ProcessBuilder(command);
         builder.directory(workingDir);
         builder.inheritIO(); // 将输出继承到控制台

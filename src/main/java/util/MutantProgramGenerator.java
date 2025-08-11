@@ -15,13 +15,13 @@ import java.util.regex.Pattern;
 public class MutantProgramGenerator {
     public static void main(String[] args) {
         // 原始文件路径
-        String originalFilePath = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\Triangle.java";
+        String originalFilePath = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\Day.java";
 
         // 变异体信息JSON文件路径（或直接传入JSON字符串）
-        String mutantsJsonPath = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsIDJson\\Trianglemutants.json";
+        String mutantsJsonPath = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsDelJson\\Daymutants.json";
 
         // 输出目录
-        String outputBaseDir = "D:\\bishe_code\\progex_benchmark\\mutant_programs\\Triangle\\mutants";
+        String outputBaseDir = "D:\\bishe_code\\progex_benchmark\\mutant_programs\\Day\\mutants";
 
         try {
             // 读取JSON文件内容
