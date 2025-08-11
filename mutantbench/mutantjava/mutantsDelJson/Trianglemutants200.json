@@ -1,0 +1,801 @@
+[ {
+  "mutant_id" : "MUT_001",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_002",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b-- || b + c < a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_003",
+  "difference" : "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian % 2;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_004",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (a + c > b) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_005",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (b < c || a + c < b || b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_006",
+  "difference" : "@@ -28 +28 @@\n-        if (b == c) {\n+        if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_007",
+  "difference" : "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b == ++c) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_008",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c <= a) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_009",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b++ + c < a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_010",
+  "difference" : "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = ~trian + 3;",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_011",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && false) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_012",
+  "difference" : "@@ -33 +33 @@\n-                return INVALID;\n+                return -INVALID;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_013",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (false) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_014",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian <= 2 && a + c > b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_015",
+  "difference" : "@@ -32,5 +31,0 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n-                return INVALID;\n-            } else {\n-                return SCALENE;\n-            }",
+  "operator" : "ISDL"
+}, {
+  "mutant_id" : "MUT_016",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (true && a + c > b) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_017",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (true && b + c > a) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_018",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c >= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_019",
+  "difference" : "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (--trian > 3) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_020",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || !(c <= 0)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_021",
+  "difference" : "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a == c++) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_022",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (!(a + b < c || a + c < b || b + c < a)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_023",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if ((a + b < c || a + c < b) != b + c < a) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_024",
+  "difference" : "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian > -3) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_025",
+  "difference" : "@@ -28 +28 @@\n-        if (b == c) {\n+        if (~b == c) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_026",
+  "difference" : "@@ -33 +33 @@\n-                return INVALID;\n+                return 0;",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_027",
+  "difference" : "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (!(trian == 0)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_028",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_029",
+  "difference" : "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a >= b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_030",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian-- == 3 && b + c > a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_031",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c != 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_032",
+  "difference" : "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = ++trian + 3;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_033",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c != b || b + c < a) {",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_034",
+  "difference" : "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = trian + 0;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_035",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (~a + b < c || a + c < b || b + c < a) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_036",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c && a + c < b || b + c < a) {",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_037",
+  "difference" : "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a == ++b) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_038",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c != b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_039",
+  "difference" : "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_040",
+  "difference" : "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a != b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_041",
+  "difference" : "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = -trian + 2;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_042",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian > 2 && a + c > b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_043",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_044",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if ((a <= 0 || b <= 0) && c <= 0) {",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_045",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || true) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_046",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a / c > b) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_047",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + ++c < b || b + c < a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_048",
+  "difference" : "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (~trian == 0) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_049",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c <= b || b + c < a) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_050",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (b <= 0 || c <= 0) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_051",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (c <= 0) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_052",
+  "difference" : "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a < c) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_053",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || c <= 0) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_054",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && ++b + c > a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_055",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || c <= 0) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_056",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b / c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_057",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 ^ b <= 0 || c <= 0) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_058",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || --b <= 0 || c <= 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_059",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a % c > b) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_060",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || c == 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_061",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 && b <= 0 || c <= 0) {",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_062",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + --c > b) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_063",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian <= 2 && a + c > b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_064",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c == b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_065",
+  "difference" : "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian++ + 2;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_066",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (b <= 0 || c <= 0) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_067",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && false) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_068",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a % b < c || a + c < b || b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_069",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_070",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a - c > b) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_071",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || !(b <= 0) || c <= 0) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_072",
+  "difference" : "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian++ > 3) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_073",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_074",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian-- == 1 && a + b > c) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_075",
+  "difference" : "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian - 2;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_076",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && false) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_077",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a / b > c) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_078",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (!(a <= 0 || b <= 0 || c <= 0)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_079",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b / c > a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_080",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (--trian == 3 && b + c > a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_081",
+  "difference" : "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = --trian + 1;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_082",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c >= a) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_083",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian++ == 3 && b + c > a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_084",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (false || a + c < b || b + c < a) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_085",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a * c > b) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_086",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + ~c > a) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_087",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || !(a + c < b) || b + c < a) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_088",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_089",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian < 1 && a + b > c) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_090",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b / c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_091",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_092",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian < 3 && b + c > a) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_093",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c != b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_094",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a-- + c < b || b + c < a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_095",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && !(b + c > a)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_096",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b > c++) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_097",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a - c < b || b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_098",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a < b || b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_099",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 0 && b + c > a) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_100",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a % b > c) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_101",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 0 && a + c > b) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_102",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c < b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_103",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (a + c > b) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_104",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c-- < b || b + c < a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_105",
+  "difference" : "@@ -25,3 +24,0 @@\n-        if (a == c) {\n-            trian = trian + 2;\n-        }",
+  "operator" : "ISDL"
+}, {
+  "mutant_id" : "MUT_106",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b != c) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_107",
+  "difference" : "@@ -21 +21 @@\n-        trian = 0;\n+        trian = 1;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_108",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 == a + b > c) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_109",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + --c < a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_110",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (true || b + c < a) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_111",
+  "difference" : "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (true) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_112",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && false) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_113",
+  "difference" : "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (trian++ == 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_114",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c > a--) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_115",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || b + c < a) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_116",
+  "difference" : "@@ -44 +42 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 == a + c > b) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_117",
+  "difference" : "@@ -29 +29 @@\n-            trian = trian + 3;\n+            trian = trian * 3;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_118",
+  "difference" : "@@ -22 +22 @@\n-        if (a == b) {\n+        if (--a == b) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_119",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b-- > c) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_120",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c < ~a) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_121",
+  "difference" : "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a == ++c) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_122",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (true) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_123",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (false) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_124",
+  "difference" : "@@ -47 +47 @@\n-                    return ISOSCELES;\n+                    return 0;",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_125",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c <= a) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_126",
+  "difference" : "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b-- == c) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_127",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a++ + c < b || b + c < a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_128",
+  "difference" : "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian - 2;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_129",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || true || c <= 0) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_130",
+  "difference" : "@@ -25 +25 @@\n-        if (a == c) {\n+        if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_131",
+  "difference" : "@@ -28 +28 @@\n-        if (b == c) {\n+        if (true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_132",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (b + c > a) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_133",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (true) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_134",
+  "difference" : "@@ -27 +27 @@\n-            trian = trian + 2;\n+            trian = trian / 2;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_135",
+  "difference" : "@@ -52 +52 @@\n-        return INVALID;\n+        return ~INVALID;",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_136",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b < 0 || c <= 0) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_137",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (--a <= 0 || b <= 0 || c <= 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_138",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c == a) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_139",
+  "difference" : "@@ -22 +22 @@\n-        if (a == b) {\n+        if (true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_140",
+  "difference" : "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a <= b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_141",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && ++a + c > b) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_142",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a - b > c) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_143",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || ++b <= 0 || c <= 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_144",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a == 0 || b <= 0 || c <= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_145",
+  "difference" : "@@ -22 +22 @@\n-        if (a == b) {\n+        if (a == b--) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_146",
+  "difference" : "@@ -45 +45 @@\n-                return ISOSCELES;\n+                return ~ISOSCELES;",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_147",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || true || b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_148",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian <= 1 && a + b > c) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_149",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == -2 && a + c > b) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_150",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 1 || b <= 1 || c <= 1) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_151",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian >= 1 && a + b > c) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_152",
+  "difference" : "@@ -23 +23 @@\n-            trian = trian + 1;\n+            trian = trian % 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_153",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c-- > b) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_154",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b <= c || a + c < b || b + c < a) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_155",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a != 0 || b <= 0 || c <= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_156",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (++trian == 1 && a + b > c) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_157",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c != a + c < b || b + c < a) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_158",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + ~c > b) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_159",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian >= 2 && a + c > b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_160",
+  "difference" : "@@ -35 +35 @@\n-                return SCALENE;\n+                return -SCALENE;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_161",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c++ > b) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_162",
+  "difference" : "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian + 0;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_163",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (++a <= 0 || b <= 0 || c <= 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_164",
+  "difference" : "@@ -32 +32 @@\n-        if (trian == 0) {\n+        if (trian >= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_165",
+  "difference" : "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian > 0) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_166",
+  "difference" : "@@ -31 +31 @@\n-        if (trian == 0) {\n+        if (trian != 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_167",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (false) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_168",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b < 0 || c <= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_169",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || a + c < b || b + c > a) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_170",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian >= 1 && a + b > c) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_171",
+  "difference" : "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a != c) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_172",
+  "difference" : "@@ -25 +25 @@\n-        if (a == c) {\n+        if (a == ~c) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_173",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a > 0 || b <= 0 || c <= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_174",
+  "difference" : "@@ -19 +19 @@\n-            return INVALID;\n+            return -INVALID;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_175",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_176",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && ++a + b > c) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_177",
+  "difference" : "@@ -28 +28 @@\n-        if (b == c) {\n+        if (b <= c) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_178",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian <= 1 && a + b > c) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_179",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || b <= 0 || true) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_180",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_181",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || c < b || b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_182",
+  "difference" : "@@ -42 +42 @@\n-            return ISOSCELES;\n+            return 0;",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_183",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (--a + b < c || a + c < b || b + c < a) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_184",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if ((a + b < c || a + c < b) && b + c < a) {",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_185",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (trian == 3 && b + c > a++) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_186",
+  "difference" : "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (!(trian > 3)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_187",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a + b < c || false || b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_188",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (true) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_189",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && ~a + c > b) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_190",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_191",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a-- <= 0 || b <= 0 || c <= 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_192",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (a <= 0 || true || c <= 0) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_193",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a + c <= b) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_194",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (!(trian == 2) && a + c > b) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_195",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (false) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_196",
+  "difference" : "@@ -32 +32 @@\n-            if (a + b < c || a + c < b || b + c < a) {\n+            if (a - b < c || a + c < b || b + c < a) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_197",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (trian == 2 && a / c > b) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_198",
+  "difference" : "@@ -38 +38 @@\n-        if (trian > 3) {\n+        if (trian != 3) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_199",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (false && a + b > c) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_200",
+  "difference" : "@@ -41 +41 @@\n-        if (trian == 1 && a + b > c) {\n+        if (trian == 1 && a + b != c) {",
+  "operator" : "ROR"
+} ]

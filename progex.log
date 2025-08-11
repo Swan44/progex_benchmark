@@ -1,4 +1,4 @@
-======= LOG CREATED on 星期二 2025/八月/12 01:20:07:935 =======
+======= LOG CREATED on 星期二 2025/八月/12 02:12:31:697 =======
 
 PROGEX (Program Graph Extractor)  [ v3.4.5 ]
 Visit project website @ https://github.com/ghaffarian/progex
@@ -6,10 +6,10 @@ Visit project website @ https://github.com/ghaffarian/progex
 PROGEX execution config:
   Language = Java
   Output format = JSON
-  Output directory = D:\bishe_code\progex_benchmark\mutant_programs\Day\mutants\mutant_001\outdir\
+  Output directory = D:\bishe_code\progex_benchmark\mutant_programs\Triangle\mutants\mutant_078\outdir\
   Analysis types = [CFG]
   Input paths = 
-        D:\bishe_code\progex_benchmark\mutant_programs\Day\mutants\mutant_001\Day.java
+        D:\bishe_code\progex_benchmark\mutant_programs\Triangle\mutants\mutant_078\Triangle.java
 
 
 # Java source files = 1
@@ -17,4 +17,4 @@ PROGEX execution config:
 
 Control-Flow Analysis
 =====================
-CFG exported to: D:\bishe_code\progex_benchmark\mutant_programs\Day\mutants\mutant_001\outdir\Day-CFG.json
+CFG exported to: D:\bishe_code\progex_benchmark\mutant_programs\Triangle\mutants\mutant_078\outdir\Triangle-CFG.json

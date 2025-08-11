@@ -1,6 +1,6 @@
 [ {
   "mutant_id" : "MUT_001",
-  "difference" : "@@ -19 +19 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true) {",
+  "difference" : "@@ -18 +18 @@\n-        if (a <= 0 || b <= 0 || c <= 0) {\n+        if (true) {",
   "operator" : "null"
 }, {
   "mutant_id" : "MUT_002",
@@ -8,11 +8,11 @@
   "operator" : "AOIS"
 }, {
   "mutant_id" : "MUT_003",
-  "difference" : "@@ -27 +27 @@\n-            trian = trian + 2;\n+            trian = trian % 2;",
+  "difference" : "@@ -26 +26 @@\n-            trian = trian + 2;\n+            trian = trian % 2;",
   "operator" : "AORB"
 }, {
   "mutant_id" : "MUT_004",
-  "difference" : "@@ -45 +45 @@\n-            if (trian == 2 && a + c > b) {\n+            if (a + c > b) {",
+  "difference" : "@@ -44 +44 @@\n-            if (trian == 2 && a + c > b) {\n+            if (a + c > b) {",
   "operator" : "null"
 }, {
   "mutant_id" : "MUT_005",
@@ -48,7 +48,7 @@
   "operator" : "AOIU"
 }, {
   "mutant_id" : "MUT_013",
-  "difference" : "@@ -47 +48 @@\n-                if (trian == 3 && b + c > a) {\n+                if (false) {",
+  "difference" : "@@ -47 +47 @@\n-                if (trian == 3 && b + c > a) {\n+                if (false) {",
   "operator" : "AORB"
 }, {
   "mutant_id" : "MUT_014",
