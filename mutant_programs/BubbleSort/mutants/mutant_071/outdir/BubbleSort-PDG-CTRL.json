@@ -1,0 +1,171 @@
+{
+  "directed": true,
+  "label": "CDG of BubbleSort.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "BubbleSort.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 7,
+      "label": "void sort( int[] data )"
+    },
+    {
+      "id": 1,
+      "line": 9,
+      "label": "int i = 0"
+    },
+    {
+      "id": 2,
+      "line": 9,
+      "label": "for (;)"
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 4,
+      "line": 10,
+      "label": "int j = data.length - 1"
+    },
+    {
+      "id": 5,
+      "line": 10,
+      "label": "for (j > i)"
+    },
+    {
+      "id": 6,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 7,
+      "line": 11,
+      "label": "if (data[j] < data[j - 1])"
+    },
+    {
+      "id": 8,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 9,
+      "line": 12,
+      "label": "int temp = data[j]"
+    },
+    {
+      "id": 10,
+      "line": 13,
+      "label": "data[j] = data[j - 1]"
+    },
+    {
+      "id": 11,
+      "line": 14,
+      "label": "data[j - 1] = temp"
+    },
+    {
+      "id": 12,
+      "line": 10,
+      "label": "--j"
+    },
+    {
+      "id": 13,
+      "line": 9,
+      "label": "i++"
+    },
+    {
+      "id": 14,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": "True"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 3,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": "True"
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": "True"
+    },
+    {
+      "id": 8,
+      "source": 8,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 8,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 8,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 6,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 3,
+      "target": 13,
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 0,
+      "target": 14,
+      "label": ""
+    }
+  ]
+}

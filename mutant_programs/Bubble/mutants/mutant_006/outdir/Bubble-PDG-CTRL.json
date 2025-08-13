@@ -1,0 +1,259 @@
+{
+  "directed": true,
+  "label": "CDG of Bubble.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "Bubble.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 3,
+      "label": "void main(int b, int c, int d, int e, int f)"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int i,j,xyz,y"
+    },
+    {
+      "id": 2,
+      "line": 4,
+      "label": "int[]a=new int[5]"
+    },
+    {
+      "id": 3,
+      "line": 5,
+      "label": "a[0] = b"
+    },
+    {
+      "id": 4,
+      "line": 6,
+      "label": "a[1] = c"
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "a[2] = d"
+    },
+    {
+      "id": 6,
+      "line": 8,
+      "label": "a[3] = e"
+    },
+    {
+      "id": 7,
+      "line": 9,
+      "label": "a[4] = f"
+    },
+    {
+      "id": 8,
+      "line": 10,
+      "label": "i=0"
+    },
+    {
+      "id": 9,
+      "line": 10,
+      "label": "for (i<5)"
+    },
+    {
+      "id": 10,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 11,
+      "line": 12,
+      "label": "j=i+1"
+    },
+    {
+      "id": 12,
+      "line": 12,
+      "label": "for (j<5)"
+    },
+    {
+      "id": 13,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 14,
+      "line": 14,
+      "label": "if (a[i]<a[j])"
+    },
+    {
+      "id": 15,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 16,
+      "line": 16,
+      "label": "xyz=a[i]++"
+    },
+    {
+      "id": 17,
+      "line": 17,
+      "label": "a[i]=a[j]"
+    },
+    {
+      "id": 18,
+      "line": 18,
+      "label": "a[j]=xyz"
+    },
+    {
+      "id": 19,
+      "line": 12,
+      "label": "j++"
+    },
+    {
+      "id": 20,
+      "line": 20,
+      "label": "System.out.printf('5d ',a[i])"
+    },
+    {
+      "id": 21,
+      "line": 10,
+      "label": "i++"
+    },
+    {
+      "id": 22,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 0,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 0,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 0,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 0,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 0,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 0,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "label": "True"
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 10,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 12,
+      "target": 13,
+      "label": "True"
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 14,
+      "target": 15,
+      "label": "True"
+    },
+    {
+      "id": 15,
+      "source": 15,
+      "target": 16,
+      "label": ""
+    },
+    {
+      "id": 16,
+      "source": 15,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 15,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 13,
+      "target": 19,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 10,
+      "target": 20,
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 10,
+      "target": 21,
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 0,
+      "target": 22,
+      "label": ""
+    }
+  ]
+}

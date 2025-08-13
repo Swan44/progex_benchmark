@@ -1,0 +1,533 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of Prime_num.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "Prime_num.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void main(String args[])",
+      "defs": ["args"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int m,i,k,h=0,leap=1",
+      "defs": ["h", "leap"],
+      "uses": []
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "System.out.print('\\n')",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "m=1",
+      "defs": ["m"],
+      "uses": []
+    },
+    {
+      "id": 4,
+      "line": 6,
+      "label": "for (m<=5)",
+      "defs": [],
+      "uses": ["m"]
+    },
+    {
+      "id": 5,
+      "line": 6,
+      "label": "m++",
+      "defs": ["m"],
+      "uses": ["m"]
+    },
+    {
+      "id": 6,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 7,
+      "line": 8,
+      "label": "k=(int)Math.sqrt(m*1)",
+      "defs": ["k"],
+      "uses": ["m"]
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "i=2",
+      "defs": ["i"],
+      "uses": []
+    },
+    {
+      "id": 9,
+      "line": 9,
+      "label": "for (i<=k)",
+      "defs": [],
+      "uses": ["i", "k"]
+    },
+    {
+      "id": 10,
+      "line": 9,
+      "label": "i++",
+      "defs": ["i"],
+      "uses": ["i"]
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 12,
+      "line": 11,
+      "label": "if (m%i==0)",
+      "defs": [],
+      "uses": ["i", "m"]
+    },
+    {
+      "id": 13,
+      "line": 13,
+      "label": "leap=0",
+      "defs": ["leap"],
+      "uses": []
+    },
+    {
+      "id": 14,
+      "line": 14,
+      "label": "break;"
+    },
+    {
+      "id": 15,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 16,
+      "line": 17,
+      "label": "if (leap!=0)",
+      "defs": [],
+      "uses": ["leap"]
+    },
+    {
+      "id": 17,
+      "line": 19,
+      "label": "System.out.printf('%-4d',m)",
+      "defs": [],
+      "uses": ["m"]
+    },
+    {
+      "id": 18,
+      "line": 20,
+      "label": "h++",
+      "defs": ["h"],
+      "uses": ["h"]
+    },
+    {
+      "id": 19,
+      "line": 21,
+      "label": "if (h%10==0)",
+      "defs": [],
+      "uses": ["h"]
+    },
+    {
+      "id": 20,
+      "line": 22,
+      "label": "System.out.printf('\\n')",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 21,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 22,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 23,
+      "line": 24,
+      "label": "leap=1",
+      "defs": ["leap"],
+      "uses": []
+    },
+    {
+      "id": 24,
+      "line": 26,
+      "label": "System.out.printf('\\nThe total is %d',h)",
+      "defs": [],
+      "uses": ["h"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 6,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 5,
+      "source": 4,
+      "target": 7,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 6,
+      "source": 7,
+      "target": 8,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 8,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 9,
+      "target": 11,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 12,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 10,
+      "source": 12,
+      "target": 13,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 11,
+      "source": 13,
+      "target": 14,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 14,
+      "target": 11,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 12,
+      "target": 15,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 14,
+      "source": 15,
+      "target": 10,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 10,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 16,
+      "source": 11,
+      "target": 16,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 16,
+      "target": 17,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 18,
+      "source": 17,
+      "target": 18,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 18,
+      "target": 19,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 19,
+      "target": 20,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 21,
+      "source": 20,
+      "target": 21,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 19,
+      "target": 21,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 23,
+      "source": 21,
+      "target": 22,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 24,
+      "source": 16,
+      "target": 22,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 25,
+      "source": 22,
+      "target": 23,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 26,
+      "source": 23,
+      "target": 5,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 27,
+      "source": 5,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 28,
+      "source": 6,
+      "target": 24,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 29,
+      "source": 1,
+      "target": 18,
+      "type": "Flows",
+      "label": "h"
+    },
+    {
+      "id": 30,
+      "source": 1,
+      "target": 24,
+      "type": "Flows",
+      "label": "h"
+    },
+    {
+      "id": 31,
+      "source": 1,
+      "target": 16,
+      "type": "Flows",
+      "label": "leap"
+    },
+    {
+      "id": 32,
+      "source": 3,
+      "target": 4,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 33,
+      "source": 3,
+      "target": 7,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 34,
+      "source": 3,
+      "target": 12,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 35,
+      "source": 3,
+      "target": 5,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 36,
+      "source": 3,
+      "target": 17,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 37,
+      "source": 7,
+      "target": 9,
+      "type": "Flows",
+      "label": "k"
+    },
+    {
+      "id": 38,
+      "source": 8,
+      "target": 9,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 39,
+      "source": 8,
+      "target": 12,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 40,
+      "source": 8,
+      "target": 10,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 41,
+      "source": 10,
+      "target": 9,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 42,
+      "source": 10,
+      "target": 12,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 43,
+      "source": 13,
+      "target": 16,
+      "type": "Flows",
+      "label": "leap"
+    },
+    {
+      "id": 44,
+      "source": 23,
+      "target": 16,
+      "type": "Flows",
+      "label": "leap"
+    },
+    {
+      "id": 45,
+      "source": 5,
+      "target": 4,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 46,
+      "source": 5,
+      "target": 7,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 47,
+      "source": 5,
+      "target": 12,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 48,
+      "source": 5,
+      "target": 17,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 49,
+      "source": 18,
+      "target": 19,
+      "type": "Flows",
+      "label": "h"
+    },
+    {
+      "id": 50,
+      "source": 18,
+      "target": 24,
+      "type": "Flows",
+      "label": "h"
+    }
+  ]
+}

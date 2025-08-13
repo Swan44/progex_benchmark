@@ -1,0 +1,19 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of BubbleSort.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "BubbleSort.java",
+  "package": "mutantbench.mutantjava",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 7,
+      "label": "void sort( int[] data )"
+    }
+  ],
+
+  "edges": [
+  ]
+}

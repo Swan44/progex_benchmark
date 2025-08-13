@@ -1,5 +1,3 @@
-package mutantbench.mutantjava;
-
 import java.util.Scanner;
 public class Bubble {
 public static void main(int b, int c, int d, int e, int f)

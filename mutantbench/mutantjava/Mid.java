@@ -1,5 +1,3 @@
-package mutantbench.mutantjava;
-
 public class Mid {
 	public static int main( int a, int b, int c ) {
 		int mid;

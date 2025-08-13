@@ -1,0 +1,72 @@
+{
+  "directed": true,
+  "label": "CDG of BubbleSort.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "BubbleSort.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 7,
+      "label": "void sort( int[] data )"
+    },
+    {
+      "id": 1,
+      "line": 9,
+      "label": "int i = 0"
+    },
+    {
+      "id": 2,
+      "line": 9,
+      "label": "for (i < data.length - 1)"
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 4,
+      "line": 9,
+      "label": "i++"
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": "True"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 0,
+      "target": 5,
+      "label": ""
+    }
+  ]
+}
