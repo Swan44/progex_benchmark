@@ -1,0 +1,820 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of SimulatorAddNode.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "SimulatorAddNode.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void addNode(int id, int rate, int coverage, int xPosition,  int yPosition, int ac)",
+      "defs": ["coverage", "xPosition", "ac", "rate", "yPosition", "id"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 5,
+      "label": "boolean nodeExists = false",
+      "defs": ["nodeExists"],
+      "uses": []
+    },
+    {
+      "id": 2,
+      "line": 6,
+      "label": "int i = 0",
+      "defs": ["i"],
+      "uses": []
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "for (i < nodesList.size())",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 4,
+      "line": 6,
+      "label": "i++",
+      "defs": ["i"],
+      "uses": ["i"]
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 6,
+      "line": 7,
+      "label": "if (((pamvotis.core.MobileNode) nodesList.elementAt(i)).params.id == id)",
+      "defs": [],
+      "uses": ["i", "id"]
+    },
+    {
+      "id": 7,
+      "line": 8,
+      "label": "nodeExists = true",
+      "defs": ["nodeExists"],
+      "uses": []
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "break;"
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 10,
+      "line": 12,
+      "label": "if (nodeExists)",
+      "defs": [],
+      "uses": ["nodeExists"]
+    },
+    {
+      "id": 11,
+      "line": 13,
+      "label": "throw new pamvotis.exceptions.ElementExistsException('Node ' + id  + ' already exists.')",
+      "defs": [],
+      "uses": ["id"]
+    },
+    {
+      "id": 12,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 13,
+      "line": 16,
+      "label": "pamvotis.core.MobileNode nd = new pamvotis.core.MobileNode()",
+      "defs": ["nd"],
+      "uses": []
+    },
+    {
+      "id": 14,
+      "line": 17,
+      "label": "int nCwMin = cwMin",
+      "defs": ["nCwMin"],
+      "uses": []
+    },
+    {
+      "id": 15,
+      "line": 18,
+      "label": "int nCwMax = SpecParams.CW_MAX",
+      "defs": ["nCwMax"],
+      "uses": []
+    },
+    {
+      "id": 16,
+      "line": 19,
+      "label": "float nAifsd = sifs + 2 * slot",
+      "defs": ["nAifsd"],
+      "uses": []
+    },
+    {
+      "id": 17,
+      "line": 20,
+      "label": "switch (ac)",
+      "defs": [],
+      "uses": ["ac"]
+    },
+    {
+      "id": 18,
+      "line": 0,
+      "label": "end-switch"
+    },
+    {
+      "id": 19,
+      "line": 21,
+      "label": "case 1:"
+    },
+    {
+      "id": 20,
+      "line": 22,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact1)",
+      "defs": ["nCwMin"],
+      "uses": []
+    },
+    {
+      "id": 21,
+      "line": 23,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact1)",
+      "defs": ["nCwMax"],
+      "uses": []
+    },
+    {
+      "id": 22,
+      "line": 24,
+      "label": "nAifsd = sifs + aifs1 / slot",
+      "defs": ["nAifsd"],
+      "uses": []
+    },
+    {
+      "id": 23,
+      "line": 25,
+      "label": "break;"
+    },
+    {
+      "id": 24,
+      "line": 28,
+      "label": "case 2:"
+    },
+    {
+      "id": 25,
+      "line": 29,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact2)",
+      "defs": ["nCwMin"],
+      "uses": []
+    },
+    {
+      "id": 26,
+      "line": 30,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact2)",
+      "defs": ["nCwMax"],
+      "uses": []
+    },
+    {
+      "id": 27,
+      "line": 31,
+      "label": "nAifsd = sifs + aifs2 * slot",
+      "defs": ["nAifsd"],
+      "uses": []
+    },
+    {
+      "id": 28,
+      "line": 32,
+      "label": "break;"
+    },
+    {
+      "id": 29,
+      "line": 35,
+      "label": "case 3:"
+    },
+    {
+      "id": 30,
+      "line": 36,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact3)",
+      "defs": ["nCwMin"],
+      "uses": []
+    },
+    {
+      "id": 31,
+      "line": 37,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact3)",
+      "defs": ["nCwMax"],
+      "uses": []
+    },
+    {
+      "id": 32,
+      "line": 38,
+      "label": "nAifsd = sifs + aifs3 * slot",
+      "defs": ["nAifsd"],
+      "uses": []
+    },
+    {
+      "id": 33,
+      "line": 39,
+      "label": "break;"
+    },
+    {
+      "id": 34,
+      "line": 42,
+      "label": "default:"
+    },
+    {
+      "id": 35,
+      "line": 43,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact0)",
+      "defs": ["nCwMin"],
+      "uses": []
+    },
+    {
+      "id": 36,
+      "line": 44,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact0)",
+      "defs": ["nCwMax"],
+      "uses": []
+    },
+    {
+      "id": 37,
+      "line": 45,
+      "label": "nAifsd = sifs + aifs0 * slot",
+      "defs": ["nAifsd"],
+      "uses": []
+    },
+    {
+      "id": 38,
+      "line": 46,
+      "label": "break;"
+    },
+    {
+      "id": 39,
+      "line": 50,
+      "label": "nd.params.InitParams(id, rate, xPosition, yPosition, coverage, ac,  nAifsd, nCwMin, nCwMax)",
+      "defs": [],
+      "uses": ["xPosition", "coverage", "ac", "rate", "yPosition", "id", "nAifsd", "nCwMin", "nCwMax"]
+    },
+    {
+      "id": 40,
+      "line": 52,
+      "label": "nd.contWind = nd.params.cwMin",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 41,
+      "line": 53,
+      "label": "nodesList.addElement(nd)",
+      "defs": [],
+      "uses": ["nd"]
+    },
+    {
+      "id": 42,
+      "line": 54,
+      "label": "nmbrOfNodes++",
+      "defs": [],
+      "uses": []
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 5,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 4,
+      "source": 3,
+      "target": 6,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 6,
+      "target": 7,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 6,
+      "source": 7,
+      "target": 8,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 8,
+      "target": 5,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 6,
+      "target": 9,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 4,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 5,
+      "target": 10,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 10,
+      "target": 11,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 13,
+      "source": 10,
+      "target": 13,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 14,
+      "source": 13,
+      "target": 14,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 14,
+      "target": 15,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 16,
+      "source": 15,
+      "target": 16,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 16,
+      "target": 17,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 17,
+      "target": 19,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 19,
+      "target": 20,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 20,
+      "source": 20,
+      "target": 21,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 21,
+      "target": 22,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 22,
+      "target": 23,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 23,
+      "target": 18,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 24,
+      "source": 19,
+      "target": 24,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 25,
+      "source": 24,
+      "target": 25,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 26,
+      "source": 25,
+      "target": 26,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 27,
+      "source": 26,
+      "target": 27,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 28,
+      "source": 27,
+      "target": 28,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 29,
+      "source": 28,
+      "target": 18,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 30,
+      "source": 24,
+      "target": 29,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 31,
+      "source": 29,
+      "target": 30,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 32,
+      "source": 30,
+      "target": 31,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 33,
+      "source": 31,
+      "target": 32,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 34,
+      "source": 32,
+      "target": 33,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 35,
+      "source": 33,
+      "target": 18,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 36,
+      "source": 29,
+      "target": 34,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 37,
+      "source": 34,
+      "target": 35,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 38,
+      "source": 35,
+      "target": 36,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 39,
+      "source": 36,
+      "target": 37,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 40,
+      "source": 37,
+      "target": 38,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 41,
+      "source": 38,
+      "target": 18,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 42,
+      "source": 18,
+      "target": 39,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 43,
+      "source": 39,
+      "target": 40,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 44,
+      "source": 40,
+      "target": 41,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 45,
+      "source": 41,
+      "target": 42,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 46,
+      "source": 42,
+      "target": 12,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 47,
+      "source": 0,
+      "target": 39,
+      "type": "Flows",
+      "label": "coverage"
+    },
+    {
+      "id": 48,
+      "source": 0,
+      "target": 39,
+      "type": "Flows",
+      "label": "xPosition"
+    },
+    {
+      "id": 49,
+      "source": 0,
+      "target": 17,
+      "type": "Flows",
+      "label": "ac"
+    },
+    {
+      "id": 50,
+      "source": 0,
+      "target": 39,
+      "type": "Flows",
+      "label": "ac"
+    },
+    {
+      "id": 51,
+      "source": 0,
+      "target": 39,
+      "type": "Flows",
+      "label": "rate"
+    },
+    {
+      "id": 52,
+      "source": 0,
+      "target": 39,
+      "type": "Flows",
+      "label": "yPosition"
+    },
+    {
+      "id": 53,
+      "source": 0,
+      "target": 6,
+      "type": "Flows",
+      "label": "id"
+    },
+    {
+      "id": 54,
+      "source": 0,
+      "target": 39,
+      "type": "Flows",
+      "label": "id"
+    },
+    {
+      "id": 55,
+      "source": 0,
+      "target": 11,
+      "type": "Flows",
+      "label": "id"
+    },
+    {
+      "id": 56,
+      "source": 1,
+      "target": 10,
+      "type": "Flows",
+      "label": "nodeExists"
+    },
+    {
+      "id": 57,
+      "source": 2,
+      "target": 3,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 58,
+      "source": 2,
+      "target": 6,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 59,
+      "source": 2,
+      "target": 4,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 60,
+      "source": 4,
+      "target": 3,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 61,
+      "source": 4,
+      "target": 6,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 62,
+      "source": 7,
+      "target": 10,
+      "type": "Flows",
+      "label": "nodeExists"
+    },
+    {
+      "id": 63,
+      "source": 13,
+      "target": 41,
+      "type": "Flows",
+      "label": "nd"
+    },
+    {
+      "id": 64,
+      "source": 35,
+      "target": 39,
+      "type": "Flows",
+      "label": "nCwMin"
+    },
+    {
+      "id": 65,
+      "source": 36,
+      "target": 39,
+      "type": "Flows",
+      "label": "nCwMax"
+    },
+    {
+      "id": 66,
+      "source": 37,
+      "target": 39,
+      "type": "Flows",
+      "label": "nAifsd"
+    },
+    {
+      "id": 67,
+      "source": 30,
+      "target": 39,
+      "type": "Flows",
+      "label": "nCwMin"
+    },
+    {
+      "id": 68,
+      "source": 31,
+      "target": 39,
+      "type": "Flows",
+      "label": "nCwMax"
+    },
+    {
+      "id": 69,
+      "source": 32,
+      "target": 39,
+      "type": "Flows",
+      "label": "nAifsd"
+    },
+    {
+      "id": 70,
+      "source": 25,
+      "target": 39,
+      "type": "Flows",
+      "label": "nCwMin"
+    },
+    {
+      "id": 71,
+      "source": 26,
+      "target": 39,
+      "type": "Flows",
+      "label": "nCwMax"
+    },
+    {
+      "id": 72,
+      "source": 27,
+      "target": 39,
+      "type": "Flows",
+      "label": "nAifsd"
+    },
+    {
+      "id": 73,
+      "source": 20,
+      "target": 39,
+      "type": "Flows",
+      "label": "nCwMin"
+    },
+    {
+      "id": 74,
+      "source": 21,
+      "target": 39,
+      "type": "Flows",
+      "label": "nCwMax"
+    },
+    {
+      "id": 75,
+      "source": 22,
+      "target": 39,
+      "type": "Flows",
+      "label": "nAifsd"
+    }
+  ]
+}

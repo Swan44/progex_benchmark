@@ -1,0 +1,61 @@
+[ {
+  "mutant_id" : "MUT_001",
+  "difference" : "@@ -5 +5 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; false; i++) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_009",
+  "difference" : "@@ -4 +4 @@\n-\t\tint position = -1;\n+\t\tint position = 0;",
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_017",
+  "difference" : "@@ -11 +11 @@\n-\t\tif (position != -1) {\n+\t\tif (position > -1) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_023",
+  "difference" : "@@ -5 +5 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; i <= nodesList.size(); i++) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_024",
+  "difference" : "@@ -12 +12 @@\n-\t\t\tnodesList.removeElementAt(position);\n+\t\t\t;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_033",
+  "difference" : "@@ -5 +5 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; i != nodesList.size(); i++) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_034",
+  "difference" : "@@ -11 +11 @@\n-\t\tif (position != -1) {\n+\t\tif (true) {",
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_040",
+  "difference" : "@@ -5 +5 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = -1; i < nodesList.size(); i++) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_043",
+  "difference" : "@@ -11 +11 @@\n-\t\tif (position != -1) {\n+\t\tif (position != 0) {",
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_045",
+  "difference" : "@@ -11 +11 @@\n-\t\tif (position != -1) {\n+\t\tif (position != 1) {",
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_049",
+  "difference" : "@@ -14 +14 @@\n-\t\t\treturn true;\n+\t\t\treturn false;",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_052",
+  "difference" : "@@ -4 +4 @@\n-\t\tint position = -1;\n+\t\tint position = 1;",
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_053",
+  "difference" : "@@ -5 +5 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 1; i < nodesList.size(); i++) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_054",
+  "difference" : "@@ -13 +13 @@\n-\t\t\tnmbrOfNodes--;\n+\t\t\t;",
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_068",
+  "difference" : "@@ -11 +11 @@\n-\t\tif (position != -1) {\n+\t\tif (position < -1) {",
+  "operator" : "ROR"
+} ]

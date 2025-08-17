@@ -1,0 +1,521 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of Profit.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "Profit.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 3,
+      "label": "double Profit(double i)",
+      "defs": ["i"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 5,
+      "label": "double bonus1,bonus2,bonus4,bonus6,bonus10,bonus",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 2,
+      "line": 6,
+      "label": "bonus1=100000*0.1",
+      "defs": ["bonus1"],
+      "uses": []
+    },
+    {
+      "id": 3,
+      "line": 7,
+      "label": "bonus2=100000*0.1+100000*0.075",
+      "defs": ["bonus2"],
+      "uses": []
+    },
+    {
+      "id": 4,
+      "line": 8,
+      "label": "bonus4=100000*0.1+100000*0.075+200000*0.05",
+      "defs": ["bonus4"],
+      "uses": []
+    },
+    {
+      "id": 5,
+      "line": 9,
+      "label": "bonus6=100000*0.1+100000*0.075+200000*0.05+200000*0.03",
+      "defs": ["bonus6"],
+      "uses": []
+    },
+    {
+      "id": 6,
+      "line": 10,
+      "label": "bonus10=100000*0.1+100000*0.075+200000*0.05+200000*0.03+400000*0.015",
+      "defs": ["bonus10"],
+      "uses": []
+    },
+    {
+      "id": 7,
+      "line": 11,
+      "label": "if (i<=100000)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 8,
+      "line": 12,
+      "label": "bonus=i*0.1",
+      "defs": ["bonus"],
+      "uses": ["i"]
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 10,
+      "line": 13,
+      "label": "if (i<=200000)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 11,
+      "line": 14,
+      "label": "bonus=bonus1+(i-100000)*0.075",
+      "defs": ["bonus"],
+      "uses": ["bonus1", "i"]
+    },
+    {
+      "id": 12,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 13,
+      "line": 15,
+      "label": "if (i<=400000)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 14,
+      "line": 16,
+      "label": "bonus=bonus2+(i-200000)*0.05",
+      "defs": ["bonus"],
+      "uses": ["i", "bonus2"]
+    },
+    {
+      "id": 15,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 16,
+      "line": 17,
+      "label": "if (i<=600000)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 17,
+      "line": 18,
+      "label": "bonus=bonus4+(i-400000)*0.03",
+      "defs": ["bonus"],
+      "uses": ["i", "bonus4"]
+    },
+    {
+      "id": 18,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 19,
+      "line": 19,
+      "label": "if (i<=1000000)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 20,
+      "line": 20,
+      "label": "bonus=bonus6+(i-600000)*0.015",
+      "defs": ["bonus"],
+      "uses": ["i", "bonus6"]
+    },
+    {
+      "id": 21,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 22,
+      "line": 22,
+      "label": "bonus=bonus10+(i-1000000)*0.01",
+      "defs": ["bonus"],
+      "uses": ["i", "bonus10"]
+    },
+    {
+      "id": 23,
+      "line": 23,
+      "label": "return(abs(bonus));",
+      "defs": [],
+      "uses": ["bonus"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 8,
+      "source": 8,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 7,
+      "target": 10,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 11,
+      "source": 11,
+      "target": 12,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 10,
+      "target": 13,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 14,
+      "source": 14,
+      "target": 15,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 13,
+      "target": 16,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 16,
+      "source": 16,
+      "target": 17,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 17,
+      "source": 17,
+      "target": 18,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 16,
+      "target": 19,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 19,
+      "source": 19,
+      "target": 20,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 20,
+      "source": 20,
+      "target": 21,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 19,
+      "target": 22,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 22,
+      "source": 22,
+      "target": 21,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 21,
+      "target": 18,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 24,
+      "source": 18,
+      "target": 15,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 25,
+      "source": 15,
+      "target": 12,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 26,
+      "source": 12,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 27,
+      "source": 9,
+      "target": 23,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 28,
+      "source": 0,
+      "target": 7,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 29,
+      "source": 0,
+      "target": 10,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 30,
+      "source": 0,
+      "target": 13,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 31,
+      "source": 0,
+      "target": 16,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 32,
+      "source": 0,
+      "target": 19,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 33,
+      "source": 0,
+      "target": 22,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 34,
+      "source": 0,
+      "target": 20,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 35,
+      "source": 0,
+      "target": 17,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 36,
+      "source": 0,
+      "target": 14,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 37,
+      "source": 0,
+      "target": 11,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 38,
+      "source": 0,
+      "target": 8,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 39,
+      "source": 2,
+      "target": 11,
+      "type": "Flows",
+      "label": "bonus1"
+    },
+    {
+      "id": 40,
+      "source": 3,
+      "target": 14,
+      "type": "Flows",
+      "label": "bonus2"
+    },
+    {
+      "id": 41,
+      "source": 4,
+      "target": 17,
+      "type": "Flows",
+      "label": "bonus4"
+    },
+    {
+      "id": 42,
+      "source": 5,
+      "target": 20,
+      "type": "Flows",
+      "label": "bonus6"
+    },
+    {
+      "id": 43,
+      "source": 6,
+      "target": 22,
+      "type": "Flows",
+      "label": "bonus10"
+    },
+    {
+      "id": 44,
+      "source": 22,
+      "target": 23,
+      "type": "Flows",
+      "label": "bonus"
+    },
+    {
+      "id": 45,
+      "source": 20,
+      "target": 23,
+      "type": "Flows",
+      "label": "bonus"
+    },
+    {
+      "id": 46,
+      "source": 17,
+      "target": 23,
+      "type": "Flows",
+      "label": "bonus"
+    },
+    {
+      "id": 47,
+      "source": 14,
+      "target": 23,
+      "type": "Flows",
+      "label": "bonus"
+    },
+    {
+      "id": 48,
+      "source": 11,
+      "target": 23,
+      "type": "Flows",
+      "label": "bonus"
+    },
+    {
+      "id": 49,
+      "source": 8,
+      "target": 23,
+      "type": "Flows",
+      "label": "bonus"
+    }
+  ]
+}

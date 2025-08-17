@@ -1,0 +1,578 @@
+{
+  "directed": true,
+  "label": "CDG of SimulatorAddNode.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "SimulatorAddNode.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void addNode(int id, int rate, int coverage, int xPosition,  int yPosition, int ac)"
+    },
+    {
+      "id": 1,
+      "line": 5,
+      "label": "boolean nodeExists = false"
+    },
+    {
+      "id": 2,
+      "line": 6,
+      "label": "int i = 1"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "for (i < nodesList.size())"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "if (((pamvotis.core.MobileNode) nodesList.elementAt(i)).params.id == id)"
+    },
+    {
+      "id": 6,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 7,
+      "line": 8,
+      "label": "nodeExists = true"
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "break;"
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 10,
+      "line": 6,
+      "label": "i++"
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "FOLLOW-1"
+    },
+    {
+      "id": 12,
+      "line": 12,
+      "label": "if (nodeExists)"
+    },
+    {
+      "id": 13,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 14,
+      "line": 13,
+      "label": "throw new pamvotis.exceptions.ElementExistsException('Node ' + id  + ' already exists.');"
+    },
+    {
+      "id": 15,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 16,
+      "line": 16,
+      "label": "pamvotis.core.MobileNode nd = new pamvotis.core.MobileNode()"
+    },
+    {
+      "id": 17,
+      "line": 17,
+      "label": "int nCwMin = cwMin"
+    },
+    {
+      "id": 18,
+      "line": 18,
+      "label": "int nCwMax = SpecParams.CW_MAX"
+    },
+    {
+      "id": 19,
+      "line": 19,
+      "label": "float nAifsd = sifs + 2 * slot"
+    },
+    {
+      "id": 20,
+      "line": 20,
+      "label": "switch (ac)"
+    },
+    {
+      "id": 21,
+      "line": 21,
+      "label": "case 1:"
+    },
+    {
+      "id": 22,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 23,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 24,
+      "line": 22,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact1)"
+    },
+    {
+      "id": 25,
+      "line": 23,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact1)"
+    },
+    {
+      "id": 26,
+      "line": 24,
+      "label": "nAifsd = sifs + aifs1 * slot"
+    },
+    {
+      "id": 27,
+      "line": 25,
+      "label": "break;"
+    },
+    {
+      "id": 28,
+      "line": 28,
+      "label": "case 2:"
+    },
+    {
+      "id": 29,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 30,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 31,
+      "line": 29,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact2)"
+    },
+    {
+      "id": 32,
+      "line": 30,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact2)"
+    },
+    {
+      "id": 33,
+      "line": 31,
+      "label": "nAifsd = sifs + aifs2 * slot"
+    },
+    {
+      "id": 34,
+      "line": 32,
+      "label": "break;"
+    },
+    {
+      "id": 35,
+      "line": 35,
+      "label": "case 3:"
+    },
+    {
+      "id": 36,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 37,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 38,
+      "line": 36,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact3)"
+    },
+    {
+      "id": 39,
+      "line": 37,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact3)"
+    },
+    {
+      "id": 40,
+      "line": 38,
+      "label": "nAifsd = sifs + aifs3 * slot"
+    },
+    {
+      "id": 41,
+      "line": 39,
+      "label": "break;"
+    },
+    {
+      "id": 42,
+      "line": 42,
+      "label": "default:"
+    },
+    {
+      "id": 43,
+      "line": 43,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact0)"
+    },
+    {
+      "id": 44,
+      "line": 44,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact0)"
+    },
+    {
+      "id": 45,
+      "line": 45,
+      "label": "nAifsd = sifs + aifs0 * slot"
+    },
+    {
+      "id": 46,
+      "line": 46,
+      "label": "break;"
+    },
+    {
+      "id": 47,
+      "line": 50,
+      "label": "nd.params.InitParams(id, rate, xPosition, yPosition, coverage, ac,  nAifsd, nCwMin, nCwMax)"
+    },
+    {
+      "id": 48,
+      "line": 52,
+      "label": "nd.contWind = nd.params.cwMin"
+    },
+    {
+      "id": 49,
+      "line": 53,
+      "label": "nodesList.addElement(nd)"
+    },
+    {
+      "id": 50,
+      "line": 54,
+      "label": "nmbrOfNodes++"
+    },
+    {
+      "id": 51,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": "True"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": "True"
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 6,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 5,
+      "target": 9,
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 4,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 9,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 11,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 12,
+      "target": 13,
+      "label": "True"
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 12,
+      "target": 15,
+      "label": "False"
+    },
+    {
+      "id": 15,
+      "source": 15,
+      "target": 16,
+      "label": ""
+    },
+    {
+      "id": 16,
+      "source": 15,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 15,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 15,
+      "target": 19,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 15,
+      "target": 20,
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 20,
+      "target": 21,
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 21,
+      "target": 22,
+      "label": "True"
+    },
+    {
+      "id": 22,
+      "source": 22,
+      "target": 24,
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 22,
+      "target": 25,
+      "label": ""
+    },
+    {
+      "id": 24,
+      "source": 22,
+      "target": 26,
+      "label": ""
+    },
+    {
+      "id": 25,
+      "source": 22,
+      "target": 27,
+      "label": ""
+    },
+    {
+      "id": 26,
+      "source": 21,
+      "target": 23,
+      "label": "False"
+    },
+    {
+      "id": 27,
+      "source": 20,
+      "target": 28,
+      "label": ""
+    },
+    {
+      "id": 28,
+      "source": 28,
+      "target": 29,
+      "label": "True"
+    },
+    {
+      "id": 29,
+      "source": 29,
+      "target": 31,
+      "label": ""
+    },
+    {
+      "id": 30,
+      "source": 29,
+      "target": 32,
+      "label": ""
+    },
+    {
+      "id": 31,
+      "source": 29,
+      "target": 33,
+      "label": ""
+    },
+    {
+      "id": 32,
+      "source": 29,
+      "target": 34,
+      "label": ""
+    },
+    {
+      "id": 33,
+      "source": 28,
+      "target": 30,
+      "label": "False"
+    },
+    {
+      "id": 34,
+      "source": 20,
+      "target": 35,
+      "label": ""
+    },
+    {
+      "id": 35,
+      "source": 35,
+      "target": 36,
+      "label": "True"
+    },
+    {
+      "id": 36,
+      "source": 36,
+      "target": 38,
+      "label": ""
+    },
+    {
+      "id": 37,
+      "source": 36,
+      "target": 39,
+      "label": ""
+    },
+    {
+      "id": 38,
+      "source": 36,
+      "target": 40,
+      "label": ""
+    },
+    {
+      "id": 39,
+      "source": 36,
+      "target": 41,
+      "label": ""
+    },
+    {
+      "id": 40,
+      "source": 35,
+      "target": 37,
+      "label": "False"
+    },
+    {
+      "id": 41,
+      "source": 20,
+      "target": 42,
+      "label": ""
+    },
+    {
+      "id": 42,
+      "source": 20,
+      "target": 43,
+      "label": ""
+    },
+    {
+      "id": 43,
+      "source": 20,
+      "target": 44,
+      "label": ""
+    },
+    {
+      "id": 44,
+      "source": 20,
+      "target": 45,
+      "label": ""
+    },
+    {
+      "id": 45,
+      "source": 20,
+      "target": 46,
+      "label": ""
+    },
+    {
+      "id": 46,
+      "source": 15,
+      "target": 47,
+      "label": ""
+    },
+    {
+      "id": 47,
+      "source": 15,
+      "target": 48,
+      "label": ""
+    },
+    {
+      "id": 48,
+      "source": 15,
+      "target": 49,
+      "label": ""
+    },
+    {
+      "id": 49,
+      "source": 15,
+      "target": 50,
+      "label": ""
+    },
+    {
+      "id": 50,
+      "source": 0,
+      "target": 51,
+      "label": ""
+    }
+  ]
+}

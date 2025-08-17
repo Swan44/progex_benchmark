@@ -1,5 +1,3 @@
-package mutantbench.mutantjava;
-
 public class Profit {
 
 double Profit(double i)
@@ -24,8 +22,4 @@ double Profit(double i)
                       bonus=bonus10+(i-1000000)*0.01;
 return(bonus);
 }
-	double abs(double a) {
-		if (a < 0) return -a;
-		return a;
-	}
 }

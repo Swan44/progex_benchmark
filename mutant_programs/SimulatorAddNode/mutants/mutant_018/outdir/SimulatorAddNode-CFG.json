@@ -1,0 +1,511 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of SimulatorAddNode.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "SimulatorAddNode.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void addNode(int id, int rate, int coverage, int xPosition,  int yPosition, int ac)"
+    },
+    {
+      "id": 1,
+      "line": 5,
+      "label": "boolean nodeExists = false"
+    },
+    {
+      "id": 2,
+      "line": 6,
+      "label": "int i = 0"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "for (i < nodesList.size())"
+    },
+    {
+      "id": 4,
+      "line": 6,
+      "label": "i++"
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 6,
+      "line": 7,
+      "label": "if (((pamvotis.core.MobileNode) nodesList.elementAt(i)).params.id == id)"
+    },
+    {
+      "id": 7,
+      "line": 8,
+      "label": "nodeExists = true"
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "break;"
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 10,
+      "line": 12,
+      "label": "if (nodeExists)"
+    },
+    {
+      "id": 11,
+      "line": 13,
+      "label": "throw new pamvotis.exceptions.ElementExistsException('Node ' + id  + ' already exists.')"
+    },
+    {
+      "id": 12,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 13,
+      "line": 16,
+      "label": "pamvotis.core.MobileNode nd = new pamvotis.core.MobileNode()"
+    },
+    {
+      "id": 14,
+      "line": 17,
+      "label": "int nCwMin = cwMin"
+    },
+    {
+      "id": 15,
+      "line": 18,
+      "label": "int nCwMax = SpecParams.CW_MAX"
+    },
+    {
+      "id": 16,
+      "line": 19,
+      "label": "float nAifsd = sifs + 2 * slot"
+    },
+    {
+      "id": 17,
+      "line": 20,
+      "label": "switch (ac)"
+    },
+    {
+      "id": 18,
+      "line": 0,
+      "label": "end-switch"
+    },
+    {
+      "id": 19,
+      "line": 21,
+      "label": "case 1:"
+    },
+    {
+      "id": 20,
+      "line": 22,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact1)"
+    },
+    {
+      "id": 21,
+      "line": 23,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact1)"
+    },
+    {
+      "id": 22,
+      "line": 24,
+      "label": "nAifsd = sifs + aifs1 * slot"
+    },
+    {
+      "id": 23,
+      "line": 25,
+      "label": "break;"
+    },
+    {
+      "id": 24,
+      "line": 28,
+      "label": "case 2:"
+    },
+    {
+      "id": 25,
+      "line": 29,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact2)"
+    },
+    {
+      "id": 26,
+      "line": 30,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact2)"
+    },
+    {
+      "id": 27,
+      "line": 31,
+      "label": "nAifsd = sifs + aifs2 % slot"
+    },
+    {
+      "id": 28,
+      "line": 32,
+      "label": "break;"
+    },
+    {
+      "id": 29,
+      "line": 35,
+      "label": "case 3:"
+    },
+    {
+      "id": 30,
+      "line": 36,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact3)"
+    },
+    {
+      "id": 31,
+      "line": 37,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact3)"
+    },
+    {
+      "id": 32,
+      "line": 38,
+      "label": "nAifsd = sifs + aifs3 * slot"
+    },
+    {
+      "id": 33,
+      "line": 39,
+      "label": "break;"
+    },
+    {
+      "id": 34,
+      "line": 42,
+      "label": "default:"
+    },
+    {
+      "id": 35,
+      "line": 43,
+      "label": "nCwMin = (int) ((float) cwMin / (float) cwMinFact0)"
+    },
+    {
+      "id": 36,
+      "line": 44,
+      "label": "nCwMax = (int) ((float) SpecParams.CW_MAX / (float) cwMaxFact0)"
+    },
+    {
+      "id": 37,
+      "line": 45,
+      "label": "nAifsd = sifs + aifs0 * slot"
+    },
+    {
+      "id": 38,
+      "line": 46,
+      "label": "break;"
+    },
+    {
+      "id": 39,
+      "line": 50,
+      "label": "nd.params.InitParams(id, rate, xPosition, yPosition, coverage, ac,  nAifsd, nCwMin, nCwMax)"
+    },
+    {
+      "id": 40,
+      "line": 52,
+      "label": "nd.contWind = nd.params.cwMin"
+    },
+    {
+      "id": 41,
+      "line": 53,
+      "label": "nodesList.addElement(nd)"
+    },
+    {
+      "id": 42,
+      "line": 54,
+      "label": "nmbrOfNodes++"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 5,
+      "label": "False"
+    },
+    {
+      "id": 4,
+      "source": 3,
+      "target": 6,
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 6,
+      "target": 7,
+      "label": "True"
+    },
+    {
+      "id": 6,
+      "source": 7,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 8,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 6,
+      "target": 9,
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 4,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 5,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 10,
+      "target": 11,
+      "label": "True"
+    },
+    {
+      "id": 13,
+      "source": 10,
+      "target": 13,
+      "label": "False"
+    },
+    {
+      "id": 14,
+      "source": 13,
+      "target": 14,
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 14,
+      "target": 15,
+      "label": ""
+    },
+    {
+      "id": 16,
+      "source": 15,
+      "target": 16,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 16,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 17,
+      "target": 19,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 19,
+      "target": 20,
+      "label": "True"
+    },
+    {
+      "id": 20,
+      "source": 20,
+      "target": 21,
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 21,
+      "target": 22,
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 22,
+      "target": 23,
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 23,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 24,
+      "source": 19,
+      "target": 24,
+      "label": "False"
+    },
+    {
+      "id": 25,
+      "source": 24,
+      "target": 25,
+      "label": "True"
+    },
+    {
+      "id": 26,
+      "source": 25,
+      "target": 26,
+      "label": ""
+    },
+    {
+      "id": 27,
+      "source": 26,
+      "target": 27,
+      "label": ""
+    },
+    {
+      "id": 28,
+      "source": 27,
+      "target": 28,
+      "label": ""
+    },
+    {
+      "id": 29,
+      "source": 28,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 30,
+      "source": 24,
+      "target": 29,
+      "label": "False"
+    },
+    {
+      "id": 31,
+      "source": 29,
+      "target": 30,
+      "label": "True"
+    },
+    {
+      "id": 32,
+      "source": 30,
+      "target": 31,
+      "label": ""
+    },
+    {
+      "id": 33,
+      "source": 31,
+      "target": 32,
+      "label": ""
+    },
+    {
+      "id": 34,
+      "source": 32,
+      "target": 33,
+      "label": ""
+    },
+    {
+      "id": 35,
+      "source": 33,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 36,
+      "source": 29,
+      "target": 34,
+      "label": "False"
+    },
+    {
+      "id": 37,
+      "source": 34,
+      "target": 35,
+      "label": ""
+    },
+    {
+      "id": 38,
+      "source": 35,
+      "target": 36,
+      "label": ""
+    },
+    {
+      "id": 39,
+      "source": 36,
+      "target": 37,
+      "label": ""
+    },
+    {
+      "id": 40,
+      "source": 37,
+      "target": 38,
+      "label": ""
+    },
+    {
+      "id": 41,
+      "source": 38,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 42,
+      "source": 18,
+      "target": 39,
+      "label": ""
+    },
+    {
+      "id": 43,
+      "source": 39,
+      "target": 40,
+      "label": ""
+    },
+    {
+      "id": 44,
+      "source": 40,
+      "target": 41,
+      "label": ""
+    },
+    {
+      "id": 45,
+      "source": 41,
+      "target": 42,
+      "label": ""
+    },
+    {
+      "id": 46,
+      "source": 42,
+      "target": 12,
+      "label": ""
+    }
+  ]
+}

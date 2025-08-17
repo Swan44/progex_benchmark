@@ -1,0 +1,6 @@
+[ {
+  "mutant_id" : "MUT_106",
+  "difference" : "@@ -4 +4 @@\n-        return wrap( str, wrapLength, null, false );\n+        return wrap( str, wrapLength, null, true );",
+  "equivalence" : false,
+  "operator" : "SEOR"
+} ]

@@ -1,0 +1,171 @@
+[ {
+  "mutant_id" : "MUT_004",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (delimLen == 0) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_007",
+  "difference" : "@@ -73 +73 @@\n-        int delimLen = delimiters == null ? -1 : delimiters.length;\n+        int delimLen = false ? -1 : delimiters.length;",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_009",
+  "difference" : "@@ -82 +82 @@\n-            if (isDelimiter(ch, delimiters)) {\n+            if (true) {",
+  "equivalence" : false,
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_014",
+  "difference" : "@@ -73 +73 @@\n-        int delimLen = delimiters == null ? -1 : delimiters.length;\n+        int delimLen = delimiters == null ? 0 : delimiters.length;",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_017",
+  "difference" : "@@ -88 +88 @@\n-                    capitalizeNext = false;\n+                    capitalizeNext = true;",
+  "equivalence" : false,
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_020",
+  "difference" : "@@ -84 +84 @@\n-                capitalizeNext = true;\n+                capitalizeNext = false;",
+  "equivalence" : false,
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_022",
+  "difference" : "@@ -79 +79 @@\n-        boolean capitalizeNext = true;\n+        boolean capitalizeNext = false;",
+  "equivalence" : false,
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_023",
+  "difference" : "@@ -80 +80 @@\n-        for (int i = 0; i < strLen; i++) {\n+        for (int i = 0; i != strLen; i++) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_031",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null || str.length() == 0) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_033",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (false || str.length() == 0 || delimLen == 0) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_039",
+  "difference" : "@@ -86 +86 @@\n-                if (capitalizeNext) {\n+                if (true) {",
+  "equivalence" : false,
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_040",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null || str.length() == 0 || delimLen >= 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_041",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null || str.length() == -1 || delimLen == -1) {",
+  "equivalence" : true,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_048",
+  "difference" : "@@ -90 +90 @@\n-                    buffer.append(ch);\n+                    ;",
+  "equivalence" : false,
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_049",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null || str.length() == 0 || delimLen <= 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_052",
+  "difference" : "@@ -80 +80 @@\n-        for (int i = 0; i < strLen; i++) {\n+        for (int i = 1; i < strLen; i++) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_053",
+  "difference" : "@@ -73 +73 @@\n-        int delimLen = delimiters == null ? -1 : delimiters.length;\n+        int delimLen = delimiters == null ? 1 : delimiters.length;",
+  "equivalence" : true,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_056",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str.length() == 0 || delimLen == 0) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_058",
+  "difference" : "@@ -83 +83 @@\n-                buffer.append(ch);\n+                ;",
+  "equivalence" : false,
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_063",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null != (str.length() == 0) || delimLen == 0) {",
+  "equivalence" : false,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_064",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null || delimLen == 0) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_067",
+  "difference" : "@@ -80 +80 @@\n-        for (int i = 0; i < strLen; i++) {\n+        for (int i = 0; false; i++) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_069",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (true || delimLen == 0) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_071",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (true) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_080",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null || false || delimLen == 0) {",
+  "equivalence" : true,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_082",
+  "difference" : "@@ -86 +86 @@\n-                if (capitalizeNext) {\n+                if (false) {",
+  "equivalence" : false,
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_086",
+  "difference" : "@@ -80 +80 @@\n-        for (int i = 0; i < strLen; i++) {\n+        for (int i = 0; i <= strLen; i++) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_087",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null || str.length() == 1 || delimLen == 1) {",
+  "equivalence" : false,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_088",
+  "difference" : "@@ -80 +80 @@\n-        for (int i = 0; i < strLen; i++) {\n+        for (int i = -1; i < strLen; i++) {",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_090",
+  "difference" : "@@ -82 +82 @@\n-            if (isDelimiter(ch, delimiters)) {\n+            if (false) {",
+  "equivalence" : false,
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_092",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null || str.length() <= 0 || delimLen == 0) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_097",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null || str.length() >= 0 || delimLen == 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_098",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if (str == null || str.length() == 0 || false) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_105",
+  "difference" : "@@ -74 +74 @@\n-        if (str == null || str.length() == 0 || delimLen == 0) {\n+        if ((str == null || str.length() == 0) != (delimLen == 0)) {",
+  "equivalence" : false,
+  "operator" : "null"
+} ]

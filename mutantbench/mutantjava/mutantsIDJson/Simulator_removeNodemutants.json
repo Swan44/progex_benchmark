@@ -1,0 +1,80 @@
+[
+  {
+    "mutant_id" : "MUT_001",
+    "difference" : "@@ -4 +4 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; false; i++) {",
+    "equivalence" : false,
+    "operator" : "ROD"
+  },
+  {
+    "mutant_id" : "MUT_009",
+    "difference" : "@@ -3 +3 @@\n-\t\tint position = -1;\n+\t\tint position = 0;",
+    "equivalence" : false,
+    "operator" : "AODU"
+  },
+  {
+  "mutant_id" : "MUT_017",
+  "difference" : "@@ -10 +10 @@\n-\t\tif (position != -1) {\n+\t\tif (position > -1) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+},{
+  "mutant_id" : "MUT_023",
+  "difference" : "@@ -4 +4 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; i <= nodesList.size(); i++) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_024",
+  "difference" : "@@ -11 +11 @@\n-\t\t\tnodesList.removeElementAt(position);\n+\t\t\t;",
+  "equivalence" : false,
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_033",
+  "difference" : "@@ -4 +4 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 0; i != nodesList.size(); i++) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_034",
+  "difference" : "@@ -10 +10 @@\n-\t\tif (position != -1) {\n+\t\tif (true) {",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_040",
+  "difference" : "@@ -4 +4 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = -1; i < nodesList.size(); i++) {",
+  "equivalence" : false,
+  "operator" : "AOIU"
+},{
+  "mutant_id" : "MUT_043",
+  "difference" : "@@ -10 +10 @@\n-\t\tif (position != -1) {\n+\t\tif (position != 0) {",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_045",
+  "difference" : "@@ -10 +10 @@\n-\t\tif (position != -1) {\n+\t\tif (position != 1) {",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_049",
+  "difference" : "@@ -13 +13 @@\n-\t\t\treturn true;\n+\t\t\treturn false;",
+  "equivalence" : false,
+  "operator" : "SEOR"
+},{
+  "mutant_id" : "MUT_052",
+  "difference" : "@@ -3 +3 @@\n-\t\tint position = -1;\n+\t\tint position = 1;",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_053",
+  "difference" : "@@ -4 +4 @@\n-\t\tfor (int i = 0; i < nodesList.size(); i++) {\n+\t\tfor (int i = 1; i < nodesList.size(); i++) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_054",
+  "difference" : "@@ -12 +12 @@\n-\t\t\tnmbrOfNodes--;\n+\t\t\t;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_068",
+  "difference" : "@@ -10 +10 @@\n-\t\tif (position != -1) {\n+\t\tif (position < -1) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}
+]

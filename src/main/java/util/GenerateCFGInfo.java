@@ -12,7 +12,7 @@ public class GenerateCFGInfo {
 
     public static void main(String[] args) {
         // mutants 文件夹路径
-        String mutantsBaseDir = "D:\\bishe_code\\progex_benchmark\\mutant_programs\\Mid\\mutants";
+        String mutantsBaseDir = "D:\\bishe_code\\progex_benchmark\\mutant_programs\\WordUtilsCapitalize\\mutants";
 
         // 遍历 mutants 文件夹
         File mutantsDir = new File(mutantsBaseDir);
@@ -39,8 +39,6 @@ public class GenerateCFGInfo {
                 System.err.println("处理 " + mutantDir.getName() + " 时出错: " + e.getMessage());
             }
         });
-
-        //System.out.println("所有变异体的 CFG 和 PDG 生成完成！");
     }
 
     /**
@@ -65,25 +63,11 @@ public class GenerateCFGInfo {
         }
         String javaFilePath = javaFiles[0].getAbsolutePath();
 
-        // 生成 CFG
-        //String cfgOutDir = outDir.resolve("cfg").toString();
-        //Files.createDirectories(Paths.get(cfgOutDir));
         String cfgCommand = String.format(
                 "java -jar \"%s\" -cfg -lang java -format json -outdir \"%s\" \"%s\"",
                 PROGEX_JAR_PATH, outDir.toString(), javaFilePath
         );
         executeCommand(cfgCommand);
-
-        // 生成 PDG
-        //String pdgOutDir = outDir.resolve("pdg").toString();
-        //Files.createDirectories(Paths.get(pdgOutDir));
-        //String pdgCommand = String.format(
-                //"java -jar \"%s\" -pdg -lang java -format json -outdir \"%s\" \"%s\"",
-                //PROGEX_JAR_PATH, outDir.toString(), javaFilePath
-        //);
-        //executeCommand(pdgCommand);
-
-        //System.out.println(mutantName + " 处理完成");
     }
 
     /**

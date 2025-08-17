@@ -1,0 +1,190 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of SimulatorRemoveNode.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "SimulatorRemoveNode.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "boolean removeNode(int nodeId)"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int position = -1"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "int i = 0"
+    },
+    {
+      "id": 3,
+      "line": 5,
+      "label": "for (i < nodesList.size())"
+    },
+    {
+      "id": 4,
+      "line": 5,
+      "label": "i++"
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 6,
+      "line": 6,
+      "label": "if (((pamvotis.core.MobileNode) nodesList.elementAt(i)).params.id == nodeId)"
+    },
+    {
+      "id": 7,
+      "line": 7,
+      "label": "position = i"
+    },
+    {
+      "id": 8,
+      "line": 8,
+      "label": "break;"
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 10,
+      "line": 11,
+      "label": "if (position != 1)"
+    },
+    {
+      "id": 11,
+      "line": 12,
+      "label": "nodesList.removeElementAt(position)"
+    },
+    {
+      "id": 12,
+      "line": 13,
+      "label": "nmbrOfNodes--"
+    },
+    {
+      "id": 13,
+      "line": 14,
+      "label": "return true;"
+    },
+    {
+      "id": 14,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 15,
+      "line": 16,
+      "label": "throw new pamvotis.exceptions.ElementDoesNotExistException('Node '  + nodeId + ' does not exist.')"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 5,
+      "label": "False"
+    },
+    {
+      "id": 4,
+      "source": 3,
+      "target": 6,
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 6,
+      "target": 7,
+      "label": "True"
+    },
+    {
+      "id": 6,
+      "source": 7,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 8,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 6,
+      "target": 9,
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 4,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 5,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 10,
+      "target": 11,
+      "label": "True"
+    },
+    {
+      "id": 13,
+      "source": 11,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 12,
+      "target": 13,
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 10,
+      "target": 15,
+      "label": "False"
+    }
+  ]
+}

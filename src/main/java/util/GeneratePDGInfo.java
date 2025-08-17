@@ -12,7 +12,7 @@ public class GeneratePDGInfo {
     private static final File PROGEX_WORKING_DIR = new File("D:\\progex-v3.4.5\\progex-v3.4.5");
     public static void main(String[] args) {
         // mutants 文件夹路径
-        String mutantsBaseDir = "D:\\bishe_code\\progex_benchmark\\mutant_programs\\Mid\\mutants";
+        String mutantsBaseDir = "D:\\bishe_code\\progex_benchmark\\mutant_programs\\WordUtilsCapitalize\\mutants";
 
         // 遍历 mutants 文件夹
         File mutantsDir = new File(mutantsBaseDir);
