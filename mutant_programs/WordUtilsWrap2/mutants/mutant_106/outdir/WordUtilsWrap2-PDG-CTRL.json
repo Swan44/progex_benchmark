@@ -1,0 +1,39 @@
+{
+  "directed": true,
+  "label": "CDG of WordUtilsWrap2.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "WordUtilsWrap2.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "String wrap( String str, int wrapLength )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "return wrap( str, wrapLength, null, true );"
+    },
+    {
+      "id": 2,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    }
+  ]
+}

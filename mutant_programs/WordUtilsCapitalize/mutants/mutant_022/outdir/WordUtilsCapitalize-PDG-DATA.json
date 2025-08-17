@@ -1,0 +1,579 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of WordUtilsCapitalize.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "WordUtilsCapitalize.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "String capitalize( String str, char[] delimiters )",
+      "defs": ["str", "delimiters"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int delimLen = delimiters == null ? -1 : delimiters.length",
+      "defs": ["delimLen"],
+      "uses": ["delimiters"]
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "if (str == null || str.length() == 0 || delimLen == 0)",
+      "defs": [],
+      "uses": ["str", "delimLen"]
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "return str;",
+      "defs": [],
+      "uses": ["str"]
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "int strLen = str.length()",
+      "defs": ["strLen"],
+      "uses": ["str"]
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "StringBuffer buffer = new StringBuffer(strLen)",
+      "defs": ["buffer"],
+      "uses": ["strLen"]
+    },
+    {
+      "id": 7,
+      "line": 10,
+      "label": "boolean capitalizeNext = false",
+      "defs": ["capitalizeNext"],
+      "uses": []
+    },
+    {
+      "id": 8,
+      "line": 11,
+      "label": "int i = 0",
+      "defs": ["i"],
+      "uses": []
+    },
+    {
+      "id": 9,
+      "line": 11,
+      "label": "for (i < strLen)",
+      "defs": [],
+      "uses": ["strLen", "i"]
+    },
+    {
+      "id": 10,
+      "line": 11,
+      "label": "i++",
+      "defs": ["i"],
+      "uses": ["i"]
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 12,
+      "line": 12,
+      "label": "char ch = str.charAt(i)",
+      "defs": ["ch"],
+      "uses": ["str", "i"]
+    },
+    {
+      "id": 13,
+      "line": 13,
+      "label": "if (isDelimiter(ch, delimiters))",
+      "defs": [],
+      "uses": ["ch", "delimiters"]
+    },
+    {
+      "id": 14,
+      "line": 14,
+      "label": "buffer.append(ch)",
+      "defs": ["buffer"],
+      "uses": ["ch", "buffer"]
+    },
+    {
+      "id": 15,
+      "line": 15,
+      "label": "capitalizeNext = true",
+      "defs": ["capitalizeNext"],
+      "uses": []
+    },
+    {
+      "id": 16,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 17,
+      "line": 17,
+      "label": "if (capitalizeNext)",
+      "defs": [],
+      "uses": ["capitalizeNext"]
+    },
+    {
+      "id": 18,
+      "line": 18,
+      "label": "buffer.append(Character.toTitleCase( ch ))",
+      "defs": ["buffer"],
+      "uses": ["ch", "buffer"]
+    },
+    {
+      "id": 19,
+      "line": 19,
+      "label": "capitalizeNext = false",
+      "defs": ["capitalizeNext"],
+      "uses": []
+    },
+    {
+      "id": 20,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 21,
+      "line": 21,
+      "label": "buffer.append(ch)",
+      "defs": ["buffer"],
+      "uses": ["ch", "buffer"]
+    },
+    {
+      "id": 22,
+      "line": 25,
+      "label": "return buffer.toString();",
+      "defs": [],
+      "uses": ["buffer"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 3,
+      "source": 2,
+      "target": 4,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 8,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 11,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 10,
+      "source": 9,
+      "target": 12,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 11,
+      "source": 12,
+      "target": 13,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 13,
+      "target": 14,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 13,
+      "source": 14,
+      "target": 15,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 15,
+      "target": 16,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 13,
+      "target": 17,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 16,
+      "source": 17,
+      "target": 18,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 17,
+      "source": 18,
+      "target": 19,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 19,
+      "target": 20,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 17,
+      "target": 21,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 20,
+      "source": 21,
+      "target": 20,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 20,
+      "target": 16,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 16,
+      "target": 10,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 10,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 24,
+      "source": 11,
+      "target": 22,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 25,
+      "source": 0,
+      "target": 2,
+      "type": "Flows",
+      "label": "str"
+    },
+    {
+      "id": 26,
+      "source": 0,
+      "target": 5,
+      "type": "Flows",
+      "label": "str"
+    },
+    {
+      "id": 27,
+      "source": 0,
+      "target": 12,
+      "type": "Flows",
+      "label": "str"
+    },
+    {
+      "id": 28,
+      "source": 0,
+      "target": 3,
+      "type": "Flows",
+      "label": "str"
+    },
+    {
+      "id": 29,
+      "source": 0,
+      "target": 1,
+      "type": "Flows",
+      "label": "delimiters"
+    },
+    {
+      "id": 30,
+      "source": 0,
+      "target": 13,
+      "type": "Flows",
+      "label": "delimiters"
+    },
+    {
+      "id": 31,
+      "source": 1,
+      "target": 2,
+      "type": "Flows",
+      "label": "delimLen"
+    },
+    {
+      "id": 32,
+      "source": 5,
+      "target": 6,
+      "type": "Flows",
+      "label": "strLen"
+    },
+    {
+      "id": 33,
+      "source": 5,
+      "target": 9,
+      "type": "Flows",
+      "label": "strLen"
+    },
+    {
+      "id": 34,
+      "source": 6,
+      "target": 21,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 35,
+      "source": 6,
+      "target": 18,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 36,
+      "source": 6,
+      "target": 14,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 37,
+      "source": 6,
+      "target": 22,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 38,
+      "source": 7,
+      "target": 17,
+      "type": "Flows",
+      "label": "capitalizeNext"
+    },
+    {
+      "id": 39,
+      "source": 8,
+      "target": 9,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 40,
+      "source": 8,
+      "target": 12,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 41,
+      "source": 8,
+      "target": 10,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 42,
+      "source": 12,
+      "target": 13,
+      "type": "Flows",
+      "label": "ch"
+    },
+    {
+      "id": 43,
+      "source": 12,
+      "target": 21,
+      "type": "Flows",
+      "label": "ch"
+    },
+    {
+      "id": 44,
+      "source": 12,
+      "target": 18,
+      "type": "Flows",
+      "label": "ch"
+    },
+    {
+      "id": 45,
+      "source": 12,
+      "target": 14,
+      "type": "Flows",
+      "label": "ch"
+    },
+    {
+      "id": 46,
+      "source": 21,
+      "target": 18,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 47,
+      "source": 21,
+      "target": 14,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 48,
+      "source": 21,
+      "target": 22,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 49,
+      "source": 10,
+      "target": 9,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 50,
+      "source": 10,
+      "target": 12,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 51,
+      "source": 18,
+      "target": 21,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 52,
+      "source": 18,
+      "target": 14,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 53,
+      "source": 18,
+      "target": 22,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 54,
+      "source": 19,
+      "target": 17,
+      "type": "Flows",
+      "label": "capitalizeNext"
+    },
+    {
+      "id": 55,
+      "source": 14,
+      "target": 21,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 56,
+      "source": 14,
+      "target": 18,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 57,
+      "source": 14,
+      "target": 22,
+      "type": "Flows",
+      "label": "buffer"
+    },
+    {
+      "id": 58,
+      "source": 15,
+      "target": 17,
+      "type": "Flows",
+      "label": "capitalizeNext"
+    }
+  ]
+}

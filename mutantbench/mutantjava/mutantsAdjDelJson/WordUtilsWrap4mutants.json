@@ -1,0 +1,285 @@
+[ {
+  "mutant_id" : "MUT_001",
+  "difference" : "@@ -15 +15 @@\n-        StringBuffer wrappedLine = new StringBuffer( inputLineLength + 32 );\n+        StringBuffer wrappedLine = new StringBuffer( inputLineLength / 32 );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_002",
+  "difference" : "@@ -28 +28 @@\n-                    wrappedLine.append(str.substring(offset, wrapLength + offset));\n+                    wrappedLine.append(str.substring(offset, wrapLength % offset));",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_003",
+  "difference" : "@@ -17 +17 @@\n-            if (str.charAt(offset) == ' ') {\n+            if (str.charAt(offset) >= ' ') {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_005",
+  "difference" : "@@ -25 +25 @@\n-                offset = spaceToWrapAt + 1;\n+                offset = spaceToWrapAt * 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_006",
+  "difference" : "@@ -32 +32 @@\n-                    spaceToWrapAt = str.indexOf(' ', wrapLength + offset);\n+                    spaceToWrapAt = str.indexOf(' ', wrapLength - offset);",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_008",
+  "difference" : "@@ -18 +18 @@\n-                offset++;\n+                ;",
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_010",
+  "difference" : "@@ -22 +22 @@\n-            if (spaceToWrapAt >= offset) {\n+            if (true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_011",
+  "difference" : "@@ -35 +35 @@\n-                        wrappedLine.append(newLineStr);\n+                        ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_012",
+  "difference" : "@@ -17 +17 @@\n-            if (str.charAt(offset) == ' ') {\n+            if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_013",
+  "difference" : "@@ -15 +15 @@\n-        StringBuffer wrappedLine = new StringBuffer( inputLineLength + 32 );\n+        StringBuffer wrappedLine = new StringBuffer( inputLineLength + -32 );",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_015",
+  "difference" : "@@ -36 +36 @@\n-                        offset = spaceToWrapAt + 1;\n+                        offset = spaceToWrapAt + 0;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_016",
+  "difference" : "@@ -34 +34 @@\n-                        wrappedLine.append(str.substring(offset, spaceToWrapAt));\n+                        ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_018",
+  "difference" : "@@ -36 +36 @@\n-                        offset = spaceToWrapAt + 1;\n+                        offset = spaceToWrapAt + -1;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_019",
+  "difference" : "@@ -16 +16 @@\n-        while (inputLineLength - offset > wrapLength) {\n+        while (inputLineLength - offset >= wrapLength) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_021",
+  "difference" : "@@ -30 +30 @@\n-                    offset += wrapLength;\n+                    ;",
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_024",
+  "difference" : "@@ -16 +16 @@\n-        while (inputLineLength - offset > wrapLength) {\n+        while (inputLineLength - offset != wrapLength) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_025",
+  "difference" : "@@ -16 +16 @@\n-        while (inputLineLength - offset > wrapLength) {\n+        while (inputLineLength / offset > wrapLength) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_026",
+  "difference" : "@@ -28 +28 @@\n-                    wrappedLine.append(str.substring(offset, wrapLength + offset));\n+                    wrappedLine.append(str.substring(offset, wrapLength - offset));",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_027",
+  "difference" : "@@ -33 +33 @@\n-                    if (spaceToWrapAt >= 0) {\n+                    if (spaceToWrapAt >= -1) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_028",
+  "difference" : "@@ -33 +33 @@\n-                    if (spaceToWrapAt >= 0) {\n+                    if (spaceToWrapAt == 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_029",
+  "difference" : "@@ -25 +25 @@\n-                offset = spaceToWrapAt + 1;\n+                offset = spaceToWrapAt % 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_030",
+  "difference" : "@@ -17 +17 @@\n-            if (str.charAt(offset) == ' ') {\n+            if (str.charAt(offset) <= ' ') {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_032",
+  "difference" : "@@ -21 +21 @@\n-            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength + offset);\n+            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength * offset);",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_034",
+  "difference" : "@@ -28 +28 @@\n-                    wrappedLine.append(str.substring(offset, wrapLength + offset));\n+                    wrappedLine.append(str.substring(offset, wrapLength * offset));",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_035",
+  "difference" : "@@ -24 +24 @@\n-                wrappedLine.append(newLineStr);\n+                ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_036",
+  "difference" : "@@ -25 +25 @@\n-                offset = spaceToWrapAt + 1;\n+                offset = spaceToWrapAt + 0;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_037",
+  "difference" : "@@ -27 +27 @@\n-                if (wrapLongWords) {\n+                if (true) {",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_038",
+  "difference" : "@@ -15 +15 @@\n-        StringBuffer wrappedLine = new StringBuffer( inputLineLength + 32 );\n+        StringBuffer wrappedLine = new StringBuffer( inputLineLength % 32 );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_042",
+  "difference" : "@@ -16 +16 @@\n-        while (inputLineLength - offset > wrapLength) {\n+        while (inputLineLength * offset > wrapLength) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_043",
+  "difference" : "@@ -25 +25 @@\n-                offset = spaceToWrapAt + 1;\n+                offset = spaceToWrapAt / 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_044",
+  "difference" : "@@ -21 +21 @@\n-            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength + offset);\n+            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength / offset);",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_045",
+  "difference" : "@@ -32 +32 @@\n-                    spaceToWrapAt = str.indexOf(' ', wrapLength + offset);\n+                    spaceToWrapAt = str.indexOf(' ', wrapLength / offset);",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_046",
+  "difference" : "@@ -38 +38 @@\n-                        wrappedLine.append(str.substring(offset));\n+                        ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_047",
+  "difference" : "@@ -16 +16 @@\n-        while (inputLineLength - offset > wrapLength) {\n+        while (inputLineLength + offset > wrapLength) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_050",
+  "difference" : "@@ -15 +15 @@\n-        StringBuffer wrappedLine = new StringBuffer( inputLineLength + 32 );\n+        StringBuffer wrappedLine = new StringBuffer( inputLineLength * 32 );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_051",
+  "difference" : "@@ -10 +10 @@\n-        if (wrapLength < 1) {\n+        if (false) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_054",
+  "difference" : "@@ -32 +32 @@\n-                    spaceToWrapAt = str.indexOf(' ', wrapLength + offset);\n+                    spaceToWrapAt = str.indexOf(' ', wrapLength * offset);",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_055",
+  "difference" : "@@ -27 +27 @@\n-                if (wrapLongWords) {\n+                if (false) {",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_057",
+  "difference" : "@@ -11 +11 @@\n-            wrapLength = 1;\n+            wrapLength = -1;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_059",
+  "difference" : "@@ -33 +33 @@\n-                    if (spaceToWrapAt >= 0) {\n+                    if (spaceToWrapAt > 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_060",
+  "difference" : "@@ -28 +28 @@\n-                    wrappedLine.append(str.substring(offset, wrapLength + offset));\n+                    wrappedLine.append(str.substring(offset, wrapLength / offset));",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_061",
+  "difference" : "@@ -36 +36 @@\n-                        offset = spaceToWrapAt + 1;\n+                        offset = spaceToWrapAt * 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_062",
+  "difference" : "@@ -25 +25 @@\n-                offset = spaceToWrapAt + 1;\n+                offset = spaceToWrapAt + -1;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_065",
+  "difference" : "@@ -10 +10 @@\n-        if (wrapLength < 1) {\n+        if (wrapLength <= 1) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_066",
+  "difference" : "@@ -11 +11 @@\n-            wrapLength = 1;\n+            wrapLength = 0;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_068",
+  "difference" : "@@ -29 +29 @@\n-                    wrappedLine.append(newLineStr);\n+                    ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_070",
+  "difference" : "@@ -22 +22 @@\n-            if (spaceToWrapAt >= offset) {\n+            if (spaceToWrapAt > offset) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_072",
+  "difference" : "@@ -10 +10 @@\n-        if (wrapLength < 1) {\n+        if (wrapLength < 0) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_073",
+  "difference" : "@@ -33 +33 @@\n-                    if (spaceToWrapAt >= 0) {\n+                    if (true) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_074",
+  "difference" : "@@ -44 +44 @@\n-        wrappedLine.append(str.substring(offset));\n+        ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_075",
+  "difference" : "@@ -7 +7 @@\n-        if (newLineStr == null) {\n+        if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_076",
+  "difference" : "@@ -32 +32 @@\n-                    spaceToWrapAt = str.indexOf(' ', wrapLength + offset);\n+                    spaceToWrapAt = str.indexOf(' ', wrapLength % offset);",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_077",
+  "difference" : "@@ -4 +4 @@\n-        if (str == null) {\n+        if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_078",
+  "difference" : "@@ -16 +16 @@\n-        while (inputLineLength - offset > wrapLength) {\n+        while (false) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_079",
+  "difference" : "@@ -36 +36 @@\n-                        offset = spaceToWrapAt + 1;\n+                        offset = spaceToWrapAt % 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_081",
+  "difference" : "@@ -16 +16 @@\n-        while (inputLineLength - offset > wrapLength) {\n+        while (inputLineLength % offset > wrapLength) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_083",
+  "difference" : "@@ -21 +21 @@\n-            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength + offset);\n+            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength - offset);",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_084",
+  "difference" : "@@ -14 +14 @@\n-        int offset = 0;\n+        int offset = 1;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_085",
+  "difference" : "@@ -28 +28 @@\n-                    wrappedLine.append(str.substring(offset, wrapLength + offset));\n+                    ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_089",
+  "difference" : "@@ -10 +10 @@\n-        if (wrapLength < 1) {\n+        if (wrapLength != 1) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_091",
+  "difference" : "@@ -36 +36 @@\n-                        offset = spaceToWrapAt + 1;\n+                        offset = spaceToWrapAt / 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_093",
+  "difference" : "@@ -15 +15 @@\n-        StringBuffer wrappedLine = new StringBuffer( inputLineLength + 32 );\n+        StringBuffer wrappedLine = new StringBuffer( inputLineLength + 0 );",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_094",
+  "difference" : "@@ -36 +36 @@\n-                        offset = spaceToWrapAt + 1;\n+                        offset = spaceToWrapAt - 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_095",
+  "difference" : "@@ -14 +14 @@\n-        int offset = 0;\n+        int offset = -1;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_096",
+  "difference" : "@@ -10 +10 @@\n-        if (wrapLength < 1) {\n+        if (wrapLength < -1) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_099",
+  "difference" : "@@ -33 +33 @@\n-                    if (spaceToWrapAt >= 0) {\n+                    if (spaceToWrapAt >= 1) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_100",
+  "difference" : "@@ -25 +25 @@\n-                offset = spaceToWrapAt + 1;\n+                offset = spaceToWrapAt - 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_101",
+  "difference" : "@@ -21 +21 @@\n-            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength + offset);\n+            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength % offset);",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_102",
+  "difference" : "@@ -23 +23 @@\n-                wrappedLine.append(str.substring(offset, spaceToWrapAt));\n+                ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_103",
+  "difference" : "@@ -15 +15 @@\n-        StringBuffer wrappedLine = new StringBuffer( inputLineLength + 32 );\n+        StringBuffer wrappedLine = new StringBuffer( inputLineLength - 32 );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_104",
+  "difference" : "@@ -22 +22 @@\n-            if (spaceToWrapAt >= offset) {\n+            if (spaceToWrapAt == offset) {",
+  "operator" : "ROR"
+} ]

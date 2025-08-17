@@ -1,0 +1,523 @@
+{
+  "directed": true,
+  "label": "CDG of WordUtilsWrap4.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "WordUtilsWrap4.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "String wrap( String str, int wrapLength, String newLineStr, boolean wrapLongWords )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "if (str == null)"
+    },
+    {
+      "id": 2,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 3,
+      "line": 5,
+      "label": "return null;"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "FOLLOW-1"
+    },
+    {
+      "id": 6,
+      "line": 7,
+      "label": "if (newLineStr == null)"
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 8,
+      "line": 8,
+      "label": "newLineStr = SystemUtils.LINE_SEPARATOR"
+    },
+    {
+      "id": 9,
+      "line": 10,
+      "label": "if (wrapLength < 1)"
+    },
+    {
+      "id": 10,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 11,
+      "line": 11,
+      "label": "wrapLength = 1"
+    },
+    {
+      "id": 12,
+      "line": 13,
+      "label": "int inputLineLength = str.length()"
+    },
+    {
+      "id": 13,
+      "line": 14,
+      "label": "int offset = 0"
+    },
+    {
+      "id": 14,
+      "line": 15,
+      "label": "StringBuffer wrappedLine = new StringBuffer( inputLineLength + 32 )"
+    },
+    {
+      "id": 15,
+      "line": 16,
+      "label": "while (inputLineLength - offset > wrapLength)"
+    },
+    {
+      "id": 16,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 17,
+      "line": 17,
+      "label": "if (str.charAt(offset) == ' ')"
+    },
+    {
+      "id": 18,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 19,
+      "line": 18,
+      "label": "offset++"
+    },
+    {
+      "id": 20,
+      "line": 19,
+      "label": "continue;"
+    },
+    {
+      "id": 21,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 22,
+      "line": 0,
+      "label": "FOLLOW-2"
+    },
+    {
+      "id": 23,
+      "line": 21,
+      "label": "int spaceToWrapAt = str.lastIndexOf(' ', wrapLength + offset)"
+    },
+    {
+      "id": 24,
+      "line": 22,
+      "label": "if (spaceToWrapAt >= offset)"
+    },
+    {
+      "id": 25,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 26,
+      "line": 24,
+      "label": "wrappedLine.append(newLineStr)"
+    },
+    {
+      "id": 27,
+      "line": 25,
+      "label": "offset = spaceToWrapAt + 1"
+    },
+    {
+      "id": 28,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 29,
+      "line": 27,
+      "label": "if (wrapLongWords)"
+    },
+    {
+      "id": 30,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 31,
+      "line": 28,
+      "label": "wrappedLine.append(str.substring(offset, wrapLength + offset))"
+    },
+    {
+      "id": 32,
+      "line": 29,
+      "label": "wrappedLine.append(newLineStr)"
+    },
+    {
+      "id": 33,
+      "line": 30,
+      "label": "offset += wrapLength"
+    },
+    {
+      "id": 34,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 35,
+      "line": 32,
+      "label": "spaceToWrapAt = str.indexOf(' ', wrapLength + offset)"
+    },
+    {
+      "id": 36,
+      "line": 33,
+      "label": "if (spaceToWrapAt >= 0)"
+    },
+    {
+      "id": 37,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 38,
+      "line": 34,
+      "label": "wrappedLine.append(str.substring(offset, spaceToWrapAt))"
+    },
+    {
+      "id": 39,
+      "line": 35,
+      "label": "wrappedLine.append(newLineStr)"
+    },
+    {
+      "id": 40,
+      "line": 36,
+      "label": "offset = spaceToWrapAt + 1"
+    },
+    {
+      "id": 41,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 42,
+      "line": 38,
+      "label": "wrappedLine.append(str.substring(offset))"
+    },
+    {
+      "id": 43,
+      "line": 39,
+      "label": "offset = inputLineLength"
+    },
+    {
+      "id": 44,
+      "line": 44,
+      "label": "wrappedLine.append(str.substring(offset))"
+    },
+    {
+      "id": 45,
+      "line": 45,
+      "label": "return wrappedLine.toString();"
+    },
+    {
+      "id": 46,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 1,
+      "target": 4,
+      "label": "False"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 5,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "label": "True"
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 5,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 5,
+      "target": 13,
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 5,
+      "target": 14,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 5,
+      "target": 15,
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 15,
+      "target": 16,
+      "label": "True"
+    },
+    {
+      "id": 16,
+      "source": 16,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 17,
+      "target": 18,
+      "label": "True"
+    },
+    {
+      "id": 18,
+      "source": 18,
+      "target": 19,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 18,
+      "target": 20,
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 17,
+      "target": 21,
+      "label": "False"
+    },
+    {
+      "id": 21,
+      "source": 21,
+      "target": 22,
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 22,
+      "target": 23,
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 22,
+      "target": 24,
+      "label": ""
+    },
+    {
+      "id": 24,
+      "source": 24,
+      "target": 25,
+      "label": "True"
+    },
+    {
+      "id": 25,
+      "source": 25,
+      "target": 26,
+      "label": ""
+    },
+    {
+      "id": 26,
+      "source": 25,
+      "target": 27,
+      "label": ""
+    },
+    {
+      "id": 27,
+      "source": 24,
+      "target": 28,
+      "label": "False"
+    },
+    {
+      "id": 28,
+      "source": 28,
+      "target": 29,
+      "label": ""
+    },
+    {
+      "id": 29,
+      "source": 29,
+      "target": 30,
+      "label": "True"
+    },
+    {
+      "id": 30,
+      "source": 30,
+      "target": 31,
+      "label": ""
+    },
+    {
+      "id": 31,
+      "source": 30,
+      "target": 32,
+      "label": ""
+    },
+    {
+      "id": 32,
+      "source": 30,
+      "target": 33,
+      "label": ""
+    },
+    {
+      "id": 33,
+      "source": 29,
+      "target": 34,
+      "label": "False"
+    },
+    {
+      "id": 34,
+      "source": 34,
+      "target": 35,
+      "label": ""
+    },
+    {
+      "id": 35,
+      "source": 34,
+      "target": 36,
+      "label": ""
+    },
+    {
+      "id": 36,
+      "source": 36,
+      "target": 37,
+      "label": "True"
+    },
+    {
+      "id": 37,
+      "source": 37,
+      "target": 38,
+      "label": ""
+    },
+    {
+      "id": 38,
+      "source": 37,
+      "target": 39,
+      "label": ""
+    },
+    {
+      "id": 39,
+      "source": 37,
+      "target": 40,
+      "label": ""
+    },
+    {
+      "id": 40,
+      "source": 36,
+      "target": 41,
+      "label": "False"
+    },
+    {
+      "id": 41,
+      "source": 41,
+      "target": 42,
+      "label": ""
+    },
+    {
+      "id": 42,
+      "source": 41,
+      "target": 43,
+      "label": ""
+    },
+    {
+      "id": 43,
+      "source": 5,
+      "target": 44,
+      "label": ""
+    },
+    {
+      "id": 44,
+      "source": 5,
+      "target": 45,
+      "label": ""
+    },
+    {
+      "id": 45,
+      "source": 0,
+      "target": 46,
+      "label": ""
+    }
+  ]
+}
