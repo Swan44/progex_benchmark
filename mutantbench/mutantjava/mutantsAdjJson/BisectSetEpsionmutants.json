@@ -1,0 +1,31 @@
+[ {
+  "mutant_id" : "MUT_005",
+  "difference" : "@@ -4 +4 @@\n-        this.mEpsilon = epsilon;\n+        this.mEpsilon = --epsilon;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_080",
+  "difference" : "@@ -4 +4 @@\n-        this.mEpsilon = epsilon;\n+        this.mEpsilon = epsilon--;",
+  "equivalence" : true,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_082",
+  "difference" : "@@ -4 +4 @@\n-        this.mEpsilon = epsilon;\n+        this.mEpsilon = ++epsilon;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_131",
+  "difference" : "@@ -4 +4 @@\n-        this.mEpsilon = epsilon;\n+        this.mEpsilon = epsilon++;",
+  "equivalence" : true,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_147",
+  "difference" : "@@ -4 +4 @@\n-        this.mEpsilon = epsilon;\n+        this.mEpsilon = -epsilon;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_187",
+  "difference" : "@@ -4 +4 @@\n-        this.mEpsilon = epsilon;",
+  "equivalence" : false,
+  "operator" : "ADL"
+} ]

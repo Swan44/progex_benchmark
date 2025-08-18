@@ -14,13 +14,12 @@ import java.util.Map;
 public class MutantClassifier {
 
     private static final Map<String, int[]> CLASSIFICATION_RULES = Map.of(
-            "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\WordUtilsWrap2mutants.json", new int[]{15, 18},
-            "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\WordUtilsWrap4mutants.json", new int[]{20, 64},
-            "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\WordUtilsCapitalizemutants.json", new int[]{71, 95}
+            "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\BisectSetEpsionmutants.json", new int[]{17, 20},
+            "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\BisectSqrtmutants.json", new int[]{22, 44}
     );
 
     public static void main(String[] args) {
-        String inputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsIDJson\\WordUtilsmutants.json";
+        String inputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsIDJson\\Bisectmutants.json";
         try {
             classifyMutants(inputFile);
         } catch (IOException e) {
@@ -84,12 +83,13 @@ public class MutantClassifier {
     }
 
     private static int extractLineNumber(String difference) {
-        // Example: "@@ -33 +33 @@" -> extract 33 from "+33"
+        // Example: "@@ -29,12 +31,15 @@" -> extract 31 from "+31,15"
         String[] parts = difference.split("\\s+");
         if (parts.length < 2) {
             throw new IllegalArgumentException("Invalid difference format: " + difference);
         }
-        String linePart = parts[1]; // "+33"
-        return Integer.parseInt(linePart.substring(1)); // Remove '+' and parse
+        String linePart = parts[1]; // "+31,15"
+        String lineNumber = linePart.substring(1).split(",")[0]; // Remove '+' and take before comma
+        return Integer.parseInt(lineNumber);
     }
 }

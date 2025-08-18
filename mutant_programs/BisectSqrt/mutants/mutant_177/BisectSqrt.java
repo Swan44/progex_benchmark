@@ -1,0 +1,21 @@
+public class BisectSqrt {
+    public  double sqrt( double N )
+    {
+        double x = N;
+        double M = N;
+        double m = 1;
+        double r = x;
+        double diff = x * x - N;
+        while (Math.abs(diff) > mEpsilon) {
+            if (diff < 0) {
+                m = x;
+                x = (M + x) / 2;
+            } else {
+            }
+            diff = x * x - N;
+        }
+        r = x;
+        mResult = r;
+        return r;
+    }
+}

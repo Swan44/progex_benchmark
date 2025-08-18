@@ -13,9 +13,9 @@ public class MutantPositionAdjuster {
     private static final Pattern POSITION_PATTERN = Pattern.compile("@@ -(\\d+) \\+(\\d+) @@");
 
     public static void main(String[] args) {
-        String inputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsDiv\\WordUtilsCapitalizemutants.json";
-        String outputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\WordUtilsCapitalizemutants.json";
-        int offset = 69;
+        String inputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsDiv\\BisectSqrtmutants.json";
+        String outputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\BisectSqrtmutants.json";
+        int offset = 20;
 
         try {
             adjustMutantPositions(inputFile, outputFile, offset);
