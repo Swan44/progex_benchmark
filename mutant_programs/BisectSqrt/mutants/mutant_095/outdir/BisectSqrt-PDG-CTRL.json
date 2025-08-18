@@ -1,0 +1,149 @@
+{
+  "directed": true,
+  "label": "CDG of BisectSqrt.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "BisectSqrt.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "double sqrt( double N )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "double x = N"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "double M = N"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "double m = 1"
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "double r = x"
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "double diff = x * x - N"
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "while (Math.abs(diff) > mEpsilon)"
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 8,
+      "line": 10,
+      "label": "diff = x * x - N"
+    },
+    {
+      "id": 9,
+      "line": 12,
+      "label": "r = x"
+    },
+    {
+      "id": 10,
+      "line": 13,
+      "label": "mResult = r"
+    },
+    {
+      "id": 11,
+      "line": 14,
+      "label": "return r;"
+    },
+    {
+      "id": 12,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 0,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 0,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 0,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 0,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 0,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 0,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 0,
+      "target": 12,
+      "label": ""
+    }
+  ]
+}

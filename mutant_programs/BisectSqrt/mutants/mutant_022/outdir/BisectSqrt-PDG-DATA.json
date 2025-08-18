@@ -1,0 +1,525 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of BisectSqrt.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "BisectSqrt.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "double sqrt( double N )",
+      "defs": ["N"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "double x = N",
+      "defs": ["x"],
+      "uses": ["N"]
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "double M = N",
+      "defs": ["M"],
+      "uses": ["N"]
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "double m = 1",
+      "defs": ["m"],
+      "uses": []
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "double r = x",
+      "defs": ["r"],
+      "uses": ["x"]
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "double diff = x * x - N",
+      "defs": ["diff"],
+      "uses": ["x", "N"]
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "while (Math.abs( diff-- ) > mEpsilon)",
+      "defs": ["diff"],
+      "uses": ["diff"]
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "endwhile"
+    },
+    {
+      "id": 8,
+      "line": 10,
+      "label": "if (diff < 0)",
+      "defs": [],
+      "uses": ["diff"]
+    },
+    {
+      "id": 9,
+      "line": 11,
+      "label": "m = x",
+      "defs": ["m"],
+      "uses": ["x"]
+    },
+    {
+      "id": 10,
+      "line": 12,
+      "label": "x = (M + x) / 2",
+      "defs": ["x"],
+      "uses": ["x", "M"]
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 12,
+      "line": 14,
+      "label": "if (diff > 0)",
+      "defs": [],
+      "uses": ["diff"]
+    },
+    {
+      "id": 13,
+      "line": 15,
+      "label": "M = x",
+      "defs": ["M"],
+      "uses": ["x"]
+    },
+    {
+      "id": 14,
+      "line": 16,
+      "label": "x = (m + x) / 2",
+      "defs": ["x"],
+      "uses": ["x", "m"]
+    },
+    {
+      "id": 15,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 16,
+      "line": 19,
+      "label": "diff = x * x - N",
+      "defs": ["diff"],
+      "uses": ["x", "N"]
+    },
+    {
+      "id": 17,
+      "line": 21,
+      "label": "r = x",
+      "defs": ["r"],
+      "uses": ["x"]
+    },
+    {
+      "id": 18,
+      "line": 22,
+      "label": "mResult = r",
+      "defs": [],
+      "uses": ["r"]
+    },
+    {
+      "id": 19,
+      "line": 23,
+      "label": "return r;",
+      "defs": [],
+      "uses": ["r"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 7,
+      "source": 6,
+      "target": 8,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 8,
+      "source": 8,
+      "target": 9,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 8,
+      "target": 12,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 12,
+      "source": 12,
+      "target": 13,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 14,
+      "target": 15,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 12,
+      "target": 15,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 16,
+      "source": 15,
+      "target": 11,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 11,
+      "target": 16,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 16,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 7,
+      "target": 17,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 17,
+      "target": 18,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 18,
+      "target": 19,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 0,
+      "target": 1,
+      "type": "Flows",
+      "label": "N"
+    },
+    {
+      "id": 23,
+      "source": 0,
+      "target": 2,
+      "type": "Flows",
+      "label": "N"
+    },
+    {
+      "id": 24,
+      "source": 0,
+      "target": 5,
+      "type": "Flows",
+      "label": "N"
+    },
+    {
+      "id": 25,
+      "source": 0,
+      "target": 16,
+      "type": "Flows",
+      "label": "N"
+    },
+    {
+      "id": 26,
+      "source": 1,
+      "target": 4,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 27,
+      "source": 1,
+      "target": 5,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 28,
+      "source": 1,
+      "target": 16,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 29,
+      "source": 1,
+      "target": 13,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 30,
+      "source": 1,
+      "target": 14,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 31,
+      "source": 1,
+      "target": 9,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 32,
+      "source": 1,
+      "target": 10,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 33,
+      "source": 1,
+      "target": 17,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 34,
+      "source": 2,
+      "target": 10,
+      "type": "Flows",
+      "label": "M"
+    },
+    {
+      "id": 35,
+      "source": 3,
+      "target": 14,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 36,
+      "source": 5,
+      "target": 6,
+      "type": "Flows",
+      "label": "diff"
+    },
+    {
+      "id": 37,
+      "source": 6,
+      "target": 8,
+      "type": "Flows",
+      "label": "diff"
+    },
+    {
+      "id": 38,
+      "source": 6,
+      "target": 12,
+      "type": "Flows",
+      "label": "diff"
+    },
+    {
+      "id": 39,
+      "source": 16,
+      "target": 6,
+      "type": "Flows",
+      "label": "diff"
+    },
+    {
+      "id": 40,
+      "source": 13,
+      "target": 10,
+      "type": "Flows",
+      "label": "M"
+    },
+    {
+      "id": 41,
+      "source": 14,
+      "target": 16,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 42,
+      "source": 14,
+      "target": 13,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 43,
+      "source": 14,
+      "target": 9,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 44,
+      "source": 14,
+      "target": 10,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 45,
+      "source": 14,
+      "target": 17,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 46,
+      "source": 9,
+      "target": 14,
+      "type": "Flows",
+      "label": "m"
+    },
+    {
+      "id": 47,
+      "source": 10,
+      "target": 16,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 48,
+      "source": 10,
+      "target": 13,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 49,
+      "source": 10,
+      "target": 14,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 50,
+      "source": 10,
+      "target": 9,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 51,
+      "source": 10,
+      "target": 17,
+      "type": "Flows",
+      "label": "x"
+    },
+    {
+      "id": 52,
+      "source": 17,
+      "target": 18,
+      "type": "Flows",
+      "label": "r"
+    },
+    {
+      "id": 53,
+      "source": 17,
+      "target": 19,
+      "type": "Flows",
+      "label": "r"
+    }
+  ]
+}

@@ -1,0 +1,586 @@
+[ {
+  "mutant_id" : "MUT_001",
+  "difference" : "@@ -25 +25 @@\n-        if (k == 31) {\n+        if (k == -31) {",
+  "equivalence" : true,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_002",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u * 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_003",
+  "difference" : "@@ -3 +3 @@\n-        if (u * v == 0) {\n+        if (u * v >= 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_004",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((v & 1) == 0 && k < 31) { // while u and v are",
+  "equivalence" : true,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_005",
+  "difference" : "@@ -46 +46 @@\n-            t = (v - u) / 2;\n+            t = (v / u) / 2;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_006",
+  "difference" : "@@ -40 +40 @@\n-            if (t > 0) {\n+            if (t > -1) {",
+  "equivalence" : true,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_007",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = (false) ? v : -(u / 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_008",
+  "difference" : "@@ -15 +15 @@\n-            v = -v;\n+            v = ~v;",
+  "equivalence" : false,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_009",
+  "difference" : "@@ -11 +11 @@\n-        if (u > 0) {\n+        if (u > 1) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_010",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v ^ 1) == 0 && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "LOR"
+}, {
+  "mutant_id" : "MUT_011",
+  "difference" : "@@ -41 +41 @@\n-                u = -t;\n+                u = ~t;",
+  "equivalence" : false,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_012",
+  "difference" : "@@ -3 +3 @@\n-        if (u * v == 0) {\n+        if (u + v == 0) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_013",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (false && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_014",
+  "difference" : "@@ -50 +50 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return +u * (1 << k); // gcd is u*2^k",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_015",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) <= 1) ? v : -(u / 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_016",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u | 1) == 1) ? v : -(u / 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "LOR"
+}, {
+  "mutant_id" : "MUT_017",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : +(u / 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_018",
+  "difference" : "@@ -21 +21 @@\n-            u /= 2;\n+            ;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_019",
+  "difference" : "@@ -46 +46 @@\n-            t = (v - u) / 2;\n+            t = (v % u) / 2;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_020",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u ^ 1) == 1) ? v : -(u / 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "LOR"
+}, {
+  "mutant_id" : "MUT_021",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u / 0)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_022",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u / -2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_023",
+  "difference" : "@@ -22 +22 @@\n-            v /= 2;\n+            v /= 0;",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_024",
+  "difference" : "@@ -50 +50 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u * (1 >>> k); // gcd is u*2^k",
+  "equivalence" : false,
+  "operator" : "SOR"
+}, {
+  "mutant_id" : "MUT_025",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && false) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_026",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0) { // while u and v are",
+  "equivalence" : true,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_027",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 == ((v & 1) == 0) && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_028",
+  "difference" : "@@ -18 +18 @@\n-        int k = 0;\n+        int k = 1;",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_029",
+  "difference" : "@@ -12 +12 @@\n-            u = -u;\n+            u = ~u;",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_030",
+  "difference" : "@@ -18 +18 @@\n-        int k = 0;\n+        int k = -1;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_031",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v | 1) == 0 && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "LOR"
+}, {
+  "mutant_id" : "MUT_032",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 1 && (v & 1) == 1 && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_033",
+  "difference" : "@@ -21 +21 @@\n-            u /= 2;\n+            u /= -2;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_034",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) >= 1) ? v : -(u / 2)/* B3 */;",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_035",
+  "difference" : "@@ -14 +14 @@\n-        if (v > 0) {\n+        if (v != 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_036",
+  "difference" : "@@ -50 +50 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u * (-1 << k); // gcd is u*2^k",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_037",
+  "difference" : "@@ -40 +40 @@\n-            if (t > 0) {\n+            if (t >= 0) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_038",
+  "difference" : "@@ -12 +12 @@\n-            u = -u;\n+            u = +u;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_039",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && false && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_040",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) >= 0 && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_041",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && k < -31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_042",
+  "difference" : "@@ -4 +4 @@\n-            return (Math.abs(u) + Math.abs(v));\n+            return (Math.abs(u) - Math.abs(v));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_043",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) <= 0 && k < 31) { // while u and v are",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_044",
+  "difference" : "@@ -49 +49 @@\n-        } while (t != 0);\n+        } while (true);",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_045",
+  "difference" : "@@ -49 +49 @@\n-        } while (t != 0);\n+        } while (t > 0);",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_046",
+  "difference" : "@@ -50 +50 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u * (0 << k); // gcd is u*2^k",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_047",
+  "difference" : "@@ -11 +11 @@\n-        if (u > 0) {\n+        if (u > -1) {",
+  "equivalence" : true,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_048",
+  "difference" : "@@ -46 +46 @@\n-            t = (v - u) / 2;\n+            t = (v + u) / 2;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_049",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == -1 && (v & 1) == -1 && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_050",
+  "difference" : "@@ -22 +22 @@\n-            v /= 2;\n+            v /= -2;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_051",
+  "difference" : "@@ -46 +46 @@\n-            t = (v - u) / 2;\n+            t = (v - u) + 2;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_052",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : ~(u / 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_053",
+  "difference" : "@@ -50 +50 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u * (1 >> k); // gcd is u*2^k",
+  "equivalence" : false,
+  "operator" : "SOR"
+}, {
+  "mutant_id" : "MUT_054",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 0) == 0) ? v : -(u / 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_055",
+  "difference" : "@@ -25 +25 @@\n-        if (k == 31) {\n+        if (k == 0) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_056",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u + 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_057",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && k < 31) { // while u and v are",
+  "equivalence" : true,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_058",
+  "difference" : "@@ -4 +4 @@\n-            return (Math.abs(u) + Math.abs(v));\n+            return (Math.abs(u) / Math.abs(v));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_059",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && k <= 31) { // while u and v are",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_060",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) <= 0 && (v & 1) == 0 && k < 31) { // while u and v are",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_061",
+  "difference" : "@@ -50 +50 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u - (1 << k); // gcd is u*2^k",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_062",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && k < 0) { // while u and v are",
+  "equivalence" : true,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_063",
+  "difference" : "@@ -46 +46 @@\n-            t = (v - u) / 2;\n+            t = (v - u) / -2;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_064",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (false && (v & 1) == 0 && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_065",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u - 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_066",
+  "difference" : "@@ -37 +37 @@\n-                t /= 2; // cast out twos\n+                t /= 0; // cast out twos",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_067",
+  "difference" : "@@ -14 +14 @@\n-        if (v > 0) {\n+        if (v > -1) {",
+  "equivalence" : true,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_068",
+  "difference" : "@@ -50 +50 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return ~u * (1 << k); // gcd is u*2^k",
+  "equivalence" : false,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_069",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & -1) == -1) ? v : -(u / 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_070",
+  "difference" : "@@ -11 +11 @@\n-        if (u > 0) {\n+        if (u >= 0) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_071",
+  "difference" : "@@ -21 +21 @@\n-            u /= 2;\n+            u /= 0;",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_072",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (((u & 1) == 0 && (v & 1) == 0) == k < 31) { // while u and v are",
+  "equivalence" : true,
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_073",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & -1) == 0 && (v & -1) == 0 && k < 3-1) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_074",
+  "difference" : "@@ -14 +14 @@\n-        if (v > 0) {\n+        if (v >= 0) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_075",
+  "difference" : "@@ -50 +50 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u / (1 << k); // gcd is u*2^k",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_076",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u ^ 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "LOR"
+}, {
+  "mutant_id" : "MUT_077",
+  "difference" : "@@ -46 +46 @@\n-            t = (v - u) / 2;\n+            t = (v - u) - 2;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_078",
+  "difference" : "@@ -3 +3 @@\n-        if (u * v == 0) {\n+        if (u % v == 0) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_079",
+  "difference" : "@@ -46 +46 @@\n-            t = (v - u) / 2;\n+            t = (v - u) % 2;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_080",
+  "difference" : "@@ -4 +4 @@\n-            return (Math.abs(u) + Math.abs(v));\n+            return (Math.abs(u) * Math.abs(v));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_081",
+  "difference" : "@@ -14 +14 @@\n-        if (v > 0) {\n+        if (v > 1) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_082",
+  "difference" : "@@ -11 +11 @@\n-        if (u > 0) {\n+        if (false) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_083",
+  "difference" : "@@ -40 +40 @@\n-            if (t > 0) {\n+            if (t != 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_084",
+  "difference" : "@@ -15 +15 @@\n-            v = -v;\n+            v = +v;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_085",
+  "difference" : "@@ -3 +3 @@\n-        if (u * v == 0) {\n+        if (false) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_086",
+  "difference" : "@@ -22 +22 @@\n-            v /= 2;\n+            ;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_087",
+  "difference" : "@@ -37 +37 @@\n-                t /= 2; // cast out twos\n+                ; // cast out twos",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_088",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) == 0 && (v & 1) == 0 && k != 31) { // while u and v are",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_089",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u | 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "LOR"
+}, {
+  "mutant_id" : "MUT_090",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 1) >= 0 && (v & 1) == 0 && k < 31) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_091",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (false) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_092",
+  "difference" : "@@ -46 +46 @@\n-            t = (v - u) / 2;\n+            t = (v - u) * 2;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_093",
+  "difference" : "@@ -25 +25 @@\n-        if (k == 31) {\n+        if (k <= 31) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_094",
+  "difference" : "@@ -50 +50 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u + (1 << k); // gcd is u*2^k",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_095",
+  "difference" : "@@ -25 +25 @@\n-        if (k == 31) {\n+        if (k >= 31) {",
+  "equivalence" : true,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_096",
+  "difference" : "@@ -46 +46 @@\n-            t = (v - u) / 2;\n+            t = (v - u) / 0;",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_097",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while (k < 31) { // while u and v are",
+  "equivalence" : true,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_098",
+  "difference" : "@@ -11 +11 @@\n-        if (u > 0) {\n+        if (u != 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_099",
+  "difference" : "@@ -40 +40 @@\n-            if (t > 0) {\n+            if (false) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_100",
+  "difference" : "@@ -40 +40 @@\n-            if (t > 0) {\n+            if (t > 1) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_101",
+  "difference" : "@@ -46 +46 @@\n-            t = (v - u) / 2;\n+            t = (v * u) / 2;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_102",
+  "difference" : "@@ -49 +49 @@\n-        } while (t != 0);\n+        } while (t != 1);",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_103",
+  "difference" : "@@ -37 +37 @@\n-                t /= 2; // cast out twos\n+                t /= -2; // cast out twos",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_104",
+  "difference" : "@@ -49 +49 @@\n-        } while (t != 0);\n+        } while (t < 0);",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_105",
+  "difference" : "@@ -3 +3 @@\n-        if (u * v == 0) {\n+        if (u - v == 0) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_106",
+  "difference" : "@@ -41 +41 @@\n-                u = -t;\n+                u = +t;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_107",
+  "difference" : "@@ -50 +50 @@\n-        return -u * (1 << k); // gcd is u*2^k\n+        return -u % (1 << k); // gcd is u*2^k",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_108",
+  "difference" : "@@ -49 +49 @@\n-        } while (t != 0);\n+        } while (t != -1);",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_109",
+  "difference" : "@@ -3 +3 @@\n-        if (u * v == 0) {\n+        if (u * v == 1) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_110",
+  "difference" : "@@ -3 +3 @@\n-        if (u * v == 0) {\n+        if (u * v == -1) {",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_111",
+  "difference" : "@@ -4 +4 @@\n-            return (Math.abs(u) + Math.abs(v));\n+            return (Math.abs(u) % Math.abs(v));",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_112",
+  "difference" : "@@ -14 +14 @@\n-        if (v > 0) {\n+        if (false) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_113",
+  "difference" : "@@ -19 +19 @@\n-        while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are\n+        while ((u & 0) == 0 && (v & 0) == 0 && k < 30) { // while u and v are",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_114",
+  "difference" : "@@ -3 +3 @@\n-        if (u * v == 0) {\n+        if (u * v <= 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_115",
+  "difference" : "@@ -30 +30 @@\n-        int t = ((u & 1) == 1) ? v : -(u / 2)/* B3 */;\n+        int t = ((u & 1) == 1) ? v : -(u % 2)/* B3 */;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_116",
+  "difference" : "@@ -25 +25 @@\n-        if (k == 31) {\n+        if (false) {",
+  "equivalence" : true,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_117",
+  "difference" : "@@ -3 +3 @@\n-        if (u * v == 0) {\n+        if (u / v == 0) {",
+  "equivalence" : false,
+  "operator" : "AORB"
+} ]

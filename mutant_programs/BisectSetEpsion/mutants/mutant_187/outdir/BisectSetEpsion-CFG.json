@@ -1,0 +1,19 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of BisectSetEpsion.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "BisectSetEpsion.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void setEpsilon( double epsilon )"
+    }
+  ],
+
+  "edges": [
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of BisectSqrt.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "BisectSqrt.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "double sqrt( double N )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "double x = N"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "double M = N"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "double m = 1"
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "double r = x"
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "double diff = x * x - N"
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "while (Math.abs(diff) > mEpsilon)"
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "endwhile"
+    },
+    {
+      "id": 8,
+      "line": 10,
+      "label": "if (diff < 0)"
+    },
+    {
+      "id": 9,
+      "line": 11,
+      "label": "m = x"
+    },
+    {
+      "id": 10,
+      "line": 12,
+      "label": "x = (M + x) / 2"
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 12,
+      "line": 14,
+      "label": "if (diff > 0)"
+    },
+    {
+      "id": 13,
+      "line": 15,
+      "label": "M = x"
+    },
+    {
+      "id": 14,
+      "line": 16,
+      "label": "x = (m + x) / 2"
+    },
+    {
+      "id": 15,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 16,
+      "line": 19,
+      "label": "diff = x * --x - N"
+    },
+    {
+      "id": 17,
+      "line": 21,
+      "label": "r = x"
+    },
+    {
+      "id": 18,
+      "line": 22,
+      "label": "mResult = r"
+    },
+    {
+      "id": 19,
+      "line": 23,
+      "label": "return r;"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": "False"
+    },
+    {
+      "id": 7,
+      "source": 6,
+      "target": 8,
+      "label": "True"
+    },
+    {
+      "id": 8,
+      "source": 8,
+      "target": 9,
+      "label": "True"
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 8,
+      "target": 12,
+      "label": "False"
+    },
+    {
+      "id": 12,
+      "source": 12,
+      "target": 13,
+      "label": "True"
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 14,
+      "target": 15,
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 12,
+      "target": 15,
+      "label": "False"
+    },
+    {
+      "id": 16,
+      "source": 15,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 11,
+      "target": 16,
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 16,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 7,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 17,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 18,
+      "target": 19,
+      "label": ""
+    }
+  ]
+}

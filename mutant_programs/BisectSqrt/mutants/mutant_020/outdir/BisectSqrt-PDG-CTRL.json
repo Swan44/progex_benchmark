@@ -1,0 +1,116 @@
+{
+  "directed": true,
+  "label": "CDG of BisectSqrt.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "BisectSqrt.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "double sqrt( double N )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "double x = N"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "double M = N"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "double m = 1"
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "double r = x"
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "double diff = x * x - N"
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "r = x"
+    },
+    {
+      "id": 7,
+      "line": 10,
+      "label": "mResult = r"
+    },
+    {
+      "id": 8,
+      "line": 11,
+      "label": "return r;"
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 0,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 0,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 0,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 0,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 0,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 0,
+      "target": 9,
+      "label": ""
+    }
+  ]
+}

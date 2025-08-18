@@ -1,0 +1,48 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of BisectSetEpsion.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "BisectSetEpsion.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void setEpsilon( double epsilon )",
+      "defs": ["epsilon"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "this.mEpsilon = --epsilon",
+      "defs": ["epsilon"],
+      "uses": ["epsilon"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 1,
+      "type": "Flows",
+      "label": "epsilon"
+    },
+    {
+      "id": 2,
+      "source": 1,
+      "target": 1,
+      "type": "Flows",
+      "label": "epsilon"
+    }
+  ]
+}
