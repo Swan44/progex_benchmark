@@ -12,7 +12,7 @@ public class GenerateCFGInfo {
 
     public static void main(String[] args) {
         // mutants 文件夹路径
-        String mutantsBaseDir = "D:\\bishe_code\\progex_benchmark\\mutant_programs\\BisectSqrt\\mutants";
+        String mutantsBaseDir = "D:\\bishe_code\\progex_benchmark\\mutant_programs\\QuickSortSwap\\mutants";
 
         // 遍历 mutants 文件夹
         File mutantsDir = new File(mutantsBaseDir);

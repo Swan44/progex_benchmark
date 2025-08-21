@@ -1,0 +1,340 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of StringTokenizerSetMax.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "StringTokenizerSetMax.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void setMaxDelimCodePoint()"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "if (delimiters == null)"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "maxDelimCodePoint = 0"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "return;"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "int m = 0"
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "int c"
+    },
+    {
+      "id": 7,
+      "line": 10,
+      "label": "int count = 0"
+    },
+    {
+      "id": 8,
+      "line": 11,
+      "label": "int i = 0"
+    },
+    {
+      "id": 9,
+      "line": 11,
+      "label": "for (i < delimiters.length())"
+    },
+    {
+      "id": 10,
+      "line": 11,
+      "label": "i += Character.charCount( c )"
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 12,
+      "line": 12,
+      "label": "c = delimiters.charAt( i )"
+    },
+    {
+      "id": 13,
+      "line": 13,
+      "label": "if (c >= Character.MIN_HIGH_SURROGATE && c <= Character.MAX_LOW_SURROGATE)"
+    },
+    {
+      "id": 14,
+      "line": 14,
+      "label": "c = delimiters.codePointAt( i )"
+    },
+    {
+      "id": 15,
+      "line": 15,
+      "label": "hasSurrogates = true"
+    },
+    {
+      "id": 16,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 17,
+      "line": 17,
+      "label": "count++"
+    },
+    {
+      "id": 18,
+      "line": 19,
+      "label": "maxDelimCodePoint = m"
+    },
+    {
+      "id": 19,
+      "line": 20,
+      "label": "if (hasSurrogates)"
+    },
+    {
+      "id": 20,
+      "line": 21,
+      "label": "delimiterCodePoints = new int[count]"
+    },
+    {
+      "id": 21,
+      "line": 22,
+      "label": "int i = 0, j = 0"
+    },
+    {
+      "id": 22,
+      "line": 22,
+      "label": "for (i < count)"
+    },
+    {
+      "id": 23,
+      "line": 22,
+      "label": "i++, j += Character.charCount( c )"
+    },
+    {
+      "id": 24,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 25,
+      "line": 23,
+      "label": "c = delimiters.codePointAt( j )"
+    },
+    {
+      "id": 26,
+      "line": 24,
+      "label": "delimiterCodePoints[i] = c"
+    },
+    {
+      "id": 27,
+      "line": 0,
+      "label": "endif"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 1,
+      "target": 4,
+      "label": "False"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 8,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 11,
+      "label": "False"
+    },
+    {
+      "id": 10,
+      "source": 9,
+      "target": 12,
+      "label": "True"
+    },
+    {
+      "id": 11,
+      "source": 12,
+      "target": 13,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 13,
+      "target": 14,
+      "label": "True"
+    },
+    {
+      "id": 13,
+      "source": 14,
+      "target": 15,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 15,
+      "target": 16,
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 13,
+      "target": 16,
+      "label": "False"
+    },
+    {
+      "id": 16,
+      "source": 16,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 17,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 10,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 11,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 18,
+      "target": 19,
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 19,
+      "target": 20,
+      "label": "True"
+    },
+    {
+      "id": 22,
+      "source": 20,
+      "target": 21,
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 21,
+      "target": 22,
+      "label": ""
+    },
+    {
+      "id": 24,
+      "source": 22,
+      "target": 24,
+      "label": "False"
+    },
+    {
+      "id": 25,
+      "source": 22,
+      "target": 25,
+      "label": "True"
+    },
+    {
+      "id": 26,
+      "source": 25,
+      "target": 26,
+      "label": ""
+    },
+    {
+      "id": 27,
+      "source": 26,
+      "target": 23,
+      "label": ""
+    },
+    {
+      "id": 28,
+      "source": 23,
+      "target": 22,
+      "label": ""
+    },
+    {
+      "id": 29,
+      "source": 24,
+      "target": 27,
+      "label": ""
+    },
+    {
+      "id": 30,
+      "source": 19,
+      "target": 27,
+      "label": "False"
+    }
+  ]
+}

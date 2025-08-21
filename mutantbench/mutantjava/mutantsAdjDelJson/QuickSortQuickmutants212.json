@@ -1,0 +1,285 @@
+[ {
+  "mutant_id" : "MUT_212",
+  "difference" : "@@ -6 +6 @@\n-        swap( data, first, (first + last) / 2 );\n+        swap( data, first, (~first + last) / 2 );",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_215",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n+        if (first < ++upper - 1) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_218",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n+        if (first >= upper - 1) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_219",
+  "difference" : "@@ -25 +25 @@\n-        if (upper + 1 < last) {\n+        if (upper + 1 > last) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_220",
+  "difference" : "@@ -5 +5 @@\n-        int upper = last;\n+        int upper = last++;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_222",
+  "difference" : "@@ -25 +25 @@\n-        if (upper + 1 < last) {\n+        if (1 < last) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_223",
+  "difference" : "@@ -6 +6 @@\n-        swap( data, first, (first + last) / 2 );\n+        swap( data, first, (first + last) * 2 );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_225",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n+        if (first < upper / 1) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_227",
+  "difference" : "@@ -12 +12 @@\n-            while (bound < data[upper]) {\n+            while (bound-- < data[upper]) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_229",
+  "difference" : "@@ -12 +12 @@\n-            while (bound < data[upper]) {\n+            while (bound < data[upper++]) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_230",
+  "difference" : "@@ -15 +15 @@\n-            if (lower < upper) {\n+            if (!(lower < upper)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_231",
+  "difference" : "@@ -21 +21 @@\n-        swap( data, upper, first );\n+        swap( data, upper, -first );",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_232",
+  "difference" : "@@ -9 +9 @@\n-            while (bound > data[lower]) {\n+            while (~bound > data[lower]) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_233",
+  "difference" : "@@ -8 +8 @@\n-        while (lower <= upper) {\n+        while (lower <= ++upper) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_234",
+  "difference" : "@@ -15 +15 @@\n-            if (lower < upper) {\n+            if (lower < ~upper) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_236",
+  "difference" : "@@ -4 +4 @@\n-        int lower = first + 1;\n+        int lower = first % 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_237",
+  "difference" : "@@ -25 +25 @@\n-        if (upper + 1 < last) {\n+        if (upper + 1 < ~last) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_239",
+  "difference" : "@@ -9 +9 @@\n-            while (bound > data[lower]) {\n+            while (bound-- > data[lower]) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_240",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n+        if (true) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_241",
+  "difference" : "@@ -23 +23 @@\n-            quicksort( data, first, upper - 1 );\n+            quicksort( data, first--, upper - 1 );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_242",
+  "difference" : "@@ -23 +23 @@\n-            quicksort( data, first, upper - 1 );\n+            quicksort( data, first, upper-- - 1 );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_243",
+  "difference" : "@@ -8 +8 @@\n-        while (lower <= upper) {\n+        while (lower <= upper--) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_247",
+  "difference" : "@@ -25 +25 @@\n-        if (upper + 1 < last) {\n+        if (upper < last) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_249",
+  "difference" : "@@ -21 +21 @@\n-        swap( data, upper, first );",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_251",
+  "difference" : "@@ -16 +16 @@\n-                swap( data, lower++, upper-- );\n+                swap( data, ~lower++, upper-- );",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_252",
+  "difference" : "@@ -4 +4 @@\n-        int lower = first + 1;\n+        int lower = -first + 1;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_253",
+  "difference" : "@@ -26 +26 @@\n-            quicksort( data, upper + 1, last );\n+            quicksort( data, upper + 1, ~last );",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_254",
+  "difference" : "@@ -15 +15 @@\n-            if (lower < upper) {\n+            if (lower-- < upper) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_255",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n+        if (first < upper) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_256",
+  "difference" : "@@ -6 +6 @@\n-        swap( data, first, (first + last) / 2 );\n+        swap( data, first, (first / last) / 2 );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_259",
+  "difference" : "@@ -9 +9 @@\n-            while (bound > data[lower]) {\n+            while (bound > data[lower--]) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_260",
+  "difference" : "@@ -6 +6 @@\n-        swap( data, first, (first + last) / 2 );\n+        swap( data, first, (first * last) / 2 );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_261",
+  "difference" : "@@ -15 +15 @@\n-            if (lower < upper) {\n+            if (lower < ++upper) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_262",
+  "difference" : "@@ -6 +6 @@\n-        swap( data, first, (first + last) / 2 );\n+        swap( data, -first, (first + last) / 2 );",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_263",
+  "difference" : "@@ -9 +9 @@\n-            while (bound > data[lower]) {\n+            while (bound > data[~lower]) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_264",
+  "difference" : "@@ -26 +26 @@\n-            quicksort( data, upper + 1, last );\n+            quicksort( data, upper + 1, last-- );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_265",
+  "difference" : "@@ -6 +6 @@\n-        swap( data, first, (first + last) / 2 );\n+        swap( data, first, (first + last++) / 2 );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_266",
+  "difference" : "@@ -8 +8 @@\n-        while (lower <= upper) {\n+        while (lower++ <= upper) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_267",
+  "difference" : "@@ -6 +6 @@\n-        swap( data, first, (first + last) / 2 );\n+        swap( data, first, first + last );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_268",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n+        if (first < ~upper - 1) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_271",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n-            quicksort( data, first, upper - 1 );\n-        }",
+  "operator" : "ISDL"
+}, {
+  "mutant_id" : "MUT_273",
+  "difference" : "@@ -7 +7 @@\n-        int bound = data[first];\n+        int bound = data[first++];",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_282",
+  "difference" : "@@ -25 +25 @@\n-        if (upper + 1 < last) {\n+        if (upper + 1 != last) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_283",
+  "difference" : "@@ -21 +21 @@\n-        swap( data, upper, first );\n+        swap( data, upper, first-- );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_285",
+  "difference" : "@@ -26 +26 @@\n-            quicksort( data, upper + 1, last );\n+            quicksort( data, upper / 1, last );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_286",
+  "difference" : "@@ -25 +25 @@\n-        if (upper + 1 < last) {\n+        if (upper + 1 >= last) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_287",
+  "difference" : "@@ -23 +23 @@\n-            quicksort( data, first, upper - 1 );\n+            quicksort( data, first, 1 );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_288",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n+        if (first < 1) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_292",
+  "difference" : "@@ -15 +15 @@\n-            if (lower < upper) {\n+            if (--lower < upper) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_293",
+  "difference" : "@@ -26 +26 @@\n-            quicksort( data, upper + 1, last );\n+            quicksort( data, upper + 1, -last );",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_294",
+  "difference" : "@@ -15 +15 @@\n-            if (lower < upper) {\n+            if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_296",
+  "difference" : "@@ -26 +26 @@\n-            quicksort( data, upper + 1, last );\n+            quicksort( data, upper, last );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_297",
+  "difference" : "@@ -6 +6 @@\n-        swap( data, first, (first + last) / 2 );\n+        swap( data, first, (first + last--) / 2 );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_299",
+  "difference" : "@@ -23 +23 @@\n-            quicksort( data, first, upper - 1 );\n+            quicksort( data, first++, upper - 1 );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_301",
+  "difference" : "@@ -10 +10 @@\n-                lower++;\n+                 ;",
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_302",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n+        if (first < --upper - 1) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_304",
+  "difference" : "@@ -25 +25 @@\n-        if (upper + 1 < last) {\n+        if (true) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_305",
+  "difference" : "@@ -23 +23 @@\n-            quicksort( data, first, upper - 1 );\n+            quicksort( data, first, ++upper - 1 );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_306",
+  "difference" : "@@ -9 +9 @@\n-            while (bound > data[lower]) {\n+            while (bound < data[lower]) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_307",
+  "difference" : "@@ -4 +4 @@\n-        int lower = first + 1;\n+        int lower = first;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_308",
+  "difference" : "@@ -12 +12 @@\n-            while (bound < data[upper]) {\n+            while (!(bound < data[upper])) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_309",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n+        if (first < upper % 1) {",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_310",
+  "difference" : "@@ -21 +21 @@\n-        swap( data, upper, first );\n+        swap( data, upper, first++ );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_312",
+  "difference" : "@@ -15 +15 @@\n-            if (lower < upper) {\n+            if (lower++ < upper) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_313",
+  "difference" : "@@ -26 +26 @@\n-            quicksort( data, upper + 1, last );\n+            quicksort( data, upper % 1, last );",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_314",
+  "difference" : "@@ -6 +6 @@\n-        swap( data, first, (first + last) / 2 );\n+        swap( data, first, (first-- + last) / 2 );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_315",
+  "difference" : "@@ -26 +26 @@\n-            quicksort( data, upper + 1, last );\n+            quicksort( data, ~upper + 1, last );",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_316",
+  "difference" : "@@ -15 +15 @@\n-            if (lower < upper) {\n+            if (lower < --upper) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_317",
+  "difference" : "@@ -9 +9 @@\n-            while (bound > data[lower]) {\n+            while (bound <= data[lower]) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_318",
+  "difference" : "@@ -8 +8 @@\n-        while (lower <= upper) {\n+        while (!(lower <= upper)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_319",
+  "difference" : "@@ -22 +22 @@\n-        if (first < upper - 1) {\n+        if (first < upper + 1) {",
+  "operator" : "AORB"
+} ]

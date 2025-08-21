@@ -1,0 +1,118 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of QuickSortSwap.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "QuickSortSwap.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void swap( int[] data, int i, int j )",
+      "defs": ["data", "i", "j"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int tmp = data[i]",
+      "defs": ["tmp"],
+      "uses": ["data", "i"]
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "data[~i] = data[j]",
+      "defs": [],
+      "uses": ["data", "i", "j"]
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "data[j] = tmp",
+      "defs": [],
+      "uses": ["data", "tmp", "j"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 0,
+      "target": 1,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 4,
+      "source": 0,
+      "target": 2,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 5,
+      "source": 0,
+      "target": 3,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 6,
+      "source": 0,
+      "target": 1,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 7,
+      "source": 0,
+      "target": 2,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 8,
+      "source": 0,
+      "target": 2,
+      "type": "Flows",
+      "label": "j"
+    },
+    {
+      "id": 9,
+      "source": 0,
+      "target": 3,
+      "type": "Flows",
+      "label": "j"
+    },
+    {
+      "id": 10,
+      "source": 1,
+      "target": 3,
+      "type": "Flows",
+      "label": "tmp"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "directed": true,
+  "label": "CDG of QuickSortSort.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "QuickSortSort.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void sort( int[] data )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int max = 0"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "int i = 1"
+    },
+    {
+      "id": 3,
+      "line": 5,
+      "label": "for (i < data.length)"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 5,
+      "line": 6,
+      "label": "if (data[max] < data[i])"
+    },
+    {
+      "id": 6,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 7,
+      "line": 7,
+      "label": "max = i"
+    },
+    {
+      "id": 8,
+      "line": 5,
+      "label": "i++"
+    },
+    {
+      "id": 9,
+      "line": 10,
+      "label": "swap( data, data.length - 1, max )"
+    },
+    {
+      "id": 10,
+      "line": 11,
+      "label": "quicksort( data, 0, data.length - 2 )"
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": "True"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": "True"
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 4,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 0,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 0,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 0,
+      "target": 11,
+      "label": ""
+    }
+  ]
+}

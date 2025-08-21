@@ -1,0 +1,252 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of StringTokenizerSkip.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "StringTokenizerSkip.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int skipDelimiters( int startPos )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "if (delimiters == null)"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "throw new NullPointerException()"
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "int position = startPos"
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "while (!retDelims && position < maxPosition)"
+    },
+    {
+      "id": 6,
+      "line": 0,
+      "label": "endwhile"
+    },
+    {
+      "id": 7,
+      "line": 9,
+      "label": "if (!hasSurrogates)"
+    },
+    {
+      "id": 8,
+      "line": 10,
+      "label": "char c = str.charAt( position )"
+    },
+    {
+      "id": 9,
+      "line": 11,
+      "label": "if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0)"
+    },
+    {
+      "id": 10,
+      "line": 12,
+      "label": "break;"
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 12,
+      "line": 14,
+      "label": "position++"
+    },
+    {
+      "id": 13,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 14,
+      "line": 16,
+      "label": "int c = str.codePointAt( position++ )"
+    },
+    {
+      "id": 15,
+      "line": 17,
+      "label": "if (c > maxDelimCodePoint || !isDelimiter( c ))"
+    },
+    {
+      "id": 16,
+      "line": 18,
+      "label": "break;"
+    },
+    {
+      "id": 17,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 18,
+      "line": 20,
+      "label": "position += Character.charCount( c )"
+    },
+    {
+      "id": 19,
+      "line": 23,
+      "label": "return position;"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 1,
+      "target": 3,
+      "label": "False"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": "False"
+    },
+    {
+      "id": 6,
+      "source": 5,
+      "target": 7,
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": "True"
+    },
+    {
+      "id": 8,
+      "source": 8,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "label": "True"
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 9,
+      "target": 11,
+      "label": "False"
+    },
+    {
+      "id": 12,
+      "source": 11,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 12,
+      "target": 13,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 7,
+      "target": 14,
+      "label": "False"
+    },
+    {
+      "id": 15,
+      "source": 14,
+      "target": 15,
+      "label": ""
+    },
+    {
+      "id": 16,
+      "source": 15,
+      "target": 16,
+      "label": "True"
+    },
+    {
+      "id": 17,
+      "source": 16,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 15,
+      "target": 17,
+      "label": "False"
+    },
+    {
+      "id": 19,
+      "source": 17,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 18,
+      "target": 13,
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 13,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 6,
+      "target": 19,
+      "label": ""
+    }
+  ]
+}

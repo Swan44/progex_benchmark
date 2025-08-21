@@ -1,0 +1,127 @@
+{
+  "directed": true,
+  "label": "CDG of StringTokenizerSkip.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "StringTokenizerSkip.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int skipDelimiters( int startPos )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "if (delimiters == null)"
+    },
+    {
+      "id": 2,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 3,
+      "line": 5,
+      "label": "throw new NullPointerException();"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "FOLLOW-1"
+    },
+    {
+      "id": 6,
+      "line": 7,
+      "label": "int position = startPos"
+    },
+    {
+      "id": 7,
+      "line": 8,
+      "label": "while (!retDelims && position < maxPosition)"
+    },
+    {
+      "id": 8,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 9,
+      "line": 10,
+      "label": "return position;"
+    },
+    {
+      "id": 10,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 1,
+      "target": 4,
+      "label": "False"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 5,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": "True"
+    },
+    {
+      "id": 8,
+      "source": 5,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 0,
+      "target": 10,
+      "label": ""
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+[ {
+  "mutant_id" : "MUT_006",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i > delimiterCodePoints.length; i++) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_012",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; !(i < delimiterCodePoints.length); i++) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_017",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] == --codePoint) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_027",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i <= delimiterCodePoints.length; i++) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_029",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] >= codePoint) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_072",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] <= codePoint) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_076",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_093",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i--] == codePoint) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_154",
+  "difference" : "@@ -6 +6 @@\n-                return true;\n+                return false;",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_157",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] == ~codePoint) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_184",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] == codePoint++) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_212",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] > codePoint) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_249",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i < delimiterCodePoints.length;  ) {",
+  "operator" : "AODS"
+}, {
+  "mutant_id" : "MUT_278",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i != delimiterCodePoints.length; i++) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_284",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[~i] == codePoint) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_294",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] != codePoint) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_339",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i < ~delimiterCodePoints.length; i++) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_388",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n-            if (delimiterCodePoints[i] == codePoint) {\n-                return true;\n-            }\n-        }",
+  "operator" : "FLDL"
+}, {
+  "mutant_id" : "MUT_397",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (!(delimiterCodePoints[i] == codePoint)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_399",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i == delimiterCodePoints.length; i++) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_413",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[++i] == codePoint) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_433",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] < codePoint) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_441",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] == ++codePoint) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_484",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_499",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; ~i < delimiterCodePoints.length; i++) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_508",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n-                return true;\n-            }",
+  "operator" : "ISDL"
+}, {
+  "mutant_id" : "MUT_512",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i++ < delimiterCodePoints.length; i++) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_513",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i >= delimiterCodePoints.length; i++) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_524",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i++] == codePoint) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_548",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i < delimiterCodePoints.length;) {",
+  "operator" : "AODS"
+}, {
+  "mutant_id" : "MUT_563",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i < delimiterCodePoints.length; i--) {",
+  "operator" : "AORS"
+}, {
+  "mutant_id" : "MUT_583",
+  "difference" : "@@ -9 +9 @@\n-        return false;\n+        return true;",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_588",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; --i < delimiterCodePoints.length; i++) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_654",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[--i] == codePoint) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_658",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; ++i < delimiterCodePoints.length; i++) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_659",
+  "difference" : "@@ -5 +5 @@\n-            if (delimiterCodePoints[i] == codePoint) {\n+            if (delimiterCodePoints[i] == codePoint--) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_723",
+  "difference" : "@@ -4 +4 @@\n-        for (int i = 0; i < delimiterCodePoints.length; i++) {\n+        for (int i = 0; i-- < delimiterCodePoints.length; i++) {",
+  "operator" : "AOIS"
+} ]

@@ -1,0 +1,138 @@
+{
+  "directed": true,
+  "label": "CDG of StringTokenizerIs.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "StringTokenizerIs.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "boolean isDelimiter( int codePoint )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int i = 0"
+    },
+    {
+      "id": 2,
+      "line": 4,
+      "label": "for (i < delimiterCodePoints.length)"
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 4,
+      "line": 5,
+      "label": "if (false)"
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 6,
+      "line": 6,
+      "label": "return true;"
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 8,
+      "line": 4,
+      "label": "i++"
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "FOLLOW-1"
+    },
+    {
+      "id": 10,
+      "line": 9,
+      "label": "return false;"
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": "True"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 4,
+      "target": 7,
+      "label": "False"
+    },
+    {
+      "id": 7,
+      "source": 3,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 7,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 0,
+      "target": 11,
+      "label": ""
+    }
+  ]
+}

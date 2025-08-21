@@ -1,0 +1,252 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of StringTokenizerCount.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "StringTokenizerCount.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int countTokens()",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int count = 0",
+      "defs": ["count"],
+      "uses": []
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "int currpos = currentPosition",
+      "defs": ["currpos"],
+      "uses": []
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "while (currpos < maxPosition)",
+      "defs": [],
+      "uses": ["currpos"]
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "endwhile"
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "currpos = skipDelimiters( currpos )",
+      "defs": ["currpos"],
+      "uses": ["currpos"]
+    },
+    {
+      "id": 6,
+      "line": 8,
+      "label": "if (--currpos >= maxPosition)",
+      "defs": ["currpos"],
+      "uses": ["currpos"]
+    },
+    {
+      "id": 7,
+      "line": 9,
+      "label": "break;"
+    },
+    {
+      "id": 8,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 9,
+      "line": 11,
+      "label": "currpos = scanToken( currpos )",
+      "defs": ["currpos"],
+      "uses": ["currpos"]
+    },
+    {
+      "id": 10,
+      "line": 12,
+      "label": "count++",
+      "defs": ["count"],
+      "uses": ["count"]
+    },
+    {
+      "id": 11,
+      "line": 14,
+      "label": "return count;",
+      "defs": [],
+      "uses": ["count"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 4,
+      "source": 3,
+      "target": 5,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 6,
+      "target": 8,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 8,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 9,
+      "target": 10,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 10,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 4,
+      "target": 11,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 1,
+      "target": 10,
+      "type": "Flows",
+      "label": "count"
+    },
+    {
+      "id": 14,
+      "source": 1,
+      "target": 11,
+      "type": "Flows",
+      "label": "count"
+    },
+    {
+      "id": 15,
+      "source": 2,
+      "target": 3,
+      "type": "Flows",
+      "label": "currpos"
+    },
+    {
+      "id": 16,
+      "source": 2,
+      "target": 5,
+      "type": "Flows",
+      "label": "currpos"
+    },
+    {
+      "id": 17,
+      "source": 5,
+      "target": 6,
+      "type": "Flows",
+      "label": "currpos"
+    },
+    {
+      "id": 18,
+      "source": 6,
+      "target": 6,
+      "type": "Flows",
+      "label": "currpos"
+    },
+    {
+      "id": 19,
+      "source": 6,
+      "target": 9,
+      "type": "Flows",
+      "label": "currpos"
+    },
+    {
+      "id": 20,
+      "source": 9,
+      "target": 3,
+      "type": "Flows",
+      "label": "currpos"
+    },
+    {
+      "id": 21,
+      "source": 9,
+      "target": 5,
+      "type": "Flows",
+      "label": "currpos"
+    },
+    {
+      "id": 22,
+      "source": 10,
+      "target": 11,
+      "type": "Flows",
+      "label": "count"
+    }
+  ]
+}

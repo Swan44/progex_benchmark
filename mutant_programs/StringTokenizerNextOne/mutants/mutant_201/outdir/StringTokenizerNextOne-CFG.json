@@ -1,0 +1,52 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of StringTokenizerNextOne.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "StringTokenizerNextOne.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "String nextToken( String delim )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "delimiters = delim"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "setMaxDelimCodePoint()"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "return nextToken();"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    }
+  ]
+}

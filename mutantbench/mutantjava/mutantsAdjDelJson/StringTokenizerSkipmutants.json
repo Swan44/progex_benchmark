@@ -1,0 +1,533 @@
+[ {
+  "mutant_id" : "MUT_023",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( -c );",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_036",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n-                    break;\n-                }",
+  "operator" : "ISDL"
+}, {
+  "mutant_id" : "MUT_037",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position != maxPosition) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_066",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (true || delimiters.indexOf( c ) < 0) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_080",
+  "difference" : "@@ -16 +16 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( ~position );",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_082",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position < ~maxPosition) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_084",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_097",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position < maxPosition--) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_102",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c ) >= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_110",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && --position < maxPosition) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_115",
+  "difference" : "@@ -7 +7 @@\n-        int position = startPos;\n+        int position = -startPos;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_118",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (++c > maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_120",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( c-- );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_124",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_139",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c ) <= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_145",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position < --maxPosition) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_149",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || false) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_151",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c == maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_152",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint-- || delimiters.indexOf( c ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_153",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( --c ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_160",
+  "difference" : "@@ -23 +23 @@\n-        return position;\n+        return ~position;",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_162",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || true) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_170",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( --c );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_171",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (~c > maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_177",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position >= maxPosition) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_197",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint && !isDelimiter( c )) {",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_203",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position == maxPosition) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_240",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c < maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_241",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n-            if (!hasSurrogates) {\n-                char c = str.charAt( position );\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n-                    break;\n-                }\n-                position++;\n-            } else {\n-                int c = str.codePointAt( position );\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n-                    break;\n-                }\n-                position += Character.charCount( c );\n-            }\n-        }",
+  "operator" : "WLDL"
+}, {
+  "mutant_id" : "MUT_242",
+  "difference" : "@@ -14 +14 @@\n-                position++;\n+                position--;",
+  "operator" : "AORS"
+}, {
+  "mutant_id" : "MUT_252",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims ^ position < maxPosition) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_253",
+  "difference" : "@@ -9 +9 @@\n-            if (!hasSurrogates) {\n+            if (true) {",
+  "operator" : "SEOD"
+}, {
+  "mutant_id" : "MUT_257",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || !(delimiters.indexOf( c ) < 0)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_258",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c-- > maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_259",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims || position < maxPosition) {",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_270",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > ++maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_271",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint || !isDelimiter( ~c )) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_279",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c >= maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_285",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c++ > maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_286",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (!(c > maxDelimCodePoint || delimiters.indexOf( c ) < 0)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_290",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position -= Character.charCount( c );",
+  "operator" : "SAR"
+}, {
+  "mutant_id" : "MUT_293",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint++ || !isDelimiter( c )) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_297",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_300",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( ++c );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_312",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > ~maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_314",
+  "difference" : "@@ -16 +16 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( position++ );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_315",
+  "difference" : "@@ -16 +16 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( -position );",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_319",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (false || delimiters.indexOf( c ) < 0) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_337",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( ++c ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_352",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint++ || delimiters.indexOf( c ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_353",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (!(c > maxDelimCodePoint) || !isDelimiter( c )) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_354",
+  "difference" : "@@ -10 +10 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( -position );",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_356",
+  "difference" : "@@ -23 +23 @@\n-        return position;\n+        return -position;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_359",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (true || !isDelimiter( c )) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_360",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c == maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_364",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && !(position < maxPosition)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_365",
+  "difference" : "@@ -14 +14 @@\n-                position++;",
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_367",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position <= maxPosition) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_368",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (!isDelimiter( c )) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_370",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_374",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n-                    break;\n-                }",
+  "operator" : "ISDL"
+}, {
+  "mutant_id" : "MUT_375",
+  "difference" : "@@ -18 +18 @@\n-                    break;",
+  "operator" : "OSDL"
+}, {
+  "mutant_id" : "MUT_381",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (position < maxPosition) {",
+  "operator" : "SEOD"
+}, {
+  "mutant_id" : "MUT_382",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position++ < maxPosition) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_385",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint) {",
+  "operator" : "SEOD"
+}, {
+  "mutant_id" : "MUT_391",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c < maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_393",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c != maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_425",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c++ ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_428",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (true) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_429",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c-- > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_434",
+  "difference" : "@@ -4 +4 @@\n-        if (delimiters == null) {\n+        if (delimiters != null) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_436",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position > maxPosition) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_437",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint && delimiters.indexOf( c ) < 0) {",
+  "operator" : "SEOR"
+}, {
+  "mutant_id" : "MUT_442",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_450",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > ~maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_452",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position < maxPosition++) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_456",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > ++maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_459",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint ^ delimiters.indexOf( c ) < 0) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_467",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (delimiters.indexOf( c ) < 0) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_473",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint ^ !isDelimiter( c )) {",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_476",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && ++position < maxPosition) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_482",
+  "difference" : "@@ -23 +23 @@\n-        return position;\n+        return position++;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_485",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c >= maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_487",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position /= Character.charCount( c );",
+  "operator" : "SAR"
+}, {
+  "mutant_id" : "MUT_491",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c++ > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_493",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c <= maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_504",
+  "difference" : "@@ -10 +10 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( position-- );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_518",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (++c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_519",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (false || !isDelimiter( c )) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_537",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (--c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_541",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > --maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_551",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position *= Character.charCount( c );",
+  "operator" : "SAR"
+}, {
+  "mutant_id" : "MUT_554",
+  "difference" : "@@ -4 +4 @@\n-        if (delimiters == null) {\n+        if (true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_555",
+  "difference" : "@@ -4 +4 @@\n-        if (delimiters == null) {\n-            throw new NullPointerException();\n-        }",
+  "operator" : "ISDL"
+}, {
+  "mutant_id" : "MUT_562",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( c++ );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_566",
+  "difference" : "@@ -5 +5 @@\n-            throw new NullPointerException();",
+  "operator" : "OSDL"
+}, {
+  "mutant_id" : "MUT_578",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position %= Character.charCount( c );",
+  "operator" : "SAR"
+}, {
+  "mutant_id" : "MUT_584",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_585",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint-- || !isDelimiter( c )) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_587",
+  "difference" : "@@ -7 +7 @@\n-        int position = startPos;\n+        int position = startPos++;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_591",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!(!retDelims && position < maxPosition)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_593",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position = Character.charCount( c );",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_600",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > maxDelimCodePoint || isDelimiter( c )) {",
+  "operator" : "SEOD"
+}, {
+  "mutant_id" : "MUT_607",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( ~c ) < 0) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_610",
+  "difference" : "@@ -23 +23 @@\n-        return position;\n+        return position--;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_616",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (retDelims && position < maxPosition) {",
+  "operator" : "SEOD"
+}, {
+  "mutant_id" : "MUT_623",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && ~position < maxPosition) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_625",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );\n+                position += Character.charCount( ~c );",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_636",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (c > --maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_639",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (~c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_643",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (--c > maxDelimCodePoint || !isDelimiter( c )) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_644",
+  "difference" : "@@ -10 +10 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( position++ );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_652",
+  "difference" : "@@ -4 +4 @@\n-        if (delimiters == null) {\n+        if (!(delimiters == null)) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_656",
+  "difference" : "@@ -10 +10 @@\n-                char c = str.charAt( position );\n+                char c = str.charAt( ~position );",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_660",
+  "difference" : "@@ -17 +17 @@\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n+                if (!(c > maxDelimCodePoint || !isDelimiter( c ))) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_661",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position-- < maxPosition) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_664",
+  "difference" : "@@ -9 +9 @@\n-            if (!hasSurrogates) {\n+            if (hasSurrogates) {",
+  "operator" : "SEOD"
+}, {
+  "mutant_id" : "MUT_674",
+  "difference" : "@@ -8 +8 @@\n-        while (!retDelims && position < maxPosition) {\n+        while (!retDelims && position < ++maxPosition) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_676",
+  "difference" : "@@ -14 +14 @@\n-                position++;\n+                 ;",
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_683",
+  "difference" : "@@ -23 +23 @@\n-        return position;\n+        return 0;",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_704",
+  "difference" : "@@ -7 +7 @@\n-        int position = startPos;\n+        int position = startPos--;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_706",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c ) == 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_707",
+  "difference" : "@@ -20 +20 @@\n-                position += Character.charCount( c );",
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_713",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c-- ) < 0) {",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_714",
+  "difference" : "@@ -16 +16 @@\n-                int c = str.codePointAt( position );\n+                int c = str.codePointAt( position-- );",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_725",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c != maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_728",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c <= maxDelimCodePoint || delimiters.indexOf( c ) < 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_733",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (!(c > maxDelimCodePoint) || delimiters.indexOf( c ) < 0) {",
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_738",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c ) != 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_740",
+  "difference" : "@@ -9 +9 @@\n-            if (!hasSurrogates) {\n-                char c = str.charAt( position );\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n-                    break;\n-                }\n-                position++;\n-            } else {\n-                int c = str.codePointAt( position );\n-                if (c > maxDelimCodePoint || !isDelimiter( c )) {\n-                    break;\n-                }\n-                position += Character.charCount( c );\n-            }",
+  "operator" : "ISDL"
+}, {
+  "mutant_id" : "MUT_743",
+  "difference" : "@@ -7 +7 @@\n-        int position = startPos;\n+        int position = ~startPos;",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_745",
+  "difference" : "@@ -12 +12 @@\n-                    break;",
+  "operator" : "OSDL"
+}, {
+  "mutant_id" : "MUT_755",
+  "difference" : "@@ -11 +11 @@\n-                if (c > maxDelimCodePoint || delimiters.indexOf( c ) < 0) {\n+                if (c > maxDelimCodePoint || delimiters.indexOf( c ) > 0) {",
+  "operator" : "ROR"
+} ]

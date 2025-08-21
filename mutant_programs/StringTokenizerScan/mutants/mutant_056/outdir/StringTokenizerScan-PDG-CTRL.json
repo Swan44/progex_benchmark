@@ -1,0 +1,402 @@
+{
+  "directed": true,
+  "label": "CDG of StringTokenizerScan.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "StringTokenizerScan.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int scanToken( int startPos )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int position = startPos"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "while (position < maxPosition)"
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 4,
+      "line": 6,
+      "label": "if (!hasSurrogates)"
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 6,
+      "line": 7,
+      "label": "char c = str.charAt( position )"
+    },
+    {
+      "id": 7,
+      "line": 8,
+      "label": "if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0)"
+    },
+    {
+      "id": 8,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 9,
+      "line": 9,
+      "label": "break;"
+    },
+    {
+      "id": 10,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "FOLLOW-1"
+    },
+    {
+      "id": 12,
+      "line": 11,
+      "label": "position++"
+    },
+    {
+      "id": 13,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 14,
+      "line": 13,
+      "label": "int c = str.codePointAt( position )"
+    },
+    {
+      "id": 15,
+      "line": 14,
+      "label": "if (c <= maxDelimCodePoint && isDelimiter( c ))"
+    },
+    {
+      "id": 16,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 17,
+      "line": 15,
+      "label": "break;"
+    },
+    {
+      "id": 18,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 19,
+      "line": 0,
+      "label": "FOLLOW-2"
+    },
+    {
+      "id": 20,
+      "line": 17,
+      "label": "position += Character.charCount( c )"
+    },
+    {
+      "id": 21,
+      "line": 20,
+      "label": "if (retDelims && startPos == position)"
+    },
+    {
+      "id": 22,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 23,
+      "line": 21,
+      "label": "if (!hasSurrogates)"
+    },
+    {
+      "id": 24,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 25,
+      "line": 22,
+      "label": "char c = str.charAt( position )"
+    },
+    {
+      "id": 26,
+      "line": 23,
+      "label": "if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0)"
+    },
+    {
+      "id": 27,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 28,
+      "line": 24,
+      "label": "position++"
+    },
+    {
+      "id": 29,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 30,
+      "line": 27,
+      "label": "int c = str.codePointAt( position )"
+    },
+    {
+      "id": 31,
+      "line": 28,
+      "label": "if (c > maxDelimCodePoint && isDelimiter( c ))"
+    },
+    {
+      "id": 32,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 33,
+      "line": 29,
+      "label": "position += Character.charCount( c )"
+    },
+    {
+      "id": 34,
+      "line": 33,
+      "label": "return position;"
+    },
+    {
+      "id": 35,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": "True"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 5,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": "True"
+    },
+    {
+      "id": 8,
+      "source": 8,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 7,
+      "target": 10,
+      "label": "False"
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 11,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 4,
+      "target": 13,
+      "label": "False"
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 13,
+      "target": 15,
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 15,
+      "target": 16,
+      "label": "True"
+    },
+    {
+      "id": 16,
+      "source": 16,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 15,
+      "target": 18,
+      "label": "False"
+    },
+    {
+      "id": 18,
+      "source": 18,
+      "target": 19,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 19,
+      "target": 20,
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 0,
+      "target": 21,
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 21,
+      "target": 22,
+      "label": "True"
+    },
+    {
+      "id": 22,
+      "source": 22,
+      "target": 23,
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 23,
+      "target": 24,
+      "label": "True"
+    },
+    {
+      "id": 24,
+      "source": 24,
+      "target": 25,
+      "label": ""
+    },
+    {
+      "id": 25,
+      "source": 24,
+      "target": 26,
+      "label": ""
+    },
+    {
+      "id": 26,
+      "source": 26,
+      "target": 27,
+      "label": "True"
+    },
+    {
+      "id": 27,
+      "source": 27,
+      "target": 28,
+      "label": ""
+    },
+    {
+      "id": 28,
+      "source": 23,
+      "target": 29,
+      "label": "False"
+    },
+    {
+      "id": 29,
+      "source": 29,
+      "target": 30,
+      "label": ""
+    },
+    {
+      "id": 30,
+      "source": 29,
+      "target": 31,
+      "label": ""
+    },
+    {
+      "id": 31,
+      "source": 31,
+      "target": 32,
+      "label": "True"
+    },
+    {
+      "id": 32,
+      "source": 32,
+      "target": 33,
+      "label": ""
+    },
+    {
+      "id": 33,
+      "source": 0,
+      "target": 34,
+      "label": ""
+    },
+    {
+      "id": 34,
+      "source": 0,
+      "target": 35,
+      "label": ""
+    }
+  ]
+}

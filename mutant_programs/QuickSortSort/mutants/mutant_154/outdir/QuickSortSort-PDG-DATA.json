@@ -1,0 +1,308 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of QuickSortSort.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "QuickSortSort.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void sort( int[] data )",
+      "defs": ["data"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "if (data.length < 2)",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "return;",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "int max = 0",
+      "defs": ["max"],
+      "uses": []
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "int i = 1",
+      "defs": ["i"],
+      "uses": []
+    },
+    {
+      "id": 6,
+      "line": 8,
+      "label": "for (i < data.length)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 7,
+      "line": 8,
+      "label": "i++",
+      "defs": ["i"],
+      "uses": ["i"]
+    },
+    {
+      "id": 8,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 9,
+      "line": 9,
+      "label": "if (data[max] >= data[i])",
+      "defs": [],
+      "uses": ["data", "max", "i"]
+    },
+    {
+      "id": 10,
+      "line": 10,
+      "label": "max = i",
+      "defs": ["max"],
+      "uses": ["i"]
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 12,
+      "line": 13,
+      "label": "swap( data, data.length - 1, max )",
+      "defs": [],
+      "uses": ["data", "max"]
+    },
+    {
+      "id": 13,
+      "line": 14,
+      "label": "quicksort( data, 0, data.length - 2 )",
+      "defs": [],
+      "uses": ["data"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 1,
+      "target": 3,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 8,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 7,
+      "source": 6,
+      "target": 9,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 8,
+      "source": 9,
+      "target": 10,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 9,
+      "source": 10,
+      "target": 11,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 9,
+      "target": 11,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 11,
+      "source": 11,
+      "target": 7,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 7,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 8,
+      "target": 12,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 12,
+      "target": 13,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 0,
+      "target": 9,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 16,
+      "source": 0,
+      "target": 12,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 17,
+      "source": 0,
+      "target": 13,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 18,
+      "source": 4,
+      "target": 9,
+      "type": "Flows",
+      "label": "max"
+    },
+    {
+      "id": 19,
+      "source": 4,
+      "target": 12,
+      "type": "Flows",
+      "label": "max"
+    },
+    {
+      "id": 20,
+      "source": 5,
+      "target": 6,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 21,
+      "source": 5,
+      "target": 9,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 22,
+      "source": 5,
+      "target": 7,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 23,
+      "source": 5,
+      "target": 10,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 24,
+      "source": 7,
+      "target": 6,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 25,
+      "source": 7,
+      "target": 9,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 26,
+      "source": 7,
+      "target": 10,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 27,
+      "source": 10,
+      "target": 9,
+      "type": "Flows",
+      "label": "max"
+    },
+    {
+      "id": 28,
+      "source": 10,
+      "target": 12,
+      "type": "Flows",
+      "label": "max"
+    }
+  ]
+}

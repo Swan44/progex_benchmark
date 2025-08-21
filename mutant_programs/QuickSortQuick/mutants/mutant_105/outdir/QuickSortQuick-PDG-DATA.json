@@ -1,0 +1,324 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of QuickSortQuick.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "QuickSortQuick.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void quicksort( int[] data, int first, int last )",
+      "defs": ["data", "last", "first"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int lower = first + 1",
+      "defs": ["lower"],
+      "uses": ["first"]
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "int upper = last",
+      "defs": ["upper"],
+      "uses": ["last"]
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "swap( data, first, (first + last) / 2 )",
+      "defs": [],
+      "uses": ["data", "last", "first"]
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "int bound = data[first]",
+      "defs": ["bound"],
+      "uses": ["data", "first"]
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "swap( data, upper, first )",
+      "defs": [],
+      "uses": ["data", "upper", "first"]
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "if (first < upper - 1)",
+      "defs": [],
+      "uses": ["upper", "first"]
+    },
+    {
+      "id": 7,
+      "line": 10,
+      "label": "quicksort( data, first, upper - 1 )",
+      "defs": [],
+      "uses": ["data", "upper", "first"]
+    },
+    {
+      "id": 8,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 9,
+      "line": 12,
+      "label": "if (upper + 1 < last)",
+      "defs": [],
+      "uses": ["last", "upper"]
+    },
+    {
+      "id": 10,
+      "line": 13,
+      "label": "quicksort( data, upper + 1, last )",
+      "defs": [],
+      "uses": ["data", "last", "upper"]
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "endif"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 6,
+      "target": 8,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 8,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 9,
+      "target": 10,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 11,
+      "source": 10,
+      "target": 11,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 9,
+      "target": 11,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 13,
+      "source": 0,
+      "target": 3,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 14,
+      "source": 0,
+      "target": 4,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 15,
+      "source": 0,
+      "target": 5,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 16,
+      "source": 0,
+      "target": 10,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 17,
+      "source": 0,
+      "target": 7,
+      "type": "Flows",
+      "label": "data"
+    },
+    {
+      "id": 18,
+      "source": 0,
+      "target": 2,
+      "type": "Flows",
+      "label": "last"
+    },
+    {
+      "id": 19,
+      "source": 0,
+      "target": 3,
+      "type": "Flows",
+      "label": "last"
+    },
+    {
+      "id": 20,
+      "source": 0,
+      "target": 9,
+      "type": "Flows",
+      "label": "last"
+    },
+    {
+      "id": 21,
+      "source": 0,
+      "target": 10,
+      "type": "Flows",
+      "label": "last"
+    },
+    {
+      "id": 22,
+      "source": 0,
+      "target": 1,
+      "type": "Flows",
+      "label": "first"
+    },
+    {
+      "id": 23,
+      "source": 0,
+      "target": 3,
+      "type": "Flows",
+      "label": "first"
+    },
+    {
+      "id": 24,
+      "source": 0,
+      "target": 4,
+      "type": "Flows",
+      "label": "first"
+    },
+    {
+      "id": 25,
+      "source": 0,
+      "target": 5,
+      "type": "Flows",
+      "label": "first"
+    },
+    {
+      "id": 26,
+      "source": 0,
+      "target": 6,
+      "type": "Flows",
+      "label": "first"
+    },
+    {
+      "id": 27,
+      "source": 0,
+      "target": 7,
+      "type": "Flows",
+      "label": "first"
+    },
+    {
+      "id": 28,
+      "source": 2,
+      "target": 5,
+      "type": "Flows",
+      "label": "upper"
+    },
+    {
+      "id": 29,
+      "source": 2,
+      "target": 6,
+      "type": "Flows",
+      "label": "upper"
+    },
+    {
+      "id": 30,
+      "source": 2,
+      "target": 9,
+      "type": "Flows",
+      "label": "upper"
+    },
+    {
+      "id": 31,
+      "source": 2,
+      "target": 10,
+      "type": "Flows",
+      "label": "upper"
+    },
+    {
+      "id": 32,
+      "source": 2,
+      "target": 7,
+      "type": "Flows",
+      "label": "upper"
+    }
+  ]
+}

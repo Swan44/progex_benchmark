@@ -1,0 +1,30 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of StringTokenizerHasElem.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "StringTokenizerHasElem.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "boolean hasMoreElements()"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "return true;"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    }
+  ]
+}

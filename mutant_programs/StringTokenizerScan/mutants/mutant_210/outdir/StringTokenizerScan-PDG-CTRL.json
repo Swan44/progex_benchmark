@@ -1,0 +1,215 @@
+{
+  "directed": true,
+  "label": "CDG of StringTokenizerScan.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "StringTokenizerScan.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int scanToken( int startPos )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int position = startPos"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "while (position < maxPosition)"
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "if (retDelims && startPos == position)"
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 6,
+      "line": 8,
+      "label": "if (!hasSurrogates)"
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "char c = str.charAt( position )"
+    },
+    {
+      "id": 9,
+      "line": 10,
+      "label": "if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0)"
+    },
+    {
+      "id": 10,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 11,
+      "line": 11,
+      "label": "position++"
+    },
+    {
+      "id": 12,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 13,
+      "line": 14,
+      "label": "int c = str.codePointAt( position )"
+    },
+    {
+      "id": 14,
+      "line": 15,
+      "label": "if (c <= maxDelimCodePoint && isDelimiter( c ))"
+    },
+    {
+      "id": 15,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 16,
+      "line": 16,
+      "label": "position += Character.charCount( c )"
+    },
+    {
+      "id": 17,
+      "line": 20,
+      "label": "return position;"
+    },
+    {
+      "id": 18,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": "True"
+    },
+    {
+      "id": 3,
+      "source": 0,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 7,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "label": "True"
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 6,
+      "target": 12,
+      "label": "False"
+    },
+    {
+      "id": 12,
+      "source": 12,
+      "target": 13,
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 12,
+      "target": 14,
+      "label": ""
+    },
+    {
+      "id": 14,
+      "source": 14,
+      "target": 15,
+      "label": "True"
+    },
+    {
+      "id": 15,
+      "source": 15,
+      "target": 16,
+      "label": ""
+    },
+    {
+      "id": 16,
+      "source": 0,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 0,
+      "target": 18,
+      "label": ""
+    }
+  ]
+}

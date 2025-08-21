@@ -14,12 +14,13 @@ import java.util.Map;
 public class MutantClassifier {
 
     private static final Map<String, int[]> CLASSIFICATION_RULES = Map.of(
-            "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\BisectSetEpsionmutants.json", new int[]{17, 20},
-            "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\BisectSqrtmutants.json", new int[]{22, 44}
+            "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsDiv\\QuickSortQuickmutants.json", new int[]{7, 33},
+            "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsDiv\\QuickSortSortmutants.json", new int[]{35, 48},
+            "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsDiv\\QuickSortSwapmutants.json", new int[]{50, 55}
     );
 
     public static void main(String[] args) {
-        String inputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsIDJson\\Bisectmutants.json";
+        String inputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsIDJson\\QuickSortmutants.json";
         try {
             classifyMutants(inputFile);
         } catch (IOException e) {

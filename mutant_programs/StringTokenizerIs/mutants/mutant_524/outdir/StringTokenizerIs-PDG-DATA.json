@@ -1,0 +1,177 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of StringTokenizerIs.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "StringTokenizerIs.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "boolean isDelimiter( int codePoint )",
+      "defs": ["codePoint"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int i = 0",
+      "defs": ["i"],
+      "uses": []
+    },
+    {
+      "id": 2,
+      "line": 4,
+      "label": "for (i < delimiterCodePoints.length)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 3,
+      "line": 4,
+      "label": "i++",
+      "defs": ["i"],
+      "uses": ["i"]
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 5,
+      "line": 5,
+      "label": "if (delimiterCodePoints[i++] == codePoint)",
+      "defs": ["i"],
+      "uses": ["i", "codePoint"]
+    },
+    {
+      "id": 6,
+      "line": 6,
+      "label": "return true;",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "return false;",
+      "defs": [],
+      "uses": []
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 4,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 3,
+      "source": 2,
+      "target": 5,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 4,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 7,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 6,
+      "source": 7,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 3,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 4,
+      "target": 8,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 0,
+      "target": 5,
+      "type": "Flows",
+      "label": "codePoint"
+    },
+    {
+      "id": 10,
+      "source": 1,
+      "target": 2,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 11,
+      "source": 1,
+      "target": 5,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 12,
+      "source": 5,
+      "target": 3,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 13,
+      "source": 3,
+      "target": 2,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 14,
+      "source": 3,
+      "target": 5,
+      "type": "Flows",
+      "label": "i"
+    }
+  ]
+}

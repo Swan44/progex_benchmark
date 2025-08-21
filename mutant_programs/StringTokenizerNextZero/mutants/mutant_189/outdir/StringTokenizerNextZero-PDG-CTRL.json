@@ -1,0 +1,138 @@
+{
+  "directed": true,
+  "label": "CDG of StringTokenizerNextZero.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "StringTokenizerNextZero.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "String nextToken()"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "delimsChanged = false"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "newPosition = -1"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "if (currentPosition >= maxPosition)"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "throw new java.util.NoSuchElementException();"
+    },
+    {
+      "id": 6,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "FOLLOW-1"
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "int start = currentPosition"
+    },
+    {
+      "id": 9,
+      "line": 10,
+      "label": "currentPosition = scanToken( currentPosition )"
+    },
+    {
+      "id": 10,
+      "line": 11,
+      "label": "return str.substring( start, currentPosition );"
+    },
+    {
+      "id": 11,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": "True"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 3,
+      "target": 6,
+      "label": "False"
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 7,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 7,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 0,
+      "target": 11,
+      "label": ""
+    }
+  ]
+}

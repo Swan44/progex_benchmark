@@ -1,0 +1,30 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of StringTokenizerIs.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "StringTokenizerIs.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "boolean isDelimiter( int codePoint )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "return false;"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    }
+  ]
+}

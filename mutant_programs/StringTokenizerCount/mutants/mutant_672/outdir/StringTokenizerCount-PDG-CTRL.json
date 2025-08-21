@@ -1,0 +1,116 @@
+{
+  "directed": true,
+  "label": "CDG of StringTokenizerCount.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "StringTokenizerCount.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int countTokens()"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int count = 0"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "int currpos = currentPosition"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "while (currpos < maxPosition)"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "LOOP"
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "currpos = skipDelimiters( currpos )"
+    },
+    {
+      "id": 6,
+      "line": 8,
+      "label": "currpos = scanToken( currpos )"
+    },
+    {
+      "id": 7,
+      "line": 9,
+      "label": "count++"
+    },
+    {
+      "id": 8,
+      "line": 11,
+      "label": "return count;"
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": "True"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 4,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 4,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 0,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 0,
+      "target": 9,
+      "label": ""
+    }
+  ]
+}

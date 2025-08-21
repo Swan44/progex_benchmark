@@ -1,0 +1,50 @@
+{
+  "directed": true,
+  "label": "CDG of QuickSortSwap.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "QuickSortSwap.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void swap( int[] data, int i, int j )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int tmp = data[i]"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "data[i] = data[j]"
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    }
+  ]
+}

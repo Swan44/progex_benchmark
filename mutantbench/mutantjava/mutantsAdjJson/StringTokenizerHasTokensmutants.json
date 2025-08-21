@@ -1,0 +1,126 @@
+[ {
+  "mutant_id" : "MUT_009",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition < maxPosition++;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_071",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition >= maxPosition;",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_089",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition < ~maxPosition;",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_099",
+  "difference" : "@@ -4 +4 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( ++currentPosition );",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_113",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition++ < maxPosition;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_131",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition != maxPosition;",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_147",
+  "difference" : "@@ -4 +4 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( --currentPosition );",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_148",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition-- < maxPosition;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_167",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition < --maxPosition;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_169",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return ~newPosition < maxPosition;",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_173",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition == maxPosition;",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_193",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return ++newPosition < maxPosition;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_211",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition > maxPosition;",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_229",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return false;",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_234",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return --newPosition < maxPosition;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_265",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return true;",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_305",
+  "difference" : "@@ -4 +4 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( -currentPosition );",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_313",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition <= maxPosition;",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_454",
+  "difference" : "@@ -4 +4 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( ~currentPosition );",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_471",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition < ++maxPosition;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_486",
+  "difference" : "@@ -4 +4 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( currentPosition-- );",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_498",
+  "difference" : "@@ -4 +4 @@\n-        newPosition = skipDelimiters( currentPosition );\n+        newPosition = skipDelimiters( currentPosition++ );",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_523",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return !(newPosition < maxPosition);",
+  "equivalence" : false,
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_622",
+  "difference" : "@@ -5 +5 @@\n-        return newPosition < maxPosition;\n+        return newPosition < maxPosition--;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_667",
+  "difference" : "@@ -4 +4 @@\n-        newPosition = skipDelimiters( currentPosition );",
+  "equivalence" : false,
+  "operator" : "ADL"
+} ]

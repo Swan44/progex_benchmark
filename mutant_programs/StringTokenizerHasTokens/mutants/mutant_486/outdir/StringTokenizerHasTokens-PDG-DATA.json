@@ -1,0 +1,48 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of StringTokenizerHasTokens.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "StringTokenizerHasTokens.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "boolean hasMoreTokens()",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "newPosition = skipDelimiters( currentPosition-- )",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "return newPosition < maxPosition;",
+      "defs": [],
+      "uses": []
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+  ]
+}

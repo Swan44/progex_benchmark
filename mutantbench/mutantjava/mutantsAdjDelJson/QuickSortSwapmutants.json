@@ -1,0 +1,81 @@
+[ {
+  "mutant_id" : "MUT_006",
+  "difference" : "@@ -4 +4 @@\n-        int tmp = data[i];\n+        int tmp = data[i++];",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_031",
+  "difference" : "@@ -6 +6 @@\n-        data[j] = tmp;\n+        data[~j] = tmp;",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_072",
+  "difference" : "@@ -5 +5 @@\n-        data[i] = data[j];\n+        data[i] = data[-j];",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_092",
+  "difference" : "@@ -5 +5 @@\n-        data[i] = data[j];\n+        data[i] = data[--j];",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_108",
+  "difference" : "@@ -6 +6 @@\n-        data[j] = tmp;\n+        data[j] = ++tmp;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_125",
+  "difference" : "@@ -6 +6 @@\n-        data[j] = tmp;\n+        data[j] = -tmp;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_159",
+  "difference" : "@@ -6 +6 @@\n-        data[j] = tmp;\n+        data[j] = --tmp;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_162",
+  "difference" : "@@ -6 +6 @@\n-        data[j] = tmp;\n+        data[j] = ~tmp;",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_163",
+  "difference" : "@@ -5 +5 @@\n-        data[i] = data[j];\n+        data[i] = data[++j];",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_170",
+  "difference" : "@@ -4 +4 @@\n-        int tmp = data[i];\n+        int tmp = data[i--];",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_213",
+  "difference" : "@@ -4 +4 @@\n-        int tmp = data[i];\n+        int tmp = data[-i];",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_224",
+  "difference" : "@@ -5 +5 @@\n-        data[i] = data[j];\n+        data[~i] = data[j];",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_238",
+  "difference" : "@@ -6 +6 @@\n-        data[j] = tmp;\n+        data[j] = tmp++;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_246",
+  "difference" : "@@ -5 +5 @@\n-        data[i] = data[j];\n+        data[i] = data[~j];",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_258",
+  "difference" : "@@ -5 +5 @@\n-        data[i] = data[j];",
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_278",
+  "difference" : "@@ -6 +6 @@\n-        data[j] = tmp;\n+        data[j] = tmp--;",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_279",
+  "difference" : "@@ -4 +4 @@\n-        int tmp = data[i];\n+        int tmp = data[~i];",
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_280",
+  "difference" : "@@ -5 +5 @@\n-        data[i] = data[j];\n+        data[i] = data[j--];",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_289",
+  "difference" : "@@ -5 +5 @@\n-        data[i] = data[j];\n+        data[i] = data[j++];",
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_311",
+  "difference" : "@@ -6 +6 @@\n-        data[j] = tmp;",
+  "operator" : "ADL"
+} ]

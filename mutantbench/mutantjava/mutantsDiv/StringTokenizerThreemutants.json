@@ -1,0 +1,51 @@
+[ {
+  "mutant_id" : "MUT_032",
+  "difference" : "@@ -71 +71 @@\n-        retDelims = returnDelims;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_078",
+  "difference" : "@@ -66 +66 @@\n-        newPosition = -1;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_347",
+  "difference" : "@@ -65 +65 @@\n-        currentPosition = 0;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_468",
+  "difference" : "@@ -70 +70 @@\n-        delimiters = delim;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_469",
+  "difference" : "@@ -69 +69 @@\n-        maxPosition = str.length();",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_475",
+  "difference" : "@@ -71 +71 @@\n-        retDelims = returnDelims;\n+        retDelims = !returnDelims;",
+  "equivalence" : false,
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_489",
+  "difference" : "@@ -66 +66 @@\n-        newPosition = -1;\n+        newPosition = 1;",
+  "equivalence" : false,
+  "operator" : "AODU"
+}, {
+  "mutant_id" : "MUT_552",
+  "difference" : "@@ -72 +72 @@\n-        setMaxDelimCodePoint();",
+  "equivalence" : false,
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_631",
+  "difference" : "@@ -67 +67 @@\n-        delimsChanged = false;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_742",
+  "difference" : "@@ -68 +68 @@\n-        this.str = str;",
+  "equivalence" : false,
+  "operator" : "ADL"
+} ]

@@ -1,0 +1,52 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of QuickSortSwap.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "QuickSortSwap.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void swap( int[] data, int i, int j )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int tmp = data[i]"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "data[i] = data[--j]"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "data[j] = tmp"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    }
+  ]
+}

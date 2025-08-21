@@ -1,0 +1,149 @@
+{
+  "directed": true,
+  "label": "CDG of QuickSortQuick.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "QuickSortQuick.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void quicksort( int[] data, int first, int last )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int lower = first + 1"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "int upper = last"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "swap( data, first, (first + last) / 2 )"
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "int bound = data[first]"
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "swap( data, upper, first )"
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "if (first < upper - 1)"
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 8,
+      "line": 10,
+      "label": "quicksort( data, first, upper - 1 )"
+    },
+    {
+      "id": 9,
+      "line": 12,
+      "label": "if (upper + 1 < last)"
+    },
+    {
+      "id": 10,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 11,
+      "line": 13,
+      "label": "quicksort( data, upper + 1, last )"
+    },
+    {
+      "id": 12,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 0,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 0,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 0,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 0,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "label": "True"
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 0,
+      "target": 12,
+      "label": ""
+    }
+  ]
+}

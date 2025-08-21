@@ -1,0 +1,85 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of QuickSortSort.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "QuickSortSort.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "void sort( int[] data )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "if (data.length < 2)"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "return;"
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "int max = 0"
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "swap( data, data.length - 1, max )"
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "quicksort( data, 0, data.length - 2 )"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 1,
+      "target": 3,
+      "label": "False"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+[ {
+  "mutant_id" : "MUT_081",
+  "difference" : "@@ -4 +4 @@\n-        return hasMoreTokens();\n+        return true;",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_649",
+  "difference" : "@@ -4 +4 @@\n-        return hasMoreTokens();\n+        return false;",
+  "operator" : "VDL"
+} ]

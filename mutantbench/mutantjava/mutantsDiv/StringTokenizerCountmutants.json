@@ -1,0 +1,321 @@
+[ {
+  "mutant_id" : "MUT_003",
+  "difference" : "@@ -200 +200 @@\n-            count++;\n+             ;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_013",
+  "difference" : "@@ -193 +193 @@\n-        int currpos = currentPosition;\n+        int currpos = currentPosition++;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_046",
+  "difference" : "@@ -197 +196,0 @@\n-                break;",
+  "equivalence" : false,
+  "operator" : "OSDL"
+}, {
+  "mutant_id" : "MUT_055",
+  "difference" : "@@ -193 +193 @@\n-        int currpos = currentPosition;\n+        int currpos = ~currentPosition;",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_108",
+  "difference" : "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( currpos++ );",
+  "equivalence" : true,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_114",
+  "difference" : "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( ~currpos );",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_123",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (--currpos < maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_125",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos >= maxPosition) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_130",
+  "difference" : "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( currpos-- );",
+  "equivalence" : true,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_143",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos < ++maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_187",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos < maxPosition++) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_195",
+  "difference" : "@@ -195 +194,0 @@\n-            currpos = skipDelimiters( currpos );",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_204",
+  "difference" : "@@ -200 +200 @@\n-            count++;\n+            count--;",
+  "equivalence" : false,
+  "operator" : "AORS"
+}, {
+  "mutant_id" : "MUT_205",
+  "difference" : "@@ -193 +193 @@\n-        int currpos = currentPosition;\n+        int currpos = -currentPosition;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_236",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (~currpos < maxPosition) {",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_246",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (++currpos < maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_256",
+  "difference" : "@@ -202 +202 @@\n-        return count;\n+        return ~count;",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_263",
+  "difference" : "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( currpos-- );",
+  "equivalence" : true,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_318",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (!(currpos < maxPosition)) {",
+  "equivalence" : false,
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_338",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos > maxPosition) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_349",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos <= maxPosition) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_357",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos >= --maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_358",
+  "difference" : "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( ~currpos );",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_362",
+  "difference" : "@@ -202 +202 @@\n-        return count;\n+        return 0;",
+  "equivalence" : false,
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_372",
+  "difference" : "@@ -194,8 +193,0 @@\n-        while (currpos < maxPosition) {\n-            currpos = skipDelimiters( currpos );\n-            if (currpos >= maxPosition) {\n-                break;\n-            }\n-            currpos = scanToken( currpos );\n-            count++;\n-        }",
+  "equivalence" : false,
+  "operator" : "WLDL"
+}, {
+  "mutant_id" : "MUT_407",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (true) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_418",
+  "difference" : "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( ++currpos );",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_424",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos != maxPosition) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_426",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos-- < maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_430",
+  "difference" : "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( ++currpos );",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_438",
+  "difference" : "@@ -200 +199,0 @@\n-            count++;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_449",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (++currpos >= maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_465",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos < ~maxPosition) {",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_477",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos++ < maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_483",
+  "difference" : "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( -currpos );",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_500",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos > maxPosition) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_502",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos >= maxPosition++) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_535",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos == maxPosition) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_560",
+  "difference" : "@@ -199 +198,0 @@\n-            currpos = scanToken( currpos );",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_574",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (--currpos >= maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_575",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos != maxPosition) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_581",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos >= maxPosition--) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_594",
+  "difference" : "@@ -202 +202 @@\n-        return count;\n+        return count--;",
+  "equivalence" : true,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_598",
+  "difference" : "@@ -202 +202 @@\n-        return count;\n+        return -count;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_599",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos >= ~maxPosition) {",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_604",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (!(currpos >= maxPosition)) {",
+  "equivalence" : false,
+  "operator" : "SEOI"
+}, {
+  "mutant_id" : "MUT_609",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos-- >= maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_611",
+  "difference" : "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( currpos++ );",
+  "equivalence" : true,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_626",
+  "difference" : "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( --currpos );",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_651",
+  "difference" : "@@ -199 +199 @@\n-            currpos = scanToken( currpos );\n+            currpos = scanToken( -currpos );",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_653",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos <= maxPosition) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_663",
+  "difference" : "@@ -195 +195 @@\n-            currpos = skipDelimiters( currpos );\n+            currpos = skipDelimiters( --currpos );",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_668",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos == maxPosition) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_672",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n-                break;\n-            }",
+  "equivalence" : false,
+  "operator" : "ISDL"
+}, {
+  "mutant_id" : "MUT_693",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (false) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_695",
+  "difference" : "@@ -202 +202 @@\n-        return count;\n+        return count++;",
+  "equivalence" : true,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_703",
+  "difference" : "@@ -193 +193 @@\n-        int currpos = currentPosition;\n+        int currpos = currentPosition--;",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_710",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (~currpos >= maxPosition) {",
+  "equivalence" : false,
+  "operator" : "LOI"
+}, {
+  "mutant_id" : "MUT_715",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (true) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_719",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos >= ++maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_741",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos < --maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_749",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos < maxPosition) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_750",
+  "difference" : "@@ -196 +196 @@\n-            if (currpos >= maxPosition) {\n+            if (currpos++ >= maxPosition) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+}, {
+  "mutant_id" : "MUT_754",
+  "difference" : "@@ -194 +194 @@\n-        while (currpos < maxPosition) {\n+        while (currpos < maxPosition--) {",
+  "equivalence" : false,
+  "operator" : "AOIS"
+} ]

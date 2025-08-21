@@ -1,0 +1,742 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of StringTokenizerScan.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "StringTokenizerScan.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int scanToken( int startPos )",
+      "defs": ["startPos"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int position = startPos",
+      "defs": ["position"],
+      "uses": ["startPos"]
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "while (position < maxPosition)",
+      "defs": [],
+      "uses": ["position"]
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "endwhile"
+    },
+    {
+      "id": 4,
+      "line": 6,
+      "label": "if (!hasSurrogates)",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "char c = str.charAt( position )",
+      "defs": ["c"],
+      "uses": ["position"]
+    },
+    {
+      "id": 6,
+      "line": 8,
+      "label": "if (c <= maxDelimCodePoint && delimiters.indexOf( ++c ) >= 0)",
+      "defs": ["c"],
+      "uses": ["c"]
+    },
+    {
+      "id": 7,
+      "line": 9,
+      "label": "break;"
+    },
+    {
+      "id": 8,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 9,
+      "line": 11,
+      "label": "position++",
+      "defs": ["position"],
+      "uses": ["position"]
+    },
+    {
+      "id": 10,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 11,
+      "line": 13,
+      "label": "int c = str.codePointAt( position )",
+      "defs": ["c"],
+      "uses": ["position"]
+    },
+    {
+      "id": 12,
+      "line": 14,
+      "label": "if (c <= maxDelimCodePoint && isDelimiter( c ))",
+      "defs": [],
+      "uses": ["c"]
+    },
+    {
+      "id": 13,
+      "line": 15,
+      "label": "break;"
+    },
+    {
+      "id": 14,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 15,
+      "line": 17,
+      "label": "position += Character.charCount( c )",
+      "defs": ["position"],
+      "uses": ["c", "position"]
+    },
+    {
+      "id": 16,
+      "line": 20,
+      "label": "if (retDelims && startPos == position)",
+      "defs": [],
+      "uses": ["position", "startPos"]
+    },
+    {
+      "id": 17,
+      "line": 21,
+      "label": "if (!hasSurrogates)",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 18,
+      "line": 22,
+      "label": "char c = str.charAt( position )",
+      "defs": ["c"],
+      "uses": ["position"]
+    },
+    {
+      "id": 19,
+      "line": 23,
+      "label": "if (c <= maxDelimCodePoint && delimiters.indexOf( c ) >= 0)",
+      "defs": [],
+      "uses": ["c"]
+    },
+    {
+      "id": 20,
+      "line": 24,
+      "label": "position++",
+      "defs": ["position"],
+      "uses": ["position"]
+    },
+    {
+      "id": 21,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 22,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 23,
+      "line": 27,
+      "label": "int c = str.codePointAt( position )",
+      "defs": ["c"],
+      "uses": ["position"]
+    },
+    {
+      "id": 24,
+      "line": 28,
+      "label": "if (c <= maxDelimCodePoint && isDelimiter( c ))",
+      "defs": [],
+      "uses": ["c"]
+    },
+    {
+      "id": 25,
+      "line": 29,
+      "label": "position += Character.charCount( c )",
+      "defs": ["position"],
+      "uses": ["c", "position"]
+    },
+    {
+      "id": 26,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 27,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 28,
+      "line": 33,
+      "label": "return position;",
+      "defs": [],
+      "uses": ["position"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 3,
+      "source": 2,
+      "target": 4,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 6,
+      "target": 8,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 8,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 9,
+      "target": 10,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 4,
+      "target": 11,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 12,
+      "source": 11,
+      "target": 12,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 12,
+      "target": 13,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 14,
+      "source": 13,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 12,
+      "target": 14,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 16,
+      "source": 14,
+      "target": 15,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 15,
+      "target": 10,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 10,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 3,
+      "target": 16,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 16,
+      "target": 17,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 21,
+      "source": 17,
+      "target": 18,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 22,
+      "source": 18,
+      "target": 19,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 19,
+      "target": 20,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 24,
+      "source": 20,
+      "target": 21,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 25,
+      "source": 19,
+      "target": 21,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 26,
+      "source": 21,
+      "target": 22,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 27,
+      "source": 17,
+      "target": 23,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 28,
+      "source": 23,
+      "target": 24,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 29,
+      "source": 24,
+      "target": 25,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 30,
+      "source": 25,
+      "target": 26,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 31,
+      "source": 24,
+      "target": 26,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 32,
+      "source": 26,
+      "target": 22,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 33,
+      "source": 22,
+      "target": 27,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 34,
+      "source": 16,
+      "target": 27,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 35,
+      "source": 27,
+      "target": 28,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 36,
+      "source": 0,
+      "target": 1,
+      "type": "Flows",
+      "label": "startPos"
+    },
+    {
+      "id": 37,
+      "source": 0,
+      "target": 16,
+      "type": "Flows",
+      "label": "startPos"
+    },
+    {
+      "id": 38,
+      "source": 1,
+      "target": 2,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 39,
+      "source": 1,
+      "target": 11,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 40,
+      "source": 1,
+      "target": 15,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 41,
+      "source": 1,
+      "target": 16,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 42,
+      "source": 1,
+      "target": 28,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 43,
+      "source": 1,
+      "target": 23,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 44,
+      "source": 1,
+      "target": 25,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 45,
+      "source": 1,
+      "target": 18,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 46,
+      "source": 1,
+      "target": 20,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 47,
+      "source": 1,
+      "target": 5,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 48,
+      "source": 1,
+      "target": 9,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 49,
+      "source": 11,
+      "target": 12,
+      "type": "Flows",
+      "label": "c"
+    },
+    {
+      "id": 50,
+      "source": 11,
+      "target": 15,
+      "type": "Flows",
+      "label": "c"
+    },
+    {
+      "id": 51,
+      "source": 15,
+      "target": 2,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 52,
+      "source": 15,
+      "target": 11,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 53,
+      "source": 15,
+      "target": 16,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 54,
+      "source": 15,
+      "target": 28,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 55,
+      "source": 15,
+      "target": 23,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 56,
+      "source": 15,
+      "target": 25,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 57,
+      "source": 15,
+      "target": 18,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 58,
+      "source": 15,
+      "target": 20,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 59,
+      "source": 15,
+      "target": 5,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 60,
+      "source": 15,
+      "target": 9,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 61,
+      "source": 23,
+      "target": 24,
+      "type": "Flows",
+      "label": "c"
+    },
+    {
+      "id": 62,
+      "source": 23,
+      "target": 25,
+      "type": "Flows",
+      "label": "c"
+    },
+    {
+      "id": 63,
+      "source": 25,
+      "target": 28,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 64,
+      "source": 18,
+      "target": 19,
+      "type": "Flows",
+      "label": "c"
+    },
+    {
+      "id": 65,
+      "source": 20,
+      "target": 28,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 66,
+      "source": 5,
+      "target": 6,
+      "type": "Flows",
+      "label": "c"
+    },
+    {
+      "id": 67,
+      "source": 6,
+      "target": 6,
+      "type": "Flows",
+      "label": "c"
+    },
+    {
+      "id": 68,
+      "source": 9,
+      "target": 2,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 69,
+      "source": 9,
+      "target": 11,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 70,
+      "source": 9,
+      "target": 15,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 71,
+      "source": 9,
+      "target": 16,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 72,
+      "source": 9,
+      "target": 28,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 73,
+      "source": 9,
+      "target": 23,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 74,
+      "source": 9,
+      "target": 25,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 75,
+      "source": 9,
+      "target": 18,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 76,
+      "source": 9,
+      "target": 20,
+      "type": "Flows",
+      "label": "position"
+    },
+    {
+      "id": 77,
+      "source": 9,
+      "target": 5,
+      "type": "Flows",
+      "label": "position"
+    }
+  ]
+}

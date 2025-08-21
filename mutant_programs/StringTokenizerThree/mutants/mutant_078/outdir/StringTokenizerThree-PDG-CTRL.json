@@ -1,0 +1,105 @@
+{
+  "directed": true,
+  "label": "CDG of StringTokenizerThree.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "StringTokenizerThree.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "StringTokenizer ( String str, String delim, boolean returnDelims )"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "currentPosition = 0"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "delimsChanged = false"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "this.str = str"
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "maxPosition = str.length()"
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "delimiters = delim"
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "retDelims = returnDelims"
+    },
+    {
+      "id": 7,
+      "line": 10,
+      "label": "setMaxDelimCodePoint()"
+    },
+    {
+      "id": 8,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 0,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 0,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 0,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 0,
+      "target": 7,
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 0,
+      "target": 8,
+      "label": ""
+    }
+  ]
+}

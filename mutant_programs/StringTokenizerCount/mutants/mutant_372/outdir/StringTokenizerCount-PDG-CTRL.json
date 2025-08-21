@@ -1,0 +1,61 @@
+{
+  "directed": true,
+  "label": "CDG of StringTokenizerCount.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "StringTokenizerCount.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int countTokens()"
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "int count = 0"
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "int currpos = currentPosition"
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "return count;"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 0,
+      "target": 2,
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 0,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 0,
+      "target": 4,
+      "label": ""
+    }
+  ]
+}

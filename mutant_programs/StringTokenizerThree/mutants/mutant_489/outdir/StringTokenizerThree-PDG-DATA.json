@@ -1,0 +1,160 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of StringTokenizerThree.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "StringTokenizerThree.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "StringTokenizer ( String str, String delim, boolean returnDelims )",
+      "defs": ["str", "returnDelims", "delim"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 4,
+      "label": "currentPosition = 0",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 2,
+      "line": 5,
+      "label": "newPosition = 1",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 3,
+      "line": 6,
+      "label": "delimsChanged = false",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 4,
+      "line": 7,
+      "label": "this.str = str",
+      "defs": [],
+      "uses": ["str"]
+    },
+    {
+      "id": 5,
+      "line": 8,
+      "label": "maxPosition = str.length()",
+      "defs": [],
+      "uses": ["str"]
+    },
+    {
+      "id": 6,
+      "line": 9,
+      "label": "delimiters = delim",
+      "defs": [],
+      "uses": ["delim"]
+    },
+    {
+      "id": 7,
+      "line": 10,
+      "label": "retDelims = returnDelims",
+      "defs": [],
+      "uses": ["returnDelims"]
+    },
+    {
+      "id": 8,
+      "line": 11,
+      "label": "setMaxDelimCodePoint()",
+      "defs": [],
+      "uses": []
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 0,
+      "target": 4,
+      "type": "Flows",
+      "label": "str"
+    },
+    {
+      "id": 9,
+      "source": 0,
+      "target": 5,
+      "type": "Flows",
+      "label": "str"
+    },
+    {
+      "id": 10,
+      "source": 0,
+      "target": 7,
+      "type": "Flows",
+      "label": "returnDelims"
+    },
+    {
+      "id": 11,
+      "source": 0,
+      "target": 6,
+      "type": "Flows",
+      "label": "delim"
+    }
+  ]
+}

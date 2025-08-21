@@ -1,0 +1,21 @@
+[ {
+  "mutant_id" : "MUT_201",
+  "difference" : "@@ -175 +175 @@\n-        delimsChanged = true;",
+  "equivalence" : false,
+  "operator" : "ADL"
+}, {
+  "mutant_id" : "MUT_404",
+  "difference" : "@@ -176 +176 @@\n-        setMaxDelimCodePoint();",
+  "equivalence" : false,
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_603",
+  "difference" : "@@ -177 +177 @@\n-        return nextToken();\n+        return \"\";",
+  "equivalence" : false,
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_686",
+  "difference" : "@@ -174 +174 @@\n-        delimiters = delim;",
+  "equivalence" : false,
+  "operator" : "ADL"
+} ]
