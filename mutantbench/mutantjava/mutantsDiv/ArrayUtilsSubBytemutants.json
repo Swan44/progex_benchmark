@@ -1,0 +1,116 @@
+[ {
+  "mutant_id" : "MUT_011",
+  "difference" : "@@ -647 +647 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_021",
+  "difference" : "@@ -641 +641 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_024",
+  "difference" : "@@ -640 +640 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_025",
+  "difference" : "@@ -646 +646 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_048",
+  "difference" : "@@ -652 +652 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+  "equivalence" : false,
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_057",
+  "difference" : "@@ -643 +643 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_069",
+  "difference" : "@@ -640 +640 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_102",
+  "difference" : "@@ -647 +647 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_142",
+  "difference" : "@@ -652 +652 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_163",
+  "difference" : "@@ -646 +646 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_262",
+  "difference" : "@@ -652 +652 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_270",
+  "difference" : "@@ -641 +641 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_327",
+  "difference" : "@@ -647 +647 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_328",
+  "difference" : "@@ -643 +643 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_338",
+  "difference" : "@@ -643 +643 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_385",
+  "difference" : "@@ -640 +640 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_397",
+  "difference" : "@@ -640 +640 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_413",
+  "difference" : "@@ -646 +646 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_433",
+  "difference" : "@@ -640 +640 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_438",
+  "difference" : "@@ -647 +647 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_439",
+  "difference" : "@@ -647 +647 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_457",
+  "difference" : "@@ -637 +637 @@\n-        if (array == null) {\n+        if (false) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_471",
+  "difference" : "@@ -646 +646 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+  "equivalence" : false,
+  "operator" : "AORB"
+} ]
