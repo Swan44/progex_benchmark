@@ -1,0 +1,93 @@
+[ {
+  "mutant_id" : "MUT_004",
+  "difference" : "@@ -19 +19 @@\n-                map.put(entry[0], entry[1]);\n+                map.put(entry[-1], entry[1]);",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_017",
+  "difference" : "@@ -19 +19 @@\n-                map.put(entry[0], entry[1]);\n+                ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_044",
+  "difference" : "@@ -7 +7 @@\n-        for (int i = 0; i < array.length; i++) {\n+        for (int i = 0; false; i++) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_098",
+  "difference" : "@@ -7 +7 @@\n-        for (int i = 0; i < array.length; i++) {\n+        for (int i = 1; i < array.length; i++) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_147",
+  "difference" : "@@ -14 +14 @@\n-                if (entry.length < 2) {\n+                if (entry.length < 0) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_162",
+  "difference" : "@@ -7 +7 @@\n-        for (int i = 0; i < array.length; i++) {\n+        for (int i = 0; i != array.length; i++) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_192",
+  "difference" : "@@ -7 +7 @@\n-        for (int i = 0; i < array.length; i++) {\n+        for (int i = 0; i <= array.length; i++) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_208",
+  "difference" : "@@ -6 +6 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length + 1.5));",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_223",
+  "difference" : "@@ -6 +6 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length * 0.0));",
+  "operator" : "null"
+}, {
+  "mutant_id" : "MUT_245",
+  "difference" : "@@ -19 +19 @@\n-                map.put(entry[0], entry[1]);\n+                map.put(entry[1], entry[1]);",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_247",
+  "difference" : "@@ -3 +3 @@\n-        if (array == null) {\n+        if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_274",
+  "difference" : "@@ -6 +6 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length % 1.5));",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_298",
+  "difference" : "@@ -14 +14 @@\n-                if (entry.length < 2) {\n+                if (entry.length <= 2) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_302",
+  "difference" : "@@ -6 +6 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length - 1.5));",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_321",
+  "difference" : "@@ -14 +14 @@\n-                if (entry.length < 2) {\n+                if (entry.length < -2) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_382",
+  "difference" : "@@ -11 +11 @@\n-                map.put(entry.getKey(), entry.getValue());\n+                ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_398",
+  "difference" : "@@ -7 +7 @@\n-        for (int i = 0; i < array.length; i++) {\n+        for (int i = -1; i < array.length; i++) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_399",
+  "difference" : "@@ -14 +14 @@\n-                if (entry.length < 2) {\n+                if (entry.length != 2) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_402",
+  "difference" : "@@ -6 +6 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length / 1.5));",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_425",
+  "difference" : "@@ -6 +6 @@\n-        final Map map = new HashMap((int) (array.length * 1.5));\n+        final Map map = new HashMap((int) (array.length * -1.5));",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_427",
+  "difference" : "@@ -14 +14 @@\n-                if (entry.length < 2) {\n+                if (false) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_462",
+  "difference" : "@@ -19 +19 @@\n-                map.put(entry[0], entry[1]);\n+                map.put(entry[0], entry[-1]);",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_468",
+  "difference" : "@@ -19 +19 @@\n-                map.put(entry[0], entry[1]);\n+                map.put(entry[0], entry[0]);",
+  "operator" : "CR"
+} ]

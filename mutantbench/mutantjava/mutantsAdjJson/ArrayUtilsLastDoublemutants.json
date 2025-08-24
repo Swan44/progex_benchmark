@@ -1,0 +1,121 @@
+[ {
+  "mutant_id" : "MUT_013",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_018",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_043",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_087",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_093",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_128",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_151",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_153",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_171",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_185",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind <= array[i]) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_210",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_215",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_234",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+  "equivalence" : false,
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_248",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_258",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+  "equivalence" : false,
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_292",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind >= array[i]) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_294",
+  "difference" : "@@ -3 +3 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (true) {",
+  "equivalence" : false,
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_306",
+  "difference" : "@@ -3 +3 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (false) {",
+  "equivalence" : false,
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_320",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_410",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_423",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+  "equivalence" : false,
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_432",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+  "equivalence" : false,
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_475",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+  "equivalence" : false,
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_478",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+  "equivalence" : false,
+  "operator" : "ROD"
+} ]

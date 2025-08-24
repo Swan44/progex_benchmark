@@ -1,0 +1,218 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "CFG of ArrayUtilsLastByte.java",
+  "type": "Control Flow Graph (CFG)",
+  "file": "ArrayUtilsLastByte.java",
+  "package": "",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int lastIndexOf(byte[] array, byte valueToFind, int startIndex)"
+    },
+    {
+      "id": 1,
+      "line": 3,
+      "label": "if (array == null)"
+    },
+    {
+      "id": 2,
+      "line": 4,
+      "label": "return INDEX_NOT_FOUND;"
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 4,
+      "line": 6,
+      "label": "if (startIndex < 1)"
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "return INDEX_NOT_FOUND;"
+    },
+    {
+      "id": 6,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 7,
+      "line": 8,
+      "label": "if (startIndex >= array.length)"
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "startIndex = array.length - 1"
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 10,
+      "line": 11,
+      "label": "int i = startIndex"
+    },
+    {
+      "id": 11,
+      "line": 11,
+      "label": "for (i >= 0)"
+    },
+    {
+      "id": 12,
+      "line": 11,
+      "label": "i--"
+    },
+    {
+      "id": 13,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 14,
+      "line": 12,
+      "label": "if (valueToFind == array[i])"
+    },
+    {
+      "id": 15,
+      "line": 13,
+      "label": "return i;"
+    },
+    {
+      "id": 16,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 17,
+      "line": 16,
+      "label": "return INDEX_NOT_FOUND;"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 1,
+      "target": 3,
+      "label": "False"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 4,
+      "target": 7,
+      "label": "False"
+    },
+    {
+      "id": 6,
+      "source": 7,
+      "target": 8,
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 8,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 7,
+      "target": 9,
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 6,
+      "target": 10,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 10,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 11,
+      "target": 13,
+      "label": "False"
+    },
+    {
+      "id": 13,
+      "source": 11,
+      "target": 14,
+      "label": "True"
+    },
+    {
+      "id": 14,
+      "source": 14,
+      "target": 15,
+      "label": "True"
+    },
+    {
+      "id": 15,
+      "source": 14,
+      "target": 16,
+      "label": "False"
+    },
+    {
+      "id": 16,
+      "source": 16,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 12,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 13,
+      "target": 17,
+      "label": ""
+    }
+  ]
+}

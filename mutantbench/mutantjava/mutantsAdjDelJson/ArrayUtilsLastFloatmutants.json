@@ -1,0 +1,97 @@
+[ {
+  "mutant_id" : "MUT_008",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_039",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_053",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_065",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_071",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_074",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_115",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_141",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_204",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_206",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_218",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_220",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_227",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_266",
+  "difference" : "@@ -3 +3 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (false) {",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_282",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_290",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_335",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_342",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_348",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_383",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_412",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind <= array[i]) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_447",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind >= array[i]) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_455",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_459",
+  "difference" : "@@ -3 +3 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (true) {",
+  "operator" : "VDL"
+} ]

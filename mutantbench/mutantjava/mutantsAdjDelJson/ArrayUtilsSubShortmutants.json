@@ -1,0 +1,93 @@
+[ {
+  "mutant_id" : "MUT_038",
+  "difference" : "@@ -12 +12 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_046",
+  "difference" : "@@ -18 +18 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_094",
+  "difference" : "@@ -13 +13 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_097",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_109",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_116",
+  "difference" : "@@ -7 +7 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_117",
+  "difference" : "@@ -13 +13 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_125",
+  "difference" : "@@ -18 +18 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_173",
+  "difference" : "@@ -13 +13 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_178",
+  "difference" : "@@ -12 +12 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_271",
+  "difference" : "@@ -12 +12 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_284",
+  "difference" : "@@ -9 +9 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_286",
+  "difference" : "@@ -9 +9 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_333",
+  "difference" : "@@ -12 +12 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_340",
+  "difference" : "@@ -13 +13 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_371",
+  "difference" : "@@ -3 +3 @@\n-        if (array == null) {\n+        if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_420",
+  "difference" : "@@ -9 +9 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_422",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_430",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_437",
+  "difference" : "@@ -18 +18 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_444",
+  "difference" : "@@ -13 +13 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_456",
+  "difference" : "@@ -7 +7 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_461",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+  "operator" : "CDL"
+} ]

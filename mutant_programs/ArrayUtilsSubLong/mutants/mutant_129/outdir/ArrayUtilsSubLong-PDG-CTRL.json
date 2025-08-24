@@ -1,0 +1,248 @@
+{
+  "directed": true,
+  "label": "CDG of ArrayUtilsSubLong.java",
+  "type": "Control Dependence Graph (CDG)",
+  "file": "ArrayUtilsSubLong.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "long[] subarray(long[] array, int startIndexInclusive, int endIndexExclusive)"
+    },
+    {
+      "id": 1,
+      "line": 3,
+      "label": "if (array == null)"
+    },
+    {
+      "id": 2,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 3,
+      "line": 4,
+      "label": "return null;"
+    },
+    {
+      "id": 4,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 5,
+      "line": 0,
+      "label": "FOLLOW-1"
+    },
+    {
+      "id": 6,
+      "line": 6,
+      "label": "if (startIndexInclusive < 0)"
+    },
+    {
+      "id": 7,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 8,
+      "line": 7,
+      "label": "startIndexInclusive = 0"
+    },
+    {
+      "id": 9,
+      "line": 9,
+      "label": "if (false)"
+    },
+    {
+      "id": 10,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 11,
+      "line": 10,
+      "label": "endIndexExclusive = array.length"
+    },
+    {
+      "id": 12,
+      "line": 12,
+      "label": "int newSize = endIndexExclusive - startIndexInclusive"
+    },
+    {
+      "id": 13,
+      "line": 13,
+      "label": "if (newSize <= 0)"
+    },
+    {
+      "id": 14,
+      "line": 0,
+      "label": "THEN"
+    },
+    {
+      "id": 15,
+      "line": 14,
+      "label": "return EMPTY_LONG_ARRAY;"
+    },
+    {
+      "id": 16,
+      "line": 0,
+      "label": "ELSE"
+    },
+    {
+      "id": 17,
+      "line": 0,
+      "label": "FOLLOW-2"
+    },
+    {
+      "id": 18,
+      "line": 17,
+      "label": "long[] subarray = new long[newSize]"
+    },
+    {
+      "id": 19,
+      "line": 18,
+      "label": "System.arraycopy(array, startIndexInclusive, subarray, 0, newSize)"
+    },
+    {
+      "id": 20,
+      "line": 19,
+      "label": "return subarray;"
+    },
+    {
+      "id": 21,
+      "line": 0,
+      "label": "exit"
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "label": ""
+    },
+    {
+      "id": 3,
+      "source": 1,
+      "target": 4,
+      "label": "False"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 5,
+      "target": 9,
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "label": "True"
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 5,
+      "target": 12,
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 5,
+      "target": 13,
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "label": "True"
+    },
+    {
+      "id": 14,
+      "source": 14,
+      "target": 15,
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 13,
+      "target": 16,
+      "label": "False"
+    },
+    {
+      "id": 16,
+      "source": 16,
+      "target": 17,
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 17,
+      "target": 18,
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 17,
+      "target": 19,
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 17,
+      "target": 20,
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 0,
+      "target": 21,
+      "label": ""
+    }
+  ]
+}

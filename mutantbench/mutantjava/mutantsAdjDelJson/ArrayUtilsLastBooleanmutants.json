@@ -1,0 +1,97 @@
+[ {
+  "mutant_id" : "MUT_007",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_014",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_015",
+  "difference" : "@@ -3 +3 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (false) {",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_041",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_080",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (array[i]) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_133",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_137",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_175",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_176",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_180",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_182",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_191",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_202",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_235",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_263",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_265",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_350",
+  "difference" : "@@ -3 +3 @@\n-        if (ArrayUtils.isEmpty(array)) {\n+        if (true) {",
+  "operator" : "VDL"
+}, {
+  "mutant_id" : "MUT_359",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_394",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_415",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_436",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_440",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_445",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_452",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+  "operator" : "AORB"
+} ]

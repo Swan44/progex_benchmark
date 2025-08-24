@@ -1,0 +1,93 @@
+[ {
+  "mutant_id" : "MUT_001",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex == array.length) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_009",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length % 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_045",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= -1; i--) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_110",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (startIndex > array.length) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_122",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i == 0; i--) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_154",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i >= 1; i--) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_189",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex < -1) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_201",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; i > 0; i--) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_219",
+  "difference" : "@@ -3 +3 @@\n-        if (array == null) {\n+        if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_222",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex != 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_259",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length / 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_279",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length * 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_310",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length + 1;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_316",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind >= array[i]) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_344",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - 0;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_357",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_368",
+  "difference" : "@@ -9 +9 @@\n-            startIndex = array.length - 1;\n+            startIndex = array.length - -1;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_387",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex <= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_418",
+  "difference" : "@@ -8 +8 @@\n-        } else if (startIndex >= array.length) {\n+        } else if (true) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_446",
+  "difference" : "@@ -11 +11 @@\n-        for (int i = startIndex; i >= 0; i--) {\n+        for (int i = startIndex; true; i--) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_450",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (startIndex < 1) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_451",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndex < 0) {\n+        if (false) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_474",
+  "difference" : "@@ -12 +12 @@\n-            if (valueToFind == array[i]) {\n+            if (valueToFind <= array[i]) {",
+  "operator" : "ROR"
+} ]

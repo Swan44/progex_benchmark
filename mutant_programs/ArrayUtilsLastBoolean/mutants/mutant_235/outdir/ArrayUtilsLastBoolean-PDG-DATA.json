@@ -1,0 +1,360 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of ArrayUtilsLastBoolean.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "ArrayUtilsLastBoolean.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int lastIndexOf(boolean[] array, boolean valueToFind, int startIndex)",
+      "defs": ["startIndex", "array", "valueToFind"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 3,
+      "label": "if (ArrayUtils.isEmpty(array))",
+      "defs": [],
+      "uses": ["array"]
+    },
+    {
+      "id": 2,
+      "line": 4,
+      "label": "return INDEX_NOT_FOUND;",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 4,
+      "line": 6,
+      "label": "if (startIndex <= 0)",
+      "defs": [],
+      "uses": ["startIndex"]
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "return INDEX_NOT_FOUND;",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 6,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 7,
+      "line": 8,
+      "label": "if (startIndex >= array.length)",
+      "defs": [],
+      "uses": ["startIndex"]
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "startIndex = array.length - 1",
+      "defs": ["startIndex"],
+      "uses": []
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 10,
+      "line": 11,
+      "label": "int i = startIndex",
+      "defs": ["i"],
+      "uses": ["startIndex"]
+    },
+    {
+      "id": 11,
+      "line": 11,
+      "label": "for (i >= 0)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 12,
+      "line": 11,
+      "label": "i--",
+      "defs": ["i"],
+      "uses": ["i"]
+    },
+    {
+      "id": 13,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 14,
+      "line": 12,
+      "label": "if (valueToFind == array[i])",
+      "defs": [],
+      "uses": ["array", "valueToFind", "i"]
+    },
+    {
+      "id": 15,
+      "line": 13,
+      "label": "return i;",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 16,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 17,
+      "line": 16,
+      "label": "return INDEX_NOT_FOUND;",
+      "defs": [],
+      "uses": []
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 1,
+      "target": 3,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 4,
+      "target": 7,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 6,
+      "source": 7,
+      "target": 8,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 8,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 7,
+      "target": 9,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 6,
+      "target": 10,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 10,
+      "target": 11,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 11,
+      "target": 13,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 13,
+      "source": 11,
+      "target": 14,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 14,
+      "source": 14,
+      "target": 15,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 15,
+      "source": 14,
+      "target": 16,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 16,
+      "source": 16,
+      "target": 12,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 17,
+      "source": 12,
+      "target": 11,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 13,
+      "target": 17,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 0,
+      "target": 4,
+      "type": "Flows",
+      "label": "startIndex"
+    },
+    {
+      "id": 20,
+      "source": 0,
+      "target": 7,
+      "type": "Flows",
+      "label": "startIndex"
+    },
+    {
+      "id": 21,
+      "source": 0,
+      "target": 10,
+      "type": "Flows",
+      "label": "startIndex"
+    },
+    {
+      "id": 22,
+      "source": 0,
+      "target": 1,
+      "type": "Flows",
+      "label": "array"
+    },
+    {
+      "id": 23,
+      "source": 0,
+      "target": 14,
+      "type": "Flows",
+      "label": "array"
+    },
+    {
+      "id": 24,
+      "source": 0,
+      "target": 14,
+      "type": "Flows",
+      "label": "valueToFind"
+    },
+    {
+      "id": 25,
+      "source": 10,
+      "target": 11,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 26,
+      "source": 10,
+      "target": 14,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 27,
+      "source": 10,
+      "target": 12,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 28,
+      "source": 10,
+      "target": 15,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 29,
+      "source": 12,
+      "target": 11,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 30,
+      "source": 12,
+      "target": 14,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 31,
+      "source": 12,
+      "target": 15,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 32,
+      "source": 8,
+      "target": 10,
+      "type": "Flows",
+      "label": "startIndex"
+    }
+  ]
+}

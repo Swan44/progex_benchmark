@@ -1,0 +1,571 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of ArrayUtilsLastObj.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "ArrayUtilsLastObj.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "int lastIndexOf(Object[] array, Object objectToFind, int startIndex)",
+      "defs": ["startIndex", "objectToFind", "array"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 3,
+      "label": "if (array == null)",
+      "defs": [],
+      "uses": ["array"]
+    },
+    {
+      "id": 2,
+      "line": 4,
+      "label": "return INDEX_NOT_FOUND;",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 4,
+      "line": 6,
+      "label": "if (startIndex < 0)",
+      "defs": [],
+      "uses": ["startIndex"]
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "return INDEX_NOT_FOUND;",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 6,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 7,
+      "line": 8,
+      "label": "if (startIndex >= array.length)",
+      "defs": [],
+      "uses": ["startIndex"]
+    },
+    {
+      "id": 8,
+      "line": 9,
+      "label": "startIndex = array.length + 1",
+      "defs": ["startIndex"],
+      "uses": []
+    },
+    {
+      "id": 9,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 10,
+      "line": 11,
+      "label": "if (objectToFind == null)",
+      "defs": [],
+      "uses": ["objectToFind"]
+    },
+    {
+      "id": 11,
+      "line": 12,
+      "label": "int i = startIndex",
+      "defs": ["i"],
+      "uses": ["startIndex"]
+    },
+    {
+      "id": 12,
+      "line": 12,
+      "label": "for (i >= 0)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 13,
+      "line": 12,
+      "label": "i--",
+      "defs": ["i"],
+      "uses": ["i"]
+    },
+    {
+      "id": 14,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 15,
+      "line": 13,
+      "label": "if (array[i] == null)",
+      "defs": [],
+      "uses": ["array", "i"]
+    },
+    {
+      "id": 16,
+      "line": 14,
+      "label": "return i;",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 17,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 18,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 19,
+      "line": 18,
+      "label": "int i = startIndex",
+      "defs": ["i"],
+      "uses": ["startIndex"]
+    },
+    {
+      "id": 20,
+      "line": 18,
+      "label": "for (i >= 0)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 21,
+      "line": 18,
+      "label": "i--",
+      "defs": ["i"],
+      "uses": ["i"]
+    },
+    {
+      "id": 22,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 23,
+      "line": 19,
+      "label": "if (objectToFind.equals(array[i]))",
+      "defs": [],
+      "uses": ["objectToFind", "array", "i"]
+    },
+    {
+      "id": 24,
+      "line": 20,
+      "label": "return i;",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 25,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 26,
+      "line": 24,
+      "label": "return INDEX_NOT_FOUND;",
+      "defs": [],
+      "uses": []
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 1,
+      "target": 3,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 5,
+      "source": 4,
+      "target": 7,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 6,
+      "source": 7,
+      "target": 8,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 7,
+      "source": 8,
+      "target": 9,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "source": 7,
+      "target": 9,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 10,
+      "source": 6,
+      "target": 10,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 10,
+      "target": 11,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 12,
+      "source": 11,
+      "target": 12,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 13,
+      "source": 12,
+      "target": 14,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 14,
+      "source": 12,
+      "target": 15,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 15,
+      "source": 15,
+      "target": 16,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 16,
+      "source": 15,
+      "target": 17,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 17,
+      "source": 17,
+      "target": 13,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 13,
+      "target": 12,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 19,
+      "source": 14,
+      "target": 18,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 10,
+      "target": 19,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 21,
+      "source": 19,
+      "target": 20,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 20,
+      "target": 22,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 23,
+      "source": 20,
+      "target": 23,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 24,
+      "source": 23,
+      "target": 24,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 25,
+      "source": 23,
+      "target": 25,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 26,
+      "source": 25,
+      "target": 21,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 27,
+      "source": 21,
+      "target": 20,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 28,
+      "source": 22,
+      "target": 18,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 29,
+      "source": 18,
+      "target": 26,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 30,
+      "source": 0,
+      "target": 4,
+      "type": "Flows",
+      "label": "startIndex"
+    },
+    {
+      "id": 31,
+      "source": 0,
+      "target": 7,
+      "type": "Flows",
+      "label": "startIndex"
+    },
+    {
+      "id": 32,
+      "source": 0,
+      "target": 19,
+      "type": "Flows",
+      "label": "startIndex"
+    },
+    {
+      "id": 33,
+      "source": 0,
+      "target": 11,
+      "type": "Flows",
+      "label": "startIndex"
+    },
+    {
+      "id": 34,
+      "source": 0,
+      "target": 10,
+      "type": "Flows",
+      "label": "objectToFind"
+    },
+    {
+      "id": 35,
+      "source": 0,
+      "target": 23,
+      "type": "Flows",
+      "label": "objectToFind"
+    },
+    {
+      "id": 36,
+      "source": 0,
+      "target": 1,
+      "type": "Flows",
+      "label": "array"
+    },
+    {
+      "id": 37,
+      "source": 0,
+      "target": 23,
+      "type": "Flows",
+      "label": "array"
+    },
+    {
+      "id": 38,
+      "source": 0,
+      "target": 15,
+      "type": "Flows",
+      "label": "array"
+    },
+    {
+      "id": 39,
+      "source": 19,
+      "target": 20,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 40,
+      "source": 19,
+      "target": 23,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 41,
+      "source": 19,
+      "target": 21,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 42,
+      "source": 19,
+      "target": 24,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 43,
+      "source": 21,
+      "target": 20,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 44,
+      "source": 21,
+      "target": 23,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 45,
+      "source": 21,
+      "target": 24,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 46,
+      "source": 11,
+      "target": 12,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 47,
+      "source": 11,
+      "target": 15,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 48,
+      "source": 11,
+      "target": 13,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 49,
+      "source": 11,
+      "target": 16,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 50,
+      "source": 13,
+      "target": 12,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 51,
+      "source": 13,
+      "target": 15,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 52,
+      "source": 13,
+      "target": 16,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 53,
+      "source": 8,
+      "target": 19,
+      "type": "Flows",
+      "label": "startIndex"
+    },
+    {
+      "id": 54,
+      "source": 8,
+      "target": 11,
+      "type": "Flows",
+      "label": "startIndex"
+    }
+  ]
+}

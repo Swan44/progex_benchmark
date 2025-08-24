@@ -1,0 +1,93 @@
+[ {
+  "mutant_id" : "MUT_003",
+  "difference" : "@@ -13 +13 @@\n-        if (newSize <= 0) {\n+        if (newSize <= 1) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_006",
+  "difference" : "@@ -12 +12 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive % startIndexInclusive;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_072",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive <= 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_075",
+  "difference" : "@@ -7 +7 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = -1;",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_077",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < -1) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_129",
+  "difference" : "@@ -9 +9 @@\n-        if (endIndexExclusive > array.length) {\n+        if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_160",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive < 1) {",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_172",
+  "difference" : "@@ -13 +13 @@\n-        if (newSize <= 0) {\n+        if (newSize == 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_196",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndexInclusive < 0) {\n+        if (startIndexInclusive != 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_207",
+  "difference" : "@@ -6 +6 @@\n-        if (startIndexInclusive < 0) {\n+        if (false) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_253",
+  "difference" : "@@ -18 +18 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        ;",
+  "operator" : "FCDL"
+}, {
+  "mutant_id" : "MUT_260",
+  "difference" : "@@ -12 +12 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive / startIndexInclusive;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_331",
+  "difference" : "@@ -12 +12 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive * startIndexInclusive;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_341",
+  "difference" : "@@ -13 +13 @@\n-        if (newSize <= 0) {\n+        if (newSize <= -1) {",
+  "operator" : "AOIU"
+}, {
+  "mutant_id" : "MUT_349",
+  "difference" : "@@ -12 +12 @@\n-        int newSize = endIndexExclusive - startIndexInclusive;\n+        int newSize = endIndexExclusive + startIndexInclusive;",
+  "operator" : "AORB"
+}, {
+  "mutant_id" : "MUT_354",
+  "difference" : "@@ -9 +9 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive != array.length) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_375",
+  "difference" : "@@ -7 +7 @@\n-            startIndexInclusive = 0;\n+            startIndexInclusive = 1;",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_384",
+  "difference" : "@@ -18 +18 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, 1, newSize);",
+  "operator" : "CR"
+}, {
+  "mutant_id" : "MUT_390",
+  "difference" : "@@ -13 +13 @@\n-        if (newSize <= 0) {\n+        if (newSize < 0) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_411",
+  "difference" : "@@ -3 +3 @@\n-        if (array == null) {\n+        if (false) {",
+  "operator" : "ROD"
+}, {
+  "mutant_id" : "MUT_428",
+  "difference" : "@@ -13 +13 @@\n-        if (newSize <= 0) {\n+        if (true) {",
+  "operator" : "CDL"
+}, {
+  "mutant_id" : "MUT_472",
+  "difference" : "@@ -9 +9 @@\n-        if (endIndexExclusive > array.length) {\n+        if (endIndexExclusive >= array.length) {",
+  "operator" : "ROR"
+}, {
+  "mutant_id" : "MUT_477",
+  "difference" : "@@ -18 +18 @@\n-        System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);\n+        System.arraycopy(array, startIndexInclusive, subarray, -1, newSize);",
+  "operator" : "AOIU"
+} ]

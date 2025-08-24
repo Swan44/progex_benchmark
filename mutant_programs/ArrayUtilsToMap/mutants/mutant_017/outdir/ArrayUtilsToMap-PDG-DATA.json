@@ -1,0 +1,430 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "label": "DDG of ArrayUtilsToMap.java",
+  "type": "Data Dependence Graph (DDG)",
+  "file": "ArrayUtilsToMap.java",
+
+  "nodes": [
+    {
+      "id": 0,
+      "line": 2,
+      "label": "Map toMap(Object[] array)",
+      "defs": ["array"],
+      "uses": []
+    },
+    {
+      "id": 1,
+      "line": 3,
+      "label": "if (array == null)",
+      "defs": [],
+      "uses": ["array"]
+    },
+    {
+      "id": 2,
+      "line": 4,
+      "label": "return null;",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 3,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 4,
+      "line": 6,
+      "label": "final Map map = new HashMap((int) (array.length * 1.5))",
+      "defs": ["map"],
+      "uses": []
+    },
+    {
+      "id": 5,
+      "line": 7,
+      "label": "int i = 0",
+      "defs": ["i"],
+      "uses": []
+    },
+    {
+      "id": 6,
+      "line": 7,
+      "label": "for (i < array.length)",
+      "defs": [],
+      "uses": ["i"]
+    },
+    {
+      "id": 7,
+      "line": 7,
+      "label": "i++",
+      "defs": ["i"],
+      "uses": ["i"]
+    },
+    {
+      "id": 8,
+      "line": 0,
+      "label": "endfor"
+    },
+    {
+      "id": 9,
+      "line": 8,
+      "label": "Object object = array[i]",
+      "defs": ["object"],
+      "uses": ["array", "i"]
+    },
+    {
+      "id": 10,
+      "line": 9,
+      "label": "if (object instanceof Map.Entry)",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 11,
+      "line": 10,
+      "label": "Map.Entry entry = (Map.Entry) object",
+      "defs": ["entry"],
+      "uses": []
+    },
+    {
+      "id": 12,
+      "line": 11,
+      "label": "map.put(entry.getKey(), entry.getValue())",
+      "defs": [],
+      "uses": ["entry", "map"]
+    },
+    {
+      "id": 13,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 14,
+      "line": 12,
+      "label": "if (object instanceof Object[])",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 15,
+      "line": 13,
+      "label": "Object[] entry = (Object[]) object",
+      "defs": ["entry"],
+      "uses": []
+    },
+    {
+      "id": 16,
+      "line": 14,
+      "label": "if (entry.length < 2)",
+      "defs": [],
+      "uses": []
+    },
+    {
+      "id": 17,
+      "line": 15,
+      "label": "throw new IllegalArgumentException('Array element ' + i + ', ''  + object  + '', has a length less than 2')",
+      "defs": [],
+      "uses": ["i", "object"]
+    },
+    {
+      "id": 18,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 19,
+      "line": 0,
+      "label": "endif"
+    },
+    {
+      "id": 20,
+      "line": 21,
+      "label": "throw new IllegalArgumentException('Array element ' + i + ', ''  + object  + '', is neither of type Map.Entry nor an Array')",
+      "defs": [],
+      "uses": ["i", "object"]
+    },
+    {
+      "id": 21,
+      "line": 26,
+      "label": "return map;",
+      "defs": [],
+      "uses": ["map"]
+    }
+  ],
+
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 2,
+      "source": 1,
+      "target": 3,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 8,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 7,
+      "source": 6,
+      "target": 9,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 8,
+      "source": 9,
+      "target": 10,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 9,
+      "source": 10,
+      "target": 11,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 10,
+      "source": 11,
+      "target": 12,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 11,
+      "source": 12,
+      "target": 13,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 12,
+      "source": 10,
+      "target": 14,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 13,
+      "source": 14,
+      "target": 15,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 14,
+      "source": 15,
+      "target": 16,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 15,
+      "source": 16,
+      "target": 17,
+      "type": "Control",
+      "label": "True"
+    },
+    {
+      "id": 16,
+      "source": 16,
+      "target": 18,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 17,
+      "source": 18,
+      "target": 19,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 18,
+      "source": 14,
+      "target": 20,
+      "type": "Control",
+      "label": "False"
+    },
+    {
+      "id": 19,
+      "source": 19,
+      "target": 13,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 20,
+      "source": 13,
+      "target": 7,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 21,
+      "source": 7,
+      "target": 6,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 22,
+      "source": 8,
+      "target": 21,
+      "type": "Control",
+      "label": ""
+    },
+    {
+      "id": 23,
+      "source": 0,
+      "target": 1,
+      "type": "Flows",
+      "label": "array"
+    },
+    {
+      "id": 24,
+      "source": 0,
+      "target": 9,
+      "type": "Flows",
+      "label": "array"
+    },
+    {
+      "id": 25,
+      "source": 4,
+      "target": 12,
+      "type": "Flows",
+      "label": "map"
+    },
+    {
+      "id": 26,
+      "source": 4,
+      "target": 21,
+      "type": "Flows",
+      "label": "map"
+    },
+    {
+      "id": 27,
+      "source": 5,
+      "target": 6,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 28,
+      "source": 5,
+      "target": 9,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 29,
+      "source": 5,
+      "target": 20,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 30,
+      "source": 5,
+      "target": 7,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 31,
+      "source": 5,
+      "target": 17,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 32,
+      "source": 9,
+      "target": 20,
+      "type": "Flows",
+      "label": "object"
+    },
+    {
+      "id": 33,
+      "source": 9,
+      "target": 17,
+      "type": "Flows",
+      "label": "object"
+    },
+    {
+      "id": 34,
+      "source": 7,
+      "target": 6,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 35,
+      "source": 7,
+      "target": 9,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 36,
+      "source": 7,
+      "target": 20,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 37,
+      "source": 7,
+      "target": 17,
+      "type": "Flows",
+      "label": "i"
+    },
+    {
+      "id": 38,
+      "source": 11,
+      "target": 12,
+      "type": "Flows",
+      "label": "entry"
+    }
+  ]
+}
