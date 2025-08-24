@@ -10,8 +10,8 @@ import java.io.IOException;
 public class MutantDelEqui {
     public static void main(String[] args) {
         // 输入文件和输出文件路径
-        String inputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\QuickSortSwapmutants.json";
-        String outputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjDelJson\\QuickSortSwapmutants.json";
+        String inputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjJson\\ArrayUtilsToMapmutants.json";
+        String outputFile = "D:\\bishe_code\\progex_benchmark\\mutantbench\\mutantjava\\mutantsAdjDelJson\\ArrayUtilsToMapmutants.json";
 
         try {
             // 创建ObjectMapper实例
